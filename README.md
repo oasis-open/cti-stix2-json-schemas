@@ -17,7 +17,7 @@
 <div>
 <h2><a id="purposeStatement">Statement of Purpose</a></h2>
 
-<p>Statement of Purpose for this OASIS Open Repository (cti-stix2-json-schemas) as <a href="https://lists.oasis-open.org/archives/cti/201608/msg00050.html">proposed</a> and <a href="https://www.oasis-open.org/committees/ballot.php?id=2961">approved</a> [<a href="https://issues.oasis-open.org/browse/TCADMIN-2424">bis</a>] the TC:</p>
+<p>Statement of Purpose for this OASIS Open Repository (cti-stix2-json-schemas) as <a href="https://lists.oasis-open.org/archives/cti/201608/msg00050.html">proposed</a> and <a href="https://www.oasis-open.org/committees/ballot.php?id=2961">approved</a> [<a href="https://issues.oasis-open.org/browse/TCADMIN-2424">bis</a>] by the TC:</p>
 
 <p>The STIX schemas repository will contain non-normative JSON schemas and examples for STIX 2. The examples will include short examples of particular objects, more complete use-case examples, and complete reports in STIX 2. The repository will contain JSON schemas and JSON STIX documents.</p>
 <!-- <p>The STIX schemas repository will contain non-normative JSON schemas and examples for STIX 2. The examples will include short examples of particular objects, more complete use-case examples, and complete reports in STIX 2. The repository will contain JSON schemas and JSON STIX documents.</p>-->
