@@ -1,0 +1,45 @@
+{
+  "type": "bundle",
+  "id": "bundle--c9567f73-3803-415c-b06e-2b0622830e5d",
+  "spec_version": "2.0",
+  
+  "threat-actors": [
+    {
+		"type": "threat-actor",
+		"id": "threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428",
+		"version": 1,
+		"created": "2014-11-19 23:39:03.893348",
+        "modified": "2014-11-19 23:39:03.893348",
+		"name": "Disco Team Threat Actor Group",
+		"labels": ["crime-syndicate"]
+	}
+  ],
+  
+  "identities": [
+    {
+		"type": "identity",
+		"id": "identity--733c5838-34d9-4fbf-949c-62aba761184c",
+		"version": 1,
+		"created": "2016-08-23T18:05:49.307000",
+		"modified": "2016-08-23T18:05:49.307000",
+		"name": "Disco Tean",
+		"identity_class": "organization",
+		"regions": ["California"],
+		"nationalities": ["us"],
+		"contact_information": "disco-team@stealthemail.com"
+	}
+  ],
+  
+  "relationships": [
+    {
+		"type": "relationship",
+        "id": "relationship--966c5838-34d9-4fbf-949c-62aba7611837",
+		"version": 1,
+		"created": "2016-08-23T18:05:49.307000",
+        "modified": "2016-08-23T18:05:49.307000", 
+		"relationship_type": "attributed-to",
+		"source_ref": "threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428",
+		"target_ref": "identity--733c5838-34d9-4fbf-949c-62aba761184c"		
+	}
+  ]
+}

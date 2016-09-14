@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "external-reference",
+  "description": "External references are used to describe pointers to information represented outside of STIX.",
+  "type": "object",
+  "properties": {
+    "source_name": {
+      "type": "string",
+      "description": "The source within which the external-reference is defined (system, registry, organization, etc.)"
+    },
+	"description": {
+  	  "type": "string",
+  	  "description": "A human readable description"
+	  },
+  	"url": {
+  	  "$ref": "url.json",
+  	  "description": "A URL reference to an external resource."
+  	},
+  	"external_id": {
+  	  "type": "string",
+  	  "description": "An identifier for the external reference content."
+    }
+  },
+  "required": [
+		"source_name"
+	],
+	"anyOf":[
+		{
+			"required" : ["external_id"]
+		},
+		{
+			"required" : ["description"]
+		},
+		{
+			"required" : ["url"]
+		}
+	]
+}

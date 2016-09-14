@@ -1,0 +1,27 @@
+{
+  "type": "bundle",
+  "id": "bundle--ea99d4d4-1ae7-4120-9ebe-67ed4783fb36",
+  "spec_version": "2.0",
+  
+  "indicators":[
+    {
+		"type": "indicator",
+		"id": "indicator--567b201c-4fd5-4bde-a5db-42abc340807a",
+		"version": 1,
+		"created": "2014-06-20 15:16:56.987616",
+		"modified": "2014-06-20 15:16:56.987616",
+		"name": "silent_banker",
+		"pattern": "\\nrule silent_banker : banker\\n{\\n    meta:\\n        description = \"This is just an example\"\\n        thread_level = 3\\n        in_the_wild = true\\n\\n    strings:\\n        $a = {6A 40 68 00 30 00 00 6A 14 8D 91}\\n        $b = {8D 4D B0 2B C1 83 C0 27 99 6A 4E 59 F7 F9}\\n        $c = \"UVODFRYSIHLNWPEJXQZAKCBGMT\"\\n\\n    condition:\\n        $a or $b or $c\\n}\\n",
+		"pattern_lang": "yara",
+		"description": "This is just an example.",
+		"valid_from": "2014-06-20 15:16:56.987616",
+		"labels":["malicious-activity"],
+		"external_references":[
+		  {
+			"source_name": "yara",
+			"url": "http:\/\/plusvic.github.io\/yara\/"
+		  }	
+		]
+	}
+  ]
+}

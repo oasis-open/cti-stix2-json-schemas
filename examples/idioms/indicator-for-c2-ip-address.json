@@ -1,0 +1,20 @@
+{
+  "type": "bundle",
+  "id": "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
+  "spec_version": "2.0",
+
+  "indicators": [
+    {
+      "type": "indicator",
+      "id": "indicator--33fe3b22-0201-47cf-85d0-97c02164528d",
+      "version": 1,
+      "created": "2014-05-08T09:00:00.000000Z",
+	  "modified": "2014-05-08T09:00:00.000000Z",
+      "name": "IP Address for known C2 channel",
+      "labels": ["malicious-activity"],
+      "pattern": "ipv4addr-object:value EQ '10.0.0.0'",
+	  "pattern_lang": "cybox",
+	  "valid_from": "2014-05-08T09:00:00.000000Z"
+    }
+   ]  
+}

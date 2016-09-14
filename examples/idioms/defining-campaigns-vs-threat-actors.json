@@ -1,0 +1,71 @@
+{
+  "type": "bundle",
+  "id": "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
+  "spec_version": "2.0",
+  
+  "campaigns": [
+    {
+        "type": "campaign",
+        "id": "campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e",
+        "version": 1,
+        "created": "2014-08-08T15:50:10.983728Z",
+        "modified": "2014-08-08T15:50:10.983728Z",		
+        "name": "Compromise of ATM Machines"
+    }
+  ],
+  
+  "relationships": [
+    {
+        "type": "relationship",
+        "id": "relationship--d07b0cc3-11eb-4906-9e0b-4bcca5f408e4",
+        "version": 1,
+        "created": "2014-08-08T15:50:10.983728Z", 
+		"modified": "2014-08-08T15:50:10.983728Z",
+        "relationship_type": "targets", 
+        "source_ref": "campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e",
+        "target_ref": "identity--2d1c6ab3-5e4e-48ac-a32b-f0c01c2836a8"        
+    },
+    
+    {
+        "type": "relationship",
+        "id": "relationship--5cc8ddc2-4346-4ba1-a997-1b42872b02b0",
+        "version": 1,
+        "created": "2014-08-08T15:50:10.983728Z",
+        "modified": "2014-08-08T15:50:10.983728Z",		
+        "relationship_type": "attributed-to",
+        "source_ref": "campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e",
+        "target_ref": "threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500"        
+    } 
+  ],
+  
+  "threat_actors": [
+    {
+        "type": "threat-actor",
+        "id": "threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500",
+        "version": 1,
+        "created": "2014-08-08T15:50:10.983629Z",
+		"modified": "2014-08-08T15:50:10.983629Z",
+        "name": "People behind the ATM compromise",
+		"labels": ["hacker"]		
+    }
+  ],
+  
+  "identities": [
+    {
+        "type": "identity",
+        "id": "identity--2d1c6ab3-5e4e-48ac-a32b-f0c01c2836a8",
+        "version": 1,
+        "created": "2014-08-08T15:50:10.983464Z",
+		"modified": "2014-08-08T15:50:10.983464Z",
+		"name": "XYZ Bank",
+		"description": "Customer PII and Financial Data were targeted.",
+		"identity_class": "organization",
+		"sectors": ["financial-services"]
+    }
+  ]
+}
+  
+
+  
+  
+  

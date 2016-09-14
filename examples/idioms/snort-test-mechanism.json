@@ -1,0 +1,67 @@
+{
+  "type": "bundle",
+  "id": "bundle--ea99d4d4-1ae7-4120-9ebe-67ed4783fb36",
+  "spec_version": "2.0",
+  
+  "vulnerabilities": [
+    {
+		"type": "vulnerability",
+		"id": "vulnerability--0742cf0c-7c9a-4a4a-9156-7c501a51528c",
+		"created": "2014-06-20 15:16:56.986650",
+        "modified": "2014-06-20 15:16:56.986650",
+		"version": 1,
+		"name": "Heartbleed",
+		"external_references":[
+		  {
+			"external_id": "CVE-2013-3893",
+			"source_name": "cve"
+		  }
+		]
+	}
+  ],
+  "indicators": [
+    {
+		"type": "indicator",
+		"id": "indicator--567b201c-4fd5-4bde-a5db-42abc340807b",
+		"version": 1,
+		"created": "2014-06-20 15:16:56.987616",
+		"modified": "2014-06-20 15:16:56.987616",
+		"pattern": "alert tcp any any -> any any (msg:\\\"FOX-SRT - Flowbit - TLS-SSL Client Hello\\\"; flow:established; dsize:< 500; content:\\\"|16 03|\\\"; depth:2; byte_test:1, <=, 2, 3; byte_test:1, !=, 2, 1; content:\\\"|01|\\\"; offset:5; depth:1; content:\\\"|03|\\\"; offset:9; byte_test:1, <=, 3, 10; byte_test:1, !=, 2, 9; content:\\\"|00 0f 00|\\\"; flowbits:set,foxsslsession; flowbits:noalert; threshold:type limit, track by_src, count 1, seconds 60; reference:cve,2014-0160; classtype:bad-unknown; sid: 21001130; rev:9;), alert tcp any any -> any any (msg:\\\"FOX-SRT - Suspicious - TLS-SSL Large Heartbeat Response\\\"; flow:established; flowbits:isset,foxsslsession; content:\\\"|18 03|\\\"; depth: 2; byte_test:1, <=, 3, 2; byte_test:1, !=, 2, 1; byte_test:2, >, 200, 3; threshold:type limit, track by_src, count 1, seconds 600; reference:cve,2014-0160; classtype:bad-unknown; sid: 21001131; rev:5;)",
+		"pattern_lang": "snort",
+		"name": "Snort Signature for Heartbleed",
+		"valid_from": "2014-06-20 15:16:56.987616",
+		"labels": ["malicious-activity"],
+		"created_by_ref": "identity--a0740d84-9fcd-44af-9033-94e76a53201e"
+	}
+  ],
+  "identities": [
+    {
+		"type": "identity",
+		"id": "identity--a0740d84-9fcd-44af-9033-94e76a53201e",
+		"version": 1,
+		"created": "2014-06-20 15:16:56.987616",
+		"modified": "2014-06-20 15:16:56.987616",
+		"name": "FOX IT",
+		"identity_class": "organization",
+		"external_references":[
+		  {
+			"source_name": "FOX IT",
+			"url": "http:\/\/blog.fox-it.com\/2014\/04\/08\/openssl-heartbleed-bug-live-blog"
+		  }	
+		]
+	}
+  ],
+  "relationships": [
+    {
+		"type": "relationship",
+		"id": "relationship--45178b68-3274-439f-a603-ec39b2db2490",
+		"created": "2016-08-23T18:05:49.400000",
+        "modified": "2016-08-23T18:05:49.400000",
+		"version": 1,
+		"relationship_type": "related-to",
+		"source_ref": "indicator--567b201c-4fd5-4bde-a5db-42abc340807b",
+		"target_ref": "vulnerability--0742cf0c-7c9a-4a4a-9156-7c501a51528c"		
+	}
+  ]
+}
+		

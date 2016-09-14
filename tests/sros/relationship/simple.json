@@ -1,0 +1,10 @@
+{
+  "type": "relationship",
+  "id": "relationship--f3c5ae03-c324-4ceb-a510-5176b78a0ee3",
+  "created": "2016-02-28T01:01:01.000Z",
+  "modified": "2016-02-28T01:01:01.000Z",
+  "version": 1,
+  "relationship_type": "related-to",
+  "source_ref": "indicator--37f471ef-74cc-4e99-a220-60e02e3c4c25",
+  "target_ref": "indicator--31991728-2d73-46fb-91f0-8495d976cb95"
+}

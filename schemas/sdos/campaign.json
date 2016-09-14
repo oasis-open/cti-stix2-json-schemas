@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "campaign",
+  "description": "A Campaign is a grouping of adversary behavior that describes a set of malicious activities or attacks that occur over a period of time against a specific set of targets.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../common/core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this object, which MUST be the literal `campaign`.",
+          "enum": ["campaign"]
+        },
+        "name": {
+          "type": "string",
+          "description": "The name used to identify the Campaign."
+        },
+        "description": {
+          "type": "string",
+          "description": "A description that provides more details and context about the Campaign, potentially including its purpose and its key characteristics."
+        },
+        "aliases": {
+          "type": "array",
+          "description": "Alternative names used to identify this campaign.",
+          "items": {
+            "type": "string",
+            "minItems": 1
+          }
+        },
+        "first_seen": {
+          "$ref": "../common/timestamp.json",
+          "description": "The time that this Campaign was first seen."
+        },
+        "first_seen_precision": {
+          "$ref": "../common/timestamp-precision.json",
+          "description": "The precision of the first_seen timestamp."
+        },
+        "objective": {
+          "type": "string",
+          "description": "This field defines the Campaign’s primary goal, objective, desired outcome, or intended effect."         
+        }        
+      }
+    }
+  ],
+  "required": [
+    "name"
+  ]
+}

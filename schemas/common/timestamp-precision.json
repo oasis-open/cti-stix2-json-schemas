@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "timestamp-precision",
+  "description": "Represents the precision options for a given timestamp.",
+  "type": "string",
+  "enum": [
+    "year",
+    "month",
+    "day",
+    "hour",
+    "minute",
+    "full"
+  ]
+}

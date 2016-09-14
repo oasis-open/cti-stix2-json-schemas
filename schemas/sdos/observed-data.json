@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "observed-data",
+  "description": "Observed data conveys information that was observed on systems and networks, such as log data or network traffic, using the CybOX specification.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../common/core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this object, which MUST be the literal `observed-data`.",
+          "enum": ["observed-data"]
+        },
+        "first_observed": {
+          "$ref": "../common/timestamp.json",
+          "description": "The beginning of the time window that the data was observed during."
+        },
+        "last_observed": {
+          "$ref": "../common/timestamp.json",
+          "description": "The end of the time window that the data was observed during."
+        },
+        "number_observed": {
+          "type": "integer",
+          "description": "The number of times the data represented in the cybox property was observed. This MUST be an integer between 1 and 999,999,999 inclusive.",
+          "minimum": 1,
+          "maximum": 999999999
+        },
+        "cybox": {
+          "$ref": "../common/cybox-container.json",
+          "description": "The CybOX content that describes a single `fact` that was observed."
+        }
+      }
+    }
+  ],
+  "required": [
+    "first_observed",
+    "last_observed",
+    "number_observed",
+    "cybox"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "tool",
+  "description": "Tools are legitimate software that can be used by threat actors to perform attacks.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../common/core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this object, which MUST be the literal `tool`.",
+          "enum": [
+            "tool"
+          ]
+        },
+        "labels": {
+          "type": "array",
+          "description": "The kind(s) of tool(s) being described. Open Vocab - tool-label-ov",
+          "items": {
+            "type": "string",
+            "minItems": 1
+          }
+        },
+        "name": {
+          "type": "string",
+          "description": "The name used to identify the Tool."
+        },
+        "description": {
+          "type": "string",
+          "description": "Provides more context and details about the Tool object."
+        },
+        "tool_version": {
+          "type": "string",
+          "description": "The version identifier associated with the tool."
+        },
+        "kill_chain_phases": {
+          "type": "array",
+          "description": "The list of kill chain phases for which this Tool instance can be used.",
+          "items": {
+            "$ref": "../common/kill-chain-phase.json",
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "name",
+    "labels"
+  ],
+  "definitions": {
+    "tool-label-ov": {
+      "type": "string",
+      "enum": [
+        "denial-of-service",
+        "exploitation",
+        "information-gathering",
+        "network-capture",
+        "credential-exploitation",
+        "remote-access",
+        "vulnerability-scanning"
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "url",
+  "description": "Matches the elements of a URL using a regular expression.",
+  "type": "string",
+  "pattern": "^((http[s]?|ftp):\\\/)?\/?([^:\\/\\s]+)((\\\/\\w+)*\\/)([\\w\\-\\.]+[^#?\\s]+)(.*)?(#[\\w\\-]+)?$"
+}

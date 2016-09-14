@@ -1,0 +1,19 @@
+{
+  "type": "bundle",
+  "id": "bundle--5114ee8-303f-4428-98ff-9499f099c961",
+  "spec_version": "2.0",
+  
+  "identities": [
+    {
+		"type": "identity",
+		"id": "identity--dfd23353-167f-411c-a258-e08ec9d284af",
+		"version": 1,
+		"created": "2016-08-23T18:05:49.414000",
+		"modified": "2016-08-23T18:05:49.414000",
+		"name": "Electricity and Industrial Control System",
+		"description": "Electricity Sector and Industrial Control System Sector",
+		"sectors": ["utilities"],
+		"identity_class": "unknown"
+	}
+  ]
+}

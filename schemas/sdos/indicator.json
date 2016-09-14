@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "indicator",
+  "description": "Indicators contain a pattern that can be used to detect suspicious or malicious cyber activity.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../common/core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this object, which MUST be the literal `indicator`.",
+          "enum": ["indicator"]
+        },
+        "labels": {
+          "type": "array",
+          "description": "This field is an Open Vocabulary that specifies the type of indicator. Open vocab - indicator-label-ov",
+          "items": {
+            "type": "string",
+            "minItems": 1
+          }
+        },
+        "name": {
+          "type": "string",
+          "description": "The name used to identify the Indicator."
+        },
+        "description": {
+          "type": "string",
+          "description": "A description that provides the recipient with context about this Indicator potentially including its purpose and its key characteristics."
+        },
+        "pattern": {
+          "type": "string",
+          "description": "The detection pattern for this indicator. The default language is CybOX Patterning."
+        },
+        "pattern_lang": {
+          "type": "string",
+          "description": "The language used to define the pattern (in the pattern field). The default is cybox if the field is omitted. Open Vocabulary - pattern-lang-ov"
+        },
+		"pattern_lang_version": {
+          "type": "string",
+          "description": "The version of the language used to define the pattern (in the pattern field)."
+        },
+        "valid_from": {
+          "$ref": "../common/timestamp.json",
+          "description": "The time from which this indicator should be considered valuable intelligence."
+        },
+        "valid_from_precision": {
+          "$ref": "../common/timestamp-precision.json",
+          "description": "The precision of the start timestamp."
+        },
+        "valid_until": {
+          "$ref": "../common/timestamp.json",
+          "description": "The time at which this indicator should no longer be considered valuable intelligence."
+        },
+        "valid_until_precision": {
+          "$ref": "../common/timestamp-precision.json",
+          "description": "The precision of the end timestamp."
+        },
+        "kill_chain_phases": {
+          "type": "array",
+          "description": "The phases of the kill chain that this indicator detects.",
+          "items": {
+            "$ref": "../common/kill-chain-phase.json",
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "pattern",
+    "labels",
+    "valid_from"
+  ],
+  "definitions": {
+    "indicator-label-ov": {
+      "type": "string",
+      "enum": [
+        "anomalous-activity",
+        "anonymization",
+        "benign",
+        "compromised",
+        "malicious-activity",
+        "attribution"
+      ]
+    },
+    "pattern-lang-ov": {
+      "type": "string",
+      "enum": [
+        "cybox",
+        "openioc",
+        "snort",
+        "yara"
+      ]
+    }
+  }
+}

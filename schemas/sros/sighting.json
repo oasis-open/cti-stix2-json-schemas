@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "sighting",
+  "description": "A sighting denotes the fact that some entity in cyber threat intelligence (e.g., an indicator, malware, tool, threat actor, etc.) was seen.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../common/core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this object, which MUST be the literal `sighting`.",
+          "enum": ["sighting"]
+        },
+        "first_seen": {
+          "$ref": "../common/timestamp.json",
+          "description": "The beginning of the time window during which the SDO referenced by the sighting_of_ref property was sighted."
+        },
+        "first_seen_precision": {
+          "$ref": "../common/timestamp-precision.json",
+          "description": "The precision of the first_seen timestamp."
+        },
+        "last_seen": {
+          "$ref": "../common/timestamp.json",
+          "description": "The end of the time window during which the SDO referenced by the sighting_of_ref property was sighted."
+        },
+        "last_seen_precision": {
+          "$ref": "../common/timestamp-precision.json",
+          "description": "The precision of the last_seen timestamp."
+        },
+        "count": {
+          "type": "integer",
+          "description": "This is an integer between 0 and 999,999,999 inclusive and represents the number of times the object was sighted.",
+          "minimum": 0,
+          "maximum": 999999999
+        },
+        "sighting_of_ref": {
+          "$ref": "../common/identifier.json",
+          "description": "An ID reference to the object that has been sighted."
+        },
+        "observed_data_refs": {
+          "type": "array",
+          "description": "A list of ID references to the Observed Data objects that contain the raw cyber data for this Sighting.",
+          "items": {
+            "$ref": "../common/identifier.json",
+            "minItems": 1
+          }
+        },
+        "where_sighted_refs": {
+          "type": "array",
+          "description": "The ID of the Victim Target objects of the entities that saw the sighting.",
+          "items": {
+            "$ref": "../common/identifier.json",
+            "minItems": 1
+          }
+        },
+        "summary": {
+          "type": "boolean",
+          "description": "Whether the data should be considered primary source data (and therefore considered for counts) or summary data."
+        }
+      }
+    }
+  ],
+  "required": [
+    "sighting_of_ref"    
+  ]
+}
