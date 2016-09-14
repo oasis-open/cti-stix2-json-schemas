@@ -44,7 +44,7 @@ Purpose:  -->
 <p><b><a id="currentMaintainers">Current Maintainers of this Open Repository</a></b></p>
 
 <ul>
-<li><a href="mailto:gtback@gmail.com">Greg Back</a>; GitHub ID: <a href="https://github.com/gtback/">https://github.com/gtback/</a>; WWW: <a href="https://www.mitre.org/">MITRE</a></li>
+<li><a href="mailto:gback@mitre.org">Greg Back</a>; GitHub ID: <a href="https://github.com/gtback/">https://github.com/gtback/</a>; WWW: <a href="https://www.mitre.org/">MITRE</a></li>
 </ul>
 
 </div>
