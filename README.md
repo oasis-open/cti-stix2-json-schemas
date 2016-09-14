@@ -31,7 +31,8 @@ Purpose:  -->
 
 <div><h2><a id="purposeClarifications">Additions to Statement of Purpose</a></h2>
 
-<p>Repository Maintainers may include here any clarifications &mdash; any additional sections, subsections, and paragraphs that the Maintainer(s) wish to add as descriptive text, reflecting (sub-) project status, milestones, releases, modifications to statement of purpose, etc.  The project Maintainers will create and maintain this content on behalf of the participants.</p>
+<p><strong>NOTE:</strong> The schemas in this repository are intended to follow the STIX 2.0 Specification (TODO: insert link), but some requirements of the specification cannot be enforced in JSON schema alone. As a result, these schemas are insufficient to determine whether a particular example of STIX 2.0 JSON is "valid". Additionally, though care has been taken to ensure that these schemas do not conflict with the specification, in case of conflict, the specification takes precedence.</p>
+
 </div>
 
 <div>
