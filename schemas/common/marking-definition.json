@@ -15,8 +15,7 @@
     },
     "definition_type": {
       "type": "string",
-      "description": "The definition_type property identifies the type of Marking Definition.",
-      "enum": ["statement", "tlp"]
+      "description": "The definition_type property identifies the type of Marking Definition."
     },
     "definition": {
       "oneOf": [
