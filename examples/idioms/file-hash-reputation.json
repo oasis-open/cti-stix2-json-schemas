@@ -1,49 +1,43 @@
 {
-  "type": "bundle",
-  "id": "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
-  "spec_version": "2.0",
+	"type" : "bundle",
+	"id" : "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
+	"spec_version" : "2.0",
 
-  "indicators": [
-    {
-	    "type": "indicator",
-	    "id": "indicator--14975dea-86cd-4211-a5f8-9c2e4daab69a",
-	    "created": "2015-12-21T19:59:17Z",
-	    "modified": "2015-12-21T19:59:17Z",
-	    "version": 1,
-	    "name": "File Reputation for SHA256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-	    "labels": ["malicious-activity"],
-	    "pattern": "file-object:hashes.sha-256 EQ 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'",
-		"pattern_lang": "cybox",
-	    "valid_from": "2015-12-21T19:59:17Z"
-    }
-   ],
-   
-  "malware": [
-    {
-        "type": "malware",
-        "id": "malware--23e715a9-24c8-4b21-ba5b-f564d2edc660",
-        "version": 1,
-        "created": "2015-12-21T19:59:17Z",
-		"modified": "2015-12-21T19:59:17Z",
-        "name": "Malicious file",
-        "labels": ["spyware"]
-    }
-   ],
-   
-   "relationships": [
-     {
-         "type": "relationship",
-         "id": "relationship--21f64c7a-a4fd-4159-b5b7-3658044f7027",
-         "version": 1,
-         "created": "2015-12-21T19:59:17Z",
-		 "modified": "2015-12-21T19:59:17Z",
-         "relationship_type": "indicates",
-         "source_ref": "indicator--14975dea-86cd-4211-a5f8-9c2e4daab69a",
-         "target_ref": "malware--23e715a9-24c8-4b21-ba5b-f564d2edc660"         
-     }
-   ]
-  
+	"indicators" : [{
+			"type" : "indicator",
+			"id" : "indicator--14975dea-86cd-4211-a5f8-9c2e4daab69a",
+			"created" : "2015-12-21T19:59:17Z",
+			"modified" : "2015-12-21T19:59:17Z",
+			"version" : 1,
+			"name" : "File Reputation for SHA256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+			"labels" : ["malicious-activity"],
+			"pattern" : "file:hashes.SHA-256='e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'",
+			"pattern_lang" : "cybox",
+			"valid_from" : "2015-12-21T19:59:17Z"
+		}
+	],
+
+	"malware" : [{
+			"type" : "malware",
+			"id" : "malware--23e715a9-24c8-4b21-ba5b-f564d2edc660",
+			"version" : 1,
+			"created" : "2015-12-21T19:59:17Z",
+			"modified" : "2015-12-21T19:59:17Z",
+			"name" : "Malicious file",
+			"labels" : ["spyware"]
+		}
+	],
+
+	"relationships" : [{
+			"type" : "relationship",
+			"id" : "relationship--21f64c7a-a4fd-4159-b5b7-3658044f7027",
+			"version" : 1,
+			"created" : "2015-12-21T19:59:17Z",
+			"modified" : "2015-12-21T19:59:17Z",
+			"relationship_type" : "indicates",
+			"source_ref" : "indicator--14975dea-86cd-4211-a5f8-9c2e4daab69a",
+			"target_ref" : "malware--23e715a9-24c8-4b21-ba5b-f564d2edc660"
+		}
+	]
+
 }
-   
-    
-    

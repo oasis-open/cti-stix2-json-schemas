@@ -1,56 +1,50 @@
 {
-  "type": "bundle",
-  "id": "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
-  "spec_version": "2.0",
-  
-  "courses_of_action": [
-    {
-        "type": "course-of-action",
-        "id": "course-of-action--55f57cc7-ddd5-467b-a3a2-6fd602549d9e",
-        "version": 1,
-        "created": "2016-08-03T16:27:14Z",
-        "modified": "2016-08-03T16:27:14Z",        
-		"name": "Block Network Traffic",
-		"description": "Added rule to block network traffic coming from this address"        
-    }
-  ],
-  
-  "observed_data": [
-   {
-       "type": "observed-data",
-       "id": "observed-data--e04425e4-60a2-4d91-a9f9-0ca956f19edb",
-       "version": 1,
-       "created": "2016-07-11T12:27:14Z", 
-	   "modified": "2016-07-11T12:27:14Z",
-	   "first_observed": "2015-12-21T19:00:00Z",
-	   "last_observed": "2015-12-21T20:00:00Z",
-	   "number_observed": 11,
-       "cybox": {
-	      "type": "cybox-container",
-	      "spec_version": "3.0",
-          "objects": [
-              {
-                "type": "ipv4addr-object",
-                "id": "ipv4addr-object--1",
-                "value:": "10.10.10.10"
-              }
-          ]
-       }
-    }
-  ],
-  
-  "relationships": [
-   {
-        "type": "relationship",
-        "id": "relationship--b2dae1ac-53bf-4d1e-b478-fdc11018c649",
-        "version": 1,
-        "created": "2016-08-03T16:30:17Z",
-        "modified": "2016-08-03T16:30:17Z",
-		"relationship_type": "related-to",        
-        "source_ref": "course-of-action--55f57cc7-ddd5-467b-a3a2-6fd602549d9e",
-        "target_ref": "observed-data--e04425e4-60a2-4d91-a9f9-0ca956f19edb"        
-    }
-  ]
+	"type" : "bundle",
+	"id" : "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
+	"spec_version" : "2.0",
+
+	"courses_of_action" : [{
+			"type" : "course-of-action",
+			"id" : "course-of-action--55f57cc7-ddd5-467b-a3a2-6fd602549d9e",
+			"version" : 1,
+			"created" : "2016-08-03T16:27:14Z",
+			"modified" : "2016-08-03T16:27:14Z",
+			"name" : "Block Network Traffic",
+			"description" : "Added rule to block network traffic coming from this address"
+		}
+	],
+
+	"observed_data" : [{
+			"type" : "observed-data",
+			"id" : "observed-data--e04425e4-60a2-4d91-a9f9-0ca956f19edb",
+			"version" : 1,
+			"created" : "2016-07-11T12:27:14Z",
+			"modified" : "2016-07-11T12:27:14Z",
+			"first_observed" : "2015-12-21T19:00:00Z",
+			"last_observed" : "2015-12-21T20:00:00Z",
+			"number_observed" : 11,
+			"cybox" : {
+				"type" : "cybox-container",
+				"spec_version" : "3.0",
+				"objects" : [{
+						"type" : "ipv4addr-object",
+						"id" : "ipv4addr-object--1",
+						"value:" : "10.10.10.10"
+					}
+				]
+			}
+		}
+	],
+
+	"relationships" : [{
+			"type" : "relationship",
+			"id" : "relationship--b2dae1ac-53bf-4d1e-b478-fdc11018c649",
+			"version" : 1,
+			"created" : "2016-08-03T16:30:17Z",
+			"modified" : "2016-08-03T16:30:17Z",
+			"relationship_type" : "related-to",
+			"source_ref" : "course-of-action--55f57cc7-ddd5-467b-a3a2-6fd602549d9e",
+			"target_ref" : "observed-data--e04425e4-60a2-4d91-a9f9-0ca956f19edb"
+		}
+	]
 }
-  
-  
