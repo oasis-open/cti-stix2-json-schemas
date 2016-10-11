@@ -8,31 +8,37 @@
       "type": "string",
       "description": "The source within which the external-reference is defined (system, registry, organization, etc.)"
     },
-	"description": {
-  	  "type": "string",
-  	  "description": "A human readable description"
-	  },
-  	"url": {
-  	  "$ref": "url.json",
-  	  "description": "A URL reference to an external resource."
-  	},
-  	"external_id": {
-  	  "type": "string",
-  	  "description": "An identifier for the external reference content."
+    "description": {
+      "type": "string",
+      "description": "A human readable description"
+    },
+    "url": {
+      "$ref": "url.json",
+      "description": "A URL reference to an external resource."
+    },
+    "external_id": {
+      "type": "string",
+      "description": "An identifier for the external reference content."
     }
   },
   "required": [
-		"source_name"
-	],
-	"anyOf":[
-		{
-			"required" : ["external_id"]
-		},
-		{
-			"required" : ["description"]
-		},
-		{
-			"required" : ["url"]
-		}
-	]
+    "source_name"
+  ],
+  "anyOf": [
+    {
+      "required": [
+        "external_id"
+      ]
+    },
+    {
+      "required": [
+        "description"
+      ]
+    },
+    {
+      "required": [
+        "url"
+      ]
+    }
+  ]
 }

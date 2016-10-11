@@ -12,7 +12,9 @@
         "type": {
           "type": "string",
           "description": "The type of this object, which MUST be the literal `threat-actor`.",
-          "enum": ["threat-actor"]
+          "enum": [
+            "threat-actor"
+          ]
         },
         "labels": {
           "type": "array",
@@ -37,7 +39,7 @@
             "type": "string",
             "minItems": 1
           }
-        },        
+        },
         "roles": {
           "type": "array",
           "description": "This is a list of roles the Threat Actor plays. Open Vocab - threat-actor-role-ov",
@@ -81,29 +83,29 @@
             "type": "string",
             "minItems": 1
           }
-        }        
+        }
       }
     }
   ],
   "required": [
     "name",
-    "labels"	
+    "labels"
   ],
-  "definitions": {    
+  "definitions": {
     "threat-actor-label-ov": {
       "type": "string",
       "enum": [
         "activist",
         "competitor",
         "crime-syndicate",
-		"criminal",
+        "criminal",
         "hacker",
         "insider-accidental",
         "insider-disgruntled",
         "nation-state",
         "sensationalist",
         "spy",
-        "terrorist"        
+        "terrorist"
       ]
     },
     "threat-actor-role-ov": {
@@ -111,11 +113,11 @@
       "enum": [
         "agent",
         "director",
-		"independent",
-		"sponsor",        
+        "independent",
+        "sponsor",
         "infrastructure-operator",
         "infrastructure-architect",
-        "malware-author"        
+        "malware-author"
       ]
     },
     "threat-actor-sophistication-ov": {

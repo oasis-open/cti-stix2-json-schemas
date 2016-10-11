@@ -12,8 +12,10 @@
         "type": {
           "type": "string",
           "description": "The type of this object, which MUST be the literal `course-of-action`.",
-          "enum": ["course-of-action"]
-        },        
+          "enum": [
+            "course-of-action"
+          ]
+        },
         "name": {
           "type": "string",
           "description": "The name used to identify the Course of Action."
@@ -25,7 +27,7 @@
       }
     }
   ],
-  "required": [    
+  "required": [
     "name"
   ]
 }

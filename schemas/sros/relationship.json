@@ -12,7 +12,9 @@
         "type": {
           "type": "string",
           "description": "The type of this object, which MUST be the literal `relationship`.",
-          "enum": ["relationship"]
+          "enum": [
+            "relationship"
+          ]
         },
         "relationship_type": {
           "type": "string",

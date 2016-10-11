@@ -7,16 +7,20 @@
     "type": {
       "type": "string",
       "description": "Indicates that this object is a CybOX Container. The value of this property MUST be cybox-container.",
-      "enum": ["cybox-container"]
+      "enum": [
+        "cybox-container"
+      ]
     },
     "spec_version": {
       "type": "string",
       "description": "Indicates the version of the CybOX specification that the entities captured in the container conform to.",
-      "enum": ["3.0"]
+      "enum": [
+        "3.0"
+      ]
     },
     "objects": {
       "type": "object",
       "description": "Set of CybOX objects"
     }
-  }  
+  }
 }
