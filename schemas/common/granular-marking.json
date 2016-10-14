@@ -14,8 +14,11 @@
     },
     "marking_ref": {
       "$ref": "identifier.json",
-      "description": "The marking_ref property specifies the ID of the marking-definition object that describes the marking."      
+      "description": "The marking_ref property specifies the ID of the marking-definition object that describes the marking."
     }
   },
-  "required": ["selectors", "marking_ref"]
+  "required": [
+    "selectors",
+    "marking_ref"
+  ]
 }

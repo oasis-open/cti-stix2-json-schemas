@@ -7,14 +7,14 @@
     "kill_chain_name": {
       "type": "string",
       "description": "The name of the kill chain."
-	},
-	"phase_name": {
-	  "type": "string",
-	  "description": "The name of the phase in the kill chain."
-	}
+    },
+    "phase_name": {
+      "type": "string",
+      "description": "The name of the phase in the kill chain."
+    }
   },
   "required": [
-    "kill_chain_name", 
+    "kill_chain_name",
     "phase_name"
   ]
 }

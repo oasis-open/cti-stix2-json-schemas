@@ -2,93 +2,96 @@
   "type": "bundle",
   "id": "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
   "spec_version": "2.0",
-
   "attack_patterns": [
     {
-        "type": "attack-pattern",
-        "id": "attack-pattern--d7b066aa-4091-4276-a142-29d5d81c3484",
-        "version": 1,
-        "created": "2014-10-31T15:52:13.126765Z",
-		"modified": "2014-10-31T15:52:13.126765Z",
-        "name": "Phishing",
-        "external-references": [
-          {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d7b066aa-4091-4276-a142-29d5d81c3484",
+      "version": 1,
+      "created": "2014-10-31T15:52:13.126765Z",
+      "modified": "2014-10-31T15:52:13.126765Z",
+      "name": "Phishing",
+      "external-references": [
+        {
           "source_name": "CAPEC",
           "external_id": "capec-98"
-          }
-        ]
+        }
+      ]
     }
   ],
-
   "indicators": [
     {
-        "type": "indicator",
-        "id": "indicator--8cf9236f-1b96-493d-98be-0c1c1e8b62d7",
-        "version": 1,
-        "created": "2014-10-31T15:52:13.127931Z",
-		"modified": "2014-10-31T15:52:13.127931Z",
-        "name": "Malicious Email",		
-        "labels": ["malicious-activity"],       
-		"valid_from": "2014-10-31T15:52:13.127931Z",
-		"pattern": "email-message-object:header:subject MATCHES  \/^[IMPORTANT] Please Review Before\/",
-		"pattern_lang": "cybox"
+      "type": "indicator",
+      "id": "indicator--8cf9236f-1b96-493d-98be-0c1c1e8b62d7",
+      "version": 1,
+      "created": "2014-10-31T15:52:13.127931Z",
+      "modified": "2014-10-31T15:52:13.127931Z",
+      "name": "Malicious Email",
+      "labels": [
+        "malicious-activity"
+      ],
+      "valid_from": "2014-10-31T15:52:13.127931Z",
+      "pattern": "email-message:header.subject MATCHES  /^[IMPORTANT] Please Review Before/",
+      "pattern_lang": "cybox"
     },
-	{
-		"type": "indicator",
-        "id": "indicator--b06b0eb7-61dd-4338-a094-0290c380fbd8",
-        "version": 1,
-        "created": "2014-10-31T15:52:13.127931Z",
-		"modified": "2014-10-31T15:52:13.127931Z",
-        "name": "Malicious Email Subject Line",		
-        "labels": ["malicious-activity"],       
-		"valid_from": "2014-10-31T15:52:13.127931Z",
-		"pattern": "email-message-object:header:subject MATCHES  \/^[IMPORTANT] Please Review Before\/",
-		"pattern_lang": "cybox"
-	},
-	{
-		"type": "indicator",
-        "id": "indicator--2e17f6fe-3a4d-438a-911a-e509ba1b9933",
-        "version": 1,
-        "created": "2014-10-31T15:52:13.127931Z",
-		"modified": "2014-10-31T15:52:13.127931Z",
-        "name": "Malicious Email Attachment",		
-        "labels": ["malicious-activity"],       
-		"valid_from": "2014-10-31T15:52:13.127931Z",
-		"pattern": "email-message-object:attachments:name MATCHES  \/^Final Report.+\\.exe$\/",
-		"pattern_lang": "cybox"
-	}
+    {
+      "type": "indicator",
+      "id": "indicator--b06b0eb7-61dd-4338-a094-0290c380fbd8",
+      "version": 1,
+      "created": "2014-10-31T15:52:13.127931Z",
+      "modified": "2014-10-31T15:52:13.127931Z",
+      "name": "Malicious Email Subject Line",
+      "labels": [
+        "malicious-activity"
+      ],
+      "valid_from": "2014-10-31T15:52:13.127931Z",
+      "pattern": "email-message:header.subject MATCHES  /^[IMPORTANT] Please Review Before/",
+      "pattern_lang": "cybox"
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--2e17f6fe-3a4d-438a-911a-e509ba1b9933",
+      "version": 1,
+      "created": "2014-10-31T15:52:13.127931Z",
+      "modified": "2014-10-31T15:52:13.127931Z",
+      "name": "Malicious Email Attachment",
+      "labels": [
+        "malicious-activity"
+      ],
+      "valid_from": "2014-10-31T15:52:13.127931Z",
+      "pattern": "email-message:attachments.name MATCHES  /^Final Report.+\\.exe$/",
+      "pattern_lang": "cybox"
+    }
   ],
-  
   "relationships": [
     {
-         "type": "relationship",
-         "id": "relationship--fc2853a6-9ae3-4f46-a090-712e2cd73d40",
-         "version": 1,
-         "created": "2014-10-31T15:52:13.126765Z",
-		 "modified": "2014-10-31T15:52:13.126765Z",
-         "relationship_type": "indicates",
-         "source_ref": "indicator--8cf9236f-1b96-493d-98be-0c1c1e8b62d7",
-         "target_ref": "attack-pattern--d7b066aa-4091-4276-a142-29d5d81c3484"         
+      "type": "relationship",
+      "id": "relationship--fc2853a6-9ae3-4f46-a090-712e2cd73d40",
+      "version": 1,
+      "created": "2014-10-31T15:52:13.126765Z",
+      "modified": "2014-10-31T15:52:13.126765Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--8cf9236f-1b96-493d-98be-0c1c1e8b62d7",
+      "target_ref": "attack-pattern--d7b066aa-4091-4276-a142-29d5d81c3484"
     },
-	{
-		"type": "relationship",
-        "id": "relationship--427551a1-e3c1-4f15-9241-03e0dcc98601",
-        "version": 1,
-        "created": "2014-10-31T15:52:13.126765Z",
-		"modified": "2014-10-31T15:52:13.126765Z",
-        "relationship_type": "indicates",
-        "source_ref": "indicator--b06b0eb7-61dd-4338-a094-0290c380fbd8",
-        "target_ref": "attack-pattern--d7b066aa-4091-4276-a142-29d5d81c3484"
-	},
-	{
-		"type": "relationship",
-        "id": "relationship--e983dad5-7c88-444a-9f78-cf31dbfae2bd",
-        "version": 1,
-        "created": "2014-10-31T15:52:13.126765Z",
-		"modified": "2014-10-31T15:52:13.126765Z",
-        "relationship_type": "indicates",
-        "source_ref": "indicator--2e17f6fe-3a4d-438a-911a-e509ba1b9933",
-        "target_ref": "attack-pattern--1e270b7a-a5e2-4361-95eb-9c94954b600a"
-	}
+    {
+      "type": "relationship",
+      "id": "relationship--427551a1-e3c1-4f15-9241-03e0dcc98601",
+      "version": 1,
+      "created": "2014-10-31T15:52:13.126765Z",
+      "modified": "2014-10-31T15:52:13.126765Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b06b0eb7-61dd-4338-a094-0290c380fbd8",
+      "target_ref": "attack-pattern--d7b066aa-4091-4276-a142-29d5d81c3484"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e983dad5-7c88-444a-9f78-cf31dbfae2bd",
+      "version": 1,
+      "created": "2014-10-31T15:52:13.126765Z",
+      "modified": "2014-10-31T15:52:13.126765Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2e17f6fe-3a4d-438a-911a-e509ba1b9933",
+      "target_ref": "attack-pattern--1e270b7a-a5e2-4361-95eb-9c94954b600a"
+    }
   ]
 }

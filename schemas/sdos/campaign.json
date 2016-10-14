@@ -12,7 +12,9 @@
         "type": {
           "type": "string",
           "description": "The type of this object, which MUST be the literal `campaign`.",
-          "enum": ["campaign"]
+          "enum": [
+            "campaign"
+          ]
         },
         "name": {
           "type": "string",
@@ -40,8 +42,8 @@
         },
         "objective": {
           "type": "string",
-          "description": "This field defines the Campaign’s primary goal, objective, desired outcome, or intended effect."         
-        }        
+          "description": "This field defines the Campaign’s primary goal, objective, desired outcome, or intended effect."
+        }
       }
     }
   ],

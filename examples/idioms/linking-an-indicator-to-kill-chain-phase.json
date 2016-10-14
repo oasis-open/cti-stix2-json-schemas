@@ -2,27 +2,27 @@
   "type": "bundle",
   "id": "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
   "spec_version": "2.0",
-
   "indicators": [
     {
-        "type": "indicator",
-        "id": "indicator--efe1dec4-2f86-44ce-9977-543d15507892",
-        "version": 1,
-        "created": "2014-10-09T21:38:50.631509Z",
-        "modified": "2014-10-09T21:38:50.631509Z",
-        "name": "Malicious executable",
-        "labels": ["malicious-activity"],
-        "description": "Resident binary which implements infostealing and credit card grabber",
-        "pattern": "crypt_1_sell23-09.exe_",
-        "valid_from": "2014-10-09T21:38:50.631509Z",
-        "kill_chain_phases": [
+      "type": "indicator",
+      "id": "indicator--efe1dec4-2f86-44ce-9977-543d15507892",
+      "version": 1,
+      "created": "2014-10-09T21:38:50.631509Z",
+      "modified": "2014-10-09T21:38:50.631509Z",
+      "name": "Malicious executable",
+      "labels": [
+        "malicious-activity"
+      ],
+      "description": "Resident binary which implements infostealing and credit card grabber",
+      "pattern": "file:file_name = 'crypt1.exe'",
+      "pattern_lang": "cybox",
+      "valid_from": "2014-10-09T21:38:50.631509Z",
+      "kill_chain_phases": [
         {
-            "kill_chain_name": "Organization-specific Kill Chain",
-            "phase_name": "Infect Machine"
+          "kill_chain_name": "Organization-specific Kill Chain",
+          "phase_name": "Infect Machine"
         }
-        ]        
+      ]
     }
-   ]
+  ]
 }
-   
-   
