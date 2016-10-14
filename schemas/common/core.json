@@ -6,29 +6,29 @@
   "properties": {
     "type": {
       "type": "string",
-	  "pattern": "^\\-?[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*\\-?$",
-	  "minLength": 3,
+      "pattern": "^\\-?[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*\\-?$",
+      "minLength": 3,
       "maxLength": 250,
       "description": "The type property identifies the type of STIX Object (SDO, Relationship Object, etc). The value of the type field MUST be one of the types defined by a STIX Object (e.g., indicator).",
-	  "not": {
-	    "enum": [
-	      "incident", 
-		  "infrastructure"
-		]
-	  }
+      "not": {
+        "enum": [
+          "incident",
+          "infrastructure"
+        ]
+      }
     },
     "id": {
       "$ref": "identifier.json",
       "description": "The id property uniquely identifies this object."
     },
-	"created_by_ref": {
+    "created_by_ref": {
       "$ref": "identifier.json",
       "description": "The ID of the Source object that describes who created this object."
     },
-  	"labels": {
-  	  "type": "array",
-  	  "description": "This field specifies the type of object if known and allows for implementation dependant or trust group dependant labels or tags to also be applied to this object for further classification and sorting.",
-  	  "items": {
+    "labels": {
+      "type": "array",
+      "description": "This field specifies the type of object if known and allows for implementation dependant or trust group dependant labels or tags to also be applied to this object for further classification and sorting.",
+      "items": {
         "type": "string",
         "minItems": 1
       }
@@ -43,58 +43,82 @@
       "$ref": "timestamp.json",
       "description": "The created property represents the time at which the first version of this object was created."
     },
-  	"modified": {
-        "$ref": "timestamp.json",
-        "description": "The modified property represents the time that this particular version of the object was created."
-      },
-  	"revoked": {
-  	  "type": "boolean",
-  	  "description": "The revoked property indicates whether the object has been revoked."
-  	},
-  	"version_comment": {
-  	   "type": "string",
-  	   "description": "A comment outlining why the new version of this object was created."
-  	},
-  	"external_references": {
-  	   "type": "array",
-  	   "description": "A list of external references which refers to non-STIX information.",
-  	   "items": {
-  	     "$ref": "external-reference.json",
-         "minItems": 1
-  	   }
-  	},
+    "modified": {
+      "$ref": "timestamp.json",
+      "description": "The modified property represents the time that this particular version of the object was created."
+    },
+    "revoked": {
+      "type": "boolean",
+      "description": "The revoked property indicates whether the object has been revoked."
+    },
+    "version_comment": {
+      "type": "string",
+      "description": "A comment outlining why the new version of this object was created."
+    },
+    "external_references": {
+      "type": "array",
+      "description": "A list of external references which refers to non-STIX information.",
+      "items": {
+        "$ref": "external-reference.json",
+        "minItems": 1
+      }
+    },
     "object_marking_refs": {
-       "type": "array",
-       "description": "The list of marking-definition objects to be applied to this object.",
-       "items": {
-         "$ref": "identifier.json",
-         "minItems": 1
-       }
+      "type": "array",
+      "description": "The list of marking-definition objects to be applied to this object.",
+      "items": {
+        "$ref": "identifier.json",
+        "minItems": 1
+      }
     },
     "granular_markings": {
-       "type": "array",
-       "description": "The set of granular markings that apply to this object.",
-       "items": {
+      "type": "array",
+      "description": "The set of granular markings that apply to this object.",
+      "items": {
         "$ref": "granular-marking.json",
         "minItems": 1
-       }
+      }
     }
   },
   "not": {
     "anyOf": [
-	  {"required": ["confidence"]},
-	  {"required": ["severity"]},
-	  {"required": ["action"]},
-	  {"required": ["usernames"]},
-	  {"required": ["phone_numbers"]},
-	  {"required": ["addresses"]}	  
-	]
+      {
+        "required": [
+          "confidence"
+        ]
+      },
+      {
+        "required": [
+          "severity"
+        ]
+      },
+      {
+        "required": [
+          "action"
+        ]
+      },
+      {
+        "required": [
+          "usernames"
+        ]
+      },
+      {
+        "required": [
+          "phone_numbers"
+        ]
+      },
+      {
+        "required": [
+          "addresses"
+        ]
+      }
+    ]
   },
   "required": [
-    "type", 
-	"id", 
-	"version", 
-	"created", 
-	"modified"
+    "type",
+    "id",
+    "version",
+    "created",
+    "modified"
   ]
 }

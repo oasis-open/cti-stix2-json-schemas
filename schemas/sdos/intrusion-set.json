@@ -12,7 +12,9 @@
         "type": {
           "type": "string",
           "description": "The type of this object, which MUST be the literal `intrusion-set`.",
-          "enum": ["intrusion-set"]
+          "enum": [
+            "intrusion-set"
+          ]
         },
         "name": {
           "type": "string",
