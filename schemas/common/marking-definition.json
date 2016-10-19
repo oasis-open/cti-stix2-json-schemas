@@ -22,21 +22,6 @@
         }
       ]
     },
-    "definition_type": {
-      "type": "string",
-      "description": "The definition_type property identifies the type of Marking Definition."
-    },
-    "definition": {
-      "oneOf": [
-        {
-          "$ref": "#/definitions/statement"
-        },
-        {
-          "$ref": "#/definitions/tlp"
-        }
-      ],
-      "description": "The definition property contains the marking object itself."
-    },
     "created_by_ref": {
       "$ref": "identifier.json",
       "description": "The created_by_ref property specifies the ID of the identity object that describes the entity that created this Marking Definition."
@@ -49,27 +34,70 @@
       "type": "array",
       "description": "A list of external references which refers to non-STIX information.",
       "items": {
-        "$ref": "external-reference.json",
-        "minItems": 1
-      }
+        "$ref": "external-reference.json"
+      },
+      "minItems": 1
     },
     "object_marking_refs": {
       "type": "array",
       "description": "The object_marking_refs property specifies a list of IDs of marking-definition objects that apply to this Marking Definition.",
       "items": {
-        "$ref": "identifier.json",
-        "minItems": 1
-      }
+        "$ref": "identifier.json"
+      },
+      "minItems": 1
     },
     "granular_markings": {
       "type": "array",
       "description": "The granular_markings property specifies a list of granular markings applied to this object.",
       "items": {
-        "$ref": "granular-marking.json",
-        "minItems": 1
-      }
+        "$ref": "granular-marking.json"
+      },
+      "minItems": 1
     }
   },
+  "oneOf": [
+    {
+      "properties": {
+        "definition_type": {
+          "type": "string",
+          "description": "The definition_type property identifies the type of Marking Definition.",
+          "pattern": "^statement$"
+        },
+        "definition": {
+          "$ref": "#/definitions/statement",
+          "description": "The definition property contains the marking object itself."
+        }
+      }
+    },
+    {
+      "properties": {
+        "definition_type": {
+          "type": "string",
+          "description": "The definition_type property identifies the type of Marking Definition.",
+          "pattern": "^tlp$"
+        },
+        "definition": {
+          "$ref": "#/definitions/tlp",
+          "description": "The definition property contains the marking object itself."
+        }
+      }
+    },
+    {
+      "properties": {
+        "definition_type": {
+          "type": "string",
+          "description": "The definition_type property identifies the type of Marking Definition.",
+          "not": {
+            "pattern": "^(statement)|(tlp)$"
+          }
+        },
+        "definition": {
+          "type": "object",
+          "description": "The definition property contains the marking object itself."
+        }
+      }
+    }
+  ],
   "required": [
     "id",
     "type",
