@@ -16,6 +16,9 @@
             "indicator"
           ]
         },
+        "id": {
+          "pattern": "^indicator--"
+        },
         "labels": {
           "type": "array",
           "description": "This field is an Open Vocabulary that specifies the type of indicator. Open vocab - indicator-label-ov",

@@ -16,6 +16,9 @@
             "relationship"
           ]
         },
+        "id": {
+          "pattern": "^relationship--"
+        },
         "relationship_type": {
           "type": "string",
           "description": "The name used to identify the type of relationship.",

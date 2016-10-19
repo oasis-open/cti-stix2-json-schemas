@@ -16,6 +16,9 @@
             "campaign"
           ]
         },
+        "id": {
+          "pattern": "^campaign--"
+        },
         "name": {
           "type": "string",
           "description": "The name used to identify the Campaign."

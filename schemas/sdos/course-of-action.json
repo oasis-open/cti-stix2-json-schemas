@@ -16,6 +16,9 @@
             "course-of-action"
           ]
         },
+        "id": {
+          "pattern": "^course-of-action--"
+        },
         "name": {
           "type": "string",
           "description": "The name used to identify the Course of Action."

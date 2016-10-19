@@ -16,6 +16,9 @@
             "attack-pattern"
           ]
         },
+        "id": {
+          "pattern": "^attack-pattern--"
+        },
         "name": {
           "type": "string",
           "description": "The name used to identify the Attack Pattern."

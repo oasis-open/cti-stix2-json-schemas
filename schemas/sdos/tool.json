@@ -16,6 +16,9 @@
             "tool"
           ]
         },
+        "id": {
+          "pattern": "^tool--"
+        },
         "labels": {
           "type": "array",
           "description": "The kind(s) of tool(s) being described. Open Vocab - tool-label-ov",

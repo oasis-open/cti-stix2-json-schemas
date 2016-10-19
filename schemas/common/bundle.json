@@ -12,8 +12,15 @@
       ]
     },
     "id": {
-      "$ref": "identifier.json",
-      "description": "An identifier for this bundle."
+      "allOf": [
+        {
+          "$ref": "identifier.json",
+          "description": "An identifier for this bundle."
+        },
+        {
+          "pattern": "^bundle--"
+        }
+      ]
     },
     "spec_version": {
       "type": "string",

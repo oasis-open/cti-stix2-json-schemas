@@ -16,6 +16,9 @@
             "intrusion-set"
           ]
         },
+        "id": {
+          "pattern": "^intrusion-set--"
+        },
         "name": {
           "type": "string",
           "description": "The name used to identify the Intrusion Set."

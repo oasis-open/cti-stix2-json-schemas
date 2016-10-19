@@ -16,6 +16,9 @@
             "identity"
           ]
         },
+        "id": {
+          "pattern": "^identity--"
+        },
         "labels": {
           "type": "array",
           "description": "The list of roles that this Identity performs (e.g., CEO, Domain Administrators, Doctors, Hospital, or Retailer). No open vocabulary is yet defined for this property.",

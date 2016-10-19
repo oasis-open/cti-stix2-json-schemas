@@ -12,8 +12,15 @@
       ]
     },
     "id": {
-      "$ref": "identifier.json",
-      "description": "The id property universally and uniquely identifies this Marking Definition object."
+      "allOf": [
+        {
+          "$ref": "identifier.json",
+          "description": "An identifier for this bundle."
+        },
+        {
+          "pattern": "^marking-definition--"
+        }
+      ]
     },
     "definition_type": {
       "type": "string",

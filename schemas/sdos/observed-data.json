@@ -16,6 +16,9 @@
             "observed-data"
           ]
         },
+        "id": {
+          "pattern": "^observed-data--"
+        },
         "first_observed": {
           "$ref": "../common/timestamp.json",
           "description": "The beginning of the time window that the data was observed during."

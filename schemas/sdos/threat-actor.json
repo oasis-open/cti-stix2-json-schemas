@@ -16,6 +16,9 @@
             "threat-actor"
           ]
         },
+        "id": {
+          "pattern": "^threat-actor--"
+        },
         "labels": {
           "type": "array",
           "description": "This field specifies the type of threat actor. Open Vocab - threat-actor-label-ov",
