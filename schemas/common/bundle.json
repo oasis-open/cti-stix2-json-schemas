@@ -4,11 +4,13 @@
   "description": "A bundle is a collection of STIX Objects grouped together to enable them to be exchanged across interoperable systems.",
   "type": "object",
   "properties": {
-	"type": {
-	  "type": "string",
-	  "description": "The type of this object, which MUST be the literal `bundle`.",
-	  "enum": ["bundle"]
-	},
+    "type": {
+      "type": "string",
+      "description": "The type of this object, which MUST be the literal `bundle`.",
+      "enum": [
+        "bundle"
+      ]
+    },
     "id": {
       "allOf": [
         {
@@ -20,139 +22,145 @@
         }
       ]
     },
-	"spec_version": {
-	   "type": "string",
-       "enum": ["2.0"],
-	   "description": "The version of the STIX specification used to represent the content in this bundle."
-	},
-	"attack_patterns": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more Attack Patterns.",
-	  "items": {
-	    "$ref": "../sdos/attack-pattern.json",
-		"minItems": 1
-	  }
-	},
-	"campaigns": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more Campaigns.",
-	  "items": {
-	    "$ref": "../sdos/campaign.json",
-		"minItems": 1
-	  }
-	},
-	"courses_of_action": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more Courses of Action.",
-	  "items": {
-	    "$ref": "../sdos/course-of-action.json",
-		"minItems": 1
-	  }
-	},
+    "spec_version": {
+      "type": "string",
+      "enum": [
+        "2.0"
+      ],
+      "description": "The version of the STIX specification used to represent the content in this bundle."
+    },
+    "attack_patterns": {
+      "type": "array",
+      "description": "Specifies a set of one or more Attack Patterns.",
+      "items": {
+        "$ref": "../sdos/attack-pattern.json",
+        "minItems": 1
+      }
+    },
+    "campaigns": {
+      "type": "array",
+      "description": "Specifies a set of one or more Campaigns.",
+      "items": {
+        "$ref": "../sdos/campaign.json",
+        "minItems": 1
+      }
+    },
+    "courses_of_action": {
+      "type": "array",
+      "description": "Specifies a set of one or more Courses of Action.",
+      "items": {
+        "$ref": "../sdos/course-of-action.json",
+        "minItems": 1
+      }
+    },
     "identities": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more Identities.",
-	  "items": {
-	    "$ref": "../sdos/identity.json",
-		"minItems": 1
-	  }
-	},
-	"indicators": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more cyber threat Indicators.",
-	  "items": {
-	    "$ref": "../sdos/indicator.json",
-		"minItems": 1
-	  }
-	},	
-	"intrusion_sets": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more cyber threat Intrusion Sets.",
-	  "items": {
-	    "$ref": "../sdos/intrusion-set.json",
-		"minItems": 1
+      "type": "array",
+      "description": "Specifies a set of one or more Identities.",
+      "items": {
+        "$ref": "../sdos/identity.json",
+        "minItems": 1
       }
-	},
-	"malware": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more Malware TTPs.",
-	  "items": {
-	    "$ref": "../sdos/malware.json",
-		"minItems": 1
-	  }
-	},
-	"marking_definitions": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more Marking Definitions.",
-	  "items": {
-	    "$ref": "marking-definition.json",
-	    "minItems": 1
-	  }
-	},
-	"observed_data": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more piece of Observed Data.",
-	  "items": {
-	    "$ref": "../sdos/observed-data.json",
-		"minItems": 1
-	  }
-	},
-	"relationships": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more relationships between SDOs.",
-	  "items": {
-	    "$ref": "../sros/relationship.json",
-		"minItems": 1
-	  }
-	},
-	"reports": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more reports.",
-	  "items": {
-	    "$ref": "../sdos/report.json",
-		"minItems": 1
-	  }
-	},
-	"sightings": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more sightings.",
-	  "items": {
-	    "$ref": "../sros/sighting.json",
-		"minItems": 1
-	  }
-	},	
-	"threat_actors": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more Threat Actors.",
-	  "items": {
-	    "$ref": "../sdos/threat-actor.json",
-		"minItems": 1
-	  }
-	},
+    },
+    "indicators": {
+      "type": "array",
+      "description": "Specifies a set of one or more cyber threat Indicators.",
+      "items": {
+        "$ref": "../sdos/indicator.json",
+        "minItems": 1
+      }
+    },
+    "intrusion_sets": {
+      "type": "array",
+      "description": "Specifies a set of one or more cyber threat Intrusion Sets.",
+      "items": {
+        "$ref": "../sdos/intrusion-set.json",
+        "minItems": 1
+      }
+    },
+    "malware": {
+      "type": "array",
+      "description": "Specifies a set of one or more Malware TTPs.",
+      "items": {
+        "$ref": "../sdos/malware.json",
+        "minItems": 1
+      }
+    },
+    "marking_definitions": {
+      "type": "array",
+      "description": "Specifies a set of one or more Marking Definitions.",
+      "items": {
+        "$ref": "marking-definition.json",
+        "minItems": 1
+      }
+    },
+    "observed_data": {
+      "type": "array",
+      "description": "Specifies a set of one or more piece of Observed Data.",
+      "items": {
+        "$ref": "../sdos/observed-data.json",
+        "minItems": 1
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "description": "Specifies a set of one or more relationships between SDOs.",
+      "items": {
+        "$ref": "../sros/relationship.json",
+        "minItems": 1
+      }
+    },
+    "reports": {
+      "type": "array",
+      "description": "Specifies a set of one or more reports.",
+      "items": {
+        "$ref": "../sdos/report.json",
+        "minItems": 1
+      }
+    },
+    "sightings": {
+      "type": "array",
+      "description": "Specifies a set of one or more sightings.",
+      "items": {
+        "$ref": "../sros/sighting.json",
+        "minItems": 1
+      }
+    },
+    "threat_actors": {
+      "type": "array",
+      "description": "Specifies a set of one or more Threat Actors.",
+      "items": {
+        "$ref": "../sdos/threat-actor.json",
+        "minItems": 1
+      }
+    },
     "tools": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more Tools.",
-	  "items": {
-	    "$ref": "../sdos/tool.json",
-		"minItems": 1
-	  }
-	},    
-    "vulnerabilities": {
-	  "type": "array",
-	  "description": "Specifies a set of one or more Vulnerabilities.",
-	  "items": {
-	    "$ref": "../sdos/vulnerability.json",
-		"minItems": 1
-	  }
-	},
-    "custom_objects": {
-	  "type": "array",
-	  "description": "Specifies a list of one or more custom objects.",
-	  "items": {
-        "type": "object",
-		"minItems": 1
+      "type": "array",
+      "description": "Specifies a set of one or more Tools.",
+      "items": {
+        "$ref": "../sdos/tool.json",
+        "minItems": 1
       }
-	}
+    },
+    "vulnerabilities": {
+      "type": "array",
+      "description": "Specifies a set of one or more Vulnerabilities.",
+      "items": {
+        "$ref": "../sdos/vulnerability.json",
+        "minItems": 1
+      }
+    },
+    "custom_objects": {
+      "type": "array",
+      "description": "Specifies a list of one or more custom objects.",
+      "items": {
+        "type": "object",
+        "minItems": 1
+      }
+    }
   },
-  "required": ["type", "id", "spec_version"]
+  "required": [
+    "type",
+    "id",
+    "spec_version"
+  ]
 }

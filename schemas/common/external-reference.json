@@ -4,14 +4,14 @@
   "description": "External references are used to describe pointers to information represented outside of STIX.",
   "type": "object",
   "properties": {
-	 "description": {
-  	  "type": "string",
-  	  "description": "A human readable description"
-	  },
-  	"url": {
-  	  "$ref": "url.json",
-  	  "description": "A URL reference to an external resource."
-  	}
+    "description": {
+      "type": "string",
+      "description": "A human readable description"
+    },
+    "url": {
+      "$ref": "url.json",
+      "description": "A URL reference to an external resource."
+    }
   },
   "anyOf": [
     {
@@ -27,7 +27,10 @@
           "pattern": "^CVE-\\d{4}-(0\\d{3}|[1-9]\\d{3,})$"
         }
       },
-      "required" : ["source_name", "external_id"]
+      "required": [
+        "source_name",
+        "external_id"
+      ]
     },
     {
       "properties": {
@@ -42,31 +45,46 @@
           "pattern": "^CAPEC-\\d+$"
         }
       },
-      "required" : ["source_name", "external_id"]
+      "required": [
+        "source_name",
+        "external_id"
+      ]
     },
     {
       "properties": {
         "source_name": {
           "type": "string",
           "description": "The source within which the external-reference is defined (system, registry, organization, etc.)",
-          "not": {"pattern": "^(cve)|(capec)$"}
+          "not": {
+            "pattern": "^(cve)|(capec)$"
+          }
         },
         "external_id": {
           "type": "string",
           "description": "An identifier for the external reference content.",
-          "not": {"pattern": "^(CVE-\\d{4}-(0\\d{3}|[1-9]\\d{3,}))|(CAPEC-\\d+)$"}
+          "not": {
+            "pattern": "^(CVE-\\d{4}-(0\\d{3}|[1-9]\\d{3,}))|(CAPEC-\\d+)$"
+          }
         }
       },
-      "required" : ["source_name"],
-      "anyOf":[
+      "required": [
+        "source_name"
+      ],
+      "anyOf": [
         {
-          "required" : ["external_id"]
+          "required": [
+            "external_id"
+          ]
         },
         {
-          "required" : ["description"]
+          "required": [
+            "description"
+          ]
         },
         {
-          "required" : ["url"]
+          "required": [
+            "url"
+          ]
         }
       ]
     }

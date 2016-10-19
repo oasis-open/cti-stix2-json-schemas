@@ -12,7 +12,9 @@
         "type": {
           "type": "string",
           "description": "The type of this object, which MUST be the literal `sighting`.",
-          "enum": ["sighting"]
+          "enum": [
+            "sighting"
+          ]
         },
         "id": {
           "pattern": "^sighting--"
@@ -67,6 +69,6 @@
     }
   ],
   "required": [
-    "sighting_of_ref"    
+    "sighting_of_ref"
   ]
 }

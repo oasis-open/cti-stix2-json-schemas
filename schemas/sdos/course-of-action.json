@@ -12,7 +12,9 @@
         "type": {
           "type": "string",
           "description": "The type of this object, which MUST be the literal `course-of-action`.",
-          "enum": ["course-of-action"]
+          "enum": [
+            "course-of-action"
+          ]
         },
         "id": {
           "pattern": "^course-of-action--"
@@ -28,7 +30,7 @@
       }
     }
   ],
-  "required": [    
+  "required": [
     "name"
   ]
 }
