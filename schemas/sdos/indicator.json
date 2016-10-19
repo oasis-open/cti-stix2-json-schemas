@@ -12,9 +12,10 @@
         "type": {
           "type": "string",
           "description": "The type of this object, which MUST be the literal `indicator`.",
-          "enum": [
-            "indicator"
-          ]
+          "enum": ["indicator"]
+        },
+        "id": {
+          "pattern": "^indicator--"
         },
         "labels": {
           "type": "array",
@@ -40,7 +41,7 @@
           "type": "string",
           "description": "The language used to define the pattern (in the pattern field). The default is cybox if the field is omitted. Open Vocabulary - pattern-lang-ov"
         },
-        "pattern_lang_version": {
+		"pattern_lang_version": {
           "type": "string",
           "description": "The version of the language used to define the pattern (in the pattern field)."
         },

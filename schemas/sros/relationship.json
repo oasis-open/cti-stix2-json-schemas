@@ -12,9 +12,10 @@
         "type": {
           "type": "string",
           "description": "The type of this object, which MUST be the literal `relationship`.",
-          "enum": [
-            "relationship"
-          ]
+          "enum": ["relationship"]
+        },
+        "id": {
+          "pattern": "^relationship--"
         },
         "relationship_type": {
           "type": "string",

@@ -12,9 +12,10 @@
         "type": {
           "type": "string",
           "description": "The type of this object, which MUST be the literal `identity`.",
-          "enum": [
-            "identity"
-          ]
+          "enum": ["identity"]
+        },
+        "id": {
+          "pattern": "^identity--"
         },
         "labels": {
           "type": "array",
@@ -33,10 +34,10 @@
           "description": "A description that provides more details and context about the Identity."
         },
         "identity_class": {
-          "type": "string",
-          "description": "The type of entity that this Identity describes, e.g., an individual or organization. Open Vocab - identity-class-ov"
-        },
-        "sectors": {
+		  "type": "string",
+		  "description": "The type of entity that this Identity describes, e.g., an individual or organization. Open Vocab - identity-class-ov"
+		},
+		"sectors": {
           "type": "array",
           "description": "The list of sectors that this Identity belongs to. Open Vocab - industry-sector-ov",
           "items": {
@@ -52,7 +53,7 @@
             "minItems": 1
           }
         },
-        "nationalities": {
+		"nationalities": {
           "type": "array",
           "description": "The nationalities of this Identity. The value MUST be from the ISO 3166-1 Alpha-2 codes and represented in lowercase.",
           "items": {
@@ -60,16 +61,16 @@
             "minItems": 1
           }
         },
-        "contact_information": {
-          "type": "string",
-          "description": "The contact information (e-mail, phone number, etc.) for this Identity."
-        }
-      }
-    }
+		"contact_information": {
+		  "type": "string",
+		  "description": "The contact information (e-mail, phone number, etc.) for this Identity."
+		}
+	  }
+	}
   ],
   "required": [
-    "name",
-    "identity_class"
+    "name",    
+	"identity_class"
   ],
   "definitions": {
     "identity-class-ov": {
@@ -82,10 +83,10 @@
         "unknown"
       ]
     },
-    "industry-sector-ov": {
-      "type": "string",
-      "enum": [
-        "agriculture",
+	"industry-sector-ov": {
+	  "type": "string",
+	  "enum": [
+	    "agriculture",
         "aerospace",
         "automotive",
         "communications",
@@ -117,3 +118,4 @@
     }
   }
 }
+		

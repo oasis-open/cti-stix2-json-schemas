@@ -7,13 +7,22 @@
     "type": {
       "type": "string",
       "description": "The type of this object, which MUST be the literal `marking-definition`.",
-      "enum": [
-        "marking-definition"
-      ]
+      "enum": ["marking-definition"]
     },
     "id": {
       "$ref": "identifier.json",
       "description": "The id property universally and uniquely identifies this Marking Definition object."
+    },
+    "id": {
+      "allOf": [
+        {
+          "$ref": "identifier.json",
+          "description": "An identifier for this bundle."
+        },
+        {
+          "pattern": "^marking-definition--"
+        }
+      ]
     },
     "definition_type": {
       "type": "string",
@@ -21,12 +30,8 @@
     },
     "definition": {
       "oneOf": [
-        {
-          "$ref": "#/definitions/statement"
-        },
-        {
-          "$ref": "#/definitions/tlp"
-        }
+        {"$ref": "#/definitions/statement"},
+        {"$ref": "#/definitions/tlp"}
       ],
       "description": "The definition property contains the marking object itself."
     },
@@ -39,38 +44,39 @@
       "description": "The created property represents the time at which the first version of this Marking Definition object was created."
     },
     "external_references": {
-      "type": "array",
-      "description": "A list of external references which refers to non-STIX information.",
-      "items": {
-        "$ref": "external-reference.json",
-        "minItems": 1
-      }
+       "type": "array",
+       "description": "A list of external references which refers to non-STIX information.",
+       "items": {
+         "$ref": "external-reference.json",
+         "minItems": 1
+       }
     },
     "object_marking_refs": {
-      "type": "array",
-      "description": "The object_marking_refs property specifies a list of IDs of marking-definition objects that apply to this Marking Definition.",
-      "items": {
-        "$ref": "identifier.json",
-        "minItems": 1
-      }
+       "type": "array",
+       "description": "The object_marking_refs property specifies a list of IDs of marking-definition objects that apply to this Marking Definition.",
+       "items": {
+         "$ref": "identifier.json",
+         "minItems": 1
+       }
     },
     "granular_markings": {
-      "type": "array",
-      "description": "The granular_markings property specifies a list of granular markings applied to this object.",
-      "items": {
-        "$ref": "granular-marking.json",
-        "minItems": 1
-      }
+       "type": "array",
+       "description": "The granular_markings property specifies a list of granular markings applied to this object.",
+       "items": {
+         "$ref": "granular-marking.json",
+         "minItems": 1
+       }
     }
   },
+
   "required": [
-    "id",
-    "type",
-    "definition",
-    "definition_type",
+    "id", 
+    "type", 
+    "definition", 
+    "definition_type", 
     "created"
   ],
-  "definitions": {
+  "definitions": {   
     "statement": {
       "type": "object",
       "properties": {
@@ -79,27 +85,18 @@
           "description": "A statement (e.g., copyright, terms of use) applied to the content marked by this marking definition."
         }
       },
-      "required": [
-        "statement"
-      ]
-    },
+      "required": ["statement"]
+    },    
     "tlp": {
       "type": "object",
       "properties": {
         "tlp": {
           "type": "string",
           "description": "The TLP level of the content marked by this marking definition, as defined in this section.",
-          "enum": [
-            "white",
-            "green",
-            "amber",
-            "red"
-          ]
+          "enum": ["white", "green", "amber", "red"]
         }
       },
-      "required": [
-        "tlp"
-      ]
+      "required": ["tlp"]
     }
   }
 }

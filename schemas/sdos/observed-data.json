@@ -12,9 +12,10 @@
         "type": {
           "type": "string",
           "description": "The type of this object, which MUST be the literal `observed-data`.",
-          "enum": [
-            "observed-data"
-          ]
+          "enum": ["observed-data"]
+        },
+        "id": {
+          "pattern": "^observed-data--"
         },
         "first_observed": {
           "$ref": "../common/timestamp.json",

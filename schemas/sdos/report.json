@@ -12,9 +12,10 @@
         "type": {
           "type": "string",
           "description": "The type of this object, which MUST be the literal `report`.",
-          "enum": [
-            "report"
-          ]
+          "enum": ["report"]
+        },
+        "id": {
+          "pattern": "^report--"
         },
         "labels": {
           "type": "array",
@@ -35,7 +36,7 @@
         "published": {
           "$ref": "../common/timestamp.json",
           "description": "The date that this report object was officially published by the creator of this report."
-        },
+        },        
         "object_refs": {
           "type": "array",
           "description": "Specifies the STIX Objects that are referred to by this Report.",
