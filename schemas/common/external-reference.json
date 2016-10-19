@@ -4,40 +4,70 @@
   "description": "External references are used to describe pointers to information represented outside of STIX.",
   "type": "object",
   "properties": {
-    "source_name": {
-      "type": "string",
-      "description": "The source within which the external-reference is defined (system, registry, organization, etc.)"
-    },
-    "description": {
-      "type": "string",
-      "description": "A human readable description"
-    },
-    "url": {
-      "$ref": "url.json",
-      "description": "A URL reference to an external resource."
-    },
-    "external_id": {
-      "type": "string",
-      "description": "An identifier for the external reference content."
-    }
+	 "description": {
+  	  "type": "string",
+  	  "description": "A human readable description"
+	  },
+  	"url": {
+  	  "$ref": "url.json",
+  	  "description": "A URL reference to an external resource."
+  	}
   },
-  "required": [
-    "source_name"
-  ],
   "anyOf": [
     {
-      "required": [
-        "external_id"
-      ]
+      "properties": {
+        "source_name": {
+          "type": "string",
+          "description": "The source within which the external-reference is defined (system, registry, organization, etc.)",
+          "pattern": "^cve$"
+        },
+        "external_id": {
+          "type": "string",
+          "description": "An identifier for the external reference content.",
+          "pattern": "^CVE-\\d{4}-(0\\d{3}|[1-9]\\d{3,})$"
+        }
+      },
+      "required" : ["source_name", "external_id"]
     },
     {
-      "required": [
-        "description"
-      ]
+      "properties": {
+        "source_name": {
+          "type": "string",
+          "description": "The source within which the external-reference is defined (system, registry, organization, etc.)",
+          "pattern": "^capec$"
+        },
+        "external_id": {
+          "type": "string",
+          "description": "An identifier for the external reference content.",
+          "pattern": "^CAPEC-\\d+$"
+        }
+      },
+      "required" : ["source_name", "external_id"]
     },
     {
-      "required": [
-        "url"
+      "properties": {
+        "source_name": {
+          "type": "string",
+          "description": "The source within which the external-reference is defined (system, registry, organization, etc.)",
+          "not": {"pattern": "^(cve)|(capec)$"}
+        },
+        "external_id": {
+          "type": "string",
+          "description": "An identifier for the external reference content.",
+          "not": {"pattern": "^(CVE-\\d{4}-(0\\d{3}|[1-9]\\d{3,}))|(CAPEC-\\d+)$"}
+        }
+      },
+      "required" : ["source_name"],
+      "anyOf":[
+        {
+          "required" : ["external_id"]
+        },
+        {
+          "required" : ["description"]
+        },
+        {
+          "required" : ["url"]
+        }
       ]
     }
   ]
