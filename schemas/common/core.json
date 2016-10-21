@@ -27,11 +27,11 @@
     },
     "labels": {
       "type": "array",
-      "description": "This field specifies the type of object if known and allows for implementation dependant or trust group dependant labels or tags to also be applied to this object for further classification and sorting.",
+      "description": "The labels property specifies a set of classifications.",
       "items": {
-        "type": "string",
-        "minItems": 1
-      }
+        "type": "string"
+      },
+      "minItems": 1
     },
     "version": {
       "type": "integer",
@@ -51,33 +51,29 @@
       "type": "boolean",
       "description": "The revoked property indicates whether the object has been revoked."
     },
-    "version_comment": {
-      "type": "string",
-      "description": "A comment outlining why the new version of this object was created."
-    },
     "external_references": {
       "type": "array",
       "description": "A list of external references which refers to non-STIX information.",
       "items": {
-        "$ref": "external-reference.json",
-        "minItems": 1
-      }
+        "$ref": "external-reference.json"
+      },
+      "minItems": 1
     },
     "object_marking_refs": {
       "type": "array",
       "description": "The list of marking-definition objects to be applied to this object.",
       "items": {
-        "$ref": "identifier.json",
-        "minItems": 1
-      }
+        "$ref": "identifier.json"
+      },
+      "minItems": 1
     },
     "granular_markings": {
       "type": "array",
       "description": "The set of granular markings that apply to this object.",
       "items": {
-        "$ref": "granular-marking.json",
-        "minItems": 1
-      }
+        "$ref": "granular-marking.json"
+      },
+      "minItems": 1
     }
   },
   "patternProperties": {

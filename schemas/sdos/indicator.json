@@ -23,9 +23,9 @@
           "type": "array",
           "description": "This field is an Open Vocabulary that specifies the type of indicator. Open vocab - indicator-label-ov",
           "items": {
-            "type": "string",
-            "minItems": 1
-          }
+            "type": "string"
+          },
+          "minItems": 1
         },
         "name": {
           "type": "string",
@@ -37,11 +37,11 @@
         },
         "pattern": {
           "type": "string",
-          "description": "The detection pattern for this indicator. The default language is CybOX Patterning."
+          "description": "The detection pattern for this indicator. The default language is STIX Patterning."
         },
         "pattern_lang": {
           "type": "string",
-          "description": "The language used to define the pattern (in the pattern field). The default is cybox if the field is omitted. Open Vocabulary - pattern-lang-ov"
+          "description": "The language used to define the pattern (in the pattern field). The default is stix if the field is omitted. Open Vocabulary - pattern-lang-ov"
         },
         "pattern_lang_version": {
           "type": "string",
@@ -94,7 +94,7 @@
     "pattern-lang-ov": {
       "type": "string",
       "enum": [
-        "cybox",
+        "stix",
         "openioc",
         "snort",
         "yara"

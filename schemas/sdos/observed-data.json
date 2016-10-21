@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "observed-data",
-  "description": "Observed data conveys information that was observed on systems and networks, such as log data or network traffic, using the CybOX specification.",
+  "description": "Observed data conveys information that was observed on systems and networks, such as log data or network traffic, using the Cyber Observable specification.",
   "type": "object",
   "allOf": [
     {
@@ -33,9 +33,9 @@
           "minimum": 1,
           "maximum": 999999999
         },
-        "cybox": {
-          "$ref": "../common/cybox-container.json",
-          "description": "The CybOX content that describes a single `fact` that was observed."
+        "objects": {
+          "type": "array",
+          "description": "A dictionary of Cyber Observable Objects that describes the single 'fact' that was observed."
         }
       }
     }
@@ -44,6 +44,6 @@
     "first_observed",
     "last_observed",
     "number_observed",
-    "cybox"
+    "objects"
   ]
 }

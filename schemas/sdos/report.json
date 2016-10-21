@@ -23,9 +23,9 @@
           "type": "array",
           "description": "This field is an Open Vocabulary that specifies the primary subject of this report. The suggested values for this field are in report-label-ov.",
           "items": {
-            "type": "string",
-            "minItems": 1
-          }
+            "type": "string"
+          },
+          "minItems": 1
         },
         "name": {
           "type": "string",
@@ -43,9 +43,9 @@
           "type": "array",
           "description": "Specifies the STIX Objects that are referred to by this Report.",
           "items": {
-            "$ref": "../common/identifier.json",
-            "minItems": 1
-          }
+            "$ref": "../common/identifier.json"
+          },
+          "minItems": 1
         }
       }
     }

@@ -23,9 +23,9 @@
           "type": "array",
           "description": "The kind(s) of tool(s) being described. Open Vocab - tool-label-ov",
           "items": {
-            "type": "string",
-            "minItems": 1
-          }
+            "type": "string"
+          },
+          "minItems": 1
         },
         "name": {
           "type": "string",
@@ -43,9 +43,9 @@
           "type": "array",
           "description": "The list of kill chain phases for which this Tool instance can be used.",
           "items": {
-            "$ref": "../common/kill-chain-phase.json",
-            "minItems": 1
-          }
+            "$ref": "../common/kill-chain-phase.json"
+          },
+          "minItems": 1
         }
       }
     }

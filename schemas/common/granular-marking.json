@@ -8,9 +8,9 @@
       "type": "array",
       "description": "A list of selectors for content contained within the STIX object in which this property appears.",
       "items": {
-        "type": "string",
-        "minItems": 1
-      }
+        "type": "string"
+      },
+      "minItems": 1
     },
     "marking_ref": {
       "$ref": "identifier.json",
