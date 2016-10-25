@@ -31,9 +31,9 @@
           "type": "array",
           "description": "Alternative names used to identify this Intrusion Set.",
           "items": {
-            "type": "string",
-            "minItems": 1
-          }
+            "type": "string"
+          },
+          "minItems": 1
         },
         "first_seen": {
           "$ref": "../common/timestamp.json",
@@ -47,9 +47,9 @@
           "type": "array",
           "description": "The high level goals of this Intrusion Set, namely, what are they trying to do.",
           "items": {
-            "type": "string",
-            "minItems": 1
-          }
+            "type": "string"
+          },
+          "minItems": 1
         },
         "resource_level": {
           "type": "string",
@@ -71,9 +71,9 @@
           "type": "array",
           "description": "The secondary reasons, motivations, or purposes behind this Intrusion Set. Open Vocab - attack-motivation-ov",
           "items": {
-            "type": "string",
-            "minItems": 1
-          }
+            "type": "string"
+          },
+          "minItems": 1
         }
       }
     }

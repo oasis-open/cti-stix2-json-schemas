@@ -49,17 +49,17 @@
           "type": "array",
           "description": "A list of ID references to the Observed Data objects that contain the raw cyber data for this Sighting.",
           "items": {
-            "$ref": "../common/identifier.json",
-            "minItems": 1
-          }
+            "$ref": "../common/identifier.json"
+          },
+          "minItems": 1
         },
         "where_sighted_refs": {
           "type": "array",
           "description": "The ID of the Victim Target objects of the entities that saw the sighting.",
           "items": {
-            "$ref": "../common/identifier.json",
-            "minItems": 1
-          }
+            "$ref": "../common/identifier.json"
+          },
+          "minItems": 1
         },
         "summary": {
           "type": "boolean",

@@ -31,9 +31,9 @@
           "type": "array",
           "description": "Alternative names used to identify this campaign.",
           "items": {
-            "type": "string",
-            "minItems": 1
-          }
+            "type": "string"
+          },
+          "minItems": 1
         },
         "first_seen": {
           "$ref": "../common/timestamp.json",
