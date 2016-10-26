@@ -29,13 +29,14 @@
         },
         "number_observed": {
           "type": "integer",
-          "description": "The number of times the data represented in the cybox property was observed. This MUST be an integer between 1 and 999,999,999 inclusive.",
+          "description": "The number of times the data represented in the objects property was observed. This MUST be an integer between 1 and 999,999,999 inclusive.",
           "minimum": 1,
           "maximum": 999999999
         },
         "objects": {
-          "type": "array",
-          "description": "A dictionary of Cyber Observable Objects that describes the single 'fact' that was observed."
+          "type": "object",
+          "description": "A dictionary of Cyber Observable Objects that describes the single 'fact' that was observed.",
+          "minProperties": 1
         }
       }
     }

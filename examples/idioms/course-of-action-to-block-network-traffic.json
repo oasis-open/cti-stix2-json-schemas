@@ -23,16 +23,11 @@
       "first_observed": "2015-12-21T19:00:00Z",
       "last_observed": "2015-12-21T20:00:00Z",
       "number_observed": 11,
-      "cybox": {
-        "type": "cybox-container",
-        "spec_version": "3.0",
-        "objects": [
-          {
-            "type": "ipv4addr-object",
-            "id": "ipv4addr-object--1",
-            "value:": "10.10.10.10"
-          }
-        ]
+      "objects": {
+        "0": {
+          "type": "ipv4addr",
+          "value:": "10.10.10.10"
+        }
       }
     }
   ],

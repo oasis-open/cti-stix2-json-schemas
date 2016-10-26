@@ -7,8 +7,8 @@
       "type": "threat-actor",
       "id": "threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428",
       "version": 1,
-      "created": "2014-11-19 23:39:03.893348",
-      "modified": "2014-11-19 23:39:03.893348",
+      "created": "2014-11-19T23:39:03.893348Z",
+      "modified": "2014-11-19T23:39:03.893348Z",
       "name": "Disco Team Threat Actor Group",
       "labels": [
         "crime-syndicate"
@@ -20,9 +20,9 @@
       "type": "identity",
       "id": "identity--733c5838-34d9-4fbf-949c-62aba761184c",
       "version": 1,
-      "created": "2016-08-23T18:05:49.307000",
-      "modified": "2016-08-23T18:05:49.307000",
-      "name": "Disco Tean",
+      "created": "2016-08-23T18:05:49.307000Z",
+      "modified": "2016-08-23T18:05:49.307000Z",
+      "name": "Disco Team",
       "identity_class": "organization",
       "regions": [
         "California"
@@ -38,8 +38,8 @@
       "type": "relationship",
       "id": "relationship--966c5838-34d9-4fbf-949c-62aba7611837",
       "version": 1,
-      "created": "2016-08-23T18:05:49.307000",
-      "modified": "2016-08-23T18:05:49.307000",
+      "created": "2016-08-23T18:05:49.307000Z",
+      "modified": "2016-08-23T18:05:49.307000Z",
       "relationship_type": "attributed-to",
       "source_ref": "threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428",
       "target_ref": "identity--733c5838-34d9-4fbf-949c-62aba761184c"

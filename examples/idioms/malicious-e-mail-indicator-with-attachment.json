@@ -12,8 +12,8 @@
       "name": "Phishing",
       "external-references": [
         {
-          "source_name": "CAPEC",
-          "external_id": "capec-98"
+          "source_name": "capec",
+          "external_id": "CAPEC-98"
         }
       ]
     }
@@ -31,7 +31,7 @@
       ],
       "valid_from": "2014-10-31T15:52:13.127931Z",
       "pattern": "email-message:header.subject MATCHES  /^[IMPORTANT] Please Review Before/",
-      "pattern_lang": "cybox"
+      "pattern_lang": "stix"
     },
     {
       "type": "indicator",
@@ -45,7 +45,7 @@
       ],
       "valid_from": "2014-10-31T15:52:13.127931Z",
       "pattern": "email-message:header.subject MATCHES  /^[IMPORTANT] Please Review Before/",
-      "pattern_lang": "cybox"
+      "pattern_lang": "stix"
     },
     {
       "type": "indicator",
@@ -59,7 +59,7 @@
       ],
       "valid_from": "2014-10-31T15:52:13.127931Z",
       "pattern": "email-message:attachments.name MATCHES  /^Final Report.+\\.exe$/",
-      "pattern_lang": "cybox"
+      "pattern_lang": "stix"
     }
   ],
   "relationships": [

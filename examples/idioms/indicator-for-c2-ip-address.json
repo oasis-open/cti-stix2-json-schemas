@@ -14,7 +14,7 @@
         "malicious-activity"
       ],
       "pattern": "ipv4addr:value = '10.0.0.0'",
-      "pattern_lang": "cybox",
+      "pattern_lang": "stix",
       "valid_from": "2014-05-08T09:00:00.000000Z"
     }
   ]
