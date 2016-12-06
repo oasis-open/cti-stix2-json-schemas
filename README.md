@@ -1,8 +1,14 @@
-# README
+# cti-stix2-json-schemas
 
-## <a id="readme-general">OASIS Open Repository: cti-stix2-json-schemas</a>
+*This is an [OASIS Open Repository](https://www.oasis-open.org/resources/open-repositories/). See the [Governance](#governance) section for more information.*
 
-This GitHub public repository ( **[https://github.com/oasis-open/cti-stix2-json-schemas](https://github.com/oasis-open/cti-stix2-json-schemas)** ) was created at the request of the [OASIS Cyber Threat Intelligence (CTI) TC](https://www.oasis-open.org/committees/cti/) as an [OASIS Open Repository](https://www.oasis-open.org/resources/open-repositories/) to support development of open source resources related to Technical Committee work.
+This repository contains non-normative JSON schemas and examples for STIX 2. The examples include short examples of particular objects, more complete use-case examples, and complete reports in STIX 2. The repository contains both JSON schemas and JSON STIX documents.
+
+**NOTE:** The schemas in this repository are intended to follow the STIX 2.0 Specification (TODO: insert link), but some requirements of the specification cannot be enforced in JSON schema alone. As a result, these schemas are insufficient to determine whether a particular example of STIX 2.0 JSON is "valid". Additionally, though care has been taken to ensure that these schemas do not conflict with the specification, in case of conflict, the specification takes precedence.
+
+## Governance
+
+This GitHub public repository ( **[https://github.com/oasis-open/cti-stix2-json-schemas](https://github.com/oasis-open/cti-stix2-json-schemas)** ) was [proposed](https://lists.oasis-open.org/archives/cti/201608/msg00050.html) and [approved](https://www.oasis-open.org/committees/ballot.php?id=2961) [[bis](https://issues.oasis-open.org/browse/TCADMIN-2424)] by the the [OASIS Cyber Threat Intelligence (CTI) TC](https://www.oasis-open.org/committees/cti/) as an [OASIS Open Repository](https://www.oasis-open.org/resources/open-repositories/) to support development of open source resources related to Technical Committee work.
 
 While this Open Repository remains associated with the sponsor TC, its development priorities, leadership, intellectual property terms, participation rules, and other matters of governance are [separate and distinct](https://github.com/oasis-open/cti-stix2-json-schemas/blob/master/CONTRIBUTING.md#governance-distinct-from-oasis-tc-process) from the OASIS TC Process and related policies.
 
@@ -10,17 +16,7 @@ All contributions made to this Open Repository are subject to open source licens
 
 As documented in ["Public Participation Invited](https://github.com/oasis-open/cti-stix2-json-schemas/blob/master/CONTRIBUTING.md#public-participation-invited)", contributions to this OASIS Open Repository are invited from all parties, whether affiliated with OASIS or not. Participants must have a GitHub account, but no fees or OASIS membership obligations are required. Participation is expected to be consistent with the [OASIS Open Repository Guidelines and Procedures](https://www.oasis-open.org/policies-guidelines/open-repositories), the open source [LICENSE](https://github.com/oasis-open/cti-stix2-json-schemas/blob/master/LICENSE) designated for this particular repository, and the requirement for an [Individual Contributor License Agreement](https://www.oasis-open.org/resources/open-repositories/cla/individual-cla) that governs intellectual property.
 
-## <a id="purposeStatement">Statement of Purpose</a>
-
-Statement of Purpose for this OASIS Open Repository (cti-stix2-json-schemas) as [proposed](https://lists.oasis-open.org/archives/cti/201608/msg00050.html) and [approved](https://www.oasis-open.org/committees/ballot.php?id=2961) [[bis](https://issues.oasis-open.org/browse/TCADMIN-2424)] by the TC:
-
-The STIX schemas repository will contain non-normative JSON schemas and examples for STIX 2\. The examples will include short examples of particular objects, more complete use-case examples, and complete reports in STIX 2\. The repository will contain JSON schemas and JSON STIX documents.
-
-## <a id="purposeClarifications">Additions to Statement of Purpose</a>
-
-**NOTE:** The schemas in this repository are intended to follow the STIX 2.0 Specification (TODO: insert link), but some requirements of the specification cannot be enforced in JSON schema alone. As a result, these schemas are insufficient to determine whether a particular example of STIX 2.0 JSON is "valid". Additionally, though care has been taken to ensure that these schemas do not conflict with the specification, in case of conflict, the specification takes precedence.
-
-## <a id="maintainers">Maintainers</a>
+### <a id="maintainers">Maintainers</a>
 
 Open Repository [Maintainers](https://www.oasis-open.org/resources/open-repositories/maintainers-guide) are responsible for oversight of this project's community development activities, including evaluation of GitHub [pull requests](https://github.com/oasis-open/cti-stix2-json-schemas/blob/master/CONTRIBUTING.md#fork-and-pull-collaboration-model) and [preserving](https://www.oasis-open.org/policies-guidelines/open-repositories#repositoryManagement) open source principles of openness and fairness. Maintainers are recognized and trusted experts who serve to implement community goals and consensus design preferences.
 
