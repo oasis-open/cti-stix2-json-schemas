@@ -64,12 +64,12 @@
         "threat-report",
         "attack-pattern",
         "campaign",
+        "identity",
         "indicator",
         "malware",
         "observed-data",
         "threat-actor",
         "tool",
-        "victim-target",
         "vulnerability"
       ]
     }

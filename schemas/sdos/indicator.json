@@ -40,14 +40,6 @@
           "type": "string",
           "description": "The detection pattern for this indicator. The default language is STIX Patterning."
         },
-        "pattern_lang": {
-          "type": "string",
-          "description": "The language used to define the pattern (in the pattern field). The default is stix if the field is omitted. Open Vocabulary - pattern-lang-ov"
-        },
-        "pattern_lang_version": {
-          "type": "string",
-          "description": "The version of the language used to define the pattern (in the pattern field)."
-        },
         "valid_from": {
           "$ref": "../common/timestamp.json",
           "description": "The time from which this indicator should be considered valuable intelligence."
@@ -90,15 +82,6 @@
         "compromised",
         "malicious-activity",
         "attribution"
-      ]
-    },
-    "pattern-lang-ov": {
-      "type": "string",
-      "enum": [
-        "stix",
-        "openioc",
-        "snort",
-        "yara"
       ]
     }
   }

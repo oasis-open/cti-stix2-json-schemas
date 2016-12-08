@@ -48,22 +48,6 @@
           },
           "minItems": 1
         },
-        "regions": {
-          "type": "array",
-          "description": "The list of regions or geographic locations this Identity is located or operates in.",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 1
-        },
-        "nationalities": {
-          "type": "array",
-          "description": "The nationalities of this Identity. The value MUST be from the ISO 3166-1 Alpha-2 codes and represented in lowercase.",
-          "items": {
-            "$ref": "../common/country-code.json"
-          },
-          "minItems": 1
-        },
         "contact_information": {
           "type": "string",
           "description": "The contact information (e-mail, phone number, etc.) for this Identity."
