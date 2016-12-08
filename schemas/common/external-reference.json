@@ -13,7 +13,7 @@
       "description": "A URL reference to an external resource."
     }
   },
-  "anyOf": [
+  "oneOf": [
     {
       "properties": {
         "source_name": {

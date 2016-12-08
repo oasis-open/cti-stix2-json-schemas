@@ -5,6 +5,7 @@
   "type": "object",
   "properties": {
     "type": {
+      "title": "type",
       "type": "string",
       "pattern": "^\\-?[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*\\-?$",
       "minLength": 3,

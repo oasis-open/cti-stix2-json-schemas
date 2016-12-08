@@ -17,6 +17,7 @@
           ]
         },
         "id": {
+          "title": "id",
           "pattern": "^observed-data--"
         },
         "first_observed": {

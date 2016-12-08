@@ -17,6 +17,7 @@
           ]
         },
         "id": {
+          "title": "id",
           "pattern": "^attack-pattern--"
         },
         "name": {

@@ -18,6 +18,7 @@
           "description": "An identifier for this bundle."
         },
         {
+          "title": "id",
           "pattern": "^bundle--"
         }
       ]
