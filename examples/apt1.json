@@ -2,7 +2,7 @@
   "type": "bundle",
   "id": "bundle--cf20f99b-3ed2-4a9f-b4f1-d660a7fc8241",
   "spec_version": "2.0",
-  "intrusion_sets": [
+  "objects": [
     {
       "type": "intrusion-set",
       "id": "intrusion-set--da1065ce-972c-4605-8755-9cd1074e3b5a",
@@ -19,9 +19,7 @@
         "Comment Group",
         "Shady Rat"
       ]
-    }
-  ],
-  "threat_actors": [
+    },
     {
       "type": "threat-actor",
       "id": "threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65",
@@ -132,9 +130,7 @@
         "Military Unit Cover Designator (MUCD) 61398"
       ],
       "primary_motivation": "organizational-gain"
-    }
-  ],
-  "identities": [
+    },
     {
       "type": "identity",
       "id": "identity--a9119a87-6576-46af-bfd7-4fbe55926671",
@@ -186,9 +182,7 @@
         "government-national"
       ],
       "contact_information": "mei_qiang_82@sohu.com"
-    }
-  ],
-  "indicators": [
+    },
     {
       "type": "indicator",
       "id": "indicator--031778a4-057f-48e6-9db9-c8d72b81ccd5",
@@ -368,9 +362,7 @@
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:00:00.000000Z"
-    }
-  ],
-  "malware": [
+    },
     {
       "type": "malware",
       "id": "malware--2485b844-4efe-4343-84c8-eb33312dd56f",
@@ -461,9 +453,7 @@
         "keylogger"
       ],
       "description": "Malware family that contains functionality for keylogging, creating and killing processes, performing filesystem and registry modifications, etc."
-    }
-  ],
-  "tools": [
+    },
     {
       "type": "tool",
       "id": "tool--ce45f721-af14-4fc0-938c-000c16186418",
@@ -679,9 +669,7 @@
           "phase_name": "complete-mission"
         }
       ]
-    }
-  ],
-  "attack_patterns": [
+    },
     {
       "type": "attack-pattern",
       "id": "attack-pattern--3098c57b-d623-4c11-92f4-5905da66658b",
@@ -793,9 +781,7 @@
           "phase_name": "complete-mission"
         }
       ]
-    }
-  ],
-  "reports": [
+    },
     {
       "type": "report",
       "id": "report--e33ffe07-2f4c-48d8-b0af-ee2619d765cf",
@@ -886,9 +872,7 @@
         "relationship--b345f1d0-09c5-4a71-bfc6-a52bd5923a01",
         "relationship--912b31d0-09c5-4a71-bfc6-a52bd5989a1b"
       ]
-    }
-  ],
-  "relationships": [
+    },
     {
       "type": "relationship",
       "id": "relationship--6598bf44-1c10-4218-af9f-75b5b71c23a7",

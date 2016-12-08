@@ -2,7 +2,7 @@
   "type": "bundle",
   "id": "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
   "spec_version": "2.0",
-  "attack_patterns": [
+  "objects": [
     {
       "type": "attack-pattern",
       "id": "attack-pattern--d7b066aa-4091-4276-a142-29d5d81c3484",
@@ -16,9 +16,7 @@
           "external_id": "CAPEC-98"
         }
       ]
-    }
-  ],
-  "indicators": [
+    },
     {
       "type": "indicator",
       "id": "indicator--8cf9236f-1b96-493d-98be-0c1c1e8b62d7",
@@ -57,9 +55,7 @@
       ],
       "valid_from": "2014-10-31T15:52:13.127931Z",
       "pattern": "email-message:attachments.name MATCHES  /^Final Report.+\\.exe$/"
-    }
-  ],
-  "relationships": [
+    },
     {
       "type": "relationship",
       "id": "relationship--fc2853a6-9ae3-4f46-a090-712e2cd73d40",

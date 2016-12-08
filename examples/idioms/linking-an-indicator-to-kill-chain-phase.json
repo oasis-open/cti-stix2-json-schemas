@@ -2,7 +2,7 @@
   "type": "bundle",
   "id": "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
   "spec_version": "2.0",
-  "indicators": [
+  "objects": [
     {
       "type": "indicator",
       "id": "indicator--efe1dec4-2f86-44ce-9977-543d15507892",

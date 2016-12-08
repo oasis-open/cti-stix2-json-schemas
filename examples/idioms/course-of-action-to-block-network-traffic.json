@@ -2,7 +2,7 @@
   "type": "bundle",
   "id": "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
   "spec_version": "2.0",
-  "courses_of_action": [
+  "objects": [
     {
       "type": "course-of-action",
       "id": "course-of-action--55f57cc7-ddd5-467b-a3a2-6fd602549d9e",
@@ -11,9 +11,7 @@
       "modified": "2016-08-03T16:27:14Z",
       "name": "Block Network Traffic",
       "description": "Added rule to block network traffic coming from this address"
-    }
-  ],
-  "observed_data": [
+    },
     {
       "type": "observed-data",
       "id": "observed-data--e04425e4-60a2-4d91-a9f9-0ca956f19edb",
@@ -29,9 +27,7 @@
           "value:": "10.10.10.10"
         }
       }
-    }
-  ],
-  "relationships": [
+    },
     {
       "type": "relationship",
       "id": "relationship--b2dae1ac-53bf-4d1e-b478-fdc11018c649",

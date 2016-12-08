@@ -11,6 +11,5 @@
   "name": "Poison Ivy Malware",
   "description": "This file is part of Poison Ivy",
   "pattern": "file:hashes.MD5 = '3773a88f65a5e780c8dff9cdc3a056f3'",
-  "pattern_lang": "stix",
   "valid_from": "2016-01-01T00:00:00Z"
 }

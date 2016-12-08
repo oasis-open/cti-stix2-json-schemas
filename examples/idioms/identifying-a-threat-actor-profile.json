@@ -2,7 +2,7 @@
   "type": "bundle",
   "id": "bundle--c9567f73-3803-415c-b06e-2b0622830e5d",
   "spec_version": "2.0",
-  "threat_actors": [
+  "objects": [
     {
       "type": "threat-actor",
       "id": "threat-actor--dfaa8d77-07e2-4e28-b2c8-92e9f7b04428",
@@ -13,9 +13,7 @@
       "labels": [
         "crime-syndicate"
       ]
-    }
-  ],
-  "identities": [
+    },
     {
       "type": "identity",
       "id": "identity--733c5838-34d9-4fbf-949c-62aba761184c",
@@ -25,9 +23,7 @@
       "name": "Disco Team",
       "identity_class": "organization",
       "contact_information": "disco-team@stealthemail.com"
-    }
-  ],
-  "relationships": [
+    },
     {
       "type": "relationship",
       "id": "relationship--966c5838-34d9-4fbf-949c-62aba7611837",
