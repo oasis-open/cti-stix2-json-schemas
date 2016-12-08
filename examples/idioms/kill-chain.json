@@ -10,10 +10,14 @@
       "created": "2014-10-21T21:10:09.423000Z",
       "modified": "2014-10-21T21:10:09.423000Z",
       "valid_from": "2014-10-21T21:10:09.423000Z",
+      "pattern": "ipv4addr:value = '58.246.0.0/15'",
+      "labels": [
+        "malicious-activity"
+      ],
       "kill_chain_phases": [
         {
           "kill_chain_name": "lockheed-martin-cyber-kill-chain",
-          "phase_name": "actions-on-objectives"
+          "phase_name": "command-and-control"
         }
       ]
     }

@@ -15,7 +15,6 @@
       ],
       "description": "Resident binary which implements infostealing and credit card grabber",
       "pattern": "file:file_name = 'crypt1.exe'",
-      "pattern_lang": "stix",
       "valid_from": "2014-10-09T21:38:50.631509Z",
       "kill_chain_phases": [
         {

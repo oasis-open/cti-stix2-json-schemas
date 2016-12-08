@@ -14,7 +14,6 @@
       ],
       "name": "Malicious site hosting downloader",
       "pattern": "url:value = 'http://x4z9arb.cn/4712'",
-      "pattern_lang": "stix",
       "valid_from": "2014-06-29T13:49:37.079000Z"
     }
   ]

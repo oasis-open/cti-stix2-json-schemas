@@ -23,7 +23,6 @@
         "malicious-activity"
       ],
       "pattern": "ipv4addr.value = '10.0.0.0'",
-      "pattern_lang": "stix",
       "valid_from": "2014-09-09T19:58:39.609000Z"
     }
   ],

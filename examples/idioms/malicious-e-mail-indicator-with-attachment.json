@@ -10,7 +10,7 @@
       "created": "2014-10-31T15:52:13.126765Z",
       "modified": "2014-10-31T15:52:13.126765Z",
       "name": "Phishing",
-      "external-references": [
+      "external_references": [
         {
           "source_name": "capec",
           "external_id": "CAPEC-98"
@@ -30,8 +30,7 @@
         "malicious-activity"
       ],
       "valid_from": "2014-10-31T15:52:13.127931Z",
-      "pattern": "email-message:header.subject MATCHES  /^[IMPORTANT] Please Review Before/",
-      "pattern_lang": "stix"
+      "pattern": "email-message:header.subject MATCHES  /^[IMPORTANT] Please Review Before/"
     },
     {
       "type": "indicator",
@@ -44,8 +43,7 @@
         "malicious-activity"
       ],
       "valid_from": "2014-10-31T15:52:13.127931Z",
-      "pattern": "email-message:header.subject MATCHES  /^[IMPORTANT] Please Review Before/",
-      "pattern_lang": "stix"
+      "pattern": "email-message:header.subject MATCHES  /^[IMPORTANT] Please Review Before/"
     },
     {
       "type": "indicator",
@@ -58,8 +56,7 @@
         "malicious-activity"
       ],
       "valid_from": "2014-10-31T15:52:13.127931Z",
-      "pattern": "email-message:attachments.name MATCHES  /^Final Report.+\\.exe$/",
-      "pattern_lang": "stix"
+      "pattern": "email-message:attachments.name MATCHES  /^Final Report.+\\.exe$/"
     }
   ],
   "relationships": [
