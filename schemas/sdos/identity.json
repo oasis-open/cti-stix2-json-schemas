@@ -17,6 +17,7 @@
           ]
         },
         "id": {
+          "title": "id",
           "pattern": "^identity--"
         },
         "labels": {
@@ -44,22 +45,6 @@
           "description": "The list of sectors that this Identity belongs to. Open Vocab - industry-sector-ov",
           "items": {
             "type": "string"
-          },
-          "minItems": 1
-        },
-        "regions": {
-          "type": "array",
-          "description": "The list of regions or geographic locations this Identity is located or operates in.",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 1
-        },
-        "nationalities": {
-          "type": "array",
-          "description": "The nationalities of this Identity. The value MUST be from the ISO 3166-1 Alpha-2 codes and represented in lowercase.",
-          "items": {
-            "$ref": "../common/country-code.json"
           },
           "minItems": 1
         },

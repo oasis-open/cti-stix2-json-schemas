@@ -2,7 +2,7 @@
   "type": "bundle",
   "id": "bundle--50578bc7-bb17-4f31-abf2-d5827d131368",
   "spec_version": "2.0",
-  "campaigns": [
+  "objects": [
     {
       "type": "campaign",
       "id": "campaign--1855cb8a-d96c-4859-a450-abb1e7c061f2",
@@ -10,9 +10,7 @@
       "created": "2015-05-07T14:22:14.760144Z",
       "modified": "2015-05-07T14:22:14.760144Z",
       "name": "Campaign against ICS"
-    }
-  ],
-  "identities": [
+    },
     {
       "type": "identity",
       "id": "identity--d7ae33db-0111-45e7-9adb-75a7b081859a",
@@ -24,9 +22,7 @@
       "sectors": [
         "government-national"
       ]
-    }
-  ],
-  "malware": [
+    },
     {
       "type": "malware",
       "id": "malware--66647c79-5766-4ca7-ab8a-a579056e3c83",
@@ -37,9 +33,7 @@
       "labels": [
         "remote-access-trojan"
       ]
-    }
-  ],
-  "reports": [
+    },
     {
       "type": "report",
       "id": "report--41e59083-e2d9-4e4b-9095-ebd1eb2f9350",

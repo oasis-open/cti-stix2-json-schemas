@@ -17,6 +17,7 @@
           ]
         },
         "id": {
+          "title": "id",
           "pattern": "^sighting--"
         },
         "first_seen": {

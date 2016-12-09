@@ -17,6 +17,7 @@
           ]
         },
         "id": {
+          "title": "id",
           "pattern": "^intrusion-set--"
         },
         "name": {
@@ -54,14 +55,6 @@
         "resource_level": {
           "type": "string",
           "description": "This defines the organizational level at which this Intrusion Set typically works. Open Vocab - attack-resource-level-ov"
-        },
-        "region": {
-          "type": "string",
-          "description": "The primary region of origin for this Intrusion Set, if the actual country is not yet known."
-        },
-        "country": {
-          "$ref": "../common/country-code.json",
-          "description": "The primary country of origin for this Intrusion Set. The value MUST be from the ISO 3166-1 Alpha-2 codes and represented in lowercase."
         },
         "primary_motivation": {
           "type": "string",

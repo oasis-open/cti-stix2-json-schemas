@@ -2,7 +2,7 @@
   "type": "bundle",
   "id": "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
   "spec_version": "2.0",
-  "indicators": [
+  "objects": [
     {
       "type": "indicator",
       "id": "indicator--d81f86b9-975b-bc0b-775e-810c5ad45a4f",
@@ -14,7 +14,6 @@
       ],
       "name": "Malicious site hosting downloader",
       "pattern": "url:value = 'http://x4z9arb.cn/4712'",
-      "pattern_lang": "stix",
       "valid_from": "2014-06-29T13:49:37.079000Z"
     }
   ]

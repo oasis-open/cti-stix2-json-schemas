@@ -2,7 +2,7 @@
   "type": "bundle",
   "id": "bundle--91d9b5a2-b63b-431b-ab56-aba30ab36809",
   "spec_version": "2.0",
-  "indicators": [
+  "objects": [
     {
       "type": "indicator",
       "id": "indicator--f33c2b75-aa60-4ffb-9829-3746ef233311",
@@ -10,10 +10,14 @@
       "created": "2014-10-21T21:10:09.423000Z",
       "modified": "2014-10-21T21:10:09.423000Z",
       "valid_from": "2014-10-21T21:10:09.423000Z",
+      "pattern": "ipv4addr:value = '58.246.0.0/15'",
+      "labels": [
+        "malicious-activity"
+      ],
       "kill_chain_phases": [
         {
           "kill_chain_name": "lockheed-martin-cyber-kill-chain",
-          "phase_name": "actions-on-objectives"
+          "phase_name": "command-and-control"
         }
       ]
     }
