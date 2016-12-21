@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "mutex",
+  "description": "The Mutex Object represents the properties of a mutual exclusion (mutex) object.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../common/cyber-observable-core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The value of this property MUST be `mutex`.",
+          "enum": [
+            "mutex"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "Specifies the name of the mutex object."
+        }
+      }
+    }
+  ],
+  "required": [
+    "name"
+  ]
+}

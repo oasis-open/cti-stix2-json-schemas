@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "dictionary",
+  "description": "A dictionary captures a set of key/value pairs",
+  "type": "object",
+  "anyOf": [
+    {
+      "patternProperties": {
+        "^x_[a-zA-Z0-9_]{1,}$": {
+          "type": "string",
+          "description": "Custom hash key"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^MD5$": {
+          "type": "string",
+          "description": "Specifies the MD5 message digest algorithm.",
+          "pattern": "^[a-f0-9]{32}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^MD6$": {
+          "type": "string",
+          "description": "Specifies the MD6 message digest algorithm.",
+          "pattern": "^[a-f0-9]{32}|[a-f0-9]{40}|[a-f0-9]{56}|[a-f0-9]{64}|[a-f0-9]{96}|[a-f0-9]{128}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^RIPEMD-160$": {
+          "type": "string",
+          "description": "Specifies the RIPEMD\u00ad-160 (R​ACE​ Integrity Primitives Evaluation Message Digest)​ cryptographic hash function.",
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^SHA-1$": {
+          "type": "string",
+          "description": "Specifies the SHA\u00ad-1 (secure-\u00adhash algorithm 1) cryptographic hash function.",
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^SHA-224$": {
+          "type": "string",
+          "description": "Specifies the SHA-\u00ad224 cryptographic hash function (part of the SHA\u00ad2 family).",
+          "pattern": "^[a-f0-9]{56}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^SHA-256$": {
+          "type": "string",
+          "description": "Specifies the SHA-\u00ad256 cryptographic hash function (part of the SHA\u00ad2 family).",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^SHA-384$": {
+          "type": "string",
+          "description": "Specifies the SHA-\u00ad384 cryptographic hash function (part of the SHA\u00ad2 family).",
+          "pattern": "^[a-f0-9]{96}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^SHA-512$": {
+          "type": "string",
+          "description": "Specifies the SHA-\u00ad512 cryptographic hash function (part of the SHA\u00ad2 family).",
+          "pattern": "^[a-f0-9]{128}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^SHA3-224$": {
+          "type": "string",
+          "description": "Specifies the SHA3-224 cryptographic hash function.",
+          "pattern": "^[a-f0-9]{56}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^SHA3-256$": {
+          "type": "string",
+          "description": "Specifies the SHA3-256 cryptographic hash function.",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^SHA3-384$": {
+          "type": "string",
+          "description": "Specifies the SHA3-384 cryptographic hash function.",
+          "pattern": "^[a-f0-9]{96}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^SHA3-512$": {
+          "type": "string",
+          "description": "Specifies the SHA3-512 cryptographic hash function.",
+          "pattern": "^[a-f0-9]{128}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^ssdeep$": {
+          "type": "string",
+          "description": "Specifies the ssdeep fuzzy hashing algorithm.",
+          "pattern": "^[a-zA-Z0-9/+:.]{1,128}$"
+        }
+      }
+    },
+    {
+      "patternProperties": {
+        "^WHIRLPOOL$": {
+          "type": "string",
+          "description": "Specifies the whirlpool cryptographic hash function",
+          "pattern": "^[a-f0-9]{128}$"
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

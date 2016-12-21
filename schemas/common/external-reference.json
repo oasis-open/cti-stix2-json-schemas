@@ -9,7 +9,7 @@
       "description": "A human readable description"
     },
     "url": {
-      "$ref": "url.json",
+      "$ref": "url-regex.json",
       "description": "A URL reference to an external resource."
     }
   },

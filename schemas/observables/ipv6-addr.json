@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ipv6-addr",
+  "description": "The IPv6 Address Object represents one or more IPv6 addresses expressed using CIDR notation.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../common/cyber-observable-core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The value of this property MUST be `ipv6-addr`.",
+          "enum": [
+            "ipv6-addr"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "description": "Specifies one or more IPv6 addresses expressed using CIDR notation."
+        },
+        "resolves_to_refs": {
+          "type": "array",
+          "description": "Specifies a list of references to one or more Layer 2 Media Access Control (MAC) addresses that the IPv6 address resolves to.",
+          "items": {
+            "type":"string"
+          },
+          "minItems": 1
+        },
+        "belongs_to_refs": {
+          "type": "array",
+          "description": "Specifies a reference to one or more autonomous systems (AS) that the IPv6 address belongs to.",
+          "items": {
+            "type":"string"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  ]
+}
