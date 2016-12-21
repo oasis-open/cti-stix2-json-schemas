@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "url",
+  "description": "The URL Object represents the properties of a uniform resource locator (URL).",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../common/cyber-observable-core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The value of this property MUST be `url`.",
+          "enum": [
+            "url"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "description": "Specifies the value of the URL."
+        }
+      }
+    }
+  ],
+  "required": [
+    "value"
+  ]
+}

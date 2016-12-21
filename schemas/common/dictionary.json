@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "dictionary",
+  "description": "A dictionary captures a set of key/value pairs",
+  "type": "object",
+  "patternProperties": {
+      "^[a-zA-Z0-9_-]{3,256}$": {
+        "anyOf": [
+          {
+            "type": "array",
+            "minItems": 1
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "object"
+          }
+        ]
+      }
+    },
+  "additionalProperties": false
+}

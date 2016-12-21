@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "core",
+  "description": "Common properties and behavior across all Cyber Observable Objects.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^artifact|directory|file|mutex|process|software|user-account|windows-registry-key|x509-certificate|autonomous-system|domain-name|email-addr|email-message|ipv4-addr|ipv6-addr|mac-addr|network-traffic|url$",
+      "description": "Indicates that this object is an Observable Object. The value of this property MUST be a valid Observable Object type name."
+    },
+    "description": {
+      "type": "string",
+      "description": "Specifies a textual description of the Object."
+    },
+    "extensions": {
+      "$ref": "../common/dictionary.json",
+      "description": "Specifies any extensions of the object, as a dictionary."
+    }
+  },
+  "patternProperties": {
+    "^[a-z0-9_]{3,250}$": {
+      "anyOf": [
+        {
+          "type": "array",
+          "minItems": 1
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "type"
+  ]
+}

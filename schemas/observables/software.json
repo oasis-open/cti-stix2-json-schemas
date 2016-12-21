@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "software",
+  "description": "The Software Object represents high-level properties associated with software, including software products.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../common/cyber-observable-core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The value of this property MUST be `software`.",
+          "enum": [
+            "software"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "Specifies the name of the software."
+        },
+        "cpe": {
+          "type": "string",
+          "description": "Specifies the Common Platform Enumeration (CPE) entry for the software, if available. The value for this property MUST be a CPE v2.3 entry from the official NVD CPE Dictionary."
+        },
+        "language": {
+          "$ref": "../common/ISO-639-2-language-codes.json",
+          "description": "Specifies the language of the software. The value of this property MUST be an ISO 639-2 language code."
+        },
+        "vendor": {
+          "type": "string",
+          "description": "Specifies the name of the vendor of the software."
+        },
+        "version": {
+          "type": "string",
+          "description": "Specifies the version of the software."
+        }
+      }
+    }
+  ],
+  "required": [
+    "name"
+  ]
+}
