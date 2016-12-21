@@ -33,7 +33,7 @@
           "description": "Specifies the name of the file."
         },
         "name_enc": {
-          "$ref": "../common/character-sets.json",
+          "type": "string",
           "description": "Specifies the observed encoding for the name of the file."
         },
         "magic_number_hex": {

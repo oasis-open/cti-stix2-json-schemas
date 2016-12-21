@@ -17,7 +17,7 @@
           ]
         },
         "mime_type": {
-          "$ref": "../common/media-types.json",
+          "type": "string",
           "description": "The value of this property MUST be a valid MIME type as specified in the IANA Media Types registry."
         }
       }

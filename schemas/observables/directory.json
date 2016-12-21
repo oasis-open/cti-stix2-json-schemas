@@ -21,7 +21,7 @@
           "description": "Specifies the path, as originally observed, to the directory on the file system."
         },
         "path_enc": {
-          "$ref": "../common/character-sets.json",
+          "type": "string",
           "description": "Specifies the observed encoding for the path."
         },
         "created": {
