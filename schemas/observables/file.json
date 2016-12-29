@@ -26,6 +26,7 @@
         },
         "size": {
           "type": "integer",
+          "minimum": 0,
           "description": "Specifies the size of the file, in bytes, as a non-negative integer."
         },
         "name": {
@@ -34,6 +35,7 @@
         },
         "name_enc": {
           "type": "string",
+          "pattern": "^[a-zA-Z0-9-/\\.+_:]{2,250}$",
           "description": "Specifies the observed encoding for the name of the file."
         },
         "magic_number_hex": {
@@ -335,6 +337,7 @@
                 },
                 "size_of_optional_header": {
                   "type": "integer",
+                  "minimum": 0,
                   "description": "Specifies the size of the optional header of the PE binary."
                 },
                 "characteristics_hex": {
@@ -397,14 +400,17 @@
         },
         "size_of_code": {
           "type": "integer",
+          "minimum": 0,
           "description": "Specifies the size of the code (text) section. If there are multiple such sections, this refers to the sum of the sizes of each section."
         },
         "size_of_initialized_data": {
           "type": "integer",
+          "minimum": 0,
           "description": "Specifies the size of the initialized data section. If there are multiple such sections, this refers to the sum of the sizes of each section."
         },
         "size_of_uninitialized_data": {
           "type": "integer",
+          "minimum": 0,
           "description": "Specifies the size of the uninitialized data section. If there are multiple such sections, this refers to the sum of the sizes of each section."
         },
         "address_of_entry_point": {
@@ -461,10 +467,12 @@
         },
         "size_of_image": {
           "type": "integer",
+          "minimum": 0,
           "description": "Specifies the size, in bytes, of the image, including all headers, as the image is loaded in memory."
         },
         "size_of_headers": {
           "type": "integer",
+          "minimum": 0,
           "description": "Specifies the combined size of the MS-DOS, PE header, and section headers, rounded up a multiple of the value specified in the file_alignment header."
         },
         "checksum_hex": {
@@ -481,18 +489,22 @@
         },
         "size_of_stack_reserve": {
           "type": "integer",
+          "minimum": 0,
           "description": "Specifies the size of the stack to reserve"
         },
         "size_of_stack_commit": {
           "type": "integer",
+          "minimum": 0,
           "description": "Specifies the size of the stack to commit."
         },
         "size_of_heap_reserve": {
           "type": "integer",
+          "minimum": 0,
           "description": "Specifies the size of the local heap space to reserve."
         },
         "size_of_heap_commit": {
           "type": "integer",
+          "minimum": 0,
           "description": "Specifies the size of the local heap space to commit."
         },
         "loader_flags_hex": {
@@ -519,6 +531,7 @@
         },
         "size": {
           "type": "integer",
+          "minimum": 0,
           "description": "Specifies the size of the section, in bytes."
         },
         "entropy": {

@@ -40,9 +40,9 @@
           "$ref": "../common/timestamp.json",
           "description": "The time that this Intrusion Set was first seen."
         },
-        "first_seen_precision": {
-          "$ref": "../common/timestamp-precision.json",
-          "description": "The precision value for the first_seen field."
+        "last_seen": {
+          "$ref": "../common/timestamp.json",
+          "description": "The time that this Intrusion Set was last seen."
         },
         "goals": {
           "type": "array",

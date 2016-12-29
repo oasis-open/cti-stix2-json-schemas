@@ -18,6 +18,7 @@
         },
         "mime_type": {
           "type": "string",
+          "pattern": "[a-zA-Z0-9-/\\.+]{3,250}$",
           "description": "The value of this property MUST be a valid MIME type as specified in the IANA Media Types registry."
         }
       }

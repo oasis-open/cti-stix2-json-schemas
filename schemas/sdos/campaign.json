@@ -40,9 +40,9 @@
           "$ref": "../common/timestamp.json",
           "description": "The time that this Campaign was first seen."
         },
-        "first_seen_precision": {
-          "$ref": "../common/timestamp-precision.json",
-          "description": "The precision of the first_seen timestamp."
+        "last_seen": {
+          "$ref": "../common/timestamp.json",
+          "description": "The time that this Campaign was last seen."
         },
         "objective": {
           "type": "string",

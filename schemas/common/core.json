@@ -20,7 +20,7 @@
     },
     "id": {
       "$ref": "identifier.json",
-      "description": "The id property uniquely identifies this object."
+      "description": "The id property universally and uniquely identifies this object."
     },
     "created_by_ref": {
       "$ref": "identifier.json",
@@ -33,12 +33,6 @@
         "type": "string"
       },
       "minItems": 1
-    },
-    "version": {
-      "type": "integer",
-      "description": "The version property indicates the version of this object.",
-      "minimum": 1,
-      "maximum": 999999999
     },
     "created": {
       "$ref": "timestamp.json",
@@ -134,13 +128,32 @@
         "required": [
           "addresses"
         ]
+      },
+      {
+        "required": [
+          "first_seen_precision"
+        ]
+      },
+      {
+        "required": [
+          "last_seen_precision"
+        ]
+      },
+      {
+        "required": [
+          "valid_from_precision"
+        ]
+      },
+      {
+        "required": [
+          "valid_until_precision"
+        ]
       }
     ]
   },
   "required": [
     "type",
     "id",
-    "version",
     "created",
     "modified"
   ]
