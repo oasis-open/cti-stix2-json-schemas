@@ -21,7 +21,6 @@
           "pattern": "^relationship--"
         },
         "relationship_type": {
-          "title": "relationship_type",
           "type": "string",
           "description": "The name used to identify the type of relationship.",
           "pattern": "^[a-z0-9\\-]+$"

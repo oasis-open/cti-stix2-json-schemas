@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "marking-definition",
-  "description": "The marking-definition object represents a specific instance of a marking, defined by an external marking system (e.g., the traffic light protocol, TLP) and contained in the definition field.",
+  "description": "The marking-definition object represents a specific marking.",
   "type": "object",
   "properties": {
     "type": {
@@ -43,7 +43,8 @@
       "type": "array",
       "description": "The object_marking_refs property specifies a list of IDs of marking-definition objects that apply to this Marking Definition.",
       "items": {
-        "$ref": "identifier.json"
+        "$ref": "identifier.json",
+        "pattern": "^marking-definition--"
       },
       "minItems": 1
     },
@@ -109,6 +110,7 @@
   "definitions": {
     "statement": {
       "type": "object",
+      "description": "The Statement marking type defines the representation of a textual marking statement (e.g., copyright, terms of use, etc.) in a definition",
       "properties": {
         "statement": {
           "type": "string",
@@ -121,6 +123,7 @@
     },
     "tlp": {
       "type": "object",
+      "description": "The TLP marking type defines how you would represent a Traffic Light Protocol (TLP) marking in a definition field.",
       "properties": {
         "tlp": {
           "type": "string",

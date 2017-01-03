@@ -44,17 +44,9 @@
           "$ref": "../common/timestamp.json",
           "description": "The time from which this indicator should be considered valuable intelligence."
         },
-        "valid_from_precision": {
-          "$ref": "../common/timestamp-precision.json",
-          "description": "The precision of the start timestamp."
-        },
         "valid_until": {
           "$ref": "../common/timestamp.json",
           "description": "The time at which this indicator should no longer be considered valuable intelligence."
-        },
-        "valid_until_precision": {
-          "$ref": "../common/timestamp-precision.json",
-          "description": "The precision of the end timestamp."
         },
         "kill_chain_phases": {
           "type": "array",

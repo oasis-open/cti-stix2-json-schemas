@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "bundle",
-  "description": "A Bundle is a collection of arbitrary STIX Objects grouped together in a single container.",
+  "description": "A Bundle is a collection of arbitrary STIX Objects and Marking Definitions grouped together in a single container.",
   "type": "object",
   "properties": {
     "type": {
@@ -15,7 +15,7 @@
       "allOf": [
         {
           "$ref": "identifier.json",
-          "description": "An identifier for this bundle."
+          "description": "An identifier for this bundle. The id field for the Bundle is designed to help tools that may need it for processing, but tools are not required to store or track it. "
         },
         {
           "title": "id",

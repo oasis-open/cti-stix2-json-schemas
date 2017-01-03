@@ -22,10 +22,12 @@
         },
         "cpe": {
           "type": "string",
+          "pattern": "cpe:2\\.3:[aho](?::(?:[a-zA-Z0-9!\"#$%&'()*+,\\\\-_.\/;<=>?@\\[\\]^`{|}~]|\\:)+){10}$",
           "description": "Specifies the Common Platform Enumeration (CPE) entry for the software, if available. The value for this property MUST be a CPE v2.3 entry from the official NVD CPE Dictionary."
         },
         "language": {
-          "$ref": "../common/ISO-639-2-language-codes.json",
+          "type": "string",
+          "pattern": "^[a-z]{3}$",
           "description": "Specifies the language of the software. The value of this property MUST be an ISO 639-2 language code."
         },
         "vendor": {
