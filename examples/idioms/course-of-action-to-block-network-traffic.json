@@ -6,7 +6,6 @@
     {
       "type": "course-of-action",
       "id": "course-of-action--55f57cc7-ddd5-467b-a3a2-6fd602549d9e",
-      "version": 1,
       "created": "2016-08-03T16:27:14Z",
       "modified": "2016-08-03T16:27:14Z",
       "name": "Block Network Traffic",
@@ -15,7 +14,6 @@
     {
       "type": "observed-data",
       "id": "observed-data--e04425e4-60a2-4d91-a9f9-0ca956f19edb",
-      "version": 1,
       "created": "2016-07-11T12:27:14Z",
       "modified": "2016-07-11T12:27:14Z",
       "first_observed": "2015-12-21T19:00:00Z",
@@ -23,7 +21,7 @@
       "number_observed": 11,
       "objects": {
         "0": {
-          "type": "ipv4addr",
+          "type": "ipv4-addr",
           "value:": "10.10.10.10"
         }
       }
@@ -31,7 +29,6 @@
     {
       "type": "relationship",
       "id": "relationship--b2dae1ac-53bf-4d1e-b478-fdc11018c649",
-      "version": 1,
       "created": "2016-08-03T16:30:17Z",
       "modified": "2016-08-03T16:30:17Z",
       "relationship_type": "related-to",

@@ -6,7 +6,6 @@
     {
       "type": "indicator",
       "id": "indicator--33fe3b22-0201-47cf-85d0-97c02164528d",
-      "version": 1,
       "created": "2014-05-08T09:00:00.000000Z",
       "modified": "2014-05-08T09:00:00.000000Z",
       "name": "IP Address for known C2 channel",

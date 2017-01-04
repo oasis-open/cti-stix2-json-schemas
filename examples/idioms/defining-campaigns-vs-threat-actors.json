@@ -6,7 +6,6 @@
     {
       "type": "campaign",
       "id": "campaign--e5268b6e-4931-42f1-b379-87f48eb41b1e",
-      "version": 1,
       "created": "2014-08-08T15:50:10.983728Z",
       "modified": "2014-08-08T15:50:10.983728Z",
       "name": "Compromise of ATM Machines"
@@ -14,7 +13,6 @@
     {
       "type": "relationship",
       "id": "relationship--d07b0cc3-11eb-4906-9e0b-4bcca5f408e4",
-      "version": 1,
       "created": "2014-08-08T15:50:10.983728Z",
       "modified": "2014-08-08T15:50:10.983728Z",
       "relationship_type": "targets",
@@ -24,7 +22,6 @@
     {
       "type": "relationship",
       "id": "relationship--5cc8ddc2-4346-4ba1-a997-1b42872b02b0",
-      "version": 1,
       "created": "2014-08-08T15:50:10.983728Z",
       "modified": "2014-08-08T15:50:10.983728Z",
       "relationship_type": "attributed-to",
@@ -34,7 +31,6 @@
     {
       "type": "threat-actor",
       "id": "threat-actor--56f3f0db-b5d5-431c-ae56-c18f02caf500",
-      "version": 1,
       "created": "2014-08-08T15:50:10.983629Z",
       "modified": "2014-08-08T15:50:10.983629Z",
       "name": "People behind the ATM compromise",
@@ -45,7 +41,6 @@
     {
       "type": "identity",
       "id": "identity--2d1c6ab3-5e4e-48ac-a32b-f0c01c2836a8",
-      "version": 1,
       "created": "2014-08-08T15:50:10.983464Z",
       "modified": "2014-08-08T15:50:10.983464Z",
       "name": "XYZ Bank",
