@@ -6,7 +6,6 @@
     {
       "type": "campaign",
       "id": "campaign--1855cb8a-d96c-4859-a450-abb1e7c061f2",
-      "version": 1,
       "created": "2015-05-07T14:22:14.760144Z",
       "modified": "2015-05-07T14:22:14.760144Z",
       "name": "Campaign against ICS"
@@ -14,7 +13,6 @@
     {
       "type": "identity",
       "id": "identity--d7ae33db-0111-45e7-9adb-75a7b081859a",
-      "version": 1,
       "created": "2015-03-02T13:15:18.793213Z",
       "modified": "2015-03-02T13:15:18.793213Z",
       "name": "Government Sharing Program - GSP",
@@ -26,7 +24,6 @@
     {
       "type": "malware",
       "id": "malware--66647c79-5766-4ca7-ab8a-a579056e3c83",
-      "version": 1,
       "created": "2015-05-07T14:22:14.760302Z",
       "modified": "2015-05-07T14:22:14.760302Z",
       "name": "DrownedRat",
@@ -37,7 +34,6 @@
     {
       "type": "report",
       "id": "report--41e59083-e2d9-4e4b-9095-ebd1eb2f9350",
-      "version": 1,
       "created": "2015-05-07T14:22:14.760467Z",
       "modified": "2015-05-07T14:22:14.760467Z",
       "created_by_ref": "identity--d7ae33db-0111-45e7-9adb-75a7b081859a",
@@ -54,7 +50,6 @@
     {
       "type": "report",
       "id": "report--bd9cdb35-16a3-4b20-927a-3ae97d5ec4b9",
-      "version": 1,
       "created": "2015-05-07T14:22:14.760756Z",
       "modified": "2015-05-07T14:22:14.760756Z",
       "created_by_ref": "identity--d7ae33db-0111-45e7-9adb-75a7b081859a",

@@ -6,7 +6,6 @@
     {
       "type": "intrusion-set",
       "id": "intrusion-set--da1065ce-972c-4605-8755-9cd1074e3b5a",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "APT1",
@@ -23,7 +22,6 @@
     {
       "type": "threat-actor",
       "id": "threat-actor--6d179234-61fc-40c4-ae86-3d53308d8e65",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Ugly Gorilla",
@@ -47,7 +45,6 @@
     {
       "type": "threat-actor",
       "id": "threat-actor--d84cf283-93be-4ca7-890d-76c63eff3636",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "DOTA",
@@ -70,7 +67,6 @@
     {
       "type": "threat-actor",
       "id": "threat-actor--02e7c48f-0301-4c23-b3e4-02e5a0114c21",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "SuperHard",
@@ -92,7 +88,6 @@
     {
       "type": "threat-actor",
       "id": "threat-actor--d5b62b58-df7c-46b1-a435-4d01945fe21d",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Communist Party of China",
@@ -113,7 +108,6 @@
     {
       "type": "threat-actor",
       "id": "threat-actor--94624865-2709-443f-9b4c-2891985fd69b",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Unit 61398",
@@ -134,7 +128,6 @@
     {
       "type": "identity",
       "id": "identity--a9119a87-6576-46af-bfd7-4fbe55926671",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "JackWang",
@@ -147,7 +140,6 @@
     {
       "type": "identity",
       "id": "identity--e88ab115-7768-4630-baa3-3d49a7d946ea",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Wang Dong",
@@ -160,7 +152,6 @@
     {
       "type": "identity",
       "id": "identity--0e9d20d9-fb11-42e3-94bc-b89fb5b007ca",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "dota",
@@ -173,7 +164,6 @@
     {
       "type": "identity",
       "id": "identity--ecf1c7de-d96c-41c6-a510-b9c65cdc9e3b",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Mei Qiang",
@@ -186,7 +176,6 @@
     {
       "type": "indicator",
       "id": "indicator--031778a4-057f-48e6-9db9-c8d72b81ccd5",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "HTRAN Hop Point Accessor",
@@ -205,7 +194,6 @@
     {
       "type": "indicator",
       "id": "indicator--da1d061b-2bc9-467a-b16f-8d14f468e1f0",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "HTRAN Hop Point Accessor",
@@ -224,7 +212,6 @@
     {
       "type": "indicator",
       "id": "indicator--2173d108-5714-42fd-8213-4f3790259fda",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "HTRAN Hop Point Accessor",
@@ -243,7 +230,6 @@
     {
       "type": "indicator",
       "id": "indicator--8ce03314-dfea-4498-ac9b-136e41ab00e4",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "HTRAN Hop Point Accessor",
@@ -262,7 +248,6 @@
     {
       "type": "indicator",
       "id": "indicator--3f3ff9f1-bb4e-4392-89e5-1991179042ba",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "FQDN hugesoft.org",
@@ -275,7 +260,6 @@
     {
       "type": "indicator",
       "id": "indicator--8390fd29-24ed-45d4-84d7-c5e5feaf195d",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "FQDN arrowservice.net",
@@ -288,7 +272,6 @@
     {
       "type": "indicator",
       "id": "indicator--1002c58e-cbde-4930-b5ee-490037fd4f7e",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "FQDN msnhome.org",
@@ -301,7 +284,6 @@
     {
       "type": "indicator",
       "id": "indicator--8d12f44f-8ac0-4b12-8b4a-3699ca8c9691",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Appendix E MD5 hash '001dd76872d80801692ff942308c64e6'",
@@ -314,7 +296,6 @@
     {
       "type": "indicator",
       "id": "indicator--745e1537-b4f3-49da-9f64-df6b1b5df190",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Appendix E MD5 hash '002325a0a67fded0381b5648d7fe9b8e'",
@@ -327,7 +308,6 @@
     {
       "type": "indicator",
       "id": "indicator--1dbe6ed0-c305-458f-9cce-f83c678f5afd",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Appendix E MD5 hash '00dbb9e1c09dbdafb360f3163ba5a3de'",
@@ -340,7 +320,6 @@
     {
       "type": "indicator",
       "id": "indicator--b3b6b540-d838-11e2-853b-005056c00008",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Appendix F SSL Certificate for serial number '(Negative)4c:0b:1d:19:74:86:a7:66:b4:1a:bf:40:27:21:76:28'",
@@ -353,7 +332,6 @@
     {
       "type": "indicator",
       "id": "indicator--b3b7035e-d838-11e2-8d38-005056c00008",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Appendix F SSL Certificate for serial number '0e:97:88:1c:6c:a1:37:96:42:03:bc:45:42:24:75:6c'",
@@ -366,7 +344,6 @@
     {
       "type": "malware",
       "id": "malware--2485b844-4efe-4343-84c8-eb33312dd56f",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "MANITSME",
@@ -380,7 +357,6 @@
     {
       "type": "malware",
       "id": "malware--c0217091-9d3d-42a1-8952-ccc12d4ad8d0",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "WEBC2-UGX",
@@ -393,7 +369,6 @@
     {
       "type": "malware",
       "id": "malware--0f01c5a3-f516-4450-9381-4dd9f2279411",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "WEBC2 Backdoor",
@@ -412,7 +387,6 @@
     {
       "type": "malware",
       "id": "malware--33159b98-3264-4e10-a968-d67975b6272f",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "HUC Packet Transmit Tool (HTRAN)",
@@ -431,7 +405,6 @@
     {
       "type": "malware",
       "id": "malware--fb490cdb-6760-41eb-a79b-0b930a50c017",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "AURIGA",
@@ -444,7 +417,6 @@
     {
       "type": "malware",
       "id": "malware--ea50ecb7-2cd4-4895-bd08-31cd591ed0ca",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "BANGAT",
@@ -457,7 +429,6 @@
     {
       "type": "tool",
       "id": "tool--ce45f721-af14-4fc0-938c-000c16186418",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "cachedump",
@@ -475,7 +446,6 @@
     {
       "type": "tool",
       "id": "tool--e9778c42-bc2f-4eda-9fb4-6a931834f68c",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "fgdump",
@@ -499,7 +469,6 @@
     {
       "type": "tool",
       "id": "tool--1cf6a3b8-be43-4c1a-b042-546a890c31b2",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "gsecdump",
@@ -523,7 +492,6 @@
     {
       "type": "tool",
       "id": "tool--4d82bd3e-24a3-4f9d-b8f3-b57267fe06a9",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "lslsass",
@@ -547,7 +515,6 @@
     {
       "type": "tool",
       "id": "tool--7de5dfcc-6809-4772-9f11-cf26c2be53aa",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "mimikatz",
@@ -571,7 +538,6 @@
     {
       "type": "tool",
       "id": "tool--266b12f2-aa16-4607-809e-f2d33eebb52e",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "pass-the-hash toolkit",
@@ -595,7 +561,6 @@
     {
       "type": "tool",
       "id": "tool--98fd8dc1-6cc7-4908-899f-07473f55149a",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "pwdump7",
@@ -619,7 +584,6 @@
     {
       "type": "tool",
       "id": "tool--4215b0e5-928e-4b2a-9b5f-64819f287f48",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "pwdumpX",
@@ -637,7 +601,6 @@
     {
       "type": "tool",
       "id": "tool--a6dd62d0-9683-48bf-a9cd-61e7eceae57e",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "GETMAIL",
@@ -655,7 +618,6 @@
     {
       "type": "tool",
       "id": "tool--806a8f83-4913-4216-bb19-02b48ae25da5",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "MAPIGET",
@@ -673,7 +635,6 @@
     {
       "type": "attack-pattern",
       "id": "attack-pattern--3098c57b-d623-4c11-92f4-5905da66658b",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Initial Compromise",
@@ -695,7 +656,6 @@
     {
       "type": "attack-pattern",
       "id": "attack-pattern--1e2c4237-d469-4144-9c0b-9e5c0c513c49",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Establishing a Foothold",
@@ -710,7 +670,6 @@
     {
       "type": "attack-pattern",
       "id": "attack-pattern--e13f3e6d-4f9c-4265-b1cf-f997a1bf7827",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Privilege Escalation",
@@ -725,7 +684,6 @@
     {
       "type": "attack-pattern",
       "id": "attack-pattern--5728f45b-2eca-4942-a7f6-bc4267c1ab8d",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Internal Reconnaisance",
@@ -740,7 +698,6 @@
     {
       "type": "attack-pattern",
       "id": "attack-pattern--0bea2358-c244-4905-a664-a5cdce7bb767",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Lateral Movement",
@@ -755,7 +712,6 @@
     {
       "type": "attack-pattern",
       "id": "attack-pattern--7151c6d0-7e97-47ce-9290-087315ea3db7",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Maintain Presence",
@@ -770,7 +726,6 @@
     {
       "type": "attack-pattern",
       "id": "attack-pattern--0781fe70-4c94-4300-8865-4b08b98611b4",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "Completing the Mission",
@@ -785,7 +740,6 @@
     {
       "type": "report",
       "id": "report--e33ffe07-2f4c-48d8-b0af-ee2619d765cf",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "APT1: Exposing One of China's Cyber Espionage Units",
@@ -876,7 +830,6 @@
     {
       "type": "relationship",
       "id": "relationship--6598bf44-1c10-4218-af9f-75b5b71c23a7",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -886,7 +839,6 @@
     {
       "type": "relationship",
       "id": "relationship--35f7a2bb-e4e2-4e56-8693-665bbb64162c",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -896,7 +848,6 @@
     {
       "type": "relationship",
       "id": "relationship--fd5cda8b-f45f-43bd-a9da-e521ddd7126e",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "attributed-to",
@@ -906,7 +857,6 @@
     {
       "type": "relationship",
       "id": "relationship--a20b8626-a15e-41f0-bcb1-c05321e126f0",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "attributed-to",
@@ -916,7 +866,6 @@
     {
       "type": "relationship",
       "id": "relationship--d84cf283-93be-4ca7-890d-76c63eff3636",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "attributed-to",
@@ -926,7 +875,6 @@
     {
       "type": "relationship",
       "id": "relationship--71e6832f-17ee-42fd-938d-c7f881be2028",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "attributed-to",
@@ -936,7 +884,6 @@
     {
       "type": "relationship",
       "id": "relationship--9dd881a7-6e9b-4c35-bef5-7a777bca65d3",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -946,7 +893,6 @@
     {
       "type": "relationship",
       "id": "relationship--306ce398-f708-47f9-88a1-38aa5b9985fc",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -956,7 +902,6 @@
     {
       "type": "relationship",
       "id": "relationship--8668d82a-1c97-4bea-a367-e391b025e00e",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "attributed-to",
@@ -966,7 +911,6 @@
     {
       "type": "relationship",
       "id": "relationship--e0ca2caa-7fa0-4f36-ad19-96f107eb6023",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "attributed-to",
@@ -976,7 +920,6 @@
     {
       "type": "relationship",
       "id": "relationship--765815fb-d993-4a1d-959f-7f7bcc4a5eb3",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "attributed-to",
@@ -986,7 +929,6 @@
     {
       "type": "relationship",
       "id": "relationship--85b2a834-e4b5-4299-9a6b-bf2ac26dde7b",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -996,7 +938,6 @@
     {
       "type": "relationship",
       "id": "relationship--61f4fd3b-f581-4497-9149-e624c317287b",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -1006,7 +947,6 @@
     {
       "type": "relationship",
       "id": "relationship--7cede760-b866-490e-ad5b-1df34bc14f8d",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "indicates",
@@ -1016,7 +956,6 @@
     {
       "type": "relationship",
       "id": "relationship--b2806dec-6f20-4a0d-ae9a-d4b1f7be71e3",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "indicates",
@@ -1026,7 +965,6 @@
     {
       "type": "relationship",
       "id": "relationship--3921b161-5872-4c21-8ab0-b5b84233f3dc",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "indicates",
@@ -1036,7 +974,6 @@
     {
       "type": "relationship",
       "id": "relationship--81827b05-8c20-4247-b5d8-674295a1c611",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "indicates",
@@ -1046,7 +983,6 @@
     {
       "type": "relationship",
       "id": "relationship--066593e1-49a4-4a3d-a5bb-2e0b4ce1a63c",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -1056,7 +992,6 @@
     {
       "type": "relationship",
       "id": "relationship--b385d984-ba8a-4180-8e0e-af7b9987bcb8",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -1066,7 +1001,6 @@
     {
       "type": "relationship",
       "id": "relationship--6ffbec81-fa01-4b98-8726-c9d9fb2ef6b6",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -1076,7 +1010,6 @@
     {
       "type": "relationship",
       "id": "relationship--25586f60-bc27-47d6-9a8e-d1c6456c2f28",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -1086,7 +1019,6 @@
     {
       "type": "relationship",
       "id": "relationship--d080c1ea-1dd7-4da9-b64b-e68bb1c5887e",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -1096,7 +1028,6 @@
     {
       "type": "relationship",
       "id": "relationship--c9c66478-c9cf-49cd-bca2-66ce34a9c56d",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -1106,7 +1037,6 @@
     {
       "type": "relationship",
       "id": "relationship--44686fda-311c-4cdb-abef-80e922e7a3fb",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -1116,7 +1046,6 @@
     {
       "type": "relationship",
       "id": "relationship--340cb676-79ff-49e9-b6ba-cd27e06772c4",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -1126,7 +1055,6 @@
     {
       "type": "relationship",
       "id": "relationship--9908520f-b25d-44a8-900b-d4e0825dcd0d",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -1136,7 +1064,6 @@
     {
       "type": "relationship",
       "id": "relationship--1fbd9a8d-4c14-431c-9520-3ccc50b748c1",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
@@ -1146,7 +1073,6 @@
     {
       "type": "relationship",
       "id": "relationship--389a8dcd-8663-4f18-8584-d69a77bd71aa",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "indicates",
@@ -1156,7 +1082,6 @@
     {
       "type": "relationship",
       "id": "relationship--b345f1d0-09c5-4a71-bfc6-a52bd5923a01",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "indicates",
@@ -1166,7 +1091,6 @@
     {
       "type": "relationship",
       "id": "relationship--912b31d0-09c5-4a71-bfc6-a52bd5989a1b",
-      "version": 1,
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "indicates",
