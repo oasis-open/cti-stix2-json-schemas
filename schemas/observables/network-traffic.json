@@ -24,6 +24,10 @@
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time the network traffic was initiated, if known."
         },
+        "end": {
+          "$ref": "../common/timestamp.json",
+          "description": "Specifies the date/time the network traffic ended, if known."
+        },
         "src_ref": {
           "type": "string",
           "description": "Specifies the source of the network traffic, as a reference to one or more Observable Objects."
@@ -135,13 +139,11 @@
             "false"
           ],
           "description": "Indicates whether the network traffic is still ongoing."
-        },
-        "end": {
-          "$ref": "../common/timestamp.json",
-          "description": "Specifies the date/time the network traffic ended, if known."
         }
       },
-      "additionalProperties": false
+      "required": [
+        "is_active"
+      ]
     },
     {
       "properties": {
@@ -153,7 +155,21 @@
           "description": "Indicates whether the network traffic is still ongoing."
         }
       },
-      "additionalProperties": false
+      "required": [
+        "is_active"
+      ],
+      "not": {
+        "required": [
+          "end"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "is_active"
+        ]
+      }
     }
   ],
   "definitions": {
