@@ -109,24 +109,18 @@
       }
     }
   ],
+  "required": [
+    "protocols"
+  ],
   "anyOf": [
     {
       "required": [
-        "protocols"
+        "src_ref"
       ]
     },
     {
-      "oneOf": [
-        {
-          "required": [
-            "src_ref"
-          ]
-        },
-        {
-          "required": [
-            "dst_ref"
-          ]
-        }
+      "required": [
+        "dst_ref"
       ]
     }
   ],
@@ -136,7 +130,7 @@
         "is_active": {
           "type": "boolean",
           "enum": [
-            "false"
+            false
           ],
           "description": "Indicates whether the network traffic is still ongoing."
         }
@@ -150,7 +144,7 @@
         "is_active": {
           "type": "boolean",
           "enum": [
-            "true"
+            true
           ],
           "description": "Indicates whether the network traffic is still ongoing."
         }

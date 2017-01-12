@@ -35,7 +35,7 @@
         },
         "name_enc": {
           "type": "string",
-          "pattern": "^[a-zA-Z0-9-/\\.+_:]{2,250}$",
+          "pattern": "^[a-zA-Z0-9/\\.+_:-]{2,250}$",
           "description": "Specifies the observed encoding for the name of the file."
         },
         "magic_number_hex": {
