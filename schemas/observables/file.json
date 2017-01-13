@@ -35,7 +35,7 @@
         },
         "name_enc": {
           "type": "string",
-          "pattern": "^[a-zA-Z0-9-/\\.+_:]{2,250}$",
+          "pattern": "^[a-zA-Z0-9/\\.+_:-]{2,250}$",
           "description": "Specifies the observed encoding for the name of the file."
         },
         "magic_number_hex": {
@@ -83,6 +83,9 @@
     },
     {
       "$ref": "#/definitions/isNotEncrypted"
+    },
+    {
+      "$ref": "#/definitions/elseEncrypted"
     }
   ],
   "anyOf": [
@@ -117,6 +120,9 @@
           "description": "Specifies the decryption key used to decrypt the archive file."
         }
       },
+      "required": [
+        "is_encrypted"
+      ],
       "dependencies": {
         "encryption_algorithm": [
           "is_encrypted"
@@ -137,8 +143,33 @@
           ]
         }
       },
+      "required": [
+        "is_encrypted"
+      ],
       "not": {
         "anyOf": [
+          {
+            "required": [
+              "encryption_algorithm"
+            ]
+          },
+          {
+            "required": [
+              "decryption_key"
+            ]
+          }
+        ]
+      }
+    },
+    "elseEncrypted": {
+      "type": "object",
+      "not": {
+        "anyOf": [
+          {
+            "required": [
+              "is_encrypted"
+            ]
+          },
           {
             "required": [
               "encryption_algorithm"

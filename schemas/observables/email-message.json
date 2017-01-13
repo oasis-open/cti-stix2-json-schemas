@@ -16,10 +16,6 @@
             "email-message"
           ]
         },
-        "is_multipart": {
-          "type": "boolean",
-          "description": "Indicates whether the email body contains multiple MIME parts."
-        },
         "date": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time that the email message was sent."
@@ -72,9 +68,45 @@
           "$ref": "#/definitions/email-additional-header-fields",
           "description": "Specifies any other header fields found in the email message, as a dictionary."
         },
+        "raw_email_ref": {
+          "type": "string",
+          "description": "Specifies the raw binary contents of the email message, including both the headers and body, as a reference to an Artifact Object."
+        }
+      }
+    }
+  ],
+  "oneOf": [
+    {
+      "properties": {
+        "is_multipart": {
+          "type": "boolean",
+          "enum": [
+            false
+          ],
+          "description": "Indicates whether the email body contains multiple MIME parts."
+        },
         "body": {
           "type": "string",
           "description": "Specifies a string containing the email body. This field MAY only be used if is_multipart is false."
+        }
+      },
+      "required": [
+        "is_multipart"
+      ],
+      "not": {
+        "required": [
+          "body_multipart"
+        ]
+      }
+    },
+    {
+      "properties": {
+        "is_multipart": {
+          "type": "boolean",
+          "enum": [
+            true
+          ],
+          "description": "Indicates whether the email body contains multiple MIME parts."
         },
         "body_multipart": {
           "type": "array",
@@ -82,15 +114,16 @@
           "items": {
             "$ref": "#/definitions/mime-part-type"
           }
-        },
-        "raw_email_ref": {
-          "type": "string",
-          "description": "Specifies the raw binary contents of the email message, including both the headers and body, as a reference to an Artifact Object."
         }
       },
       "required": [
         "is_multipart"
-      ]
+      ],
+      "not": {
+        "required": [
+          "body"
+        ]
+      }
     }
   ],
   "definitions": {
@@ -136,11 +169,12 @@
           "^date|received_lines|content_type|from_ref|sender_ref|to_refs|cc_refs|bcc_refs|subject$": {
             "description": "Invalid additional header field types"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "patternProperties": {
         "^[a-zA-Z0-9_-]{3,256}$": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
