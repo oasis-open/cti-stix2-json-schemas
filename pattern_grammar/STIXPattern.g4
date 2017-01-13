@@ -1,3 +1,6 @@
+// This is an ANTLR4 grammar for the STIX Patterning Language.
+//
+// http://docs.oasis-open.org/cti/stix/v2.0/stix-v2.0-part5-stix-patterning.html
 
 grammar STIXPattern;
 
