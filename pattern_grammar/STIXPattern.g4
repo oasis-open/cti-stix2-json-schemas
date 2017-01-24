@@ -94,7 +94,6 @@ setLiteral
 primitiveLiteral
   : orderableLiteral
   | BoolLiteral
-  | NULL
   ;
 
 orderableLiteral
@@ -167,7 +166,6 @@ MONTHS:  M O N T H S;
 YEARS:  Y E A R S;
 TRUE:  T R U E;
 FALSE:  F A L S E;
-NULL:  N U L L;
 WITHIN:  W I T H I N;
 REPEATS:  R E P E A T S;
 TIMES:  T I M E S;
