@@ -57,7 +57,7 @@ startStopQualifier
   ;
 
 withinQualifier
-  : WITHIN IntLiteral SECONDS
+  : WITHIN FloatLiteral SECONDS
   ;
 
 repeatedQualifier
