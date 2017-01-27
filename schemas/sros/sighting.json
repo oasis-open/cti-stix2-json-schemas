@@ -35,25 +35,45 @@
           "maximum": 999999999
         },
         "sighting_of_ref": {
-          "$ref": "../common/identifier.json",
-          "not": {
-            "anyOf": [
-              {
+          "allOf": [
+            {
+              "$ref": "../common/identifier.json"
+            },
+            {
+              "not": {
                 "pattern": "^sighting--"
-              },
-              {
+              }
+            },
+            {
+              "not": {
                 "pattern": "^relationship--"
               }
-            ]
-          },
+            },
+            {
+              "not": {
+                "pattern": "^bundle--"
+              }
+            },
+            {
+              "not": {
+                "pattern": "^marking-definition--"
+              }
+            }
+          ],
           "description": "An ID reference to the object that has been sighted."
         },
         "observed_data_refs": {
           "type": "array",
           "description": "A list of ID references to the Observed Data objects that contain the raw cyber data for this Sighting.",
           "items": {
-            "$ref": "../common/identifier.json",
-            "pattern": "^observed-data--"
+            "allOf": [
+              {
+                "$ref": "../common/identifier.json"
+              },
+              {
+                "pattern": "^observed-data--"
+              }
+            ]
           },
           "minItems": 1
         },
@@ -61,8 +81,14 @@
           "type": "array",
           "description": "The ID of the Victim Target objects of the entities that saw the sighting.",
           "items": {
-            "$ref": "../common/identifier.json",
-            "pattern": "^identity--"
+            "allOf": [
+              {
+                "$ref": "../common/identifier.json"
+              },
+              {
+                "pattern": "^identity--"
+              }
+            ]
           },
           "minItems": 1
         },

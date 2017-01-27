@@ -81,47 +81,34 @@
   "definitions": {
     "user-account-extensions-dictionary": {
       "type": "object",
-      "anyOf": [
-        {
-          "patternProperties": {
-            "^unix-account-ext$": {
-              "type": "object",
-              "description": "The User Account Object defines the following extensions. In addition to these, producers MAY create their own.",
-              "properties": {
-                "gid": {
-                  "type": "number",
-                  "description": "Specifies the primary group ID of the account."
-                },
-                "groups": {
-                  "type": "array",
-                  "description": "Specifies a list of names of groups that the account is a member of.",
-                  "items": {
-                    "type": "string"
-                  },
-                  "minItems": 1
-                },
-                "home_dir": {
-                  "type": "string",
-                  "description": "Specifies the home directory of the account."
-                },
-                "shell": {
-                  "type": "string",
-                  "description": "Specifies the account’s command shell."
-                }
-              }
-            }
-          }
-        },
-        {
-          "not": {
-            "patternProperties": {
-              "^unix-account-ext$": {
-                "description": "Invalid custom file extension"
-              }
+      "patternProperties": {
+        "^unix-account-ext$": {
+          "type": "object",
+          "description": "The User Account Object defines the following extensions. In addition to these, producers MAY create their own.",
+          "properties": {
+            "gid": {
+              "type": "number",
+              "description": "Specifies the primary group ID of the account."
+            },
+            "groups": {
+              "type": "array",
+              "description": "Specifies a list of names of groups that the account is a member of.",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "home_dir": {
+              "type": "string",
+              "description": "Specifies the home directory of the account."
+            },
+            "shell": {
+              "type": "string",
+              "description": "Specifies the account’s command shell."
             }
           }
         }
-      ],
+      },
       "additionalProperties": {
         "$ref": "../common/dictionary.json",
         "description": "Custom file extension"
