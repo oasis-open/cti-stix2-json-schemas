@@ -57,7 +57,7 @@ startStopQualifier
   ;
 
 withinQualifier
-  : WITHIN IntLiteral timeUnit
+  : WITHIN (IntLiteral|FloatLiteral) SECONDS
   ;
 
 repeatedQualifier
@@ -103,10 +103,6 @@ orderableLiteral
   | BinaryLiteral
   | HexLiteral
   | TimestampLiteral
-  ;
-
-timeUnit
-  : MILLISECONDS | SECONDS | MINUTES | HOURS | DAYS | MONTHS | YEARS
   ;
 
 IntLiteral :
@@ -157,13 +153,7 @@ LAST:  L A S T ;
 IN:  I N;
 START:  S T A R T ;
 STOP:  S T O P ;
-MILLISECONDS:  M I L L I S E C O N D S;
 SECONDS:  S E C O N D S;
-MINUTES:  M I N U T E S;
-HOURS:  H O U R S;
-DAYS:  D A Y S;
-MONTHS:  M O N T H S;
-YEARS:  Y E A R S;
 TRUE:  T R U E;
 FALSE:  F A L S E;
 WITHIN:  W I T H I N;
