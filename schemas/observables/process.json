@@ -44,9 +44,14 @@
           "type": "array",
           "description": "Specifies the list of arguments used in executing the process.",
           "items": {
-            "type": "string"
+            "type": "string",
+            "pattern": "^((-{1,2}|\\/)[^\\s=]+ (?![-\\/]))?([^\\s\"'=|]+(=([^\\s\"'=|]+|\"([^\"]*)\"|'([^']*)'))?|\"([^\"]*)\"|'([^']*)')$"
           },
           "minItems": 1
+        },
+        "command_line": {
+          "type": "string",
+          "description": "Specifies the full command line used in executing the process, including the process name (depending on the operating system)."
         },
         "environment_variables": {
           "$ref": "../common/dictionary.json",
@@ -140,10 +145,6 @@
             "group_name": {
               "type": "string",
               "description": "Specifies the name of the load ordering group of which the service is a member."
-            },
-            "start_command_line": {
-              "type": "string",
-              "description": "Specifies the full command line used to start the service."
             },
             "start_type": {
               "type": "string",
