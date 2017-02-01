@@ -14,12 +14,12 @@
     "id": {
       "allOf": [
         {
-          "$ref": "identifier.json",
-          "description": "An identifier for this bundle."
+          "$ref": "identifier.json"
         },
         {
           "title": "id",
-          "pattern": "^marking-definition--"
+          "pattern": "^marking-definition--",
+          "description": "An identifier for this bundle."
         }
       ]
     },
@@ -43,8 +43,14 @@
       "type": "array",
       "description": "The object_marking_refs property specifies a list of IDs of marking-definition objects that apply to this Marking Definition.",
       "items": {
-        "$ref": "identifier.json",
-        "pattern": "^marking-definition--"
+        "allOf": [
+          {
+            "$ref": "identifier.json"
+          },
+          {
+            "pattern": "^marking-definition--"
+          }
+        ]
       },
       "minItems": 1
     },

@@ -14,9 +14,15 @@
       "minItems": 1
     },
     "marking_ref": {
-      "$ref": "identifier.json",
-      "pattern": "^marking-definition--",
-      "description": "The marking_ref property specifies the ID of the marking-definition object that describes the marking."
+      "allOf": [
+        {
+          "$ref": "identifier.json"
+        },
+        {
+          "pattern": "^marking-definition--",
+          "description": "The marking_ref property specifies the ID of the marking-definition object that describes the marking."
+        }
+      ]
     }
   },
   "required": [
