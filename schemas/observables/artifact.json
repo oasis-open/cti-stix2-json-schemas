@@ -41,7 +41,12 @@
       },
       "required": [
         "payload_bin"
-      ]
+      ],
+      "not": {
+        "required": [
+          "url"
+        ]
+      }
     },
     {
       "properties": {
@@ -57,7 +62,12 @@
       "required": [
         "url",
         "hashes"
-      ]
+      ],
+      "not": {
+        "required": [
+          "payload_bin"
+        ]
+      }
     }
   ]
 }

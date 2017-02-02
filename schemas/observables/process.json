@@ -44,9 +44,14 @@
           "type": "array",
           "description": "Specifies the list of arguments used in executing the process.",
           "items": {
-            "type": "string"
+            "type": "string",
+            "pattern": "^((-{1,2}|\\/)[^\\s=]+ (?![-\\/]))?([^\\s\"'=|]+(=([^\\s\"'=|]+|\"([^\"]*)\"|'([^']*)'))?|\"([^\"]*)\"|'([^']*)')$"
           },
           "minItems": 1
+        },
+        "command_line": {
+          "type": "string",
+          "description": "Specifies the full command line used in executing the process, including the process name (depending on the operating system)."
         },
         "environment_variables": {
           "$ref": "../common/dictionary.json",
@@ -86,130 +91,109 @@
   "definitions": {
     "process-extensions-dictionary": {
       "type": "object",
-      "anyOf": [
-        {
-          "patternProperties": {
-            "^windows-process-ext$": {
-              "type": "object",
-              "description": "The Windows Process extension specifies a default extension for capturing properties specific to Windows processes.",
-              "properties": {
-                "aslr_enabled": {
-                  "type": "boolean",
-                  "description": "Specifies whether Address Space Layout Randomization (ASLR) is enabled for the process."
-                },
-                "dep_enabled": {
-                  "type": "boolean",
-                  "description": "Specifies whether Data Execution Prevention (DEP) is enabled for the process."
-                },
-                "priority": {
-                  "type": "string",
-                  "description": "Specifies the current priority class of the process in Windows."
-                },
-                "owner_sid": {
-                  "type": "string",
-                  "description": "Specifies the Security ID (SID) value of the owner of the process."
-                },
-                "window_title": {
-                  "type": "string",
-                  "description": "Specifies the title of the main window of the process."
-                },
-                "startup_info": {
-                  "$ref": "#/definitions/startup-info-dictionary",
-                  "description": "Specifies the STARTUP_INFO struct used by the process, as a dictionary."
-                }
-              }
+      "patternProperties": {
+        "^windows-process-ext$": {
+          "type": "object",
+          "description": "The Windows Process extension specifies a default extension for capturing properties specific to Windows processes.",
+          "properties": {
+            "aslr_enabled": {
+              "type": "boolean",
+              "description": "Specifies whether Address Space Layout Randomization (ASLR) is enabled for the process."
+            },
+            "dep_enabled": {
+              "type": "boolean",
+              "description": "Specifies whether Data Execution Prevention (DEP) is enabled for the process."
+            },
+            "priority": {
+              "type": "string",
+              "description": "Specifies the current priority class of the process in Windows."
+            },
+            "owner_sid": {
+              "type": "string",
+              "description": "Specifies the Security ID (SID) value of the owner of the process."
+            },
+            "window_title": {
+              "type": "string",
+              "description": "Specifies the title of the main window of the process."
+            },
+            "startup_info": {
+              "$ref": "#/definitions/startup-info-dictionary",
+              "description": "Specifies the STARTUP_INFO struct used by the process, as a dictionary."
             }
           }
         },
-        {
-          "patternProperties": {
-            "^windows-service-ext$": {
-              "type": "object",
-              "description": "The Windows Service extension specifies a default extension for capturing properties specific to Windows services.",
-              "properties": {
-                "service_name": {
-                  "type": "string",
-                  "description": "Specifies the name of the service."
-                },
-                "descriptions": {
-                  "type": "array",
-                  "description": "Specifies the descriptions defined for the service.",
-                  "items": {
-                    "type": "string"
-                  },
-                  "minItems": 1
-                },
-                "display_name": {
-                  "type": "string",
-                  "description": "Specifies the displayed name of the service in Windows GUI controls."
-                },
-                "group_name": {
-                  "type": "string",
-                  "description": "Specifies the name of the load ordering group of which the service is a member."
-                },
-                "start_command_line": {
-                  "type": "string",
-                  "description": "Specifies the full command line used to start the service."
-                },
-                "start_type": {
-                  "type": "string",
-                  "description": "Specifies the start options defined for the service. windows-service-start-enum",
-                  "enum": [
-                    "SERVICE_AUTO_START",
-                    "SERVICE_BOOT_START",
-                    "SERVICE_DEMAND_START",
-                    "SERVICE_DISABLED",
-                    "SERVICE_SYSTEM_ALERT"
-                  ]
-                },
-                "service_dll_refs": {
-                  "type": "array",
-                  "description": "Specifies the DLLs loaded by the service, as a reference to one or more File Objects.",
-                  "items": {
-                    "type": "string"
-                  },
-                  "minItems": 1
-                },
-                "service_type": {
-                  "type": "string",
-                  "description": "Specifies the type of the service. windows-service-enum",
-                  "enum": [
-                    "SERVICE_KERNEL_DRIVER",
-                    "SERVICE_FILE_SYSTEM_DRIVER",
-                    "SERVICE_WIN32_OWN_PROCESS",
-                    "SERVICE_WIN32_SHARE_PROCESS"
-                  ]
-                },
-                "service_status": {
-                  "type": "string",
-                  "description": "Specifies the current status of the service. windows-service-status-enum",
-                  "enum": [
-                    "SERVICE_CONTINUE_PENDING",
-                    "SERVICE_PAUSE_PENDING",
-                    "SERVICE_PAUSED",
-                    "SERVICE_RUNNING",
-                    "SERVICE_START_PENDING",
-                    "SERVICE_STOP_PENDING",
-                    "SERVICE_STOPPED"
-                  ]
-                }
+        "^windows-service-ext$": {
+          "type": "object",
+          "description": "The Windows Service extension specifies a default extension for capturing properties specific to Windows services.",
+          "properties": {
+            "service_name": {
+              "type": "string",
+              "description": "Specifies the name of the service."
+            },
+            "descriptions": {
+              "type": "array",
+              "description": "Specifies the descriptions defined for the service.",
+              "items": {
+                "type": "string"
               },
-              "required": [
-                "service_name"
+              "minItems": 1
+            },
+            "display_name": {
+              "type": "string",
+              "description": "Specifies the displayed name of the service in Windows GUI controls."
+            },
+            "group_name": {
+              "type": "string",
+              "description": "Specifies the name of the load ordering group of which the service is a member."
+            },
+            "start_type": {
+              "type": "string",
+              "description": "Specifies the start options defined for the service. windows-service-start-enum",
+              "enum": [
+                "SERVICE_AUTO_START",
+                "SERVICE_BOOT_START",
+                "SERVICE_DEMAND_START",
+                "SERVICE_DISABLED",
+                "SERVICE_SYSTEM_ALERT"
+              ]
+            },
+            "service_dll_refs": {
+              "type": "array",
+              "description": "Specifies the DLLs loaded by the service, as a reference to one or more File Objects.",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "service_type": {
+              "type": "string",
+              "description": "Specifies the type of the service. windows-service-enum",
+              "enum": [
+                "SERVICE_KERNEL_DRIVER",
+                "SERVICE_FILE_SYSTEM_DRIVER",
+                "SERVICE_WIN32_OWN_PROCESS",
+                "SERVICE_WIN32_SHARE_PROCESS"
+              ]
+            },
+            "service_status": {
+              "type": "string",
+              "description": "Specifies the current status of the service. windows-service-status-enum",
+              "enum": [
+                "SERVICE_CONTINUE_PENDING",
+                "SERVICE_PAUSE_PENDING",
+                "SERVICE_PAUSED",
+                "SERVICE_RUNNING",
+                "SERVICE_START_PENDING",
+                "SERVICE_STOP_PENDING",
+                "SERVICE_STOPPED"
               ]
             }
-          }
-        },
-        {
-          "not": {
-            "patternProperties": {
-              "^windows-service-ext|windows-process-ext$": {
-                "description": "Invalid custom file extension"
-              }
-            }
-          }
+          },
+          "required": [
+            "service_name"
+          ]
         }
-      ],
+      },
       "additionalProperties": {
         "$ref": "../common/dictionary.json",
         "description": "Custom file extension"
@@ -217,38 +201,22 @@
     },
     "startup-info-dictionary": {
       "type": "object",
-      "anyOf": [
-        {
-          "patternProperties": {
-            "^lpDesktop|lpTitle|dwFillAttribute|dwFlags|wShowWindow|hStdInput|hStdOutput|hStdError$": {
-              "type": "string"
-            }
-          }
+      "patternProperties": {
+        "^lpDesktop|lpTitle|dwFillAttribute|dwFlags|wShowWindow|hStdInput|hStdOutput|hStdError$": {
+          "type": "string"
         },
-        {
-          "patternProperties": {
-            "^lpReserved|lpReserved2$": {
-              "type": null
-            }
-          }
+        "^lpReserved|lpReserved2$": {
+          "type": null
         },
-        {
-          "patternProperties": {
-            "^cb|dwX|dwY|dwXSize|dwYSize|dwXCountChars|dwYCountChars$": {
-              "type": "integer"
-            }
-          }
+        "^cb|dwX|dwY|dwXSize|dwYSize|dwXCountChars|dwYCountChars$": {
+          "type": "integer"
         },
-        {
-          "patternProperties": {
-            "^cbReserved2$": {
-              "type": "integer",
-              "minimum": 0,
-              "maximum": 0
-            }
-          }
+        "^cbReserved2$": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 0
         }
-      ],
+      },
       "additionalProperties": false
     }
   }

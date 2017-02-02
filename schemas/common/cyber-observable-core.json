@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "core",
+  "title": "cyber-observable-core",
   "description": "Common properties and behavior across all Cyber Observable Objects.",
   "type": "object",
   "properties": {
@@ -51,15 +51,6 @@
     }
   },
   "additionalProperties": false,
-  "not": {
-    "anyOf": [
-      {
-        "required": [
-          "action"
-        ]
-      }
-    ]
-  },
   "required": [
     "type"
   ]
