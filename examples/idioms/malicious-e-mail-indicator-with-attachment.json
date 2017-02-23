@@ -26,7 +26,7 @@
         "malicious-activity"
       ],
       "valid_from": "2014-10-31T15:52:13.127931Z",
-      "pattern": "email-message:header.subject MATCHES  /^[IMPORTANT] Please Review Before/"
+      "pattern": "[ email-message:header.subject MATCHES  /^[IMPORTANT] Please Review Before/ ]"
     },
     {
       "type": "indicator",
@@ -38,7 +38,7 @@
         "malicious-activity"
       ],
       "valid_from": "2014-10-31T15:52:13.127931Z",
-      "pattern": "email-message:header.subject MATCHES  /^[IMPORTANT] Please Review Before/"
+      "pattern": "[ email-message:header.subject MATCHES  /^[IMPORTANT] Please Review Before/ ]"
     },
     {
       "type": "indicator",
@@ -50,7 +50,7 @@
         "malicious-activity"
       ],
       "valid_from": "2014-10-31T15:52:13.127931Z",
-      "pattern": "email-message:attachments.name MATCHES  /^Final Report.+\\.exe$/"
+      "pattern": "[ email-message:attachments.name MATCHES  /^Final Report.+\\.exe$/ ]"
     },
     {
       "type": "relationship",
@@ -72,7 +72,7 @@
     },
     {
       "type": "relationship",
-      "id": "relationship--e983dad5-7c88-444a-9f78-cf31dbfae2bd",      
+      "id": "relationship--e983dad5-7c88-444a-9f78-cf31dbfae2bd",
       "created": "2014-10-31T15:52:13.126765Z",
       "modified": "2014-10-31T15:52:13.126765Z",
       "relationship_type": "indicates",
