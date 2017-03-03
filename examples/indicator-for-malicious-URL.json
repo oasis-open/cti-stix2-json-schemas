@@ -1,0 +1,46 @@
+{
+  "type": "bundle",
+  "id": "bundle--44af6c39-c09b-49c5-9de2-394224b04982",
+  "spec_version": "2.0",
+  "objects": [
+    {
+      "type": "indicator",
+      "id": "indicator--d81f86b9-975b-bc0b-775e-810c5ad45a4f",
+      "created": "2014-06-29T13:49:37.079000Z",
+      "modified": "2014-06-29T13:49:37.079000Z",
+      "labels": [
+        "malicious-activity"
+      ],
+      "name": "Malicious site hosting downloader",
+      "pattern": "[url:value = 'http://x4z9arb.cn/4712/']",
+      "valid_from": "2014-06-29T13:49:37.079000Z"
+    },
+    {
+      "type": "malware",
+      "id": "malware--162d917e-766f-4611-b5d6-652791454fca",
+      "created": "2014-06-30T09:15:17.182Z",
+      "modified": "2014-06-30T09:15:17.182Z",
+      "name": "x4z9arb backdoor",
+      "labels": [
+        "backdoor",
+        "remote-access-trojan"
+      ],
+      "description": "This malware attempts to download remote files after establishing a foothold as a backdoor.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mandiant-attack-lifecycle-model",
+          "phase_name": "establish-foothold"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6ce78886-1027-4800-9301-40c274fd472f",
+      "created": "2014-06-30T09:15:17.182Z",
+      "modified": "2014-06-30T09:15:17.182Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d81f86b9-975b-bc0b-775e-810c5ad45a4f",
+      "target_ref": "malware--162d917e-766f-4611-b5d6-652791454fca"
+    }
+  ]
+}
