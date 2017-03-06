@@ -164,7 +164,7 @@
     },
     {
       "type": "malware",
-      "id": "malware--dc66992-4a1a-470d-bfae-694e740ce181",
+      "id": "malware--dc669921-4a1a-470d-bfae-694e740ce181",
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "PIVY Variant (8002debc47e04d534b45f7bb7dfcab4d)",
@@ -845,7 +845,7 @@
         "malware--61a62a6a-9a18-4758-8e52-622431c4b8ae",
         "malware--30ea087f-7d2b-496b-9ed1-5f000c8b7695",
         "malware--4de25c38-5826-4ee7-b84d-878064de87ad",
-        "malware--dc66992-4a1a-470d-bfae-694e740ce181",
+        "malware--dc669921-4a1a-470d-bfae-694e740ce181",
         "malware--f86febd3-609b-4d2e-9fec-aa805cb498bf",
         "malware--80c260d9-a075-4148-9301-ebe4af27f449",
         "malware--3ed0364f-62c8-4ebc-b136-deaf6966880b",
@@ -1181,7 +1181,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
       "source_ref": "campaign--d02a1560-ff69-49f4-ac34-919b8aa4b91e",
-      "target_ref": "malware--dc66992-4a1a-470d-bfae-694e740ce181"
+      "target_ref": "malware--dc669921-4a1a-470d-bfae-694e740ce181"
     },
     {
       "type": "relationship",
@@ -1208,7 +1208,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "indicates",
       "source_ref": "indicator--4e11b23f-732b-418e-b786-4dbf65459d50",
-      "target_ref": "malware--dc66992-4a1a-470d-bfae-694e740ce181"
+      "target_ref": "malware--dc669921-4a1a-470d-bfae-694e740ce181"
     },
     {
       "type": "relationship",
