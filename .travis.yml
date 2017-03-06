@@ -1,7 +1,7 @@
 language: python
 
 install:
-  - pip install stix2-validator==0.1.0
+  - pip install stix2-validator==0.2.0
 
 script:
   - stix2_validator ./examples
