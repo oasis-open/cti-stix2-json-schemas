@@ -4,4 +4,4 @@ install:
   - pip install stix2-validator==0.2.0
 
 script:
-  - stix2_validator --schemas `pwd`/schemas examples
+  - stix2_validator --schemas `pwd`/schemas -r examples
