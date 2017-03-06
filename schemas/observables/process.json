@@ -206,7 +206,7 @@
           "type": "string"
         },
         "^lpReserved|lpReserved2$": {
-          "type": null
+          "type": "null"
         },
         "^cb|dwX|dwY|dwXSize|dwYSize|dwXCountChars|dwYCountChars$": {
           "type": "integer"

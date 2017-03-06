@@ -276,17 +276,17 @@
               "patternProperties": {
                 "^[a-zA-Z0-9_-]{3,256}$": {
                   "type": "string"
-                },
-                "description": "Specifies details of the PDF document information dictionary (DID), which includes properties like the document creation data and producer, as a dictionary."
+                }
               },
-              "pdfid0": {
-                "type": "string",
-                "description": "Specifies the first file identifier found for the PDF file."
-              },
-              "pdfid1": {
-                "type": "string",
-                "description": "Specifies the second file identifier found for the PDF file."
-              }
+              "description": "Specifies details of the PDF document information dictionary (DID), which includes properties like the document creation data and producer, as a dictionary."
+            },
+            "pdfid0": {
+              "type": "string",
+              "description": "Specifies the first file identifier found for the PDF file."
+            },
+            "pdfid1": {
+              "type": "string",
+              "description": "Specifies the second file identifier found for the PDF file."
             }
           }
         },
