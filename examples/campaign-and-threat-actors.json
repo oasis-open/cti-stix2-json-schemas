@@ -63,7 +63,7 @@
                 "Influence the election in Branistan"
             ],
             "resource_level": "government",
-            "primary_motivation": "political",
+            "primary_motivation": "dominance",
             "secondary_motivations": [
                 "ideology", "organizational-gain"
             ],

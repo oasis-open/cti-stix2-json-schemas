@@ -31,7 +31,7 @@
             "created": "2014-05-08T09:00:00.000Z",
             "modified": "2014-05-08T09:00:00.000Z",
             "labels": [
-                "ip-watchlist"
+                "malicious-activity"
             ],
             "name": "IP Address for known C2 channel",
             "pattern": "[ipv4-addr:value = '10.0.0.0']",
@@ -43,11 +43,11 @@
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2017-01-27T13:49:53.997Z",
             "labels": [
-                "file-hash-watchlist"
+                "malicious-activity"
             ],
             "modified": "2017-01-27T13:49:53.997Z",
             "name": "File hash for Poison Ivy variant",
-            "pattern": "[file:hashes:sha256 = 'ef537f25c895bfa782526529a9b63d97aa631564d5d789c2b765448c8635fb6c']",
+            "pattern": "[file:hashes.sha256 = 'ef537f25c895bfa782526529a9b63d97aa631564d5d789c2b765448c8635fb6c']",
             "valid_from": "2014-05-08T09:00:00.000000Z"
         },
         {

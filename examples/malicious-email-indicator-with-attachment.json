@@ -51,7 +51,7 @@
               "malicious-activity"
             ],
             "valid_from": "2014-10-31T15:52:13.127931Z",
-            "pattern": "email-message:attachments.name MATCHES  /^Final Report.+\\.exe$/"
+            "pattern": "[email-message:body_multipart[*].body_raw_ref.name MATCHES '^Final Report.+\\\\.exe$']"
         },
         {
             "type": "relationship",
