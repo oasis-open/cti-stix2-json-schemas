@@ -35,7 +35,7 @@
         },
         "name_enc": {
           "type": "string",
-          "pattern": "^[a-zA-Z0-9-/\\.+_:]{2,250}$",
+          "pattern": "^[a-zA-Z0-9/\\.+_:-]{2,250}$",
           "description": "Specifies the observed encoding for the name of the file."
         },
         "magic_number_hex": {
@@ -83,6 +83,9 @@
     },
     {
       "$ref": "#/definitions/isNotEncrypted"
+    },
+    {
+      "$ref": "#/definitions/elseEncrypted"
     }
   ],
   "anyOf": [
@@ -117,6 +120,9 @@
           "description": "Specifies the decryption key used to decrypt the archive file."
         }
       },
+      "required": [
+        "is_encrypted"
+      ],
       "dependencies": {
         "encryption_algorithm": [
           "is_encrypted"
@@ -137,6 +143,9 @@
           ]
         }
       },
+      "required": [
+        "is_encrypted"
+      ],
       "not": {
         "anyOf": [
           {
@@ -152,231 +161,224 @@
         ]
       }
     },
+    "elseEncrypted": {
+      "type": "object",
+      "not": {
+        "anyOf": [
+          {
+            "required": [
+              "is_encrypted"
+            ]
+          },
+          {
+            "required": [
+              "encryption_algorithm"
+            ]
+          },
+          {
+            "required": [
+              "decryption_key"
+            ]
+          }
+        ]
+      }
+    },
     "file-extensions-dictionary": {
       "type": "object",
-      "anyOf": [
-        {
-          "patternProperties": {
-            "^ntfs-ext$": {
-              "type": "object",
-              "description": "The NTFS file extension specifies a default extension for capturing properties specific to the storage of the file on the NTFS file system.",
-              "properties": {
-                "sid": {
-                  "type": "string",
-                  "description": "Specifies the security ID (SID) value assigned to the file."
-                },
-                "alternate_data_streams": {
-                  "type": "array",
-                  "description": "Specifies a list of NTFS alternate data streams that exist for the file.",
-                  "items": {
-                    "properties": {
-                      "name": {
-                        "type": "string",
-                        "description": "Specifies the name of the alternate data stream."
-                      },
-                      "hashes": {
-                        "$ref": "../common/hashes-type.json",
-                        "description": "Specifies a dictionary of hashes for the data contained in the alternate data stream."
-                      },
-                      "size": {
-                        "type": "integer",
-                        "description": "Specifies the size of the alternate data stream, in bytes, as a non-negative integer.",
-                        "minimum": 0
-                      }
-                    },
-                    "required": [
-                      "name"
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        },
-        {
-          "patternProperties": {
-            "^raster-image-ext$": {
-              "type": "object",
-              "description": "The Raster Image file extension specifies a default extension for capturing properties specific to image files.",
-              "properties": {
-                "image_height": {
-                  "type": "integer",
-                  "description": "Specifies the height of the image in the image file, in pixels."
-                },
-                "image_width": {
-                  "type": "integer",
-                  "description": "Specifies the width of the image in the image file, in pixels."
-                },
-                "bits_per_pixel": {
-                  "type": "integer",
-                  "description": "Specifies the sum of bits used for each color channel in the image in the image file, and thus the total number of pixels used for expressing the color depth of the image."
-                },
-                "image_compression_algorithm": {
-                  "type": "string",
-                  "description": "Specifies the name of the compression algorithm used to compress the image in the image file, if applicable."
-                },
-                "exif_tags": {
-                  "type": "object",
-                  "description": "Specifies the set of EXIF tags found in the image file, as a dictionary. Each key/value pair in the dictionary represents the name/value of a single EXIF tag.",
-                  "patternProperties": {
-                    "^[A-Z][a-zA-Z0-9_-]+$": {
-                      "oneOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "integer"
-                        }
-                      ]
-                    }
+      "patternProperties": {
+        "^ntfs-ext$": {
+          "type": "object",
+          "description": "The NTFS file extension specifies a default extension for capturing properties specific to the storage of the file on the NTFS file system.",
+          "properties": {
+            "sid": {
+              "type": "string",
+              "description": "Specifies the security ID (SID) value assigned to the file."
+            },
+            "alternate_data_streams": {
+              "type": "array",
+              "description": "Specifies a list of NTFS alternate data streams that exist for the file.",
+              "items": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Specifies the name of the alternate data stream."
                   },
-                  "additionalProperties": false
-                }
+                  "hashes": {
+                    "$ref": "../common/hashes-type.json",
+                    "description": "Specifies a dictionary of hashes for the data contained in the alternate data stream."
+                  },
+                  "size": {
+                    "type": "integer",
+                    "description": "Specifies the size of the alternate data stream, in bytes, as a non-negative integer.",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "name"
+                ]
               }
             }
           }
         },
-        {
-          "patternProperties": {
-            "^pdf-ext$": {
+        "^raster-image-ext$": {
+          "type": "object",
+          "description": "The Raster Image file extension specifies a default extension for capturing properties specific to image files.",
+          "properties": {
+            "image_height": {
+              "type": "integer",
+              "description": "Specifies the height of the image in the image file, in pixels."
+            },
+            "image_width": {
+              "type": "integer",
+              "description": "Specifies the width of the image in the image file, in pixels."
+            },
+            "bits_per_pixel": {
+              "type": "integer",
+              "description": "Specifies the sum of bits used for each color channel in the image in the image file, and thus the total number of pixels used for expressing the color depth of the image."
+            },
+            "image_compression_algorithm": {
+              "type": "string",
+              "description": "Specifies the name of the compression algorithm used to compress the image in the image file, if applicable."
+            },
+            "exif_tags": {
               "type": "object",
-              "description": "The PDF file extension specifies a default extension for capturing properties specific to PDF files.",
-              "properties": {
-                "version": {
-                  "type": "string",
-                  "description": "Specifies the decimal version number of the string from the PDF header that specifies the version of the PDF specification to which the PDF file conforms. E.g., '1.4'."
-                },
-                "is_optimized": {
-                  "type": "boolean",
-                  "description": "Specifies whether the PDF file has been optimized."
-                },
-                "document_info_dict": {
-                  "type:": "object",
-                  "patternProperties": {
-                    "^[a-zA-Z0-9_-]{3,256}$": {
+              "description": "Specifies the set of EXIF tags found in the image file, as a dictionary. Each key/value pair in the dictionary represents the name/value of a single EXIF tag.",
+              "patternProperties": {
+                "^[A-Z][a-zA-Z0-9_-]+$": {
+                  "oneOf": [
+                    {
                       "type": "string"
                     },
-                    "description": "Specifies details of the PDF document information dictionary (DID), which includes properties like the document creation data and producer, as a dictionary."
-                  },
-                  "pdfid0": {
-                    "type": "string",
-                    "description": "Specifies the first file identifier found for the PDF file."
-                  },
-                  "pdfid1": {
-                    "type": "string",
-                    "description": "Specifies the second file identifier found for the PDF file."
-                  }
-                }
-              }
-            }
-          }
-        },
-        {
-          "patternProperties": {
-            "^archive-ext$": {
-              "type": "object",
-              "description": "The Archive File extension specifies a default extension for capturing properties specific to archive files.",
-              "properties": {
-                "contains_refs": {
-                  "type": "array",
-                  "description": "Specifies the files contained in the archive, as a reference to one or more other File Objects. The objects referenced in this list MUST be of type file-object.",
-                  "items": {
-                    "type": "string"
-                  },
-                  "minItems": 1
-                },
-                "version": {
-                  "type": "string",
-                  "description": "Specifies the version of the archive type used in the archive file."
-                },
-                "comment": {
-                  "type": "string",
-                  "description": "Specifies a comment included as part of the archive file."
+                    {
+                      "type": "integer"
+                    }
+                  ]
                 }
               },
-              "required": [
-                "contains_refs"
-              ]
+              "additionalProperties": false
             }
           }
         },
-        {
-          "patternProperties": {
-            "^windows-pebinary-ext$": {
-              "type": "object",
-              "description": "The Windows PE Binary File extension specifies a default extension for capturing properties specific to Windows portable executable (PE) files.",
-              "properties": {
-                "pe_type": {
-                  "type": "string",
-                  "description": "Specifies the type of the PE binary. Open Vocabulary - windows-pebinary-type-ov"
-                },
-                "imphash": {
-                  "type": "string",
-                  "description": "Specifies the special import hash, or 'imphash', calculated for the PE Binary based on its imported libraries and functions."
-                },
-                "machine_hex": {
-                  "$ref": "../common/hex.json",
-                  "description": "Specifies the type of target machine."
-                },
-                "number_of_sections": {
-                  "type": "integer",
-                  "description": "Specifies the number of sections in the PE binary, as a non-negative integer."
-                },
-                "time_date_stamp": {
-                  "type": "string",
-                  "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$",
-                  "description": "Specifies the time when the PE binary was created.  The timestamp value MUST BE precise to the second."
-                },
-                "pointer_to_symbol_table_hex": {
-                  "$ref": "../common/hex.json",
-                  "description": "Specifies the file offset of the COFF symbol table."
-                },
-                "number_of_symbols": {
-                  "type": "integer",
-                  "description": "Specifies the number of entries in the symbol table of the PE binary, as a non-negative integer."
-                },
-                "size_of_optional_header": {
-                  "type": "integer",
-                  "minimum": 0,
-                  "description": "Specifies the size of the optional header of the PE binary."
-                },
-                "characteristics_hex": {
-                  "$ref": "../common/hex.json",
-                  "description": "Specifies the flags that indicate the file’s characteristics."
-                },
-                "file_header_hashes": {
-                  "$ref": "../common/hashes-type.json",
-                  "description": "Specifies any hashes that were computed for the file header."
-                },
-                "optional_header": {
-                  "$ref": "#/definitions/windows-pe-optional-header-type",
-                  "description": "Specifies the PE optional header of the PE binary."
-                },
-                "sections": {
-                  "type": "array",
-                  "description": "Specifies metadata about the sections in the PE file.",
-                  "items": {
-                    "$ref": "#/definitions/windows-pe-section"
-                  },
-                  "minItems": 1
+        "^pdf-ext$": {
+          "type": "object",
+          "description": "The PDF file extension specifies a default extension for capturing properties specific to PDF files.",
+          "properties": {
+            "version": {
+              "type": "string",
+              "description": "Specifies the decimal version number of the string from the PDF header that specifies the version of the PDF specification to which the PDF file conforms. E.g., '1.4'."
+            },
+            "is_optimized": {
+              "type": "boolean",
+              "description": "Specifies whether the PDF file has been optimized."
+            },
+            "document_info_dict": {
+              "type:": "object",
+              "patternProperties": {
+                "^[a-zA-Z0-9_-]{3,256}$": {
+                  "type": "string"
                 }
               },
-              "required": [
-                "pe_type"
-              ]
+              "description": "Specifies details of the PDF document information dictionary (DID), which includes properties like the document creation data and producer, as a dictionary."
+            },
+            "pdfid0": {
+              "type": "string",
+              "description": "Specifies the first file identifier found for the PDF file."
+            },
+            "pdfid1": {
+              "type": "string",
+              "description": "Specifies the second file identifier found for the PDF file."
             }
           }
         },
-        {
-          "not": {
-            "patternProperties": {
-              "^windows-pebinary-ext|archive-ext|pdf-ext|raster-image-ext|ntfs-ext$": {
-                "description": "Invalid custom file extension"
-              }
+        "^archive-ext$": {
+          "type": "object",
+          "description": "The Archive File extension specifies a default extension for capturing properties specific to archive files.",
+          "properties": {
+            "contains_refs": {
+              "type": "array",
+              "description": "Specifies the files contained in the archive, as a reference to one or more other File Objects. The objects referenced in this list MUST be of type file-object.",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "version": {
+              "type": "string",
+              "description": "Specifies the version of the archive type used in the archive file."
+            },
+            "comment": {
+              "type": "string",
+              "description": "Specifies a comment included as part of the archive file."
             }
-          }
+          },
+          "required": [
+            "contains_refs"
+          ]
+        },
+        "^windows-pebinary-ext$": {
+          "type": "object",
+          "description": "The Windows PE Binary File extension specifies a default extension for capturing properties specific to Windows portable executable (PE) files.",
+          "properties": {
+            "pe_type": {
+              "type": "string",
+              "description": "Specifies the type of the PE binary. Open Vocabulary - windows-pebinary-type-ov"
+            },
+            "imphash": {
+              "type": "string",
+              "description": "Specifies the special import hash, or 'imphash', calculated for the PE Binary based on its imported libraries and functions."
+            },
+            "machine_hex": {
+              "$ref": "../common/hex.json",
+              "description": "Specifies the type of target machine."
+            },
+            "number_of_sections": {
+              "type": "integer",
+              "description": "Specifies the number of sections in the PE binary, as a non-negative integer."
+            },
+            "time_date_stamp": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$",
+              "description": "Specifies the time when the PE binary was created.  The timestamp value MUST BE precise to the second."
+            },
+            "pointer_to_symbol_table_hex": {
+              "$ref": "../common/hex.json",
+              "description": "Specifies the file offset of the COFF symbol table."
+            },
+            "number_of_symbols": {
+              "type": "integer",
+              "description": "Specifies the number of entries in the symbol table of the PE binary, as a non-negative integer."
+            },
+            "size_of_optional_header": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Specifies the size of the optional header of the PE binary."
+            },
+            "characteristics_hex": {
+              "$ref": "../common/hex.json",
+              "description": "Specifies the flags that indicate the file’s characteristics."
+            },
+            "file_header_hashes": {
+              "$ref": "../common/hashes-type.json",
+              "description": "Specifies any hashes that were computed for the file header."
+            },
+            "optional_header": {
+              "$ref": "#/definitions/windows-pe-optional-header-type",
+              "description": "Specifies the PE optional header of the PE binary."
+            },
+            "sections": {
+              "type": "array",
+              "description": "Specifies metadata about the sections in the PE file.",
+              "items": {
+                "$ref": "#/definitions/windows-pe-section"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "pe_type"
+          ]
         }
-      ],
+      },
       "additionalProperties": {
         "$ref": "../common/dictionary.json",
         "description": "Custom file extension"

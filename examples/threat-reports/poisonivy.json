@@ -164,7 +164,7 @@
     },
     {
       "type": "malware",
-      "id": "malware--dc66992-4a1a-470d-bfae-694e740ce181",
+      "id": "malware--dc669921-4a1a-470d-bfae-694e740ce181",
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "PIVY Variant (8002debc47e04d534b45f7bb7dfcab4d)",
@@ -400,7 +400,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "IP address: 219.76.208.163",
       "description": "IP address for key@123 sample 808e21d6efa2884811fbd0adf67fda78",
-      "pattern": "ipv4addr:value = '219.76.208.163'",
+      "pattern": "[ipv4-addr:value = '219.76.208.163']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -414,7 +414,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "www.webserver.dynssl.com",
       "description": "www.webserver.dynssl.com resolved to 113.10.246.30, 219.90.112.203, 219.90.112.203, 75.126.95.138, 219.90.112.197, and 202.65.222.45, which overlap with the gwx@123 IP addresses.",
-      "pattern": "[domain-name:value = 'www.webserver.dynssl.com' OR ipv4addr:value = '113.10.246.30' OR ipv4addr:value = '219.90.112.203' OR ipv4addr:value = '75.126.95.138' OR ipv4addr:value = '219.90.112.197' OR ipv4addr:value = '202.65.222.45'].",
+      "pattern": "[domain-name:value = 'www.webserver.dynssl.com' OR ipv4-addr:value = '113.10.246.30' OR ipv4-addr:value = '219.90.112.203' OR ipv4-addr:value = '75.126.95.138' OR ipv4-addr:value = '219.90.112.197' OR ipv4-addr:value = '202.65.222.45']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -428,7 +428,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "www.webserver.freetcp.com",
       "description": "www.webserver.freetcp.com resolved to 113.10.246.30, 219.90.112.203, 202.65.220.64, 75.126.95.138, 219.90.112.197, and 202.65.222.45, which overlap with the gwx@123 IP addresses.",
-      "pattern": "[domain-name:value = 'www.webserver.freetcp.com' OR ipv4addr:value = '113.10.246.30' OR ipv4addr:value = '219.90.112.203' OR ipv4addr:value = '202.65.220.64' OR ipv4addr:value = '75.126.95.138' OR ipv4addr:value = '219.90.112.197' OR ipv4addr:value = '202.65.222.45'].",
+      "pattern": "[domain-name:value = 'www.webserver.freetcp.com' OR ipv4-addr:value = '113.10.246.30' OR ipv4-addr:value = '219.90.112.203' OR ipv4-addr:value = '202.65.220.64' OR ipv4-addr:value = '75.126.95.138' OR ipv4-addr:value = '219.90.112.197' OR ipv4-addr:value = '202.65.222.45']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -442,7 +442,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "www.webserver.fartit.com",
       "description": "www.webserver.fartit.com resolved to 113.10.246.30, 219.90.112.203, 202.65.220.64, and 75.126.95.138, which overlap with the gwx@123 IP addresses.",
-      "pattern": "[domain-name:value = 'www.webserver.fartit.com' OR ipv4addr:value = '113.10.246.30' OR ipv4addr:value = '219.90.112.203' OR ipv4addr:value = '202.65.220.64' OR ipv4addr:value = '75.126.95.138']",
+      "pattern": "[domain-name:value = 'www.webserver.fartit.com' OR ipv4-addr:value = '113.10.246.30' OR ipv4-addr:value = '219.90.112.203' OR ipv4-addr:value = '202.65.220.64' OR ipv4-addr:value = '75.126.95.138']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -456,7 +456,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "microsoft.byinter.net",
       "description": "The gwx@123 sample 0323de551aa10ca6221368c4a73732e6 connects to the CnC domain names microsofta.byinter.net, microsoftb.byinter.net, microsoftc.byinter.net, and microsofte.byinter.net. These domain names resolved to 113.10.246.30, 219.90.112.203, 202.65.220.64, 75.126.95.138, 219.90.112.197, 202.65.222.45, and 98.126.148.114.",
-      "pattern": "[domain-name:value = 'microsofta.byinter.net' OR domain-name:value = 'microsoftb.byinter.net' OR domain-name:value = 'microsoftc.byinter.net' OR domain-name:value = 'microsofte.byinter.net' OR ipv4addr:value = '113.10.246.30' OR ipv4addr:value = '219.90.112.203' OR ipv4addr:value = '202.65.220.64' OR ipv4addr:value = '75.126.95.138' OR ipv4addr:value = '219.90.112.197' OR ipv4addr:value = '202.65.222.45' OR ipv4addr:value = '98.126.148.114']",
+      "pattern": "[domain-name:value = 'microsofta.byinter.net' OR domain-name:value = 'microsoftb.byinter.net' OR domain-name:value = 'microsoftc.byinter.net' OR domain-name:value = 'microsofte.byinter.net' OR ipv4-addr:value = '113.10.246.30' OR ipv4-addr:value = '219.90.112.203' OR ipv4-addr:value = '202.65.220.64' OR ipv4-addr:value = '75.126.95.138' OR ipv4-addr:value = '219.90.112.197' OR ipv4-addr:value = '202.65.222.45' OR ipv4-addr:value = '98.126.148.114']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -470,7 +470,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "nkr.iphone.qpoe.com",
       "description": "th3bug used domain name: nkr.iphone.qpoe.com. The domain nkr.iphone.qpoe.com resolved to 180.210.206.96 on January 12, 2012 and also 101.78.151.179 on December 23, 2011.",
-      "pattern": "[domain-name:value = 'nkr.iphone.qpoe.com' OR ipv4addr:value = '180.210.206.96' OR ipv4addr:value = '101.78.151.179']",
+      "pattern": "[domain-name:value = 'nkr.iphone.qpoe.com' OR ipv4-addr:value = '180.210.206.96' OR ipv4-addr:value = '101.78.151.179']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -484,7 +484,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "e.ct.toh.info",
       "description": "th3bug used domain name: e.ct.toh.info. The domain e.ct.toh.info resolved to 101.78.151.179 on June 12, 2012. The sample 55a3b2656ceac2ba6257b6e39f4a5b5a connected to ct.toh.info domain with the PIVY password th3bug.",
-      "pattern": "[domain-name:value = 'e.ct.toh.info' OR ipv4addr:value = '101.78.151.179']",
+      "pattern": "[domain-name:value = 'e.ct.toh.info' OR ipv4-addr:value = '101.78.151.179']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -498,7 +498,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "js001.3322.org",
       "description": "menuPass used control server: js001.3322.org. The sample (b08694e14a9b966d8033b42b58ab727d) connected to a control server at js001.3322.org with a password xiaoxiaohuli (Chinese translation: 'little little fox')",
-      "pattern": "[domain-name:value = 'js001.3322.org' OR ipv4addr:value = '101.78.151.179']",
+      "pattern": "[domain-name:value = 'js001.3322.org' OR ipv4-addr:value = '101.78.151.179']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -512,7 +512,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "apple.cmdnetview.com",
       "description": "menuPass used domain: apple.cmdnetview.com. The sample d8c00fed6625e5f8d0b8188a5caac115 connected to apple.cmdnetview.com with the password XGstone. IP 60.10.1.120 hosted this domain.",
-      "pattern": "[domain-name:value = 'apple.cmdnetview.com' OR ipv4addr:value = '60.10.1.120']",
+      "pattern": "[domain-name:value = 'apple.cmdnetview.com' OR ipv4-addr:value = '60.10.1.120']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -526,7 +526,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "autuo.xicp.net",
       "description": "menuPass used domain: autuo.xicp.net. The sample b1deff736b6d12b8d98b485e20d318ea connected to autuo.xicp.net with the password keaidestone. IP 60.10.1.115 hosted this domain.",
-      "pattern": "[domain-name:value = 'domain autuo.xicp.net' OR ipv4addr:value = '60.10.1.115']",
+      "pattern": "[domain-name:value = 'domain autuo.xicp.net' OR ipv4-addr:value = '60.10.1.115']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -554,7 +554,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "tw.2012yearleft.com",
       "description": "08709f35581e0958d1ca4e50b7d86dba has a compile time of July 20. 2012 and connected to tw.2012yearleft.com with the password keaidestone. 2012yearleft.com was registered on February 13, 2012 by zhengyanbin8@gmail.com.",
-      "pattern": "[domain-name:value = 'tw.2012yearleft.com' OR ipv4addr:value = '60.10.1.114' OR ipv4addr:value = '60.1.1.114']",
+      "pattern": "[domain-name:value = 'tw.2012yearleft.com' OR ipv4-addr:value = '60.10.1.114' OR ipv4-addr:value = '60.1.1.114']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -568,7 +568,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "dedydns.ns01.us",
       "description": "The domain dedydns.ns01.us resolved to 60.10.1.121. The sample e84853c0484b02b7518dd6837 87d04fc connected to dedydns.ns01.us with the password smallfish and used the CBricksDoc launcher.",
-      "pattern": "[domain-name:value = 'dedydns.ns01.us' OR ipv4addr:value = '60.10.1.121']",
+      "pattern": "[domain-name:value = 'dedydns.ns01.us' OR ipv4-addr:value = '60.10.1.121']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -582,7 +582,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "maofajapa.3322.org",
       "description": "The domain maofajapa.3322.org resolved to 60.10.1.121. The sample cf8094c07c15aa394dddd4eca4aa8c8b connected to maofajapa.3322.org with the password happyyongzi.",
-      "pattern": "[domain-name:value = 'maofajapa.3322.org' OR ipv4addr:value = '60.10.1.121']",
+      "pattern": "[domain-name:value = 'maofajapa.3322.org' OR ipv4-addr:value = '60.10.1.121']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -610,7 +610,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "fbi.zyns.com",
       "description": "The domain fbi.zyns.com resolved to 60.10.1.118 on August 21, 2012. 68fec995a13762184a2616bda86757f8 had a compile time of March 25, 2012 and connected to fbi.zyns.com with the password menuPass.",
-      "pattern": "[domain-name:value = 'fbi.zyns.com' OR ipv4addr:value = '60.10.1.118']",
+      "pattern": "[domain-name:value = 'fbi.zyns.com' OR ipv4-addr:value = '60.10.1.118']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -652,7 +652,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "sh.chromeenter.com",
       "description": "The sample e6ca06e9b000933567a8604300094a85 connected to the domain sh.chromeenter.com with the password happyyongzi. The domain sh.chromeenter.com previously resolved to the IP 60.2.148.167.",
-      "pattern": "[domain-name:value = 'sh.chromeenter.com' OR ipv4addr:value = '60.2.148.167']",
+      "pattern": "[domain-name:value = 'sh.chromeenter.com' OR ipv4-addr:value = '60.2.148.167']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -666,7 +666,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "mf.ddns.info",
       "description": "The sample 56cff0d0e0ce486aa0b9e4bc0bf2a141 was compiled on 2011-08-31 and connected to mf.ddns.info with the password menuPass. The domain mf.ddns.info resolved to 54.241.8.84 on November 22, 2012. This same IP also hosted the domain av.ddns.us on the same date.",
-      "pattern": "[domain-name:value = 'mf.ddns.info' OR ipv4addr:value = '60.2.148.167']",
+      "pattern": "[domain-name:value = 'mf.ddns.info' OR ipv4-addr:value = '60.2.148.167']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -680,7 +680,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "av.ddns.us",
       "description": "The sample 60963553335fa5877bd5f9be9d8b23a6 was compiled on June 9, 2012 and connected to av.ddns.us with the password of admin.",
-      "pattern": "[domain-name:value = 'av.ddns.us' OR ipv4addr:value = '60.2.148.167']",
+      "pattern": "[domain-name:value = 'av.ddns.us' OR ipv4-addr:value = '60.2.148.167']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -694,7 +694,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "jj.mysecondarydns.com",
       "description": "The sample 4e84b1448cf96fabe88c623b222057c4 connected to jj.mysecondarydns.com with the password menuPass. The domain jj.mysecondarydns.com also resolved to 60.2.148.167.",
-      "pattern": "[domain-name:value = 'jj.mysecondarydns.com' OR ipv4addr:value = '60.2.148.167']",
+      "pattern": "[domain-name:value = 'jj.mysecondarydns.com' OR ipv4-addr:value = '60.2.148.167']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -708,7 +708,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "mongoles.3322.org",
       "description": "The sample 494e65cf21ad559fccf3dacdd69acc94 connected to mongoles.3322.org with the password fishplay.",
-      "pattern": "[domain-name:value = 'mongoles.3322.org' OR ipv4addr:value = '123.183.210.28']",
+      "pattern": "[domain-name:value = 'mongoles.3322.org' OR ipv4-addr:value = '123.183.210.28']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -722,7 +722,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "name": "3q.wubangtu.info",
       "description": "The sample a5965b750997dbecec61358d41ac93c7 connected to 3q.wubangtu.info with the password menuPass. The domain wubangtu.info also resolved to 123.183.210.28.",
-      "pattern": "[domain-name:value = '3q.wubangtu.info' OR ipv4addr:value = '123.183.210.28']",
+      "pattern": "[domain-name:value = '3q.wubangtu.info' OR ipv4-addr:value = '123.183.210.28']",
       "labels": [
         "malicious-activity",
         "attribution"
@@ -845,7 +845,7 @@
         "malware--61a62a6a-9a18-4758-8e52-622431c4b8ae",
         "malware--30ea087f-7d2b-496b-9ed1-5f000c8b7695",
         "malware--4de25c38-5826-4ee7-b84d-878064de87ad",
-        "malware--dc66992-4a1a-470d-bfae-694e740ce181",
+        "malware--dc669921-4a1a-470d-bfae-694e740ce181",
         "malware--f86febd3-609b-4d2e-9fec-aa805cb498bf",
         "malware--80c260d9-a075-4148-9301-ebe4af27f449",
         "malware--3ed0364f-62c8-4ebc-b136-deaf6966880b",
@@ -1181,7 +1181,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
       "source_ref": "campaign--d02a1560-ff69-49f4-ac34-919b8aa4b91e",
-      "target_ref": "malware--dc66992-4a1a-470d-bfae-694e740ce181"
+      "target_ref": "malware--dc669921-4a1a-470d-bfae-694e740ce181"
     },
     {
       "type": "relationship",
@@ -1208,7 +1208,7 @@
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "indicates",
       "source_ref": "indicator--4e11b23f-732b-418e-b786-4dbf65459d50",
-      "target_ref": "malware--dc66992-4a1a-470d-bfae-694e740ce181"
+      "target_ref": "malware--dc669921-4a1a-470d-bfae-694e740ce181"
     },
     {
       "type": "relationship",

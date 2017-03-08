@@ -37,7 +37,86 @@
         "objects": {
           "type": "object",
           "description": "A dictionary of Cyber Observable Objects that describes the single 'fact' that was observed.",
-          "minProperties": 1
+          "minProperties": 1,
+          "patternProperties": {
+            "^.*$": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "allOf": [
+                    {
+                      "$ref": "../common/cyber-observable-core.json"
+                    },
+                    {
+                      "not": {
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "pattern": "^artifact|directory|file|mutex|process|software|user-account|windows-registry-key|x509-certificate|autonomous-system|domain-name|email-addr|email-message|ipv4-addr|ipv6-addr|mac-addr|network-traffic|url$",
+                            "description": "Indicates that this object is a custom Observable Object."
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$ref": "../observables/artifact.json"
+                },
+                {
+                  "$ref": "../observables/autonomous-system.json"
+                },
+                {
+                  "$ref": "../observables/directory.json"
+                },
+                {
+                  "$ref": "../observables/domain-name.json"
+                },
+                {
+                  "$ref": "../observables/email-addr.json"
+                },
+                {
+                  "$ref": "../observables/email-message.json"
+                },
+                {
+                  "$ref": "../observables/file.json"
+                },
+                {
+                  "$ref": "../observables/ipv4-addr.json"
+                },
+                {
+                  "$ref": "../observables/ipv6-addr.json"
+                },
+                {
+                  "$ref": "../observables/mac-addr.json"
+                },
+                {
+                  "$ref": "../observables/mutex.json"
+                },
+                {
+                  "$ref": "../observables/network-traffic.json"
+                },
+                {
+                  "$ref": "../observables/process.json"
+                },
+                {
+                  "$ref": "../observables/software.json"
+                },
+                {
+                  "$ref": "../observables/url.json"
+                },
+                {
+                  "$ref": "../observables/user-account.json"
+                },
+                {
+                  "$ref": "../observables/windows-registry-key.json"
+                },
+                {
+                  "$ref": "../observables/x509-certificate.json"
+                }
+              ]
+            }
+          }
         }
       }
     }

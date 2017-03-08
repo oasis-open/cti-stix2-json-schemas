@@ -8,14 +8,21 @@
       "type": "array",
       "description": "A list of selectors for content contained within the STIX object in which this property appears.",
       "items": {
-        "type": "string"
+        "type": "string",
+        "pattern": "^[a-z0-9_-]{3,250}(\\.(\\[\\d+\\]|[a-z0-9_-]{1,250}))*$"
       },
       "minItems": 1
     },
     "marking_ref": {
-      "$ref": "identifier.json",
-      "pattern": "^marking-definition--",
-      "description": "The marking_ref property specifies the ID of the marking-definition object that describes the marking."
+      "allOf": [
+        {
+          "$ref": "identifier.json"
+        },
+        {
+          "pattern": "^marking-definition--",
+          "description": "The marking_ref property specifies the ID of the marking-definition object that describes the marking."
+        }
+      ]
     }
   },
   "required": [
