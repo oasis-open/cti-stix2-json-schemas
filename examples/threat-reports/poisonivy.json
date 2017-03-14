@@ -979,6 +979,8 @@
         "relationship--a371be18-8ca5-4453-80f5-ae52d982c21b",
         "relationship--9a3bd620-01b5-4764-beb0-f085417ed8f3",
         "relationship--48906405-9980-4583-8559-2085c111bf89",
+        "relationship--13222c71-d8fa-4688-adae-c3f8ca43a41b",
+        "relationship--73c4529e-560e-4831-8497-a0db72f7dfd8",
         "relationship--8d3e1ed6-7d9c-4aa5-b121-f4eb193312cf",
         "relationship--2c11dcc0-7968-4c07-bdde-791a8f5e2e37",
         "relationship--fd97d0ef-370e-4b6f-b2d3-8fb881aadc3f",
@@ -1671,7 +1673,7 @@
     },
     {
       "type": "relationship",
-      "id": "relationship--9a3bd620-01b5-4764-beb0-f085417ed8f3",
+      "id": "relationship--13222c71-d8fa-4688-adae-c3f8ca43a41b",
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "indicates",
@@ -1680,7 +1682,7 @@
     },
     {
       "type": "relationship",
-      "id": "relationship--48906405-9980-4583-8559-2085c111bf89",
+      "id": "relationship--73c4529e-560e-4831-8497-a0db72f7dfd8",
       "created": "2015-05-15T09:00:00.000000Z",
       "modified": "2015-05-15T09:00:00.000000Z",
       "relationship_type": "uses",
