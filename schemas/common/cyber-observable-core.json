@@ -26,6 +26,9 @@
     }
   },
   "patternProperties": {
+    "^[a-z0-9_]{0,246}_bin$": {
+      "$ref": "../common/binary.json"
+    },
     "^[a-z0-9_]{3,250}$": {
       "anyOf": [
         {

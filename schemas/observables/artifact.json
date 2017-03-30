@@ -28,10 +28,7 @@
     {
       "properties": {
         "payload_bin": {
-          "type": "string",
-          "media": {
-            "binaryEncoding": "base64"
-          },
+          "$ref": "../common/binary.json",
           "description": "Specifies the binary data contained in the artifact as a base64-encoded string."
         },
         "hashes": {
