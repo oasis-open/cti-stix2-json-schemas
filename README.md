@@ -6,6 +6,17 @@ This repository contains non-normative JSON schemas and examples for STIX 2. The
 
 **NOTE:** The schemas in this repository are intended to follow the STIX 2.0 Specification (TODO: insert link), but some requirements of the specification cannot be enforced in JSON schema alone. As a result, these schemas are insufficient to determine whether a particular example of STIX 2.0 JSON is "valid". Additionally, though care has been taken to ensure that these schemas do not conflict with the specification, in case of conflict, the specification takes precedence.
 
+Some of the checks the schemas do not contain:
+
+- The 'modified' property must be later or equal to 'created'.
+- Marking Definitions (both object markings and granular markings) cannot refer to themselves (no circular refs).
+- IDs for custom object types must start with the name of that type.
+- Granular Marking selectors must refer to properties or items actually present in the object.
+- Object references in the Cyber Observable layer must be valid within the local scope.
+- Custom observable objects and observable extensions must have at least one custom property.
+- Values for some Cyber Observable object properties must come from official registries (eg. artifact:mime_type must be a valid IANA MIME type).
+- Some Cyber Observable objects' *_ref and *_refs properties must point to specific types of objects (eg. process:binary_ref must point to an object of type 'file').
+
 ## Governance
 
 This GitHub public repository ( **[https://github.com/oasis-open/cti-stix2-json-schemas](https://github.com/oasis-open/cti-stix2-json-schemas)** ) was [proposed](https://lists.oasis-open.org/archives/cti/201608/msg00050.html) and [approved](https://www.oasis-open.org/committees/ballot.php?id=2961) [[bis](https://issues.oasis-open.org/browse/TCADMIN-2424)] by the the [OASIS Cyber Threat Intelligence (CTI) TC](https://www.oasis-open.org/committees/cti/) as an [OASIS Open Repository](https://www.oasis-open.org/resources/open-repositories/) to support development of open source resources related to Technical Committee work.
