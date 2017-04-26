@@ -12,14 +12,13 @@
       "identity_class": "organization",
       "contact_information": "info@stark.com",
       "sectors": [
-        "defense"
+        "defence"
       ]
     },
     {
       "type": "marking-definition",
       "id": "marking-definition--05ac6c05-8b38-43f2-996d-e6715571090b",
       "created": "2017-04-14T13:07:49.812Z",
-      "modified": "2017-04-14T13:07:49.812Z",
       "created_by_ref": "identity--611d9d41-dba5-4e13-9b29-e22488058ffc",
       "definition_type": "tlp",
       "definition": {
@@ -29,8 +28,7 @@
     {
       "type": "marking-definition",
       "id": "marking-definition--d771aceb-3148-4315-b4b4-130b888533d0",
-      "created": "2017-04-14T13:07:49.812Z",
-      "modified": "2017-04-14T13:07:49.812Z",
+      "created": "2017-04-14T13:07:49.812Z",      
       "created_by_ref": "identity--611d9d41-dba5-4e13-9b29-e22488058ffc",
       "definition_type": "statement",
       "definition": {
