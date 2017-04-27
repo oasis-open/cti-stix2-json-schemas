@@ -4,7 +4,7 @@
   "description": "A dictionary captures a set of key/value pairs",
   "type": "object",
   "patternProperties": {
-    "^[a-zA-Z0-9_-]{1,}$": {
+    "^[a-zA-Z0-9_-]{3,256}$": {
       "type": "string",
       "description": "Custom hash key"
     },

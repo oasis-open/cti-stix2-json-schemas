@@ -16,10 +16,6 @@
         ]
       }
     },
-    "description": {
-      "type": "string",
-      "description": "Specifies a textual description of the Object."
-    },
     "extensions": {
       "$ref": "../common/dictionary.json",
       "description": "Specifies any extensions of the object, as a dictionary."
