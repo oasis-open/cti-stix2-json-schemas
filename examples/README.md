@@ -51,6 +51,11 @@
 * Description of this example can be seen on the CTI-documentation site [here](https://oasis-open.github.io/cti-documentation/examples/threat-actor-leveraging-attack-patterns-and-malware).
 * Expanded to demonstrate the use of Kill chains in STIX 2.0 within the Attack Pattern and Malware SDOs.
 
+### Using Granular Markings
+*Completely New Example Written for 2.0*
+
+*Write-up on the documentation site to come soon*
+
 ### Using Marking Definitions
 *Completely New Example Written for 2.0*
 * Description of this example can be seen on the CTI-documentation site [here](https://oasis-open.github.io/cti-documentation/examples/using-marking-definitions).

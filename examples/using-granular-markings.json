@@ -1,0 +1,87 @@
+{
+  "type": "bundle",
+  "id": "bundle--963410f2-fd7d-4d80-937c-8ad3aed5f432",
+  "spec_version": "2.0",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca",
+      "created": "2017-04-27T16:18:24.318Z",
+      "modified": "2017-04-27T16:18:24.318Z",
+      "name": "Gotham National Bank",
+      "identity_class": "organization",
+      "contact_information": "contact@gothamnational.com",
+      "sectors": [
+        "financial-services"
+      ]
+    },
+    {
+      "type": "marking-definition",
+      "id": "marking-definition--5ca625cc-b52f-4f52-a4c5-c629e44acc08",
+      "created": "2017-04-27T16:18:24.318Z",
+      "created_by_ref": "identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca",
+      "definition_type": "tlp",
+      "definition": {
+        "tlp": "green"
+      }
+    },
+    {
+      "type": "marking-definition",
+      "id": "marking-definition--074132b9-ef15-4cf3-b20e-761c26e066f9",
+      "created": "2017-04-27T16:18:24.318Z",
+      "created_by_ref": "identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca",
+      "definition_type": "tlp",
+      "definition": {
+        "tlp": "amber"
+      }
+    },
+    {
+      "type": "marking-definition",
+      "id": "marking-definition--ff5a5d1b-7f27-4001-981b-935cc1cf9d20",
+      "created": "2017-04-27T16:18:24.318Z",
+      "created_by_ref": "identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca",
+      "definition_type": "tlp",
+      "definition": {
+        "tlp": "red"
+      }
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1",
+      "created": "2017-04-27T16:18:24.318Z",
+      "modified": "2017-04-27T16:18:24.318Z",
+      "created_by_ref": "identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca",
+      "name": "Phishing email address",
+      "description": "Messages from this email address have attempted to get users to click on a site resembling Gotham National Bank's official site but is instead an attempt to steal credentials.",
+      "labels": [
+        "malicious-activity",
+        "phishing"
+      ],
+      "pattern": "[email-message:from_ref.value MATCHES '.+\\\\banking@g0thamnatl\\\\.com$']",
+      "valid_from": "2017-04-27T16:18:24.318Z",
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--ff5a5d1b-7f27-4001-981b-935cc1cf9d20",
+          "selectors": [
+            "pattern",
+            "description"
+          ]
+        },
+        {
+          "marking_ref": "marking-definition--074132b9-ef15-4cf3-b20e-761c26e066f9",
+          "selectors": [
+            "name",
+            "labels.[1]"
+          ]
+        },
+        {
+          "marking_ref": "marking-definition--5ca625cc-b52f-4f52-a4c5-c629e44acc08",
+          "selectors": [
+            "labels.[0]",
+            "valid_from"
+          ]
+        }
+      ]
+    }
+  ]
+}
