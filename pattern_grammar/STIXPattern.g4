@@ -73,16 +73,18 @@ objectPath
 // generated parser, which enables incremental processing during
 // parsing.
 objectType
-  : Identifier
+  : IdentifierWithoutHyphen
+  | IdentifierWithHyphen
   ;
 
 firstPathComponent
-  : Identifier
+  : IdentifierWithoutHyphen
+  | StringLiteral
   ;
 
 objectPathComponent
   : <assoc=left> objectPathComponent objectPathComponent  # pathStep
-  | '.' Identifier                                        # keyPathStep
+  | '.' (IdentifierWithoutHyphen | StringLiteral)         # keyPathStep
   | LBRACK (IntLiteral|ASTERISK) RBRACK                   # indexPathStep
   ;
 
@@ -161,9 +163,14 @@ REPEATS:  R E P E A T S;
 TIMES:  T I M E S;
 
 // After keywords, so the lexer doesn't tokenize them as identifiers.
-Identifier :
-    '"' (~'"' | '""')* '"'
-  | [a-zA-Z_] [a-zA-Z0-9_-]*
+// Object types may have unquoted hyphens, but property names
+// (in object paths) cannot.
+IdentifierWithoutHyphen :
+  [a-zA-Z_] [a-zA-Z0-9_]*
+  ;
+
+IdentifierWithHyphen :
+  [a-zA-Z_] [a-zA-Z0-9_-]*
   ;
 
 EQ        :   '=' | '==';
