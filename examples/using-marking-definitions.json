@@ -17,9 +17,8 @@
     },
     {
       "type": "marking-definition",
-      "id": "marking-definition--05ac6c05-8b38-43f2-996d-e6715571090b",
-      "created": "2017-04-14T13:07:49.812Z",
-      "created_by_ref": "identity--611d9d41-dba5-4e13-9b29-e22488058ffc",
+      "id": "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82",
+      "created": "2017-01-20T00:00:00.000Z",
       "definition_type": "tlp",
       "definition": {
         "tlp": "amber"
@@ -28,7 +27,7 @@
     {
       "type": "marking-definition",
       "id": "marking-definition--d771aceb-3148-4315-b4b4-130b888533d0",
-      "created": "2017-04-14T13:07:49.812Z",      
+      "created": "2017-04-14T13:07:49.812Z",
       "created_by_ref": "identity--611d9d41-dba5-4e13-9b29-e22488058ffc",
       "definition_type": "statement",
       "definition": {
@@ -48,7 +47,7 @@
       "pattern": "[ipv4addr:value = '10.0.0.0']",
       "valid_from": "2017-04-14T13:07:49.812Z",
       "object_marking_refs": [
-        "marking-definition--05ac6c05-8b38-43f2-996d-e6715571090b",
+        "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82",
         "marking-definition--d771aceb-3148-4315-b4b4-130b888533d0"
       ]
     }
