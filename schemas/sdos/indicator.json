@@ -57,39 +57,6 @@
           }
         }
       }
-    },
-    {
-      "oneOf": [
-        {
-          "properties": {
-            "pattern_lang": {
-              "type": "string",
-              "description": "The language used to define the pattern (in the pattern field). The default is stix if the field is omitted. Open Vocabulary - pattern-lang-ov",
-              "pattern": "^stix$"
-            }
-          },
-          "not": {
-            "required": [
-              "pattern_lang_version"
-            ]
-          }
-        },
-        {
-          "properties": {
-            "pattern_lang": {
-              "type": "string",
-              "description": "The language used to define the pattern (in the pattern field). The default is stix if the field is omitted. Open Vocabulary - pattern-lang-ov",
-              "not": {
-                "pattern": "^stix$"
-              }
-            },
-            "pattern_lang_version": {
-              "type": "string",
-              "description": "The version of the language used to define the pattern (in the pattern field)."
-            }
-          }
-        }
-      ]
     }
   ],
   "required": [
