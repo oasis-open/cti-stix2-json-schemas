@@ -47,7 +47,7 @@
             ],
             "modified": "2017-01-27T13:49:53.997Z",
             "name": "File hash for Poison Ivy variant",
-            "pattern": "[file:hashes.sha256 = 'ef537f25c895bfa782526529a9b63d97aa631564d5d789c2b765448c8635fb6c']",
+            "pattern": "[file:hashes.'SHA-256' = 'ef537f25c895bfa782526529a9b63d97aa631564d5d789c2b765448c8635fb6c']",
             "valid_from": "2014-05-08T09:00:00.000000Z"
         },
         {

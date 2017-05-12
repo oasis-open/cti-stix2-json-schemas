@@ -1,0 +1,119 @@
+{
+  "type": "bundle",
+  "id": "bundle--963410f2-fd7d-4d80-937c-8ad3aed5f432",
+  "spec_version": "2.0",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca",
+      "created": "2017-04-27T16:18:24.318Z",
+      "modified": "2017-04-27T16:18:24.318Z",
+      "name": "Gotham National Bank",
+      "identity_class": "organization",
+      "contact_information": "contact@gothamnational.com",
+      "sectors": [
+        "financial-services"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c",
+      "created": "2017-04-27T16:18:24.318Z",
+      "modified": "2017-04-27T16:18:24.318Z",
+      "created_by_ref": "identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca",
+      "name": "The Joker",
+      "labels": [
+        "criminal",
+        "terrorist"
+      ],
+      "aliases": [
+        "Joe Kerr",
+        "The Clown Prince of Crime"
+      ],
+      "roles": [
+        "director"
+      ],
+      "resource_level": "team",
+      "primary_motivation": "personal-satisfaction",
+      "object_marking_refs": [
+        "marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed"
+      ]
+    },
+    {
+      "type": "marking-definition",
+      "id": "marking-definition--34098fce-860f-48ae-8e50-ebd3cc5e41da",
+      "created": "2017-01-20T00:00:00.000Z",
+      "definition_type": "tlp",
+      "definition": {
+        "tlp": "green"
+      }
+    },
+    {
+      "type": "marking-definition",
+      "id": "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82",
+      "created": "2017-01-20T00:00:00.000Z",
+      "definition_type": "tlp",
+      "definition": {
+        "tlp": "amber"
+      }
+    },
+    {
+      "type": "marking-definition",
+      "id": "marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed",
+      "created": "2017-01-20T00:00:00.000Z",
+      "definition_type": "tlp",
+      "definition": {
+        "tlp": "red"
+      }
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1",
+      "created": "2017-04-27T16:18:24.318Z",
+      "modified": "2017-04-27T16:18:24.318Z",
+      "created_by_ref": "identity--b38dfe21-7477-40d1-aa90-5c8671ce51ca",
+      "name": "Fake email address",
+      "description": "Known to be used by The Joker.",
+      "labels": [
+        "malicious-activity",
+        "attribution"
+      ],
+      "pattern": "[email-message:from_ref.value MATCHES '.+\\\\banking@g0thamnatl\\\\.com$']",
+      "valid_from": "2017-04-27T16:18:24.318Z",
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed",
+          "selectors": [
+            "description"
+          ]
+        },
+        {
+          "marking_ref": "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82",
+          "selectors": [
+            "labels.[1]"
+          ]
+        },
+        {
+          "marking_ref": "marking-definition--34098fce-860f-48ae-8e50-ebd3cc5e41da",
+          "selectors": [
+            "labels.[0]",
+            "name",
+            "pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d1dd3cc-eb47-4704-9c77-ceff2971b95c",
+      "created": "2017-04-27T16:18:24.318Z",
+      "modified": "2017-04-27T16:18:24.318Z",
+      "relationship_type": "indicates",
+      "object_marking_refs": [
+        "marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed"
+      ],
+      "source_ref": "indicator--1ed8caa7-a708-4706-b651-f1186ede6ca1",
+      "target_ref": "threat-actor--8b6297fe-cae7-47c6-9256-5584b417849c"
+    }
+  ]
+}
