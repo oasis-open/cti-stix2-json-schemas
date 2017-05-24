@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/observables/x509-certificate.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "x509-certificate",
   "description": "The X509 Certificate Object represents the properties of an X.509 certificate.",

@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/observables/email-addr.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "email-addr",
   "description": "The Email Address Object represents a single email address.",

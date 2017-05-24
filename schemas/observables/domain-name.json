@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/observables/domain-name.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "domain-name",
   "description": "The Domain Name represents the properties of a network domain name.",

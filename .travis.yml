@@ -3,6 +3,7 @@ language: python
 install:
   - pip install -U pip setuptools
   - pip install stix2-validator==0.4.0
+  - npm install -g ajv-cli
 
 script:
   - ./test_examples.sh

@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/observables/mutex.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "mutex",
   "description": "The Mutex Object represents the properties of a mutual exclusion (mutex) object.",

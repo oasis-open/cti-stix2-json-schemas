@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/common/kill-chain-phase.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "kill-chain-phase",
   "description": "The kill-chain-phase represents a phase in a kill chain.",

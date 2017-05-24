@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/observables/email-message.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "email-message",
   "description": "The Email Message Object represents an instance of an email message.",

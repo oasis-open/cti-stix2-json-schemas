@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/observables/user-account.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "user-account",
   "description": "The User Account Object represents an instance of any type of user account, including but not limited to operating system, device, messaging service, and social media platform accounts.",

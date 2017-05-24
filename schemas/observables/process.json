@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/observables/process.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "process",
   "description": "The Process Object represents common properties of an instance of a computer program as executed on an operating system.",

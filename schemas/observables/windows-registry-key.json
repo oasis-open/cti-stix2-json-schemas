@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/observables/windows-registry-key.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "windows-registry-key",
   "description": "The Registry Key Object represents the properties of a Windows registry key.",

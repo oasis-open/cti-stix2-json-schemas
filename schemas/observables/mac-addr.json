@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/observables/mac-addr.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "mac-addr",
   "description": "The MAC Address Object represents a single Media Access Control (MAC) address.",

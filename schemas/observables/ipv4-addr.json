@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/observables/ipv4-addr.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ipv4-addr",
   "description": "The IPv4 Address Object represents one or more IPv4 addresses expressed using CIDR notation.",

@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/sros/relationship.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "relationship",
   "description": "The Relationship object is used to link together two SDOs in order to describe how they are related to each other.",

@@ -1,4 +1,5 @@
 {
+  "id": "/schemas/common/core.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "core",
   "description": "Common properties and behavior across all STIX Domain Objects and STIX Relationship Objects.",
