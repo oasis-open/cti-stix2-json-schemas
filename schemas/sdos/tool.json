@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/sdos/tool.json",
+  "id": "../sdos/tool.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "tool",
   "description": "Tools are legitimate software that can be used by threat actors to perform attacks.",

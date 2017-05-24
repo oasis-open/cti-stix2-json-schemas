@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/sdos/intrusion-set.json",
+  "id": "../sdos/intrusion-set.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "intrusion-set",
   "description": "An Intrusion Set is a grouped set of adversary behavior and resources with common properties that is believed to be orchestrated by a single organization.",

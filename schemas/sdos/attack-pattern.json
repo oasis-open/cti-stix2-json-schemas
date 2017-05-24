@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/sdos/attack-pattern.json",
+  "id": "../sdos/attack-pattern.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "attack-pattern",
   "description": "Attack Patterns are a type of TTP that describe ways that adversaries attempt to compromise targets. ",

@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/observables/file.json",
+  "id": "../observables/file.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "file",
   "description": "The File Object represents the properties of a file.",

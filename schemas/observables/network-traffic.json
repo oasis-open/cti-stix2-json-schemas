@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/observables/network-traffic.json",
+  "id": "../observables/network-traffic.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "network-traffic",
   "description": "The Network Traffic Object represents arbitrary network traffic that originates from a source and is addressed to a destination.",

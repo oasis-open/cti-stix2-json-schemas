@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/common/cyber-observable-core.json",
+  "id": "../common/cyber-observable-core.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "cyber-observable-core",
   "description": "Common properties and behavior across all Cyber Observable Objects.",

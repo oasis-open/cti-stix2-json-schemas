@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/observables/ipv6-addr.json",
+  "id": "../observables/ipv6-addr.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ipv6-addr",
   "description": "The IPv6 Address Object represents one or more IPv6 addresses expressed using CIDR notation.",

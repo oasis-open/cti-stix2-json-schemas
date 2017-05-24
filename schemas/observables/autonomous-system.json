@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/observables/autonomous-system.json",
+  "id": "../observables/autonomous-system.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "autonomous-system",
   "description": "The AS object represents the properties of an Autonomous Systems (AS).",

@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/common/url-regex.json",
+  "id": "../common/url-regex.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "url-regex",
   "description": "Matches the elements of a URL using a regular expression. Uses Diego Perini's regex from https://gist.github.com/dperini/729294.",

@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/common/hashes-type.json",
+  "id": "../common/hashes-type.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "hashes",
   "description": "A dictionary captures a set of key/value pairs",

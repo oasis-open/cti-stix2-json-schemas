@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/common/bundle.json",
+  "id": "../common/bundle.json",
   "title": "bundle",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "bundle",

@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/sdos/indicator.json",
+  "id": "../sdos/indicator.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "indicator",
   "description": "Indicators contain a pattern that can be used to detect suspicious or malicious cyber activity.",

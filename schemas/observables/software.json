@@ -1,5 +1,5 @@
 {
-  "id": "/schemas/observables/software.json",
+  "id": "../observables/software.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "software",
   "description": "The Software Object represents high-level properties associated with software, including software products.",
