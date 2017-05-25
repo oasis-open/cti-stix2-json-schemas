@@ -1,4 +1,5 @@
 {
+  "id": "../sdos/identity.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "identity",
   "description": "Identities can represent actual individuals, organizations, or groups (e.g., ACME, Inc.) as well as classes of individuals, organizations, or groups.",

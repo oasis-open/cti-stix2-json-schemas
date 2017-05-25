@@ -1,4 +1,6 @@
 {
+  "id": "../common/bundle.json",
+  "title": "bundle",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "bundle",
   "description": "A Bundle is a collection of arbitrary STIX Objects and Marking Definitions grouped together in a single container.",

@@ -1,4 +1,5 @@
 {
+  "id": "../common/timestamp.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "timestamp",
   "description": "Represents timestamps across the CTI specifications. The format is an RFC3339 timestamp, with a required timezone specification of 'Z'.",

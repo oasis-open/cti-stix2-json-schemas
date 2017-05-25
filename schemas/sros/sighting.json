@@ -1,4 +1,5 @@
 {
+  "id": "../sros/sighting.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "sighting",
   "description": "A Sighting denotes the belief that something in CTI (e.g., an indicator, malware, tool, threat actor, etc.) was seen.",

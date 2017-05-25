@@ -1,4 +1,5 @@
 {
+  "id": "../observables/directory.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "directory",
   "description": "The Directory Object represents the properties common to a file system directory.",

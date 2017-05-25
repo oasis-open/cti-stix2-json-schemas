@@ -1,4 +1,5 @@
 {
+  "id": "../common/external-reference.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "external-reference",
   "description": "External references are used to describe pointers to information represented outside of STIX.",

@@ -1,4 +1,5 @@
 {
+  "id": "../common/marking-definition.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "marking-definition",
   "description": "The marking-definition object represents a specific marking.",

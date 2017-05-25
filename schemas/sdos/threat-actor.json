@@ -1,4 +1,5 @@
 {
+  "id": "../sdos/threat-actor.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "threat-actor",
   "description": "Threat Actors are actual individuals, groups, or organizations believed to be operating with malicious intent.",

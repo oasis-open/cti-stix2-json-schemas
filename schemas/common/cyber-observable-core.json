@@ -1,4 +1,5 @@
 {
+  "id": "../common/cyber-observable-core.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "cyber-observable-core",
   "description": "Common properties and behavior across all Cyber Observable Objects.",
@@ -17,13 +18,13 @@
       }
     },
     "extensions": {
-      "$ref": "../common/dictionary.json",
+      "$ref": "dictionary.json",
       "description": "Specifies any extensions of the object, as a dictionary."
     }
   },
   "patternProperties": {
     "^[a-z0-9_]{0,246}_bin$": {
-      "$ref": "../common/binary.json"
+      "$ref": "binary.json"
     },
     "^[a-z0-9_]{3,250}$": {
       "anyOf": [

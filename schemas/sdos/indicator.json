@@ -1,4 +1,5 @@
 {
+  "id": "../sdos/indicator.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "indicator",
   "description": "Indicators contain a pattern that can be used to detect suspicious or malicious cyber activity.",
@@ -52,9 +53,9 @@
           "type": "array",
           "description": "The phases of the kill chain that this indicator detects.",
           "items": {
-            "$ref": "../common/kill-chain-phase.json",
-            "minItems": 1
-          }
+            "$ref": "../common/kill-chain-phase.json"
+          },
+          "minItems": 1
         }
       }
     }
