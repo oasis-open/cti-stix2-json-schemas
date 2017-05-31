@@ -338,8 +338,15 @@
             },
             "time_date_stamp": {
               "type": "string",
-              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$",
-              "description": "Specifies the time when the PE binary was created.  The timestamp value MUST BE precise to the second."
+              "description": "Specifies the time when the PE binary was created.  The timestamp value MUST BE precise to the second.",
+              "allOf": [
+                {
+                  "$ref": "../common/timestamp.json"
+                },
+                {
+                  "pattern": "T\\d{2}:\\d{2}:\\d{2}Z$"
+                }
+              ]
             },
             "pointer_to_symbol_table_hex": {
               "$ref": "../common/hex.json",
