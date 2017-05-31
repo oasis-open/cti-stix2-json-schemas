@@ -87,6 +87,24 @@
           "minItems": 1
         }
       }
+    },
+    {
+      "anyOf": [
+        { "required": ["extensions"] },
+        { "required": ["is_hidden"] },
+        { "required": ["pid"] },
+        { "required": ["name"] },
+        { "required": ["created"] },
+        { "required": ["cwd"] },
+        { "required": ["arguments"] },
+        { "required": ["command_line"] },
+        { "required": ["environment_variables"] },
+        { "required": ["opened_connection_refs"] },
+        { "required": ["creator_user_ref"] },
+        { "required": ["binary_ref"] },
+        { "required": ["parent_ref"] },
+        { "required": ["child_refs"] }
+      ]
     }
   ],
   "definitions": {
@@ -96,32 +114,46 @@
         "^windows-process-ext$": {
           "type": "object",
           "description": "The Windows Process extension specifies a default extension for capturing properties specific to Windows processes.",
-          "properties": {
-            "aslr_enabled": {
-              "type": "boolean",
-              "description": "Specifies whether Address Space Layout Randomization (ASLR) is enabled for the process."
+          "allOf": [
+            {
+              "properties": {
+                "aslr_enabled": {
+                  "type": "boolean",
+                  "description": "Specifies whether Address Space Layout Randomization (ASLR) is enabled for the process."
+                },
+                "dep_enabled": {
+                  "type": "boolean",
+                  "description": "Specifies whether Data Execution Prevention (DEP) is enabled for the process."
+                },
+                "priority": {
+                  "type": "string",
+                  "description": "Specifies the current priority class of the process in Windows."
+                },
+                "owner_sid": {
+                  "type": "string",
+                  "description": "Specifies the Security ID (SID) value of the owner of the process."
+                },
+                "window_title": {
+                  "type": "string",
+                  "description": "Specifies the title of the main window of the process."
+                },
+                "startup_info": {
+                  "$ref": "#/definitions/startup-info-dictionary",
+                  "description": "Specifies the STARTUP_INFO struct used by the process, as a dictionary."
+                }
+              }
             },
-            "dep_enabled": {
-              "type": "boolean",
-              "description": "Specifies whether Data Execution Prevention (DEP) is enabled for the process."
-            },
-            "priority": {
-              "type": "string",
-              "description": "Specifies the current priority class of the process in Windows."
-            },
-            "owner_sid": {
-              "type": "string",
-              "description": "Specifies the Security ID (SID) value of the owner of the process."
-            },
-            "window_title": {
-              "type": "string",
-              "description": "Specifies the title of the main window of the process."
-            },
-            "startup_info": {
-              "$ref": "#/definitions/startup-info-dictionary",
-              "description": "Specifies the STARTUP_INFO struct used by the process, as a dictionary."
+            {
+              "anyOf": [
+                { "required": ["aslr_enabled"] },
+                { "required": ["dep_enabled"] },
+                { "required": ["priority"] },
+                { "required": ["owner_sid"] },
+                { "required": ["window_title"] },
+                { "required": ["startup_info"] }
+              ]
             }
-          }
+          ]
         },
         "^windows-service-ext$": {
           "type": "object",

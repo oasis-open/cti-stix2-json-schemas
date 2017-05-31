@@ -317,16 +317,26 @@
         "^tcp-ext$": {
           "type": "object",
           "description": "The TCP extension specifies a default extension for capturing network traffic properties specific to TCP.",
-          "properties": {
-            "src_flags_hex": {
-              "$ref": "../common/hex.json",
-              "description": "Specifies the source TCP flags, as the union of all TCP flags observed between the start of the traffic (as defined by the start property) and the end of the traffic (as defined by the end property). "
+          "allOf": [
+            {
+              "properties": {
+                "src_flags_hex": {
+                  "$ref": "../common/hex.json",
+                  "description": "Specifies the source TCP flags, as the union of all TCP flags observed between the start of the traffic (as defined by the start property) and the end of the traffic (as defined by the end property). "
+                },
+                "dst_flags_hex": {
+                  "$ref": "../common/hex.json",
+                  "description": "Specifies the destination TCP flags, as the union of all TCP flags observed between the start of the traffic (as defined by the start property) and the end of the traffic (as defined by the end property)."
+                }
+              }
             },
-            "dst_flags_hex": {
-              "$ref": "../common/hex.json",
-              "description": "Specifies the destination TCP flags, as the union of all TCP flags observed between the start of the traffic (as defined by the start property) and the end of the traffic (as defined by the end property)."
+            {
+              "anyOf": [
+                { "required": ["src_flags_hex"] },
+                { "required": ["dst_flags_hex"] }
+              ]
             }
-          }
+          ]
         }
       },
       "additionalProperties": {

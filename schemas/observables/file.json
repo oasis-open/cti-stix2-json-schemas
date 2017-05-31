@@ -190,106 +190,142 @@
         "^ntfs-ext$": {
           "type": "object",
           "description": "The NTFS file extension specifies a default extension for capturing properties specific to the storage of the file on the NTFS file system.",
-          "properties": {
-            "sid": {
-              "type": "string",
-              "description": "Specifies the security ID (SID) value assigned to the file."
-            },
-            "alternate_data_streams": {
-              "type": "array",
-              "description": "Specifies a list of NTFS alternate data streams that exist for the file.",
-              "items": {
-                "properties": {
-                  "name": {
-                    "type": "string",
-                    "description": "Specifies the name of the alternate data stream."
-                  },
-                  "hashes": {
-                    "$ref": "../common/hashes-type.json",
-                    "description": "Specifies a dictionary of hashes for the data contained in the alternate data stream."
-                  },
-                  "size": {
-                    "type": "integer",
-                    "description": "Specifies the size of the alternate data stream, in bytes, as a non-negative integer.",
-                    "minimum": 0
-                  }
+          "allOf": [
+            {
+              "properties": {
+                "sid": {
+                  "type": "string",
+                  "description": "Specifies the security ID (SID) value assigned to the file."
                 },
-                "required": [
-                  "name"
-                ]
+                "alternate_data_streams": {
+                  "type": "array",
+                  "description": "Specifies a list of NTFS alternate data streams that exist for the file.",
+                  "items": {
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "Specifies the name of the alternate data stream."
+                      },
+                      "hashes": {
+                        "$ref": "../common/hashes-type.json",
+                        "description": "Specifies a dictionary of hashes for the data contained in the alternate data stream."
+                      },
+                      "size": {
+                        "type": "integer",
+                        "description": "Specifies the size of the alternate data stream, in bytes, as a non-negative integer.",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "name"
+                    ]
+                  }
+                }
               }
+            },
+            {
+              "anyOf": [
+                { "required": ["sid"] },
+                { "required": ["alternate_data_streams"] }
+              ]
             }
-          }
+          ]
         },
         "^raster-image-ext$": {
           "type": "object",
           "description": "The Raster Image file extension specifies a default extension for capturing properties specific to image files.",
-          "properties": {
-            "image_height": {
-              "type": "integer",
-              "description": "Specifies the height of the image in the image file, in pixels."
-            },
-            "image_width": {
-              "type": "integer",
-              "description": "Specifies the width of the image in the image file, in pixels."
-            },
-            "bits_per_pixel": {
-              "type": "integer",
-              "description": "Specifies the sum of bits used for each color channel in the image in the image file, and thus the total number of pixels used for expressing the color depth of the image."
-            },
-            "image_compression_algorithm": {
-              "type": "string",
-              "description": "Specifies the name of the compression algorithm used to compress the image in the image file, if applicable."
-            },
-            "exif_tags": {
-              "type": "object",
-              "description": "Specifies the set of EXIF tags found in the image file, as a dictionary. Each key/value pair in the dictionary represents the name/value of a single EXIF tag.",
-              "patternProperties": {
-                "^[A-Z][a-zA-Z0-9_-]+$": {
-                  "oneOf": [
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "integer"
+          "allOf": [
+            {
+              "properties": {
+                "image_height": {
+                  "type": "integer",
+                  "description": "Specifies the height of the image in the image file, in pixels."
+                },
+                "image_width": {
+                  "type": "integer",
+                  "description": "Specifies the width of the image in the image file, in pixels."
+                },
+                "bits_per_pixel": {
+                  "type": "integer",
+                  "description": "Specifies the sum of bits used for each color channel in the image in the image file, and thus the total number of pixels used for expressing the color depth of the image."
+                },
+                "image_compression_algorithm": {
+                  "type": "string",
+                  "description": "Specifies the name of the compression algorithm used to compress the image in the image file, if applicable."
+                },
+                "exif_tags": {
+                  "type": "object",
+                  "description": "Specifies the set of EXIF tags found in the image file, as a dictionary. Each key/value pair in the dictionary represents the name/value of a single EXIF tag.",
+                  "patternProperties": {
+                    "^[A-Z][a-zA-Z0-9_-]+$": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "integer"
+                        }
+                      ]
                     }
-                  ]
+                  },
+                  "additionalProperties": false
                 }
-              },
-              "additionalProperties": false
+              }
+            },
+            {
+              "anyOf": [
+                { "required": ["image_height"] },
+                { "required": ["image_width"] },
+                { "required": ["bits_per_pixel"] },
+                { "required": ["image_compression_algorithm"] },
+                { "required": ["exif_tags"] }
+              ]
             }
-          }
+          ]
         },
         "^pdf-ext$": {
           "type": "object",
           "description": "The PDF file extension specifies a default extension for capturing properties specific to PDF files.",
-          "properties": {
-            "version": {
-              "type": "string",
-              "description": "Specifies the decimal version number of the string from the PDF header that specifies the version of the PDF specification to which the PDF file conforms. E.g., '1.4'."
-            },
-            "is_optimized": {
-              "type": "boolean",
-              "description": "Specifies whether the PDF file has been optimized."
-            },
-            "document_info_dict": {
-              "type:": "object",
-              "patternProperties": {
-                "^[a-zA-Z0-9_-]{3,256}$": {
-                  "type": "string"
+          "allOf": [
+            {
+              "properties": {
+                "version": {
+                  "type": "string",
+                  "description": "Specifies the decimal version number of the string from the PDF header that specifies the version of the PDF specification to which the PDF file conforms. E.g., '1.4'."
+                },
+                "is_optimized": {
+                  "type": "boolean",
+                  "description": "Specifies whether the PDF file has been optimized."
+                },
+                "document_info_dict": {
+                  "type:": "object",
+                  "patternProperties": {
+                    "^[a-zA-Z0-9_-]{3,256}$": {
+                      "type": "string"
+                    }
+                  },
+                  "description": "Specifies details of the PDF document information dictionary (DID), which includes properties like the document creation data and producer, as a dictionary."
+                },
+                "pdfid0": {
+                  "type": "string",
+                  "description": "Specifies the first file identifier found for the PDF file."
+                },
+                "pdfid1": {
+                  "type": "string",
+                  "description": "Specifies the second file identifier found for the PDF file."
                 }
-              },
-              "description": "Specifies details of the PDF document information dictionary (DID), which includes properties like the document creation data and producer, as a dictionary."
+              }
             },
-            "pdfid0": {
-              "type": "string",
-              "description": "Specifies the first file identifier found for the PDF file."
-            },
-            "pdfid1": {
-              "type": "string",
-              "description": "Specifies the second file identifier found for the PDF file."
+            {
+              "anyOf": [
+                { "required": ["version"] },
+                { "required": ["is_optimized"] },
+                { "required": ["document_info_dict"] },
+                { "required": ["pdfid0"] },
+                { "required": ["pdfid1"] }
+              ]
             }
-          }
+          ]
         },
         "^archive-ext$": {
           "type": "object",
