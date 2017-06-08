@@ -44,7 +44,7 @@
       "labels": [
         "malicious-activity"
       ],
-      "pattern": "[ipv4addr:value = '10.0.0.0']",
+      "pattern": "[ipv4-addr:value = '10.0.0.0']",
       "valid_from": "2017-04-14T13:07:49.812Z",
       "object_marking_refs": [
         "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82",
