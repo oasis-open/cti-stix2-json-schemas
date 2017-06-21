@@ -6,15 +6,15 @@
     {
       "type": "campaign",
       "id": "campaign--b549a58c-afd9-4847-85c3-5be13d56d3cc",
-      "created": "2014-09-09T19:58:39.609000Z",
-      "modified": "2014-09-09T19:58:39.609000Z",
+      "created": "2014-09-09T19:58:39.609Z",
+      "modified": "2014-09-09T19:58:39.609Z",
       "name": "Operation Omega"
     },
     {
       "type": "indicator",
       "id": "indicator--c43a0a05-e8d2-4f64-ae37-3f3fb153f8d9",
-      "created": "2014-09-09T19:58:39.609000Z",
-      "modified": "2014-09-09T19:58:39.609000Z",
+      "created": "2014-09-09T19:58:39.609Z",
+      "modified": "2014-09-09T19:58:39.609Z",
       "labels": [
         "malicious-activity"
       ],
@@ -25,8 +25,8 @@
       "type": "relationship",
       "id": "relationship--eca24e47-2259-4850-9705-fd1065c77236",
       "relationship_type": "indicates",
-      "created": "2014-09-09T19:58:39.609000Z",
-      "modified": "2014-09-09T19:58:39.609000Z",
+      "created": "2014-09-09T19:58:39.609Z",
+      "modified": "2014-09-09T19:58:39.609Z",
       "source_ref": "indicator--c43a0a05-e8d2-4f64-ae37-3f3fb153f8d9",
       "target_ref": "campaign--b549a58c-afd9-4847-85c3-5be13d56d3cc"
     }
