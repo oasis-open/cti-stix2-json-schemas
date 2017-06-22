@@ -36,12 +36,26 @@
       "minItems": 1
     },
     "created": {
-      "$ref": "timestamp.json",
-      "description": "The created property represents the time at which the first version of this object was created."
+      "description": "The created property represents the time at which the first version of this object was created. The timstamp value MUST be precise to the nearest millisecond.",
+      "allOf": [
+		{
+	      "$ref": "timestamp.json"
+		},
+		{
+		  "pattern": "T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+		}
+      ]
     },
     "modified": {
-      "$ref": "timestamp.json",
-      "description": "The modified property represents the time that this particular version of the object was created."
+      "description": "The modified property represents the time that this particular version of the object was created. The timstamp value MUST be precise to the nearest millisecond.",
+      "allOf": [
+		{
+	      "$ref": "timestamp.json"
+		},
+		{
+		  "pattern": "T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+		}
+      ]
     },
     "revoked": {
       "type": "boolean",
