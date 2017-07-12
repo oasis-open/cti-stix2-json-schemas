@@ -42,14 +42,14 @@ comparisonExpressionAnd
   ;
 
 propTest
-  : objectPath (EQ|NEQ) primitiveLiteral       # propTestEqual
-  | objectPath (GT|LT|GE|LE) orderableLiteral  # propTestOrder
-  | objectPath NOT? IN setLiteral              # propTestSet
-  | objectPath NOT? LIKE StringLiteral         # propTestLike
-  | objectPath NOT? MATCHES StringLiteral      # propTestRegex
-  | objectPath NOT? ISSUBSET StringLiteral     # propTestIsSubset
-  | objectPath NOT? ISSUPERSET StringLiteral   # propTestIsSuperset
-  | LPAREN comparisonExpression RPAREN         # propTestParen
+  : objectPath NOT? (EQ|NEQ) primitiveLiteral       # propTestEqual
+  | objectPath NOT? (GT|LT|GE|LE) orderableLiteral  # propTestOrder
+  | objectPath NOT? IN setLiteral                   # propTestSet
+  | objectPath NOT? LIKE StringLiteral              # propTestLike
+  | objectPath NOT? MATCHES StringLiteral           # propTestRegex
+  | objectPath NOT? ISSUBSET StringLiteral          # propTestIsSubset
+  | objectPath NOT? ISSUPERSET StringLiteral        # propTestIsSuperset
+  | LPAREN comparisonExpression RPAREN              # propTestParen
   ;
 
 startStopQualifier
@@ -68,10 +68,6 @@ objectPath
   : objectType COLON firstPathComponent objectPathComponent?
   ;
 
-// The following two simple rules are for programmer convenience: you
-// will get "notification" of object path components in order by the
-// generated parser, which enables incremental processing during
-// parsing.
 objectType
   : IdentifierWithoutHyphen
   | IdentifierWithHyphen
