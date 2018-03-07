@@ -234,3 +234,8 @@ COMMENT
 LINE_COMMENT
     :   '//' ~[\r\n]* -> skip
     ;
+
+// Catch-all to prevent lexer from silently eating unusable characters.
+InvalidCharacter
+    : .
+    ;
