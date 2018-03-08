@@ -81,7 +81,7 @@ firstPathComponent
 objectPathComponent
   : <assoc=left> objectPathComponent objectPathComponent  # pathStep
   | '.' (IdentifierWithoutHyphen | StringLiteral)         # keyPathStep
-  | LBRACK (IntLiteral|ASTERISK) RBRACK                   # indexPathStep
+  | LBRACK (IntPosLiteral|IntNegLiteral|ASTERISK) RBRACK  # indexPathStep
   ;
 
 setLiteral
@@ -95,38 +95,30 @@ primitiveLiteral
   ;
 
 orderableLiteral
-  : IntLiteral
-  | FloatLiteral
+  : IntPosLiteral
+  | IntNegLiteral
+  | FloatPosLiteral
+  | FloatNegLiteral
   | StringLiteral
   | BinaryLiteral
   | HexLiteral
   | TimestampLiteral
   ;
 
-IntLiteral :
-  : IntPosLiteral
-  | IntNegLiteral
+IntNegLiteral :
+  '-' ('0' | [1-7] [0-9]*)
   ;
 
 IntPosLiteral :
-  [+]? ('0' | [1-9] [0-9]*)
-  ;
-
-IntNegLiteral :
-  '-' ('0' | [1-9] [0-9]*)
-  ;
-
-FloatLiteral :
-  : FloatPosLiteral
-  | FloatNegLiteral
-  ;
-
-FloatPosLiteral :
-  [+]? [0-9]* '.' [0-9]+
+  '+'? ('0' | [1-8] [0-9]*)
   ;
 
 FloatNegLiteral :
-  '-'' [0-9]* '.' [0-9]+
+  '-' [0-9]* '.' [0-9]+
+  ;
+
+FloatPosLiteral :
+  '+'? [0-9]* '.' [0-9]+
   ;
 
 HexLiteral :
@@ -147,9 +139,14 @@ BoolLiteral :
 
 TimestampLiteral :
   't' QUOTE
-  [0-9] [0-9] [0-9] [0-9] HYPHEN [0-9] [0-9] HYPHEN [0-9] [0-9]
+  [0-9] [0-9] [0-9] [0-9] HYPHEN
+  ( ('0' [1-9]) | ('1' [012]) ) HYPHEN
+  ( ('0' [1-9]) | ([12] [0-9]) | ('3' [01]) )
   'T'
-  [0-9] [0-9] COLON [0-9] [0-9] COLON [0-9] [0-9] (DOT [0-9]+)?
+  ( ([01] [0-9]) | ('2' [0-3]) ) COLON
+  [0-5] [0-9] COLON
+  ([0-5] [0-9] | '60')
+  (DOT [0-9]+)?
   'Z'
   QUOTE
   ;
