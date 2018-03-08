@@ -57,11 +57,11 @@ startStopQualifier
   ;
 
 withinQualifier
-  : WITHIN (IntLiteral|FloatLiteral) SECONDS
+  : WITHIN (IntPosLiteral|FloatPosLiteral) SECONDS
   ;
 
 repeatedQualifier
-  : REPEATS IntLiteral TIMES
+  : REPEATS IntPosLiteral TIMES
   ;
 
 objectPath
@@ -104,11 +104,29 @@ orderableLiteral
   ;
 
 IntLiteral :
-  [+-]? ('0' | [1-9] [0-9]*)
+  : IntPosLiteral
+  | IntNegLiteral
+  ;
+
+IntPosLiteral :
+  [+]? ('0' | [1-9] [0-9]*)
+  ;
+
+IntNegLiteral :
+  '-' ('0' | [1-9] [0-9]*)
   ;
 
 FloatLiteral :
-  [+-]? [0-9]* '.' [0-9]+
+  : FloatPosLiteral
+  | FloatNegLiteral
+  ;
+
+FloatPosLiteral :
+  [+]? [0-9]* '.' [0-9]+
+  ;
+
+FloatNegLiteral :
+  '-'' [0-9]* '.' [0-9]+
   ;
 
 HexLiteral :
