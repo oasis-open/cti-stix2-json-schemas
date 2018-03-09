@@ -126,7 +126,13 @@ HexLiteral :
   ;
 
 BinaryLiteral :
-  'b' QUOTE Base64Char* QUOTE
+  'b' QUOTE
+  ( Base64Char Base64Char Base64Char Base64Char )*
+  ( (Base64Char Base64Char Base64Char Base64Char )
+  | (Base64Char Base64Char Base64Char ) '='
+  | (Base64Char Base64Char ) '=='
+  )
+  QUOTE
   ;
 
 StringLiteral :
@@ -235,7 +241,7 @@ fragment Z:  [zZ];
 
 fragment HexDigit: [A-Fa-f0-9];
 fragment TwoHexDigits: HexDigit HexDigit;
-fragment Base64Char: [A-Za-z0-9+/=];
+fragment Base64Char: [A-Za-z0-9+/];
 
 // Whitespace and comments
 //
