@@ -4,7 +4,7 @@
 
 This repository contains non-normative JSON schemas and examples for STIX 2. The examples include short examples of particular objects, more complete use-case examples, and complete reports in STIX 2. The repository contains both JSON schemas and JSON STIX documents.
 
-**NOTE:** The schemas in this repository are intended to follow the STIX 2.0 Specification (TODO: insert link), but some requirements of the specification cannot be enforced in JSON schema alone. As a result, these schemas are insufficient to determine whether a particular example of STIX 2.0 JSON is "valid". Additionally, though care has been taken to ensure that these schemas do not conflict with the specification, in case of conflict, the specification takes precedence.
+**NOTE:** The schemas in this repository are intended to follow the [STIX 2.0 Specification](https://www.oasis-open.org/standards#stix2.0), but some requirements of the specification cannot be enforced in JSON schema alone. As a result, these schemas are insufficient to determine whether a particular example of STIX 2.0 JSON is "valid". Additionally, though care has been taken to ensure that these schemas do not conflict with the specification, in case of conflict, the specification takes precedence.
 
 Some of the checks the schemas do not contain:
 
