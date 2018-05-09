@@ -18,7 +18,7 @@
           ]
         },
         "value": {
-          "type": "string",
+          "$ref": "../common/url-regex.json",
           "description": "Specifies the value of the URL."
         }
       }
