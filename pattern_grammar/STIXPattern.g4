@@ -106,11 +106,11 @@ orderableLiteral
   ;
 
 IntNegLiteral :
-  '-' ('0' | [1-7] [0-9]*)
+  '-' ('0' | [1-9] [0-9]*)
   ;
 
 IntPosLiteral :
-  '+'? ('0' | [1-8] [0-9]*)
+  '+'? ('0' | [1-9] [0-9]*)
   ;
 
 FloatNegLiteral :
