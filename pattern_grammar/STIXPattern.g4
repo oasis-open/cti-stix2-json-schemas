@@ -5,7 +5,7 @@
 grammar STIXPattern;
 
 pattern
-  : observationExpressions
+  : observationExpressions EOF
   ;
 
 observationExpressions
