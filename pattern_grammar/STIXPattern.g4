@@ -5,7 +5,7 @@
 grammar STIXPattern;
 
 pattern
-  : observationExpressions
+  : observationExpressions EOF
   ;
 
 observationExpressions
@@ -106,11 +106,11 @@ orderableLiteral
   ;
 
 IntNegLiteral :
-  '-' ('0' | [1-7] [0-9]*)
+  '-' ('0' | [1-9] [0-9]*)
   ;
 
 IntPosLiteral :
-  '+'? ('0' | [1-8] [0-9]*)
+  '+'? ('0' | [1-9] [0-9]*)
   ;
 
 FloatNegLiteral :
@@ -160,24 +160,24 @@ TimestampLiteral :
 //////////////////////////////////////////////
 // Keywords
 
-AND:  A N D;
-OR:  O R;
-NOT:  N O T;
-FOLLOWEDBY: F O L L O W E D B Y;
-LIKE:  L I K E ;
-MATCHES:  M A T C H E S ;
-ISSUPERSET:  I S S U P E R S E T ;
-ISSUBSET: I S S U B S E T ;
-LAST:  L A S T ;
-IN:  I N;
-START:  S T A R T ;
-STOP:  S T O P ;
-SECONDS:  S E C O N D S;
-TRUE:  T R U E;
-FALSE:  F A L S E;
-WITHIN:  W I T H I N;
-REPEATS:  R E P E A T S;
-TIMES:  T I M E S;
+AND:  'AND' ;
+OR:  'OR' ;
+NOT:  'NOT' ;
+FOLLOWEDBY: 'FOLLOWEDBY';
+LIKE:  'LIKE' ;
+MATCHES:  'MATCHES' ;
+ISSUPERSET:  'ISSUPERSET' ;
+ISSUBSET: 'ISSUBSET' ;
+LAST:  'LAST' ;
+IN:  'IN' ;
+START:  'START' ;
+STOP:  'STOP' ;
+SECONDS:  'SECONDS' ;
+TRUE:  'true' ;
+FALSE:  'false' ;
+WITHIN:  'WITHIN' ;
+REPEATS:  'REPEATS' ;
+TIMES:  'TIMES' ;
 
 // After keywords, so the lexer doesn't tokenize them as identifiers.
 // Object types may have unquoted hyphens, but property names
@@ -211,33 +211,6 @@ MINUS     : '-' ;
 POWER_OP  : '^' ;
 DIVIDE    : '/' ;
 ASTERISK  : '*';
-
-fragment A:  [aA];
-fragment B:  [bB];
-fragment C:  [cC];
-fragment D:  [dD];
-fragment E:  [eE];
-fragment F:  [fF];
-fragment G:  [gG];
-fragment H:  [hH];
-fragment I:  [iI];
-fragment J:  [jJ];
-fragment K:  [kK];
-fragment L:  [lL];
-fragment M:  [mM];
-fragment N:  [nN];
-fragment O:  [oO];
-fragment P:  [pP];
-fragment Q:  [qQ];
-fragment R:  [rR];
-fragment S:  [sS];
-fragment T:  [tT];
-fragment U:  [uU];
-fragment V:  [vV];
-fragment W:  [wW];
-fragment X:  [xX];
-fragment Y:  [yY];
-fragment Z:  [zZ];
 
 fragment HexDigit: [A-Fa-f0-9];
 fragment TwoHexDigits: HexDigit HexDigit;
