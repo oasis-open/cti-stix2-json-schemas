@@ -53,7 +53,7 @@ propTest
   ;
 
 startStopQualifier
-  : START StringLiteral STOP StringLiteral
+  : START TimestampLiteral STOP TimestampLiteral
   ;
 
 withinQualifier
