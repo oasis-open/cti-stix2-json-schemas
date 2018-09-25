@@ -118,11 +118,6 @@
     "anyOf": [
       {
         "required": [
-          "confidence"
-        ]
-      },
-      {
-        "required": [
           "severity"
         ]
       },
@@ -139,31 +134,6 @@
       {
         "required": [
           "phone_numbers"
-        ]
-      },
-      {
-        "required": [
-          "addresses"
-        ]
-      },
-      {
-        "required": [
-          "first_seen_precision"
-        ]
-      },
-      {
-        "required": [
-          "last_seen_precision"
-        ]
-      },
-      {
-        "required": [
-          "valid_from_precision"
-        ]
-      },
-      {
-        "required": [
-          "valid_until_precision"
         ]
       }
     ]
