@@ -31,18 +31,18 @@
         },
         "sender_ref": {
           "type": "string",
-          "description": "Specifies the value of the 'From' field of the email message"
+          "description": "Specifies the value of the 'From' field of the email message."
         },
         "to_refs": {
           "type": "array",
-          "description": "Specifies the mailboxes that are 'To:' recipients of the email message",
+          "description": "Specifies the mailboxes that are 'To:' recipients of the email message.",
           "items": {
             "type": "string"
           }
         },
         "cc_refs": {
           "type": "array",
-          "description": "Specifies the mailboxes that are 'CC:' recipients of the email message",
+          "description": "Specifies the mailboxes that are 'CC:' recipients of the email message.",
           "items": {
             "type": "string"
           }

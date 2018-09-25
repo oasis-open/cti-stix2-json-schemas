@@ -61,9 +61,9 @@
           "$ref": "../common/timestamp.json",
           "description": "Specifies the expiration date of the account."
         },
-        "password_last_changed": {
+        "credential_last_changed": {
           "$ref": "../common/timestamp.json",
-          "description": "Specifies when the account password was last changed."
+          "description": "Specifies when the account credential was last changed."
         },
         "account_first_login": {
           "$ref": "../common/timestamp.json",

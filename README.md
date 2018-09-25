@@ -15,7 +15,7 @@ Some of the checks the schemas do not contain:
 - Object references in the Cyber Observable layer must be valid within the local scope.
 - Custom observable objects and observable extensions must have at least one custom property.
 - Values for some Cyber Observable object properties must come from official registries (eg. artifact:mime_type must be a valid IANA MIME type).
-- Some Cyber Observable objects' *_ref and *_refs properties must point to specific types of objects (eg. process:binary_ref must point to an object of type 'file').
+- Some Cyber Observable objects' *_ref and *_refs properties must point to specific types of objects (eg. process:image_ref must point to an object of type 'file').
 
 **NOTE:** If you need schemas for previous versions of the STIX 2 specification, see the Git branch corresponding to that version.
 

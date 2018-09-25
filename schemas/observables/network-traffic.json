@@ -31,11 +31,11 @@
         },
         "src_ref": {
           "type": "string",
-          "description": "Specifies the source of the network traffic, as a reference to one or more Observable Objects."
+          "description": "Specifies the source of the network traffic, as a reference to an Observable Object."
         },
         "dst_ref": {
           "type": "string",
-          "description": "Specifies the destination of the network traffic, as a reference to one or more Observable Objects."
+          "description": "Specifies the destination of the network traffic, as a reference to an Observable Object."
         },
         "src_port": {
           "type": "integer",

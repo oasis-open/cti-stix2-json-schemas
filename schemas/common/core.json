@@ -29,7 +29,7 @@
     },
     "labels": {
       "type": "array",
-      "description": "The labels property specifies a set of classifications.",
+      "description": "The labels property specifies a set of terms used to describe this object.",
       "items": {
         "type": "string"
       },
@@ -48,7 +48,7 @@
       ]
     },
     "modified": {
-      "description": "The modified property represents the time that this particular version of the object was created. The timstamp value MUST be precise to the nearest millisecond.",
+      "description": "The modified property represents the time that this particular version of the object was modified. The timstamp value MUST be precise to the nearest millisecond.",
       "allOf": [
 		{
 	      "$ref": "timestamp.json"
