@@ -1,10 +1,10 @@
 {
-    "spec_version": "2.0",
     "type": "bundle",
     "id": "bundle--63fe3b22-0201-47cf-85d0-97c02164528d",
     "objects": [
         {
             "type": "identity",
+            "spec_version": "2.1",
             "id": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2016-08-08T15:50:10.983Z",
             "modified": "2016-08-08T15:50:10.983Z",
@@ -14,6 +14,7 @@
         },
         {
             "type": "malware",
+            "spec_version": "2.1",
             "id": "malware--fdd60b30-b67c-11e3-b0b9-f01faf20d111",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2017-01-27T13:49:53.997Z",
@@ -26,6 +27,7 @@
         },
         {
             "type": "indicator",
+            "spec_version": "2.1",
             "id": "indicator--53fe3b22-0201-47cf-85d0-97c02164528d",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2014-05-08T09:00:00.000Z",
@@ -39,6 +41,7 @@
         },
         {
             "type": "indicator",
+            "spec_version": "2.1",
             "id": "indicator--a932fcc6-e032-176c-126f-cb970a5a1ade",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2017-01-27T13:49:53.997Z",
@@ -52,6 +55,7 @@
         },
         {
             "type": "course-of-action",
+            "spec_version": "2.1",
             "id": "course-of-action--8e2e2d2b-17d4-4cbf-938f-98ee46b3cd3f",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2016-04-06T20:03:48.000Z",
@@ -61,6 +65,7 @@
         },
         {
             "type": "relationship",
+            "spec_version": "2.1",
             "id": "relationship--44298a74-ba52-4f0c-87a3-1824e67d7fad",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2016-04-06T20:06:37.000Z",
@@ -71,6 +76,7 @@
         },
         {
             "type": "relationship",
+            "spec_version": "2.1",
             "id": "relationship--2f9a9aa9-108a-4333-83e2-4fb25add0463",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2017-01-27T13:49:53.997Z",
@@ -82,6 +88,7 @@
         },
         {
             "type": "relationship",
+            "spec_version": "2.1",
             "id": "relationship--9606dac3-965a-47d3-b270-8b17431ba0e4",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2014-05-08T09:00:00.000Z",

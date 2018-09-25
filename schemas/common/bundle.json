@@ -24,13 +24,6 @@
         }
       ]
     },
-    "spec_version": {
-      "type": "string",
-      "enum": [
-        "2.0"
-      ],
-      "description": "The version of the STIX specification used to represent the content in this bundle."
-    },
     "objects": {
       "type": "array",
       "description": "Specifies a set of one or more STIX Objects.",
@@ -126,7 +119,6 @@
   },
   "required": [
     "type",
-    "id",
-    "spec_version"
+    "id"
   ]
 }
