@@ -23,7 +23,7 @@
         },
         "labels": {
           "type": "array",
-          "description": "The kind(s) of tool(s) being described. Open Vocab - tool-label-ov",
+          "description": "The kind(s) of tool(s) being described. Open Vocab - tool-type-ov",
           "items": {
             "type": "string"
           },
@@ -57,7 +57,7 @@
     "labels"
   ],
   "definitions": {
-    "tool-label-ov": {
+    "tool-type-ov": {
       "type": "string",
       "enum": [
         "denial-of-service",

@@ -23,7 +23,7 @@
         },
         "labels": {
           "type": "array",
-          "description": "This field specifies the type of threat actor. Open Vocab - threat-actor-label-ov",
+          "description": "This field specifies the type of threat actor. Open Vocab - threat-actor-type-ov",
           "items": {
             "type": "string"
           },
@@ -97,7 +97,7 @@
     "labels"
   ],
   "definitions": {
-    "threat-actor-label-ov": {
+    "threat-actor-type-ov": {
       "type": "string",
       "enum": [
         "activist",

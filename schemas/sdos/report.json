@@ -23,7 +23,7 @@
         },
         "labels": {
           "type": "array",
-          "description": "This field is an Open Vocabulary that specifies the primary subject of this report. The suggested values for this field are in report-label-ov.",
+          "description": "This field is an Open Vocabulary that specifies the primary subject of this report. The suggested values for this field are in report-type-ov.",
           "items": {
             "type": "string"
           },
@@ -59,7 +59,7 @@
     "published"
   ],
   "definitions": {
-    "report-label-ov": {
+    "report-type-ov": {
       "type": "string",
       "enum": [
         "threat-report",
