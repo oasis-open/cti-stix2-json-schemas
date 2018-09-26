@@ -1,0 +1,28 @@
+{
+  "id": "../common/language-content.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "language-content",
+  "description": "The language-content object represents text content for STIX Objects represented in languages other than that of the original object.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../common/core.json"
+    },
+    {
+      "properties": {
+        "object_modified": {
+          "$ref": "../common/timestamp.json",
+          "description": "Identifies the modified time of the object that this Language Content applies to."
+        },
+        "contents": {
+          "$ref": "../common/dictionary.json",
+          "description": "Contains the actual Language Content (translation)."
+        }
+      }
+    }
+  ],
+  "required": [
+    "selectors",
+    "marking_ref"
+  ]
+}

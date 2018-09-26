@@ -14,6 +14,10 @@
       },
       "minItems": 1
     },
+    "lang": {
+      "type": "string",
+      "description": "Identifies the language of the text identified by this marking."
+    },
     "marking_ref": {
       "allOf": [
         {
