@@ -21,7 +21,7 @@
           "title": "id",
           "pattern": "^indicator--"
         },
-        "labels": {
+        "indicator_types": {
           "type": "array",
           "description": "This field is an Open Vocabulary that specifies the type of indicator. Open vocab - indicator-type-ov",
           "items": {
@@ -62,7 +62,7 @@
   ],
   "required": [
     "pattern",
-    "labels",
+    "indicator_types",
     "valid_from"
   ],
   "definitions": {

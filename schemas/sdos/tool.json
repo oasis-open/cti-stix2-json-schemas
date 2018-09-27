@@ -21,7 +21,7 @@
           "title": "id",
           "pattern": "^tool--"
         },
-        "labels": {
+        "tool_types": {
           "type": "array",
           "description": "The kind(s) of tool(s) being described. Open Vocab - tool-type-ov",
           "items": {
@@ -54,7 +54,7 @@
   ],
   "required": [
     "name",
-    "labels"
+    "tool_types"
   ],
   "definitions": {
     "tool-type-ov": {

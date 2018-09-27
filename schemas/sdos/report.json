@@ -21,7 +21,7 @@
           "title": "id",
           "pattern": "^report--"
         },
-        "labels": {
+        "report_types": {
           "type": "array",
           "description": "This field is an Open Vocabulary that specifies the primary subject of this report. The suggested values for this field are in report-type-ov.",
           "items": {
@@ -54,7 +54,7 @@
   ],
   "required": [
     "name",
-    "labels",
+    "report_types",
     "object_refs",
     "published"
   ],
