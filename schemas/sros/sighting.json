@@ -80,14 +80,14 @@
         },
         "where_sighted_refs": {
           "type": "array",
-          "description": "The ID of the Victim Target objects of the entities that saw the sighting.",
+          "description": "A list of ID references to the Identity or Location objects describing the entities or types of entities that saw the sighting.",
           "items": {
             "allOf": [
               {
                 "$ref": "../common/identifier.json"
               },
               {
-                "pattern": "^identity--"
+                "pattern": "^(identity|location)--"
               }
             ]
           },
