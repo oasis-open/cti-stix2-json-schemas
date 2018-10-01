@@ -23,7 +23,16 @@
         },
         "hashes": {
           "$ref": "../common/hashes-type.json",
-          "description": "Specifies a dictionary of hashes for the file."
+          "description": "Specifies a dictionary of hashes for the file.",
+          "enum": [
+            "MD5",
+            "SHA-1",
+            "SHA-256",
+            "SHA-512",
+            "SHA3-256",
+            "SHA3-512",
+            "SSDEEP"
+          ]
         },
         "size": {
           "type": "integer",
@@ -78,17 +87,6 @@
       }
     }
   ],
-  "oneOf": [
-    {
-      "$ref": "#/definitions/isEncrypted"
-    },
-    {
-      "$ref": "#/definitions/isNotEncrypted"
-    },
-    {
-      "$ref": "#/definitions/elseEncrypted"
-    }
-  ],
   "anyOf": [
     {
       "required": [
@@ -102,88 +100,6 @@
     }
   ],
   "definitions": {
-    "isEncrypted": {
-      "type": "object",
-      "properties": {
-        "is_encrypted": {
-          "type": "boolean",
-          "description": "Specifies whether the file is encrypted.",
-          "enum": [
-            true
-          ]
-        },
-        "encryption_algorithm": {
-          "type": "string",
-          "description": "Specifies the name of the encryption algorithm used to encrypt the file. Open Vocabulary - encryption-algorithm-ov"
-        },
-        "decryption_key": {
-          "type": "string",
-          "description": "Specifies the decryption key used to decrypt the archive file."
-        }
-      },
-      "required": [
-        "is_encrypted"
-      ],
-      "dependencies": {
-        "encryption_algorithm": [
-          "is_encrypted"
-        ],
-        "decryption_key": [
-          "is_encrypted"
-        ]
-      }
-    },
-    "isNotEncrypted": {
-      "type": "object",
-      "properties": {
-        "is_encrypted": {
-          "type": "boolean",
-          "description": "Specifies whether the file is encrypted.",
-          "enum": [
-            false
-          ]
-        }
-      },
-      "required": [
-        "is_encrypted"
-      ],
-      "not": {
-        "anyOf": [
-          {
-            "required": [
-              "encryption_algorithm"
-            ]
-          },
-          {
-            "required": [
-              "decryption_key"
-            ]
-          }
-        ]
-      }
-    },
-    "elseEncrypted": {
-      "type": "object",
-      "not": {
-        "anyOf": [
-          {
-            "required": [
-              "is_encrypted"
-            ]
-          },
-          {
-            "required": [
-              "encryption_algorithm"
-            ]
-          },
-          {
-            "required": [
-              "decryption_key"
-            ]
-          }
-        ]
-      }
-    },
     "file-extensions-dictionary": {
       "type": "object",
       "patternProperties": {
@@ -248,10 +164,6 @@
                 "bits_per_pixel": {
                   "type": "integer",
                   "description": "Specifies the sum of bits used for each color channel in the image in the image file, and thus the total number of pixels used for expressing the color depth of the image."
-                },
-                "image_compression_algorithm": {
-                  "type": "string",
-                  "description": "Specifies the name of the compression algorithm used to compress the image in the image file, if applicable."
                 },
                 "exif_tags": {
                   "type": "object",
@@ -339,10 +251,6 @@
               },
               "minItems": 1
             },
-            "version": {
-              "type": "string",
-              "description": "Specifies the version of the archive type used in the archive file."
-            },
             "comment": {
               "type": "string",
               "description": "Specifies a comment included as part of the archive file."
@@ -418,6 +326,63 @@
               "minItems": 1
             }
           },
+          "anyOf": [
+            {
+              "required": [
+                "imphash"
+              ]
+            },
+            {
+              "required": [
+                "machine_hex"
+              ]
+            },
+            {
+              "required": [
+                "number_of_sections"
+              ]
+            },
+            {
+              "required": [
+                "time_date_stamp"
+              ]
+            },
+            {
+              "required": [
+                "pointer_to_symbol_table_hex"
+              ]
+            },
+            {
+              "required": [
+                "number_of_symbols"
+              ]
+            },
+            {
+              "required": [
+                "size_of_optional_header"
+              ]
+            },
+            {
+              "required": [
+                "characteristics_hex"
+              ]
+            },
+            {
+              "required": [
+                "file_header_hashes"
+              ]
+            },
+            {
+              "required": [
+                "optional_header"
+              ]
+            },
+            {
+              "required": [
+                "sections"
+              ]
+            }
+          ],
           "required": [
             "pe_type"
           ]
@@ -601,48 +566,5 @@
         "sys"
       ]
     }
-  },
-  "hash-algo-ov": {
-    "type": "string",
-    "enum": [
-      "MD5",
-      "MD6",
-      "RIPEMD-160",
-      "SHA-1",
-      "SHA-224",
-      "SHA-256",
-      "SHA-384",
-      "SHA-512",
-      "SHA3-224",
-      "SHA3-256",
-      "SHA3-384",
-      "SHA3-512",
-      "ssdeep",
-      "WHIRLPOOL"
-    ]
-  },
-  "encryption-algo-ov": {
-    "type": "string",
-    "enum": [
-      "AES128-ECB",
-      "AES128-CBC",
-      "AES128-CFB",
-      "AES128-COFB",
-      "AES128-CTR",
-      "AES128-XTS",
-      "AES128-GCM",
-      "Salsa20",
-      "Salsa8B",
-      "ChaCha20-Poly1305",
-      "ChaCha20",
-      "DES-CBC",
-      "3DES-CBC",
-      "DES-EBC",
-      "3DES-EBC",
-      "CAST128-CBC",
-      "CAST256-CBC",
-      "RSA",
-      "DSA"
-    ]
   }
 }
