@@ -29,10 +29,6 @@
           "type": "integer",
           "description": "Specifies the Process ID, or PID, of the process."
         },
-        "name": {
-          "type": "string",
-          "description": "Specifies the name of the process."
-        },
         "created": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time at which the process was created."
@@ -40,15 +36,6 @@
         "cwd": {
           "type": "string",
           "description": "Specifies the current working directory of the process."
-        },
-        "arguments": {
-          "type": "array",
-          "description": "Specifies the list of arguments used in executing the process.",
-          "items": {
-            "type": "string",
-            "pattern": "^((-{1,2}|\\/)[^\\s=]+ (?![-\\/]))?([^\\s\"'=|]+(=([^\\s\"'=|]+|\"([^\"]*)\"|'([^']*)'))?|\"([^\"]*)\"|'([^']*)')$"
-          },
-          "minItems": 1
         },
         "command_line": {
           "type": "string",
@@ -140,6 +127,10 @@
                 "startup_info": {
                   "$ref": "#/definitions/startup-info-dictionary",
                   "description": "Specifies the STARTUP_INFO struct used by the process, as a dictionary."
+                },
+                "integrity_level": {
+                  "$ref": "#/definitions/windows-integrity-level-enum",
+                  "description": "Specifies the Windows integrity level, or trustworthiness, of the process."
                 }
               }
             },
@@ -222,9 +213,18 @@
               ]
             }
           },
-          "required": [
-            "service_name"
-          ]
+          {
+            "anyOf": [
+              { "required": ["service_name"] },
+              { "required": ["descriptions"] },
+              { "required": ["display_name"] },
+              { "required": ["group_name"] },
+              { "required": ["start_type"] },
+              { "required": ["service_dll_refs"] },
+              { "required": ["service_type"] },
+              { "required": ["service_status"] }
+            ]
+          }
         }
       },
       "additionalProperties": {
@@ -251,6 +251,15 @@
         }
       },
       "additionalProperties": false
+    },
+    "windows-integrity-level-enum": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "system"
+      ]
     }
   }
 }
