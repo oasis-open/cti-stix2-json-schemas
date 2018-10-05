@@ -44,9 +44,15 @@
       }
     }
   ],
-  "required": [
-    "key"
-  ],
+  {
+    "anyOf": [
+      { "required": ["key"] },
+      { "required": ["values"] },
+      { "required": ["modified"] },
+      { "required": ["creator_user_ref"] },
+      { "required": ["number_of_subkeys"] }
+    ]
+  },
   "definitions": {
     "windows-registry-value-type": {
       "type": "object",
@@ -79,9 +85,13 @@
           ]
         }
       },
-      "required": [
-        "name"
-      ]
+      {
+        "anyOf": [
+          { "required": ["name"] },
+          { "required": ["data"] },
+          { "required": ["data_type"] }
+        ]
+      }
     }
   }
 }
