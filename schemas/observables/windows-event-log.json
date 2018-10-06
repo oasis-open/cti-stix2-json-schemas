@@ -100,7 +100,7 @@ identifier is used to specify simple relationships between events."
         "relative_correlation_id": {
           "type": "integer",
           "description": "Identifies a related activity in a process for which the event is involved."
-        },
+        }
       }
     }
   ],
