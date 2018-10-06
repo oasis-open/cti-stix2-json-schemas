@@ -1,0 +1,110 @@
+{
+  "id": "../observables/windows-event-log.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "windows-event-log",
+  "description": "The Windows_Event_Log object is intended to characterize entries in the Windows event log. Microsoft's Event schema is described at http://msdn.microsoft.com/en-us/library/aa385201 and the .NET API is described at http://msdn.microsoft.com/en-us/library/y80k1300.aspx. Based on http://uk.sans.org/reading-room/whitepapers/logging/evtx-windows-event-logging-32949. The following table is a list which Microsoft (Event Properties, 2008) has defined as the
+most common event properties.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../common/cyber-observable-core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The value of this property MUST be `windows-event-log`.",
+          "enum": [
+            "windows-event-log"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "description": "Specifies The software that logged the event."
+        },
+        "event_id": {
+          "type": "integer",
+          "description": "A number identifying the particular event type. The first line of the
+description usually contains the name of the event type. "
+        },
+        "level": {
+          "type": "string",
+          "pattern": "^Information|Warning|Error|Critical|Success Audit|Failure Audit",
+          "description": "A classification of the event severity."
+        },
+        "user": {
+          "type": "string",
+          "description": "The name of the user on whose behalf the event occurred. This name is
+the client ID if the event was actually caused by a server process or the
+primary ID if impersonation is not taking place."
+        },
+        "operational_code": {
+          "type": "integer",
+          "description": "Contains a numeric value that identifies the activity or a point within an
+activity that the application was performing when it raised the event."
+        },
+        "log": {
+          "type": "string",
+          "description": "The name of the log where the event was recorded."
+        },
+        "task_category": {
+          "type": "string",
+          "description": "Used to represent a subcomponent or activity of the event publisher."
+        },
+        "keywords": {
+          "type": "string",
+          "description": "A set of categories or tags that can be used to filter or search for events."
+        },
+        "computer": {
+          "type": "string",
+          "description": "The name of the computer on which the event occurred."
+        },
+        "date_time": {
+          "$ref": "../common/timestamp.json",
+          "description": "The date and time that the event was logged."
+        },
+        "process_id": {
+          "type": "integer",
+          "description": "The identification number for the process that generated the event."
+        },
+        "thread_id": {
+          "type": "integer",
+          "description": "The identification number for the thread that generated the event."
+        },
+        "processor_id": {
+          "type": "integer",
+          "description": "The identification number for the processor that processed the event."
+        },
+        "session_id": {
+          "type": "integer",
+          "description": "The identification number of the terminal server session in whcih the event occured."
+        },
+        "kernal_time": {
+          "$ref": "../common/timestamp.json",
+          "description": "The elapsed execution time for kernal-mode instructions, in CPU time
+units."
+        },
+        "user_time": {
+          "$ref": "../common/timestamp.json",
+          "description": "The elapsed execution time for user-mode instructions, in CPU time units."
+        },
+        "processor_time": {
+          "$ref": "../common/timestamp.json",
+          "description": "The elapsed execution time for user-mode instructions, in CPU ticks."
+        },
+        "correlation_id": {
+          "type": "integer",
+          "description": "Identifies the activity in the process for which the event is involved. This
+identifier is used to specify simple relationships between events."
+        },
+        "relative_correlation_id": {
+          "type": "integer",
+          "description": "Identifies a related activity in a process for which the event is involved."
+        },
+      }
+    }
+  ],
+  "required": [
+    "source","event_id","level"
+  ]
+}
