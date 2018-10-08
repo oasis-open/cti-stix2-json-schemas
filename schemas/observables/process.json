@@ -74,25 +74,23 @@
           "minItems": 1
         }
       }
-    },
-    {
-      "anyOf": [
-        { "required": ["extensions"] },
-        { "required": ["is_hidden"] },
-        { "required": ["pid"] },
-        { "required": ["name"] },
-        { "required": ["created"] },
-        { "required": ["cwd"] },
-        { "required": ["arguments"] },
-        { "required": ["command_line"] },
-        { "required": ["environment_variables"] },
-        { "required": ["opened_connection_refs"] },
-        { "required": ["creator_user_ref"] },
-        { "required": ["image_ref"] },
-        { "required": ["parent_ref"] },
-        { "required": ["child_refs"] }
-      ]
     }
+  ],
+  "anyOf": [
+    { "required": ["extensions"] },
+    { "required": ["is_hidden"] },
+    { "required": ["pid"] },
+    { "required": ["name"] },
+    { "required": ["created"] },
+    { "required": ["cwd"] },
+    { "required": ["arguments"] },
+    { "required": ["command_line"] },
+    { "required": ["environment_variables"] },
+    { "required": ["opened_connection_refs"] },
+    { "required": ["creator_user_ref"] },
+    { "required": ["image_ref"] },
+    { "required": ["parent_ref"] },
+    { "required": ["child_refs"] }
   ],
   "definitions": {
     "process-extensions-dictionary": {
@@ -213,18 +211,16 @@
               ]
             }
           },
-          {
-            "anyOf": [
-              { "required": ["service_name"] },
-              { "required": ["descriptions"] },
-              { "required": ["display_name"] },
-              { "required": ["group_name"] },
-              { "required": ["start_type"] },
-              { "required": ["service_dll_refs"] },
-              { "required": ["service_type"] },
-              { "required": ["service_status"] }
-            ]
-          }
+          "anyOf": [
+            { "required": ["service_name"] },
+            { "required": ["descriptions"] },
+            { "required": ["display_name"] },
+            { "required": ["group_name"] },
+            { "required": ["start_type"] },
+            { "required": ["service_dll_refs"] },
+            { "required": ["service_type"] },
+            { "required": ["service_status"] }
+          ]
         }
       },
       "additionalProperties": {

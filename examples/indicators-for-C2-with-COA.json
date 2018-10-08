@@ -20,7 +20,7 @@
             "created": "2017-01-27T13:49:53.997Z",
             "modified": "2017-01-27T13:49:53.997Z",
             "description": "variant",
-            "labels": [
+            "malware_types": [
                 "remote-access-trojan"
             ],
             "name": "Poison Ivy"
@@ -32,7 +32,7 @@
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2014-05-08T09:00:00.000Z",
             "modified": "2014-05-08T09:00:00.000Z",
-            "labels": [
+            "indicator_types": [
                 "malicious-activity"
             ],
             "name": "IP Address for known C2 channel",
@@ -45,7 +45,7 @@
             "id": "indicator--a932fcc6-e032-176c-126f-cb970a5a1ade",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2017-01-27T13:49:53.997Z",
-            "labels": [
+            "indicator_types": [
                 "malicious-activity"
             ],
             "modified": "2017-01-27T13:49:53.997Z",

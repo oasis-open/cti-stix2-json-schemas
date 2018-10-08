@@ -44,15 +44,13 @@
       }
     }
   ],
-  {
-    "anyOf": [
-      { "required": ["key"] },
-      { "required": ["values"] },
-      { "required": ["modified"] },
-      { "required": ["creator_user_ref"] },
-      { "required": ["number_of_subkeys"] }
-    ]
-  },
+  "anyOf": [
+    { "required": ["key"] },
+    { "required": ["values"] },
+    { "required": ["modified"] },
+    { "required": ["creator_user_ref"] },
+    { "required": ["number_of_subkeys"] }
+  ],
   "definitions": {
     "windows-registry-value-type": {
       "type": "object",
@@ -85,13 +83,11 @@
           ]
         }
       },
-      {
-        "anyOf": [
-          { "required": ["name"] },
-          { "required": ["data"] },
-          { "required": ["data_type"] }
-        ]
-      }
+      "anyOf": [
+        { "required": ["name"] },
+        { "required": ["data"] },
+        { "required": ["data_type"] }
+      ]
     }
   }
 }

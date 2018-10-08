@@ -27,19 +27,19 @@
         },
 
         "latitude": {
-          "type": "float",
+          "type": "number",
           "description": "The latitude of the Location in decimal degrees.",
           "minimum": -90,
-          "maxmimum": 90
+          "maximum": 90
         },
         "longitude": {
-          "type": "float",
+          "type": "number",
           "description": "The longitude of the Location in decimal degrees.",
           "minimum": -180,
-          "maxmimum": 180
+          "maximum": 180
         },
         "precision": {
-          "type": "float",
+          "type": "number",
           "description": "Defines the precision of the coordinates specified by the latitude and longitude properties, measured in meters."
         },
         "region": {
@@ -68,78 +68,74 @@
           "description": "The postal code for this Location."
         }
       }
+    },
+    {
+      "anyOf": [
+        {
+          "required": [
+            "region"
+          ]
+        },
+        {
+          "required": [
+            "country"
+          ]
+        },
+        {
+          "required": [
+            "latitude",
+            "longitude"
+          ]
+        }
+      ]
+    },
+    {
+      "oneOf": [
+        {
+          "required": [
+            "latitude",
+            "longitude"
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "not": {
+                "required": [
+                  "latitude"
+                ]
+              }
+            },
+            {
+              "not": {
+                "required": [
+                  "longitude"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "oneOf": [
+        {
+          "required": [
+            "precision",
+            "latitude",
+            "longitude"
+          ]
+        },
+        {
+          "not": {
+            "required": [
+              "precision"
+            ]
+          }
+        }
+      ]
     }
   ],
-  {
-    "allOf": [
-      {
-        "anyOf": [
-          {
-            "required": [
-              "region"
-            ]
-          },
-          {
-            "required": [
-              "country"
-            ]
-          },
-          {
-            "required": [
-              "latitude",
-              "longitude"
-            ]
-          }
-        ]
-      },
-      {
-        "oneOf": [
-          {
-            "required": [
-              "latitude",
-              "longitude"
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "not": {
-                  "required": [
-                    "latitude"
-                  ]
-                }
-              },
-              {
-                "not": {
-                  "required": [
-                    "longitude"
-                  ]
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "oneOf": [
-          {
-            "required": [
-              "precision",
-              "latitude",
-              "longitude"
-            ]
-          },
-          {
-            "not": {
-              "required": [
-                "precision"
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  },
   "definitions": {
     "region-ov": {
       "type": "string",

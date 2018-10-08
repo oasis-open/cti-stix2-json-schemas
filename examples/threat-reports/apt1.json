@@ -26,7 +26,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Ugly Gorilla",
-      "labels": [
+      "threat_actor_types": [
         "nation-state",
         "spy"
       ],
@@ -50,7 +50,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "DOTA",
-      "labels": [
+      "threat_actor_types": [
         "nation-state",
         "spy"
       ],
@@ -73,7 +73,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "SuperHard",
-      "labels": [
+      "threat_actor_types": [
         "nation-state"
       ],
       "sophistication": "expert",
@@ -96,7 +96,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Communist Party of China",
       "description": " The CPC is the ultimate authority in Mainland China and tasks the PLA to commit cyber espionage and data theft against organizations around the world.",
-      "labels": [
+      "threat_actor_types": [
         "nation-state"
       ],
       "resource_level": "government",
@@ -117,7 +117,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Unit 61398",
       "description": "Unit 61398 functions as the Third Department's premier entity targeting the United States and Canada, most likely focusing on political, economic, and military-related intelligence.",
-      "labels": [
+      "threat_actor_types": [
         "nation-state"
       ],
       "resource_level": "government",
@@ -190,7 +190,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HTRAN Hop Point Accessor",
       "pattern": "[ipv4-addr:value = '223.166.0.0/15']",
-      "labels": [
+      "indicator_types": [
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:12:16.432678Z",
@@ -209,7 +209,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HTRAN Hop Point Accessor",
       "pattern": "[ipv4-addr:value = '58.246.0.0/15']",
-      "labels": [
+      "indicator_types": [
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:12:16.432678Z",
@@ -228,7 +228,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HTRAN Hop Point Accessor",
       "pattern": "[ipv4-addr:value = '112.64.0.0/15']",
-      "labels": [
+      "indicator_types": [
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:12:16.432678Z",
@@ -247,7 +247,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HTRAN Hop Point Accessor",
       "pattern": "[ipv4-addr:value = '139.226.0.0/15']",
-      "labels": [
+      "indicator_types": [
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:12:16.432678Z",
@@ -266,7 +266,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "FQDN hugesoft.org",
       "pattern": "[domain-name:value = 'hugesoft.org']",
-      "labels": [
+      "indicator_types": [
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:12:16.432678Z"
@@ -279,7 +279,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "FQDN arrowservice.net",
       "pattern": "[domain-name:value = 'arrowservice.net']",
-      "labels": [
+      "indicator_types": [
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:12:16.432678Z"
@@ -292,7 +292,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "FQDN msnhome.org",
       "pattern": "[domain-name:value = 'msnhome.org']",
-      "labels": [
+      "indicator_types": [
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:12:16.432678Z"
@@ -305,7 +305,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix E MD5 hash '001dd76872d80801692ff942308c64e6'",
       "pattern": "[file:hashes.md5 = '001dd76872d80801692ff942308c64e6']",
-      "labels": [
+      "indicator_types": [
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:12:16.432678Z"
@@ -318,7 +318,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix E MD5 hash '002325a0a67fded0381b5648d7fe9b8e'",
       "pattern": "[file:hashes.md5 = '002325a0a67fded0381b5648d7fe9b8e']",
-      "labels": [
+      "indicator_types": [
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:12:16.432678Z"
@@ -331,7 +331,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix E MD5 hash '00dbb9e1c09dbdafb360f3163ba5a3de'",
       "pattern": "[file:hashes.md5 = '00dbb9e1c09dbdafb360f3163ba5a3de']",
-      "labels": [
+      "indicator_types": [
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:12:16.432678Z"
@@ -344,7 +344,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix F SSL Certificate for serial number '(Negative)4c:0b:1d:19:74:86:a7:66:b4:1a:bf:40:27:21:76:28'",
       "pattern": "[x509-certificate:issuer = 'CN=WEBMAIL' AND x509-certificate:serial_number = '4c:0b:1d:19:74:86:a7:66:b4:1a:bf:40:27:21:76:28']",
-      "labels": [
+      "indicator_types": [
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:12:16.432678Z"
@@ -357,7 +357,7 @@
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix F SSL Certificate for serial number '0e:97:88:1c:6c:a1:37:96:42:03:bc:45:42:24:75:6c'",
       "pattern": "[x509-certificate:issuer = 'CN=LM-68AB71FBD8F5' AND x509-certificate:serial_number = '0e:97:88:1c:6c:a1:37:96:42:03:bc:45:42:24:75:6c']",
-      "labels": [
+      "indicator_types": [
         "malicious-activity"
       ],
       "valid_from": "2015-05-15T09:12:16.432678Z"
@@ -369,7 +369,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "MANITSME",
-      "labels": [
+      "malware_types": [
         "backdoor",
         "dropper",
         "remote-access-trojan"
@@ -383,7 +383,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "WEBC2-UGX",
-      "labels": [
+      "malware_types": [
         "backdoor",
         "remote-access-trojan"
       ],
@@ -396,7 +396,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "WEBC2 Backdoor",
-      "labels": [
+      "malware_types": [
         "backdoor",
         "remote-access-trojan"
       ],
@@ -415,7 +415,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HUC Packet Transmit Tool (HTRAN)",
-      "labels": [
+      "malware_types": [
         "backdoor",
         "remote-access-trojan"
       ],
@@ -434,7 +434,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "AURIGA",
-      "labels": [
+      "malware_types": [
         "backdoor",
         "keylogger"
       ],
@@ -447,7 +447,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "BANGAT",
-      "labels": [
+      "malware_types": [
         "backdoor",
         "keylogger"
       ],
@@ -460,7 +460,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "cachedump",
-      "labels": [
+      "tool_types": [
         "credential-exploitation"
       ],
       "description": "This program extracts cached password hashes from a system’s registry.",
@@ -478,7 +478,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "fgdump",
-      "labels": [
+      "tool_types": [
         "credential-exploitation"
       ],
       "description": "Windows password hash dumper",
@@ -502,7 +502,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "gsecdump",
-      "labels": [
+      "tool_types": [
         "credential-exploitation"
       ],
       "description": "Obtains password hashes from the Windows registry, including the SAM file, cached domain credentials, and LSA secrets",
@@ -526,7 +526,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "lslsass",
-      "labels": [
+      "tool_types": [
         "credential-exploitation"
       ],
       "description": "Dump active logon session password hashes from the lsass process",
@@ -550,7 +550,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "mimikatz",
-      "labels": [
+      "tool_types": [
         "credential-exploitation"
       ],
       "description": "A utility primarily used for dumping password hashes",
@@ -574,7 +574,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "pass-the-hash toolkit",
-      "labels": [
+      "tool_types": [
         "credential-exploitation"
       ],
       "description": "Allows an intruder to “pass” a password hash (without knowing the original password) to log in to systems",
@@ -598,7 +598,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "pwdump7",
-      "labels": [
+      "tool_types": [
         "credential-exploitation"
       ],
       "description": "Dumps password hashes from the Windows registry",
@@ -622,7 +622,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "pwdumpX",
-      "labels": [
+      "tool_types": [
         "credential-exploitation"
       ],
       "description": "Dumps password hashes from the Windows registry",
@@ -640,7 +640,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "GETMAIL",
-      "labels": [
+      "tool_types": [
         "information-gathering"
       ],
       "description": "GETMAIL was designed specifically to extract email messages, attachments, and folders from within Microsoft Outlook archive (“PST”) files.",
@@ -658,7 +658,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "MAPIGET",
-      "labels": [
+      "tool_types": [
         "information-gathering"
       ],
       "description": "MAPIGET was designed specifically to steal email that has not yet been archived and still resides on a Microsoft Exchange Server.",
@@ -788,7 +788,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "APT1: Exposing One of China's Cyber Espionage Units",
-      "labels": [
+      "report_types": [
         "threat-report",
         "threat-actor"
       ],

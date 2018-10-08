@@ -36,7 +36,7 @@
             "modified": "2014-10-31T15:52:13.127Z",
             "description": "",
             "name": "Malicious E-mail",
-            "labels": [
+            "indicator_types": [
                 "malicious-activity"
             ],
             "pattern": "[email-message:subject MATCHES '^[IMPORTANT] Please Review Before']",
@@ -50,7 +50,7 @@
             "created": "2014-10-31T15:52:13.127Z",
             "modified": "2014-10-31T15:52:13.127Z",
             "name": "Malicious Email Attachment",
-            "labels": [
+            "indicator_types": [
               "malicious-activity"
             ],
             "valid_from": "2014-10-31T15:52:13.127931Z",
