@@ -32,6 +32,11 @@ description usually contains the name of the event type. "
           "pattern": "^Information|Warning|Error|Critical|Success Audit|Failure Audit",
           "description": "A classification of the event severity."
         },
+        "security_identifier": {
+          "type": "string",
+          "pattern": "(^S(-[0-9]+){7}$)",
+          "description": "A classification of the event severity."
+        },
         "user": {
           "type": "string",
           "description": "The name of the user on whose behalf the event occurred. This name is
