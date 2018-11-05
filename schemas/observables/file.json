@@ -370,6 +370,7 @@
             },
             "number_of_sections": {
               "type": "integer",
+              "minimum": 0,
               "description": "Specifies the number of sections in the PE binary, as a non-negative integer."
             },
             "time_date_stamp": {
@@ -390,6 +391,7 @@
             },
             "number_of_symbols": {
               "type": "integer",
+              "minimum": 0,
               "description": "Specifies the number of entries in the symbol table of the PE binary, as a non-negative integer."
             },
             "size_of_optional_header": {
