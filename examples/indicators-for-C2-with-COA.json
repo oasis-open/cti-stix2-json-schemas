@@ -14,7 +14,7 @@
         },
         {
             "type": "malware",
-            "id": "malware--fdd60b30-b67c-11e3-b0b9-f01faf20d111",
+            "id": "malware--fdd60b30-b67c-41e3-b0b9-f01faf20d111",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2017-01-27T13:49:53.997Z",
             "modified": "2017-01-27T13:49:53.997Z",
@@ -39,7 +39,7 @@
         },
         {
             "type": "indicator",
-            "id": "indicator--a932fcc6-e032-176c-126f-cb970a5a1ade",
+            "id": "indicator--a932fcc6-e032-476c-826f-cb970a5a1ade",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2017-01-27T13:49:53.997Z",
             "labels": [
@@ -66,7 +66,7 @@
             "created": "2016-04-06T20:06:37.000Z",
             "modified": "2016-04-06T20:06:37.000Z",
             "source_ref": "course-of-action--8e2e2d2b-17d4-4cbf-938f-98ee46b3cd3f",
-            "target_ref": "malware--fdd60b30-b67c-11e3-b0b9-f01faf20d111",
+            "target_ref": "malware--fdd60b30-b67c-41e3-b0b9-f01faf20d111",
             "relationship_type": "mitigates"
         },
         {
@@ -76,8 +76,8 @@
             "created": "2017-01-27T13:49:53.997Z",
             "modified": "2017-01-27T13:49:53.997Z",
             "relationship_type": "indicates",
-            "source_ref": "indicator--a932fcc6-e032-176c-126f-cb970a5a1ade",
-            "target_ref": "malware--fdd60b30-b67c-11e3-b0b9-f01faf20d111"
+            "source_ref": "indicator--a932fcc6-e032-476c-826f-cb970a5a1ade",
+            "target_ref": "malware--fdd60b30-b67c-41e3-b0b9-f01faf20d111"
 
         },
         {
@@ -88,7 +88,7 @@
             "modified": "2014-05-08T09:00:00.000Z",
             "relationship_type": "indicates",
             "source_ref": "indicator--53fe3b22-0201-47cf-85d0-97c02164528d",
-            "target_ref": "malware--fdd60b30-b67c-11e3-b0b9-f01faf20d111"
+            "target_ref": "malware--fdd60b30-b67c-41e3-b0b9-f01faf20d111"
 
         }
     ]
