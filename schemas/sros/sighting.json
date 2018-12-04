@@ -59,6 +59,11 @@
               "not": {
                 "pattern": "^marking-definition--"
               }
+            },
+            {
+              "not": {
+                "pattern": "^language-content--"
+              }
             }
           ],
           "description": "An ID reference to the object that has been sighted."

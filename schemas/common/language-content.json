@@ -21,6 +21,19 @@
           "title": "id",
           "pattern": "^language-content--"
         },
+        "object_ref": {
+          "description": "Identifies the object that this Language Content applies to.",
+          "allOf": [
+            {
+              "$ref": "../common/identifier.json"
+            },
+            {
+              "not": {
+                "pattern": "^(bundle|language-content)--.+$"
+              }
+            }
+          ]
+        },
         "object_modified": {
           "$ref": "../common/timestamp.json",
           "description": "Identifies the modified time of the object that this Language Content applies to."
@@ -30,10 +43,13 @@
           "description": "Contains the actual Language Content (translation)."
         }
       }
+    },
+    {
+      "required": [
+        "object_ref",
+        "object_modified",
+        "contents"
+      ]
     }
-  ],
-  "required": [
-    "selectors",
-    "marking_ref"
   ]
 }

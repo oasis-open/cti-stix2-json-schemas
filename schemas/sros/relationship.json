@@ -39,7 +39,7 @@
             },
             {
               "not": {
-                "pattern": "^(relationship|sighting|bundle|marking-definition)--.+$"
+                "pattern": "^(relationship|sighting|bundle|marking-definition|language-content)--.+$"
               }
             }
           ]
@@ -52,7 +52,7 @@
             },
             {
               "not": {
-                "pattern": "^(relationship|sighting|bundle|marking-definition)--.+$"
+                "pattern": "^(relationship|sighting|bundle|marking-definition|language-content)--.+$"
               }
             }
           ]
