@@ -12,6 +12,14 @@
         "marking-definition"
       ]
     },
+    "spec_version": {
+      "type": "string",
+      "enum": [
+        "2.0",
+        "2.1"
+      ],
+      "description": "The version of the STIX specification used to represent this object."
+    },
     "created_by_ref": {
       "$ref": "identifier.json",
       "description": "The created_by_ref property specifies the ID of the identity object that describes the entity that created this Marking Definition."
@@ -101,6 +109,7 @@
       "required": [
         "id",
         "type",
+        "spec_version",
         "definition",
         "definition_type",
         "created"

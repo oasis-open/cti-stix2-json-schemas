@@ -46,25 +46,25 @@
     "created": {
       "description": "The created property represents the time at which the first version of this object was created. The timstamp value MUST be precise to the nearest millisecond.",
       "allOf": [
-		{
-	      "$ref": "timestamp.json"
-		},
-		{
-		  "title": "timestamp_millis",
-		  "pattern": "T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
-		}
+        {
+          "$ref": "timestamp.json"
+        },
+        {
+          "title": "timestamp_millis",
+          "pattern": "T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+        }
       ]
     },
     "modified": {
       "description": "The modified property represents the time that this particular version of the object was modified. The timstamp value MUST be precise to the nearest millisecond.",
       "allOf": [
-		{
-	      "$ref": "timestamp.json"
-		},
-		{
-		  "title": "timestamp_millis",
-		  "pattern": "T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
-		}
+        {
+          "$ref": "timestamp.json"
+        },
+        {
+          "title": "timestamp_millis",
+          "pattern": "T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+        }
       ]
     },
     "revoked": {
