@@ -21,11 +21,11 @@
           "title": "id",
           "pattern": "^note--"
         },
-        "summary": {
+        "abstract": {
           "type": "string",
-          "description": "A brief description used as a summary of the note."
+          "description": "A brief summary of the note."
         },
-        "description": {
+        "content": {
           "type": "string",
           "description": "The content of the note."
         },
@@ -49,7 +49,6 @@
     }
   ],
   "required": [
-    "description",
     "object_refs"
   ]
 }
