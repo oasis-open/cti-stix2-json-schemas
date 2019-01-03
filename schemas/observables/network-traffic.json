@@ -272,6 +272,7 @@
             },
             "socket_descriptor": {
               "type": "integer",
+              "minimum": 0,
               "description": "Specifies the socket file descriptor value associated with the socket, as a non-negative integer."
             },
             "socket_handle": {

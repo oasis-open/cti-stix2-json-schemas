@@ -339,7 +339,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b3b6b540-d838-11e2-853b-005056c00008",
+      "id": "indicator--b3b6b540-d838-41e2-853b-005056c00008",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix F SSL Certificate for serial number '(Negative)4c:0b:1d:19:74:86:a7:66:b4:1a:bf:40:27:21:76:28'",
@@ -352,7 +352,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b3b7035e-d838-11e2-8d38-005056c00008",
+      "id": "indicator--b3b7035e-d838-41e2-8d38-005056c00008",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix F SSL Certificate for serial number '0e:97:88:1c:6c:a1:37:96:42:03:bc:45:42:24:75:6c'",
@@ -816,8 +816,8 @@
         "indicator--8d12f44f-8ac0-4b12-8b4a-3699ca8c9691",
         "indicator--745e1537-b4f3-49da-9f64-df6b1b5df190",
         "indicator--1dbe6ed0-c305-458f-9cce-f83c678f5afd",
-        "indicator--b3b6b540-d838-11e2-853b-005056c00008",
-        "indicator--b3b7035e-d838-11e2-8d38-005056c00008",
+        "indicator--b3b6b540-d838-41e2-853b-005056c00008",
+        "indicator--b3b7035e-d838-41e2-8d38-005056c00008",
         "intrusion-set--da1065ce-972c-4605-8755-9cd1074e3b5a",
         "malware--2485b844-4efe-4343-84c8-eb33312dd56f",
         "malware--c0217091-9d3d-42a1-8952-ccc12d4ad8d0",
