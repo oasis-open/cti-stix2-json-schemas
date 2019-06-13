@@ -17,6 +17,10 @@
             "email-message"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^email-message--"
+        },
         "date": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time that the email message was sent."

@@ -17,6 +17,11 @@
             "directory"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^directory--"
+        },
+
         "path": {
           "type": "string",
           "description": "Specifies the path, as originally observed, to the directory on the file system."

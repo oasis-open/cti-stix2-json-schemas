@@ -17,6 +17,10 @@
             "ipv6-addr"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^ipv6-addr--"
+        },
         "value": {
           "type": "string",
           "description": "Specifies one or more IPv6 addresses expressed using CIDR notation."

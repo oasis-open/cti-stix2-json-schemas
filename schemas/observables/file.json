@@ -17,6 +17,10 @@
             "file"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^file--"
+        },
         "extensions": {
           "$ref": "#/definitions/file-extensions-dictionary",
           "description": "The File Object defines the following extensions. In addition to these, producers MAY create their own. Extensions: ntfs-ext, raster-image-ext, pdf-ext, archive-ext, windows-pebinary-ext"

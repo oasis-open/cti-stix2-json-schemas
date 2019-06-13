@@ -17,6 +17,10 @@
             "x509-certificate"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^x509-certificate--"
+        },
         "is_self_signed": {
           "type": "boolean",
           "description": "Specifies whether the certificate is self-signed, i.e., whether it is signed by the same entity whose identity it certifies."

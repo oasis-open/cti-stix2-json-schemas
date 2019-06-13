@@ -17,6 +17,10 @@
             "artifact"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^artifact--"
+        },
         "mime_type": {
           "type": "string",
           "pattern": "^(application|audio|font|image|message|model|multipart|text|video)/[a-zA-Z0-9.+_-]+",

@@ -17,6 +17,10 @@
             "process"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^process--"
+        },
         "extensions": {
           "$ref": "#/definitions/process-extensions-dictionary",
           "description": "The Process Object defines the following extensions. In addition to these, producers MAY create their own. Extensions: windows-process-ext, windows-service-ext."
