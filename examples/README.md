@@ -60,3 +60,8 @@
 *Completely New Example Written for 2.0*
 * Description of this example can be seen on the CTI-documentation site [here](https://oasis-open.github.io/cti-documentation/examples/using-marking-definitions).
 * Demonstrates both specification-designed marking definition types: Statement and TLP.
+
+### Infrastructure Examples
+*Completely New Example Written for 2.1*
+* This example contains the bundled form of the infrastructure examples from STIX 2.1 WD04.
+* Demonstrates how to use the new Infrastructure object.
