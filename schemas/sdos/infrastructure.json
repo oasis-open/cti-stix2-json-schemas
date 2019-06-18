@@ -39,7 +39,7 @@
         },
         "aliases": {
           "type": "array",
-          "description": "This field contains a description that provides more details and context about the Infrastructure",
+          "description": "Alternative names used to identify this Infrastructure.",
           "items": {
             "type": "string"
           },
