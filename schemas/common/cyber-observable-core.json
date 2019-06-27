@@ -17,6 +17,10 @@
         ]
       }
     },
+    "id": {
+      "$ref": "identifier.json",
+      "description": "Specifies the identifier of the observable object, as a string."
+    },
     "extensions": {
       "$ref": "dictionary.json",
       "description": "Specifies any extensions of the object, as a dictionary."
@@ -52,6 +56,7 @@
   },
   "additionalProperties": false,
   "required": [
-    "type"
+    "type",
+    "id"
   ]
 }

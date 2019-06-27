@@ -17,6 +17,10 @@
             "ipv4-addr"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^ipv4-addr--"
+        },
         "value": {
           "type": "string",
           "description": "Specifies one or more IPv4 addresses expressed using CIDR notation."

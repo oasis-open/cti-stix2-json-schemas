@@ -17,6 +17,10 @@
             "user-account"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^user-account--"
+        },
         "extensions": {
           "$ref": "#/definitions/user-account-extensions-dictionary",
           "description": "The User Account Object defines the following extensions. In addition to these, producers MAY create their own. Extensions: unix-account-ext."

@@ -17,6 +17,10 @@
             "url"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^url--"
+        },
         "value": {
           "$ref": "../common/url-regex.json",
           "description": "Specifies the value of the URL."

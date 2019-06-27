@@ -17,6 +17,10 @@
             "network-traffic"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^network-traffic--"
+        },
         "extensions": {
           "$ref": "#/definitions/network-traffic-extensions-dictionary",
           "description": "The Network Traffic Object defines the following extensions. In addition to these, producers MAY create their own. Extensions: http-ext, tcp-ext, icmp-ext, socket-ext"

@@ -17,6 +17,10 @@
             "autonomous-system"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^autonomous-system--"
+        },
         "number": {
           "type": "integer",
           "description": "Specifies the number assigned to the AS. Such assignments are typically performed by a Regional Internet Registries (RIR)."

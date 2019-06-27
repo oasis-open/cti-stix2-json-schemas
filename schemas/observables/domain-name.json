@@ -17,6 +17,10 @@
             "domain-name"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^domain-name--"
+        },
         "value": {
           "type": "string",
           "description": "Specifies the value of the domain name."

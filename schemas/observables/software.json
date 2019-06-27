@@ -17,6 +17,10 @@
             "software"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^software--"
+        },
         "name": {
           "type": "string",
           "description": "Specifies the name of the software."

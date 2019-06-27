@@ -37,6 +37,14 @@
           },
           "minItems": 1
         },
+        "aliases": {
+          "type": "array",
+          "description": "Alternative names used to identify this Infrastructure.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
         "kill_chain_phases": {
           "type": "array",
           "description": "The list of kill chain phases for which this infrastructure is used.",

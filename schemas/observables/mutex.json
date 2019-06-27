@@ -17,6 +17,10 @@
             "mutex"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^mutex--"
+        },
         "name": {
           "type": "string",
           "description": "Specifies the name of the mutex object."
