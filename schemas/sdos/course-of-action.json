@@ -17,6 +17,10 @@
             "course-of-action"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^course-of-action--"
+        },
         "action_type": {
           "type" : "string",
           "description" : "The type of action defined by either the action_bin property or the dereferenced content from the action_reference property. Open Vocab - course-of-action-type-ov."
