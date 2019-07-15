@@ -401,6 +401,8 @@
     },
     "windows-pe-optional-header-type": {
       "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
       "description": "The Windows PE Optional Header type represents the properties of the PE optional header.",
       "properties": {
         "magic_hex": {

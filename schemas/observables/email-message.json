@@ -58,6 +58,10 @@
             "type": "string"
           }
         },
+        "message_id" : {
+          "type" : "string",
+          "description": "Specifies the Message-ID field of the email message."
+        },
         "subject": {
           "type": "string",
           "description": "Specifies the subject of the email message."
