@@ -31,15 +31,15 @@
           "pattern": "^[a-zA-Z0-9/\\.+_:-]{2,250}$",
           "description": "Specifies the observed encoding for the path."
         },
-        "created": {
+        "ctime": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time the directory was created."
         },
-        "modified": {
+        "mtime": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time the directory was last written to/modified."
         },
-        "accessed": {
+        "atime": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time the directory was last accessed."
         },

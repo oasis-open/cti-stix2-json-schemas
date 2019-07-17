@@ -33,7 +33,7 @@
           },
           "description": "Specifies the values found under the registry key."
         },
-        "modified": {
+        "modified_time": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the last date/time that the registry key was modified."
         },

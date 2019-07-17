@@ -60,15 +60,15 @@
           "type": "string",
           "description": "Specifies the MIME type name specified for the file, e.g., 'application/msword'."
         },
-        "created": {
+        "ctime": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time the file was created."
         },
-        "modified": {
+        "mtime": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time the file was last written to/modified."
         },
-        "accessed": {
+        "atime": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time the file was last accessed."
         },
