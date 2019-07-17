@@ -45,6 +45,7 @@
     }
   ],
   "required": [
-    "context"
+    "context",
+    "object_refs"
   ]
 }

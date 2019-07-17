@@ -17,6 +17,13 @@
             "attack-pattern"
           ]
         },
+        "aliases" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "description": "Alternative names used to identify this Attack Pattern."
+        },
         "id": {
           "title": "id",
           "pattern": "^attack-pattern--"
