@@ -39,6 +39,7 @@ Initially, the associated TC members have designated one or more persons to serv
 
  * [Greg Back](mailto:gback@mitre.org); GitHub ID: [https://github.com/gtback/](https://github.com/gtback/); WWW: [MITRE](https://www.mitre.org/)
  * [Chris Lenk](mailto:clenk@mitre.org); GitHub ID: [https://github.com/clenk](https://github.com/clenk); WWW: [MITRE](https://www.mitre.org)
+ * [Jason Keirstead](mailto:Jason.Keirstead@ca.ibm.com); GitHub ID: [https://github.com/JasonKeirstead](https://github.com/JasonKeirstead); WWW: [IBM](http://www.ibm.com/)
  
 ## <a id="aboutOpenRepos">About OASIS TC Open Repositories</a>
 
