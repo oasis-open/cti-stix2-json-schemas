@@ -29,14 +29,7 @@
           "type": "array",
           "description": "Specifies a list of references to one or more Layer 2 Media Access Control (MAC) addresses that the IPv4 address resolves to.",
           "items": {
-            "allOf": [
-              {
-                "$ref": "../common/identifier.json"
-              },
-              {
-                "pattern": "^mac-addr--"
-              }
-            ]
+            "type": "string"
           },
           "minItems": 1
         },
@@ -44,14 +37,7 @@
           "type": "array",
           "description": "Specifies a reference to one or more autonomous systems (AS) that the IPv4 address belongs to.",
           "items": {
-            "allOf": [
-              {
-                "$ref": "../common/identifier.json"
-              },
-              {
-                "pattern": "^autonomous-system--"
-              }
-            ]
+            "type": "string"
           },
           "minItems": 1
         }

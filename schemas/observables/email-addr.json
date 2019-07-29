@@ -32,14 +32,7 @@
         },
         "belongs_to_ref": {
           "description": "Specifies the user account that the email address belongs to, as a reference to a User Account Object.",
-          "allOf": [
-            {
-              "$ref": "../common/identifier.json"
-            },
-            {
-              "pattern": "^user-account--"
-            }
-          ]
+          "type": "string"
         }
       },
       "required": [

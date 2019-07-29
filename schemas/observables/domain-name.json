@@ -29,24 +29,7 @@
           "type": "array",
           "description": "Specifies a list of references to one or more IP addresses or domain names that the domain name resolves to.",
           "items": {
-            "allOf": [
-              {
-                "$ref": "../common/identifier.json"
-              },
-              {
-                "oneOf": [
-                  {
-                    "pattern": "^ipv4-addr--"
-                  },
-                  {
-                    "pattern": "^ipv6-addr--"
-                  },
-                  {
-                    "pattern": "^domain-name--"
-                  }
-                ]
-              }
-            ]
+            "type": "string"
           },
           "minItems": 1
         }

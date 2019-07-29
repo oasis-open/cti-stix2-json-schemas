@@ -39,14 +39,7 @@
         },
         "creator_user_ref": {
           "description": "Specifies a reference to a user account, represented as a User Account Object, that created the registry key.",
-          "allOf": [
-            {
-              "$ref": "../common/identifier.json"
-            },
-            {
-              "pattern": "^user-account--"
-            }
-          ]
+          "type": "string",
         },
         "number_of_subkeys": {
           "type": "integer",

@@ -31,38 +31,17 @@
         },
         "from_ref": {
           "description": "Specifies the value of the 'From:' header of the email message.",
-          "allOf": [
-            {
-              "$ref": "../common/identifier.json"
-            },
-            {
-              "pattern": "^email-addr--"
-            }
-          ]
+          "type": "string"
         },
         "sender_ref": {
           "description": "Specifies the value of the 'From' field of the email message.",
-          "allOf": [
-            {
-              "$ref": "../common/identifier.json"
-            },
-            {
-              "pattern": "^email-addr--"
-            }
-          ]
+          "type": "string"
         },
         "to_refs": {
           "type": "array",
           "description": "Specifies the mailboxes that are 'To:' recipients of the email message.",
           "items": {
-            "allOf": [
-              {
-                "$ref": "../common/identifier.json"
-              },
-              {
-                "pattern": "^email-addr--"
-              }
-            ]
+            "type": "string"
           },
           "minItems": 1
         },
@@ -70,14 +49,7 @@
           "type": "array",
           "description": "Specifies the mailboxes that are 'CC:' recipients of the email message.",
           "items": {
-            "allOf": [
-              {
-                "$ref": "../common/identifier.json"
-              },
-              {
-                "pattern": "^email-addr--"
-              }
-            ]
+            "type": "string"
           },
           "minItems": 1
         },
@@ -85,14 +57,7 @@
           "type": "array",
           "description": "Specifies the mailboxes that are 'BCC:' recipients of the email message.",
           "items": {
-            "allOf": [
-              {
-                "$ref": "../common/identifier.json"
-              },
-              {
-                "pattern": "^email-addr--"
-              }
-            ]
+            "type": "string"
           },
           "minItems": 1
         },
@@ -117,14 +82,7 @@
         },
         "raw_email_ref": {
           "description": "Specifies the raw binary contents of the email message, including both the headers and body, as a reference to an Artifact Object.",
-          "allOf": [
-            {
-              "$ref": "../common/identifier.json"
-            },
-            {
-              "pattern": "^artifact--"
-            }
-          ]
+          "type": "string"
         }
       }
     }

@@ -35,51 +35,11 @@
         },
         "src_ref": {
           "description": "Specifies the source of the network traffic, as a reference to an Observable Object.",
-          "allOf": [
-            {
-              "$ref": "../common/identifier.json"
-            },
-            {
-              "oneOf": [
-                {
-                  "pattern": "^ipv4-addr--"
-                },
-                {
-                  "pattern": "^ipv6-addr--"
-                },
-                {
-                  "pattern": "^mac-addr--"
-                },
-                {
-                  "pattern": "^domain-name--"
-                }
-              ]
-            }
-          ]
+          "type": "string"
         },
         "dst_ref": {
           "description": "Specifies the destination of the network traffic, as a reference to an Observable Object.",
-          "allOf": [
-            {
-              "$ref": "../common/identifier.json"
-            },
-            {
-              "oneOf": [
-                {
-                  "pattern": "^ipv4-addr--"
-                },
-                {
-                  "pattern": "^ipv6-addr--"
-                },
-                {
-                  "pattern": "^mac-addr--"
-                },
-                {
-                  "pattern": "^domain-name--"
-                }
-              ]
-            }
-          ]
+          "type": "string"
         },
         "src_port": {
           "type": "integer",
@@ -134,51 +94,23 @@
         },
         "src_payload_ref": {
           "description": "Specifies the bytes sent from the source to the destination.",
-          "allOf": [
-            {
-              "$ref": "../common/identifier.json"
-            },
-            {
-              "pattern": "^artifact--"
-            }
-          ]
+          "type": "string"
         },
         "dst_payload_ref": {
           "description": "Specifies the bytes sent from the source to the destination.",
-          "allOf": [
-            {
-              "$ref": "../common/identifier.json"
-            },
-            {
-              "pattern": "^artifact--"
-            }
-          ]
+          "type": "string"
         },
         "encapsulates_refs": {
           "type": "array",
           "description": "Links to other network-traffic objects encapsulated by a network-traffic.",
           "items": {
-            "allOf": [
-              {
-                "$ref": "../common/identifier.json"
-              },
-              {
-                "pattern": "^network-traffic--"
-              }
-            ]
+            "type": "string"
           },
           "minItems": 1
         },
         "encapsulated_by_ref": {
           "description": "Links to another network-traffic object which encapsulates this object.",
-          "allOf": [
-            {
-              "$ref": "../common/identifier.json"
-            },
-            {
-              "pattern": "^network-traffic--"
-            }
-          ]
+          "type": "string"
         }
       }
     }
@@ -279,14 +211,7 @@
             },
             "message_body_data_ref": {
               "description": "Specifies the data contained in the HTTP message body, if included.",
-              "allOf": [
-                {
-                  "$ref": "../common/identifier.json"
-                },
-                {
-                  "pattern": "^artifact--"
-                }
-              ]
+              "type": "string"
             }
           },
           "required": [
