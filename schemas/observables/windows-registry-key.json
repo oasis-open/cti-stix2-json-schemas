@@ -33,13 +33,13 @@
           },
           "description": "Specifies the values found under the registry key."
         },
-        "modified": {
+        "modified_time": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the last date/time that the registry key was modified."
         },
         "creator_user_ref": {
+          "description": "Specifies a reference to a user account, represented as a User Account Object, that created the registry key.",
           "type": "string",
-          "description": "Specifies a reference to a user account, represented as a User Account Object, that created the registry key."
         },
         "number_of_subkeys": {
           "type": "integer",
@@ -77,6 +77,7 @@
             "REG_BINARY",
             "REG_DWORD",
             "REG_DWORD_BIG_ENDIAN",
+            "REG_DWORD_LITTLE_ENDIAN",
             "REG_LINK",
             "REG_MULTI_SZ",
             "REG_RESOURCE_LIST",

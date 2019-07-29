@@ -20,6 +20,10 @@
       ],
       "description": "The version of the STIX specification used to represent this object."
     },
+    "name" : {
+      "type" : "string",
+      "description": "A name used to identify the Marking Definition."
+    },
     "created_by_ref": {
       "$ref": "identifier.json",
       "description": "The created_by_ref property specifies the ID of the identity object that describes the entity that created this Marking Definition."

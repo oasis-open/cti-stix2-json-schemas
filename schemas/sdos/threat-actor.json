@@ -61,6 +61,14 @@
           },
           "minItems": 1
         },
+        "first_seen" : {
+          "$ref": "../common/timestamp.json",
+          "description": "The time that this Threat Actor was first seen."
+        },
+        "last_seen" : {
+          "$ref": "../common/timestamp.json",
+          "description": "The time that this Threat Actor was last seen."
+        },
         "sophistication": {
           "type": "string",
           "description": "The skill, specific knowledge, special training, or expertise a Threat Actor must have to perform the attack. Open Vocab - threat-actor-sophistication-ov"
@@ -110,7 +118,8 @@
         "nation-state",
         "sensationalist",
         "spy",
-        "terrorist"
+        "terrorist",
+        "unknown"
       ]
     },
     "threat-actor-role-ov": {

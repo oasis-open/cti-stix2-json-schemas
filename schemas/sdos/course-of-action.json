@@ -21,6 +21,29 @@
           "title": "id",
           "pattern": "^course-of-action--"
         },
+        "action_type": {
+          "type" : "string",
+          "description" : "The type of action defined by either the action_bin property or the dereferenced content from the action_reference property. Open Vocab - course-of-action-type-ov."
+        },
+        "os_execution_envs" : {
+          "type" : "array",
+          "description": "A recommendation on the operating systems that this course of action can be applied to.",
+          "items" : {
+            "type" : "string"
+          },
+          "minItems" : 1
+        },
+        "oneof" : {
+          "action_bin" : {
+            "type": "string",
+            "contentEncoding": "base64", 
+            "description" : "Base64-encoded action content."
+          },
+          "action_reference" :{
+            "type" : "string",
+            "description" : "The value of this property MUST be a valid external reference that resolves to the action content as defined by the action_type property."
+          }
+        },
         "name": {
           "type": "string",
           "description": "The name used to identify the Course of Action."
@@ -34,5 +57,45 @@
   ],
   "required": [
     "name"
-  ]
+  ],
+  "oneOf": [
+    {
+      "properties": {
+        "action_bin" : {
+          "type": "string",
+          "contentEncoding": "base64", 
+          "description" : "Base64-encoded action content."
+        }
+      },
+      "not": {
+        "required": [
+          "action_reference"
+        ]
+      }
+    },
+    {
+      "properties": {
+        "action_reference" :{
+          "type" : "string",
+          "description" : "The value of this property MUST be a valid external reference that resolves to the action content as defined by the action_type property."
+        }
+      },
+      "not": {
+        "required": [
+          "action_bin"
+        ]
+      }
+    }
+  ],
+  "definitions": {
+    "course-of-action-type-ov": {
+      "type": "string",
+      "enum": [
+        "textual:text/plain",
+        "textual:text/html",
+        "textual:text/md",
+        "textual:pdf"
+      ]
+    }
+  }
 }

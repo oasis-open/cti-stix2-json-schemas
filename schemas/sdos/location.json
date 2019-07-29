@@ -25,7 +25,10 @@
           "type": "string",
           "description": "A textual description of the Location."
         },
-
+        "name" : {
+          "type" : "string",
+          "description": "A name used to identify the Location."
+        },
         "latitude": {
           "type": "number",
           "description": "The latitude of the Location in decimal degrees.",
@@ -160,7 +163,7 @@
         "northern-europe",
         "southern-europe",
         "western-europe",
-        "oceana",
+        "oceania",
         "australia-new-zealand",
         "melanesia",
         "micronesia",

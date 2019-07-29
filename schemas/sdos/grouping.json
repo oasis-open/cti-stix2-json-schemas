@@ -27,7 +27,7 @@
         },
         "description": {
           "type": "string",
-          "description": "A description which provides more details and context about the Grouping, potentially including hte purpose and key characteristics."
+          "description": "A description which provides more details and context about the Grouping, potentially including the purpose and key characteristics."
         },
         "context": {
           "type": "string",
@@ -35,7 +35,7 @@
         },
         "object_refs": {
           "type": "array",
-          "description": "The STIX Objects (SDOs and SROs) that the note is being applied to.",
+          "description": "The STIX Objects (SDOs and SROs) that  are referred to by this Grouping.",
           "items": {
             "$ref": "../common/identifier.json"
           },
@@ -45,6 +45,17 @@
     }
   ],
   "required": [
-    "context"
-  ]
+    "context",
+    "object_refs"
+  ],
+  "definitions": {
+    "grouping-context-ov": {
+      "type": "string",
+      "enum": [
+        "suspicious-activity",
+        "malware-analysis",
+        "unspecified"
+      ]
+    }
+  }
 }

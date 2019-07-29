@@ -21,6 +21,10 @@
           "title": "id",
           "pattern": "^sighting--"
         },
+        "description" : {
+          "type" : "string",
+          "description" : "A description that provides more details and context about the Sighting."
+        },
         "first_seen": {
           "$ref": "../common/timestamp.json",
           "description": "The beginning of the time window during which the SDO referenced by the sighting_of_ref property was sighted."

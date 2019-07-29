@@ -17,6 +17,33 @@
         ]
       }
     },
+    "spec_version": {
+      "type": "string",
+      "enum": [
+        "2.0", "2.1"
+      ],
+      "description": "The version of the STIX specification used to represent the content in this cyber-observable."
+    },
+    "object_marking_refs": {
+      "type": "array",
+      "description": "The list of marking-definition objects to be applied to this object.",
+      "items": {
+        "$ref": "identifier.json"
+      },
+      "minItems": 1
+    },
+    "granular_markings": {
+      "type": "array",
+      "description": "The set of granular markings that apply to this object.",
+      "items": {
+        "$ref": "granular-marking.json"
+      },
+      "minItems": 1
+    },
+    "is_defanged" : {
+      "type" : "boolean",
+      "description": "Defines whether or not the data contained within the object has been defanged."
+    },
     "id": {
       "$ref": "identifier.json",
       "description": "Specifies the identifier of the observable object, as a string."

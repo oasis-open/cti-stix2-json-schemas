@@ -21,6 +21,14 @@
           "title": "id",
           "pattern": "^tool--"
         },
+        "aliases" : {
+          "type" : "array",
+          "description": "Alternative names used to identify this Tool.",
+          "items" : {
+            "type" : "string"
+          },
+          "minItems" : 1
+        },
         "tool_types": {
           "type": "array",
           "description": "The kind(s) of tool(s) being described. Open Vocab - tool-type-ov",
@@ -66,7 +74,8 @@
         "network-capture",
         "credential-exploitation",
         "remote-access",
-        "vulnerability-scanning"
+        "vulnerability-scanning",
+        "unknown"
       ]
     }
   }
