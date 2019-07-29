@@ -29,7 +29,14 @@
           "type": "array",
           "description": "Specifies a list of references to one or more Layer 2 Media Access Control (MAC) addresses that the IPv6 address resolves to.",
           "items": {
-            "type":"string"
+            "allOf": [
+              {
+                "$ref": "../common/identifier.json"
+              },
+              {
+                "pattern": "^mac-addr--"
+              }
+            ]
           },
           "minItems": 1
         },
@@ -37,7 +44,14 @@
           "type": "array",
           "description": "Specifies a reference to one or more autonomous systems (AS) that the IPv6 address belongs to.",
           "items": {
-            "type":"string"
+            "allOf": [
+              {
+                "$ref": "../common/identifier.json"
+              },
+              {
+                "pattern": "^autonomous-system--"
+              }
+            ]
           },
           "minItems": 1
         }

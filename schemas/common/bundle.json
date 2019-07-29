@@ -15,7 +15,7 @@
     "id": {
       "allOf": [
         {
-          "$ref": "identifier.json",
+          "$ref": "../common/identifier.json",
           "description": "An identifier for this bundle. The id field for the Bundle is designed to help tools that may need it for processing, but tools are not required to store or track it. "
         },
         {

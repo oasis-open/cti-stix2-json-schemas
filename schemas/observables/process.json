@@ -53,27 +53,62 @@
           "type": "array",
           "description": "Specifies the list of network connections opened by the process, as a reference to one or more Network Traffic Objects.",
           "items": {
-            "type": "string"
+            "allOf": [
+              {
+                "$ref": "../common/identifier.json"
+              },
+              {
+                "pattern": "^network-traffic--"
+              }
+            ]
           },
           "minItems": 1
         },
         "creator_user_ref": {
-          "type": "string",
-          "description": "Specifies the user that created the process, as a reference to a User Account Object."
+          "description": "Specifies the user that created the process, as a reference to a User Account Object.",
+          "allOf": [
+            {
+              "$ref": "../common/identifier.json"
+            },
+            {
+              "pattern": "^user-account--"
+            }
+          ]
         },
         "image_ref": {
-          "type": "string",
-          "description": "Specifies the executable binary that was executed as the process image, as a reference to a File Object."
+          "description": "Specifies the executable binary that was executed as the process image, as a reference to a File Object.",
+          "allOf": [
+            {
+              "$ref": "../common/identifier.json"
+            },
+            {
+              "pattern": "^file--"
+            }
+          ]
         },
         "parent_ref": {
-          "type": "string",
-          "description": "Specifies the other process that spawned (i.e. is the parent of) this one, as represented by a Process Object."
+          "description": "Specifies the other process that spawned (i.e. is the parent of) this one, as represented by a Process Object.",
+          "allOf": [
+            {
+              "$ref": "../common/identifier.json"
+            },
+            {
+              "pattern": "^process--"
+            }
+          ]
         },
         "child_refs": {
           "type": "array",
           "description": "Specifies the other processes that were spawned by (i.e. children of) this process, as a reference to one or more other Process Objects.",
           "items": {
-            "type": "string"
+            "allOf": [
+              {
+                "$ref": "../common/identifier.json"
+              },
+              {
+                "pattern": "^process--"
+              }
+            ]
           },
           "minItems": 1
         }
@@ -187,7 +222,14 @@
               "type": "array",
               "description": "Specifies the DLLs loaded by the service, as a reference to one or more File Objects.",
               "items": {
-                "type": "string"
+                "allOf": [
+                  {
+                    "$ref": "../common/identifier.json"
+                  },
+                  {
+                    "pattern": "^file--"
+                  }
+                ]
               },
               "minItems": 1
             },

@@ -118,6 +118,14 @@
               ]
             }
           }
+        },
+        "object_refs": {
+          "type": "array",
+          "description": "A list of SCOs and SROs representing the observation.",
+          "items": {
+            "$ref": "../common/identifier.json"
+          },
+          "minItems": 1
         }
       }
     }
@@ -125,7 +133,18 @@
   "required": [
     "first_observed",
     "last_observed",
-    "number_observed",
-    "objects"
+    "number_observed"
+  ],
+  "oneOf": [
+    {
+      "required": [
+        "objects"
+      ]
+    },
+    {
+      "required": [
+        "object_refs"
+      ]
+    }
   ]
 }

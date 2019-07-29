@@ -38,8 +38,15 @@
           "description": "Specifies the last date/time that the registry key was modified."
         },
         "creator_user_ref": {
-          "type": "string",
-          "description": "Specifies a reference to a user account, represented as a User Account Object, that created the registry key."
+          "description": "Specifies a reference to a user account, represented as a User Account Object, that created the registry key.",
+          "allOf": [
+            {
+              "$ref": "../common/identifier.json"
+            },
+            {
+              "pattern": "^user-account--"
+            }
+          ]
         },
         "number_of_subkeys": {
           "type": "integer",
@@ -77,6 +84,7 @@
             "REG_BINARY",
             "REG_DWORD",
             "REG_DWORD_BIG_ENDIAN",
+            "REG_DWORD_LITTLE_ENDIAN",
             "REG_LINK",
             "REG_MULTI_SZ",
             "REG_RESOURCE_LIST",

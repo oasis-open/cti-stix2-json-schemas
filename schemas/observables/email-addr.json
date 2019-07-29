@@ -31,8 +31,15 @@
           "description": "Specifies a single email display name, i.e., the name that is displayed to the human user of a mail application."
         },
         "belongs_to_ref": {
-          "type": "string",
-          "description": "Specifies the user account that the email address belongs to, as a reference to a User Account Object."
+          "description": "Specifies the user account that the email address belongs to, as a reference to a User Account Object.",
+          "allOf": [
+            {
+              "$ref": "../common/identifier.json"
+            },
+            {
+              "pattern": "^user-account--"
+            }
+          ]
         }
       },
       "required": [

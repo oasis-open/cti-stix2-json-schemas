@@ -47,7 +47,21 @@
           "type": "array",
           "description": "Specifies a list of references to other File and/or Directory Objects contained within the directory.",
           "items": {
-            "type": "string"
+            "allOf": [
+              {
+                "$ref": "../common/identifier.json"
+              },
+              {
+                "oneOf": [
+                  {
+                    "pattern": "^file--"
+                  },
+                  {
+                    "pattern": "^directory--"
+                  }
+                ]
+              }
+            ]
           },
           "minItems": 1
         }

@@ -27,16 +27,7 @@
         },
         "hashes": {
           "$ref": "../common/hashes-type.json",
-          "description": "Specifies a dictionary of hashes for the file.",
-          "enum": [
-            "MD5",
-            "SHA-1",
-            "SHA-256",
-            "SHA-512",
-            "SHA3-256",
-            "SHA3-512",
-            "SSDEEP"
-          ]
+          "description": "Specifies a dictionary of hashes for the file."
         },
         "size": {
           "type": "integer",
@@ -73,20 +64,34 @@
           "description": "Specifies the date/time the file was last accessed."
         },
         "parent_directory_ref": {
-          "type": "string",
-          "description": "Specifies the parent directory of the file, as a reference to a Directory Object."
+          "description": "Specifies the parent directory of the file, as a reference to a Directory Object.",
+          "allOf": [
+            {
+              "$ref": "../common/identifier.json"
+            },
+            {
+              "pattern": "^directory--"
+            }
+          ]
         },
         "contains_refs": {
           "type": "array",
           "description": "Specifies a list of references to other Observable Objects contained within the file.",
           "items": {
-            "type": "string"
+            "$ref": "../common/identifier.json"
           },
           "minItems": 1
         },
         "content_ref": {
-          "type": "string",
-          "description": "Specifies the content of the file, represented as an Artifact Object."
+          "description": "Specifies the content of the file, represented as an Artifact Object.",
+          "allOf": [
+            {
+              "$ref": "../common/identifier.json"
+            },
+            {
+              "pattern": "^artifact--"
+            }
+          ]
         }
       }
     }
@@ -251,7 +256,21 @@
               "type": "array",
               "description": "Specifies the files contained in the archive, as a reference to one or more other File Objects. The objects referenced in this list MUST be of type file-object.",
               "items": {
-                "type": "string"
+                "allOf": [
+                  {
+                    "$ref": "../common/identifier.json"
+                  },
+                  {
+                    "oneOf": [
+                      {
+                        "pattern": "^file--"
+                      },
+                      {
+                        "pattern": "^directory--"
+                      }
+                    ]
+                  }
+                ]
               },
               "minItems": 1
             },
