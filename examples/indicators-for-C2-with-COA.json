@@ -19,6 +19,7 @@
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2017-01-27T13:49:53.997Z",
             "modified": "2017-01-27T13:49:53.997Z",
+            "is_family": true,
             "description": "variant",
             "malware_types": [
                 "remote-access-trojan"
@@ -28,6 +29,7 @@
         {
             "type": "indicator",
             "spec_version": "2.1",
+            "pattern_type": "stix",
             "id": "indicator--53fe3b22-0201-47cf-85d0-97c02164528d",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2014-05-08T09:00:00.000Z",
@@ -42,6 +44,7 @@
         {
             "type": "indicator",
             "spec_version": "2.1",
+            "pattern_type": "stix",
             "id": "indicator--a932fcc6-e032-476c-826f-cb970a5a1ade",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2017-01-27T13:49:53.997Z",

@@ -4,6 +4,7 @@
   "objects": [
     {
       "type": "malware",
+      "is_family": true,
       "spec_version": "2.1",
       "id": "malware--591f0cb7-d66f-4e14-a8e6-5927b597f920",
       "created": "2015-05-15T09:12:16.432Z",
@@ -140,6 +141,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--61a62a6a-9a18-4758-8e52-622431c4b8ae",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -152,6 +154,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--30ea087f-7d2b-496b-9ed1-5f000c8b7695",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -164,6 +167,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--4de25c38-5826-4ee7-b84d-878064de87ad",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -176,6 +180,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--dc669921-4a1a-470d-bfae-694e740ce181",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -187,6 +192,7 @@
     },
     {
       "type": "malware",
+      "is_family": false,
       "spec_version": "2.1",
       "id": "malware--f86febd3-609b-4d2e-9fec-aa805cb498bf",
       "created": "2015-05-15T09:12:16.432Z",
@@ -200,6 +206,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--80c260d9-a075-4148-9301-ebe4af27f449",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -212,6 +219,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--3ed0364f-62c8-4ebc-b136-deaf6966880b",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -224,6 +232,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--17099f03-5ec8-456d-a2de-968aebaafc78",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -236,6 +245,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--e14b6476-40b5-4b0b-bde7-0e856ab00b6c",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -248,6 +258,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--feaf146d-ea67-4eb1-946a-6f352ff79a81",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -260,6 +271,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--13791e02-6621-45fb-8c10-f6b72e1bf553",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -272,6 +284,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--703a15a7-eb85-475d-a27a-77d8fcf8f7b9",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -284,6 +297,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--fade08cb-fa57-485e-97f8-fab5a1bd4460",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -296,6 +310,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--3050937d-6330-44c7-83ba-8821e1f7e7bd",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -308,6 +323,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--9d995717-edc3-4bd8-8554-aecf773bdecc",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -320,6 +336,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--40e15fa5-df8d-4771-a682-21dab0a024fd",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -332,6 +349,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--69101c2f-da92-47af-b402-7c60a39a982f",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -344,6 +362,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--1601b8c2-5e6f-4a18-a413-10527e5d90b7",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -356,6 +375,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--626badcc-4257-4222-946c-6d6e889836ea",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -368,6 +388,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--3b275ed1-9c2e-4443-b1dd-5cfb51eaef2e",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -380,6 +401,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--f138b6e0-9a7d-4cd9-a904-08a7df2eabb1",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -392,6 +414,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--302ac5b5-486c-4c99-8cad-4426aeaf47b6",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -404,6 +427,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--e1c02dca-d3fe-48f1-bb4b-3cacd2bc3619",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -416,6 +440,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--a4f315bd-e159-4bfb-8439-0d5a8330fc70",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -428,6 +453,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--e8094b09-7df4-4b13-b207-1e27af3c4bde",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -443,6 +469,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--329ae6e9-25bd-49e8-89d1-aae4ca52e4a7",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -458,6 +485,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--54e1e351-fec0-41a4-b62c-d7f86101e241",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -473,6 +501,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--2e59f00b-0986-437e-9ebd-e0d61900d688",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -488,6 +517,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--8da68996-f175-4ae0-bd74-aad4913873b8",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -503,6 +533,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--4e11b23f-732b-418e-b786-4dbf65459d50",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -518,6 +549,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--b7fa7e73-e645-4813-9723-161bbd8dda62",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -533,6 +565,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--b2f09ce0-2db4-480f-bd2f-073ddb3a0c87",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -548,6 +581,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--9842a3b9-fc5b-44c4-bb48-578cf6f728d9",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -563,6 +597,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--4e4c4ad7-4909-456a-b6fa-e24a6f682a40",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -578,6 +613,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--137acf67-cedc-4a07-8719-72759174de3a",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -593,6 +629,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--9695dc2f-d92a-4f2b-8b16-b0e21d7c631d",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -608,6 +645,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--7fd865ed-93e9-481f-953b-82ab386190ae",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -623,6 +661,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--e5bc6507-d052-447f-93c7-db7ef32211da",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -638,6 +677,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--fead5c52-9533-405c-b822-a034092a1ba8",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -653,6 +693,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--405ff732-2c35-4f46-9f78-2a632ce36e03",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -668,6 +709,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--4d58096e-b5c9-47d8-af9a-1af5f4762d6b",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -683,6 +725,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--9c725598-a160-4e91-8b93-ed0956709892",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -698,6 +741,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--2efe7c62-1b96-4568-81ee-c85b840bde39",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -713,6 +757,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--b8322c9b-8031-4fb3-9cbc-8a1ea0fe3cfa",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -728,6 +773,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--b08f9631-dd94-4d99-a96c-32b42af2ea81",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -743,6 +789,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--950c01b8-c647-4cc8-b0c1-3612fa780108",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -758,6 +805,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--ae29faa6-5f70-4eb8-981b-30818433a52e",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -773,6 +821,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--b6cc482d-89db-4e6b-a592-723070f6d22d",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -788,6 +837,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--0b71628d-31dd-4eb8-baee-39f19c0a14b0",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
