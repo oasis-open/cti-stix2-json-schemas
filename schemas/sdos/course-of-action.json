@@ -57,5 +57,16 @@
   ],
   "required": [
     "name"
-  ]
+  ],
+  "definitions": {
+    "course-of-action-type-ov": {
+      "type": "string",
+      "enum": [
+        "textual:text/plain",
+        "textual:text/html",
+        "textual:text/md",
+        "textual:pdf"
+      ]
+    }
+  }
 }
