@@ -50,6 +50,7 @@ propTest
   | objectPath NOT? ISSUBSET StringLiteral          # propTestIsSubset
   | objectPath NOT? ISSUPERSET StringLiteral        # propTestIsSuperset
   | LPAREN comparisonExpression RPAREN              # propTestParen
+  | EXISTS objectPath                               # propTestExists
   ;
 
 startStopQualifier
@@ -168,6 +169,7 @@ LIKE:  'LIKE' ;
 MATCHES:  'MATCHES' ;
 ISSUPERSET:  'ISSUPERSET' ;
 ISSUBSET: 'ISSUBSET' ;
+EXISTS:  'EXISTS' ;
 LAST:  'LAST' ;
 IN:  'IN' ;
 START:  'START' ;
