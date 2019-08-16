@@ -1,12 +1,12 @@
 {
-  "id": "../sdos/attack-pattern.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/attack-pattern.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "attack-pattern",
   "description": "Attack Patterns are a type of TTP that describe ways that adversaries attempt to compromise targets. ",
   "type": "object",
   "allOf": [
     {
-      "$ref": "../common/core.json"
+      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/core.json"
     },
     {
       "properties": {
@@ -33,7 +33,7 @@
           "type": "array",
           "description": "The list of kill chain phases for which this attack pattern is used.",
           "items": {
-            "$ref": "../common/kill-chain-phase.json"
+            "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/kill-chain-phase.json"
           },
           "minItems": 1
         }

@@ -1,12 +1,12 @@
 {
-  "id": "../observables/file.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/file.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "file",
   "description": "The File Object represents the properties of a file.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "../common/cyber-observable-core.json"
+      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/cyber-observable-core.json"
     },
     {
       "properties": {
@@ -22,7 +22,7 @@
           "description": "The File Object defines the following extensions. In addition to these, producers MAY create their own. Extensions: ntfs-ext, raster-image-ext, pdf-ext, archive-ext, windows-pebinary-ext"
         },
         "hashes": {
-          "$ref": "../common/hashes-type.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hashes-type.json",
           "description": "Specifies a dictionary of hashes for the file."
         },
         "size": {
@@ -40,7 +40,7 @@
           "description": "Specifies the observed encoding for the name of the file."
         },
         "magic_number_hex": {
-          "$ref": "../common/hex.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hex.json",
           "description": "Specifies the hexadecimal constant ('magic number') associated with a specific file format that corresponds to the file, if applicable."
         },
         "mime_type": {
@@ -48,15 +48,15 @@
           "description": "Specifies the MIME type name specified for the file, e.g., 'application/msword'."
         },
         "created": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies the date/time the file was created."
         },
         "modified": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies the date/time the file was last written to/modified."
         },
         "accessed": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies the date/time the file was last accessed."
         },
         "parent_directory_ref": {
@@ -207,7 +207,7 @@
                         "description": "Specifies the name of the alternate data stream."
                       },
                       "hashes": {
-                        "$ref": "../common/hashes-type.json",
+                        "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hashes-type.json",
                         "description": "Specifies a dictionary of hashes for the data contained in the alternate data stream."
                       },
                       "size": {
@@ -365,7 +365,7 @@
               "description": "Specifies the special import hash, or 'imphash', calculated for the PE Binary based on its imported libraries and functions."
             },
             "machine_hex": {
-              "$ref": "../common/hex.json",
+              "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hex.json",
               "description": "Specifies the type of target machine."
             },
             "number_of_sections": {
@@ -378,7 +378,7 @@
               "description": "Specifies the time when the PE binary was created.  The timestamp value MUST BE precise to the second.",
               "allOf": [
                 {
-                  "$ref": "../common/timestamp.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json"
                 },
                 {
                   "pattern": "T\\d{2}:\\d{2}:\\d{2}Z$"
@@ -386,7 +386,7 @@
               ]
             },
             "pointer_to_symbol_table_hex": {
-              "$ref": "../common/hex.json",
+              "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hex.json",
               "description": "Specifies the file offset of the COFF symbol table."
             },
             "number_of_symbols": {
@@ -400,11 +400,11 @@
               "description": "Specifies the size of the optional header of the PE binary."
             },
             "characteristics_hex": {
-              "$ref": "../common/hex.json",
+              "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hex.json",
               "description": "Specifies the flags that indicate the file’s characteristics."
             },
             "file_header_hashes": {
-              "$ref": "../common/hashes-type.json",
+              "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hashes-type.json",
               "description": "Specifies any hashes that were computed for the file header."
             },
             "optional_header": {
@@ -426,7 +426,7 @@
         }
       },
       "additionalProperties": {
-        "$ref": "../common/dictionary.json",
+        "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/dictionary.json",
         "description": "Custom file extension"
       }
     },
@@ -435,7 +435,7 @@
       "description": "The Windows PE Optional Header type represents the properties of the PE optional header.",
       "properties": {
         "magic_hex": {
-          "$ref": "../common/hex.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hex.json",
           "description": "Specifies the unsigned integer that indicates the type of the PE binary."
         },
         "major_linker_version": {
@@ -510,7 +510,7 @@
           "description": "Specifies the minor version number of the subsystem."
         },
         "win32_version_value_hex": {
-          "$ref": "../common/hex.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hex.json",
           "description": "Specifies the reserved win32 version value."
         },
         "size_of_image": {
@@ -524,15 +524,15 @@
           "description": "Specifies the combined size of the MS-DOS, PE header, and section headers, rounded up a multiple of the value specified in the file_alignment header."
         },
         "checksum_hex": {
-          "$ref": "../common/hex.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hex.json",
           "description": "Specifies the checksum of the PE binary."
         },
         "subsystem_hex": {
-          "$ref": "../common/hex.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hex.json",
           "description": "Specifies the subsystem (e.g., GUI, device driver, etc.) that is required to run this image."
         },
         "dll_characteristics_hex": {
-          "$ref": "../common/hex.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hex.json",
           "description": "Specifies the flags that characterize the PE binary."
         },
         "size_of_stack_reserve": {
@@ -556,7 +556,7 @@
           "description": "Specifies the size of the local heap space to commit."
         },
         "loader_flags_hex": {
-          "$ref": "../common/hex.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hex.json",
           "description": "Specifies the reserved loader flags."
         },
         "number_of_rva_and_sizes": {
@@ -564,7 +564,7 @@
           "description": "Specifies the number of data-directory entries in the remainder of the optional header."
         },
         "hashes": {
-          "$ref": "../common/hashes-type.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hashes-type.json",
           "description": "Specifies any hashes that were computed for the optional header."
         }
       }
@@ -587,7 +587,7 @@
           "description": "Specifies the calculated entropy for the section, as calculated using the Shannon algorithm."
         },
         "hashes": {
-          "$ref": "../common/hashes-type.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hashes-type.json",
           "description": "Specifies any hashes computed over the section."
         }
       },

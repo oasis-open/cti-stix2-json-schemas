@@ -1,12 +1,12 @@
 {
-  "id": "../sdos/observed-data.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/observed-data.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "observed-data",
   "description": "Observed data conveys information that was observed on systems and networks, such as log data or network traffic, using the Cyber Observable specification.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "../common/core.json"
+      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/core.json"
     },
     {
       "properties": {
@@ -22,11 +22,11 @@
           "pattern": "^observed-data--"
         },
         "first_observed": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "The beginning of the time window that the data was observed during."
         },
         "last_observed": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "The end of the time window that the data was observed during."
         },
         "number_observed": {
@@ -46,7 +46,7 @@
                 {
                   "allOf": [
                     {
-                      "$ref": "../common/cyber-observable-core.json"
+                      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/cyber-observable-core.json"
                     },
                     {
                       "not": {
@@ -62,58 +62,58 @@
                   ]
                 },
                 {
-                  "$ref": "../observables/artifact.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/artifact.json"
                 },
                 {
-                  "$ref": "../observables/autonomous-system.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/autonomous-system.json"
                 },
                 {
-                  "$ref": "../observables/directory.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/directory.json"
                 },
                 {
-                  "$ref": "../observables/domain-name.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/domain-name.json"
                 },
                 {
-                  "$ref": "../observables/email-addr.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/email-addr.json"
                 },
                 {
-                  "$ref": "../observables/email-message.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/email-message.json"
                 },
                 {
-                  "$ref": "../observables/file.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/file.json"
                 },
                 {
-                  "$ref": "../observables/ipv4-addr.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/ipv4-addr.json"
                 },
                 {
-                  "$ref": "../observables/ipv6-addr.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/ipv6-addr.json"
                 },
                 {
-                  "$ref": "../observables/mac-addr.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/mac-addr.json"
                 },
                 {
-                  "$ref": "../observables/mutex.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/mutex.json"
                 },
                 {
-                  "$ref": "../observables/network-traffic.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/network-traffic.json"
                 },
                 {
-                  "$ref": "../observables/process.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/process.json"
                 },
                 {
-                  "$ref": "../observables/software.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/software.json"
                 },
                 {
-                  "$ref": "../observables/url.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/url.json"
                 },
                 {
-                  "$ref": "../observables/user-account.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/user-account.json"
                 },
                 {
-                  "$ref": "../observables/windows-registry-key.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/windows-registry-key.json"
                 },
                 {
-                  "$ref": "../observables/x509-certificate.json"
+                  "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/x509-certificate.json"
                 }
               ]
             }

@@ -1,12 +1,12 @@
 {
-  "id": "../observables/user-account.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/user-account.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "user-account",
   "description": "The User Account Object represents an instance of any type of user account, including but not limited to operating system, device, messaging service, and social media platform accounts.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "../common/cyber-observable-core.json"
+      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/cyber-observable-core.json"
     },
     {
       "properties": {
@@ -54,23 +54,23 @@
           "description": "Specifies if the account is disabled."
         },
         "account_created": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies when the account was created."
         },
         "account_expires": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies the expiration date of the account."
         },
         "password_last_changed": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies when the account password was last changed."
         },
         "account_first_login": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies when the account was first accessed."
         },
         "account_last_login": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies when the account was last accessed."
         }
       }
@@ -123,7 +123,7 @@
         }
       },
       "additionalProperties": {
-        "$ref": "../common/dictionary.json",
+        "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/dictionary.json",
         "description": "Custom file extension"
       }
     },

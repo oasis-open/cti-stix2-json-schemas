@@ -1,12 +1,12 @@
 {
-  "id": "../observables/windows-registry-key.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/windows-registry-key.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "windows-registry-key",
   "description": "The Registry Key Object represents the properties of a Windows registry key.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "../common/cyber-observable-core.json"
+      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/cyber-observable-core.json"
     },
     {
       "properties": {
@@ -30,7 +30,7 @@
           "description": "Specifies the values found under the registry key."
         },
         "modified": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies the last date/time that the registry key was modified."
         },
         "creator_user_ref": {
