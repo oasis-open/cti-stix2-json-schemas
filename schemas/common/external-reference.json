@@ -61,14 +61,14 @@
           "type": "string",
           "description": "The source within which the external-reference is defined (system, registry, organization, etc.)",
           "not": {
-            "pattern": "^(cve)|(capec)$"
+            "pattern": "^((cve)|(capec))$"
           }
         },
         "external_id": {
           "type": "string",
           "description": "An identifier for the external reference content.",
           "not": {
-            "pattern": "^(CVE-\\d{4}-(0\\d{3}|[1-9]\\d{3,}))|(CAPEC-\\d+)$"
+            "pattern": "^((CVE-\\d{4}-(0\\d{3}|[1-9]\\d{3,}))|(CAPEC-\\d+))$"
           }
         }
       },
