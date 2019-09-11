@@ -20,12 +20,15 @@ observationExpressionOr
 
 observationExpressionAnd
   : <assoc=left> observationExpressionAnd AND observationExpressionAnd
-  | observationExpression qualifier?
+  | observationExpression
   ;
 
 observationExpression
   : LBRACK comparisonExpression RBRACK        # observationExpressionSimple
   | LPAREN observationExpressions RPAREN      # observationExpressionCompound
+  | observationExpression startStopQualifier  # observationExpressionStartStop
+  | observationExpression withinQualifier     # observationExpressionWithin
+  | observationExpression repeatedQualifier   # observationExpressionRepeated
   ;
 
 comparisonExpression
@@ -48,15 +51,6 @@ propTest
   | objectPath NOT? ISSUPERSET StringLiteral        # propTestIsSuperset
   | LPAREN comparisonExpression RPAREN              # propTestParen
   | EXISTS objectPath                               # propTestExists
-  ;
-
-qualifier
-  : startStopQualifier withinQualifier? repeatedQualifier?
-  | startStopQualifier repeatedQualifier? withinQualifier?
-  | withinQualifier startStopQualifier? repeatedQualifier?
-  | withinQualifier repeatedQualifier? startStopQualifier?
-  | repeatedQualifier startStopQualifier? withinQualifier?
-  | repeatedQualifier withinQualifier? startStopQualifier?
   ;
 
 startStopQualifier
