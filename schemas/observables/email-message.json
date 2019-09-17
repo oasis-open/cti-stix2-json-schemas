@@ -30,33 +30,36 @@
           "description": "Specifies the value of the 'Content-Type' header of the email message."
         },
         "from_ref": {
-          "type": "string",
-          "description": "Specifies the value of the 'From:' header of the email message."
+          "description": "Specifies the value of the 'From:' header of the email message.",
+          "type": "string"
         },
         "sender_ref": {
-          "type": "string",
-          "description": "Specifies the value of the 'From' field of the email message."
+          "description": "Specifies the value of the 'From' field of the email message.",
+          "type": "string"
         },
         "to_refs": {
           "type": "array",
           "description": "Specifies the mailboxes that are 'To:' recipients of the email message.",
           "items": {
             "type": "string"
-          }
+          },
+          "minItems": 1
         },
         "cc_refs": {
           "type": "array",
           "description": "Specifies the mailboxes that are 'CC:' recipients of the email message.",
           "items": {
             "type": "string"
-          }
+          },
+          "minItems": 1
         },
         "bcc_refs": {
           "type": "array",
           "description": "Specifies the mailboxes that are 'BCC:' recipients of the email message.",
           "items": {
             "type": "string"
-          }
+          },
+          "minItems": 1
         },
         "message_id" : {
           "type" : "string",
@@ -78,8 +81,8 @@
           "description": "Specifies any other header fields found in the email message, as a dictionary."
         },
         "raw_email_ref": {
-          "type": "string",
-          "description": "Specifies the raw binary contents of the email message, including both the headers and body, as a reference to an Artifact Object."
+          "description": "Specifies the raw binary contents of the email message, including both the headers and body, as a reference to an Artifact Object.",
+          "type": "string"
         }
       }
     }

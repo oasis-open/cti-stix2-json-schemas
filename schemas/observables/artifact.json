@@ -39,7 +39,7 @@
           "description": "Specifies a dictionary of hashes for the contents of the url or the payload_bin.  This MUST be provided when the url property is present."
         },
         "encryption_algorithm": {
-          "$ref": "#/definitions/artifact-encryption-enum",
+          "$ref": "#/definitions/encryption-algorithm-enum",
           "description": "If the artifact is encrypted, specifies the type of encryption algorithm the binary data  (either via payload_bin or url) is encoded in."
         },
         "decryption_key": {
@@ -113,7 +113,7 @@
     }
   ],
   "definitions": {
-    "artifact-encryption-enum": {
+    "encryption-algorithm-enum": {
       "type": "string",
       "enum": [
         "AES-256-GCM",
