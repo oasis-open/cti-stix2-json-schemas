@@ -58,16 +58,16 @@
           "minItems": 1
         },
         "creator_user_ref": {
-          "type": "string",
-          "description": "Specifies the user that created the process, as a reference to a User Account Object."
+          "description": "Specifies the user that created the process, as a reference to a User Account Object.",
+          "type": "string"
         },
         "image_ref": {
-          "type": "string",
-          "description": "Specifies the executable binary that was executed as the process image, as a reference to a File Object."
+          "description": "Specifies the executable binary that was executed as the process image, as a reference to a File Object.",
+          "type": "string"
         },
         "parent_ref": {
-          "type": "string",
-          "description": "Specifies the other process that spawned (i.e. is the parent of) this one, as represented by a Process Object."
+          "description": "Specifies the other process that spawned (i.e. is the parent of) this one, as represented by a Process Object.",
+          "type": "string"
         },
         "child_refs": {
           "type": "array",

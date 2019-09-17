@@ -27,16 +27,7 @@
         },
         "hashes": {
           "$ref": "../common/hashes-type.json",
-          "description": "Specifies a dictionary of hashes for the file.",
-          "enum": [
-            "MD5",
-            "SHA-1",
-            "SHA-256",
-            "SHA-512",
-            "SHA3-256",
-            "SHA3-512",
-            "SSDEEP"
-          ]
+          "description": "Specifies a dictionary of hashes for the file."
         },
         "size": {
           "type": "integer",
@@ -73,8 +64,8 @@
           "description": "Specifies the date/time the file was last accessed."
         },
         "parent_directory_ref": {
-          "type": "string",
-          "description": "Specifies the parent directory of the file, as a reference to a Directory Object."
+          "description": "Specifies the parent directory of the file, as a reference to a Directory Object.",
+          "type": "string"
         },
         "contains_refs": {
           "type": "array",
@@ -85,8 +76,8 @@
           "minItems": 1
         },
         "content_ref": {
-          "type": "string",
-          "description": "Specifies the content of the file, represented as an Artifact Object."
+          "description": "Specifies the content of the file, represented as an Artifact Object.",
+          "type": "string"
         }
       }
     }

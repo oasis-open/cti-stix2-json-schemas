@@ -118,7 +118,8 @@
         "nation-state",
         "sensationalist",
         "spy",
-        "terrorist"
+        "terrorist",
+        "unknown"
       ]
     },
     "threat-actor-role-ov": {

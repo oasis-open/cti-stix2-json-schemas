@@ -58,6 +58,35 @@
   "required": [
     "name"
   ],
+  "oneOf": [
+    {
+      "properties": {
+        "action_bin" : {
+          "type": "string",
+          "contentEncoding": "base64", 
+          "description" : "Base64-encoded action content."
+        }
+      },
+      "not": {
+        "required": [
+          "action_reference"
+        ]
+      }
+    },
+    {
+      "properties": {
+        "action_reference" :{
+          "type" : "string",
+          "description" : "The value of this property MUST be a valid external reference that resolves to the action content as defined by the action_type property."
+        }
+      },
+      "not": {
+        "required": [
+          "action_bin"
+        ]
+      }
+    }
+  ],
   "definitions": {
     "course-of-action-type-ov": {
       "type": "string",

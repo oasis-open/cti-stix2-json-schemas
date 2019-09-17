@@ -30,7 +30,8 @@
           "description": "Specifies a list of references to one or more IP addresses or domain names that the domain name resolves to.",
           "items": {
             "type": "string"
-          }
+          },
+          "minItems": 1
         }
       },
       "required": [
