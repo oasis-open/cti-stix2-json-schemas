@@ -185,10 +185,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--031778a4-057f-48e6-9db9-c8d72b81ccd5",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HTRAN Hop Point Accessor",
+      "description": "Test description.",
       "pattern": "[ipv4-addr:value = '223.166.0.0/15']",
       "indicator_types": [
         "malicious-activity"
@@ -204,10 +206,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--da1d061b-2bc9-467a-b16f-8d14f468e1f0",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HTRAN Hop Point Accessor",
+      "description": "Test description.",
       "pattern": "[ipv4-addr:value = '58.246.0.0/15']",
       "indicator_types": [
         "malicious-activity"
@@ -223,10 +227,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--2173d108-5714-42fd-8213-4f3790259fda",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HTRAN Hop Point Accessor",
+      "description": "Test description.",
       "pattern": "[ipv4-addr:value = '112.64.0.0/15']",
       "indicator_types": [
         "malicious-activity"
@@ -242,10 +248,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--8ce03314-dfea-4498-ac9b-136e41ab00e4",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HTRAN Hop Point Accessor",
+      "description": "Test description.",
       "pattern": "[ipv4-addr:value = '139.226.0.0/15']",
       "indicator_types": [
         "malicious-activity"
@@ -261,10 +269,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--3f3ff9f1-bb4e-4392-89e5-1991179042ba",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "FQDN hugesoft.org",
+      "description": "Test description.",
       "pattern": "[domain-name:value = 'hugesoft.org']",
       "indicator_types": [
         "malicious-activity"
@@ -274,10 +284,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--8390fd29-24ed-45d4-84d7-c5e5feaf195d",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "FQDN arrowservice.net",
+      "description": "Test description.",
       "pattern": "[domain-name:value = 'arrowservice.net']",
       "indicator_types": [
         "malicious-activity"
@@ -287,10 +299,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--1002c58e-cbde-4930-b5ee-490037fd4f7e",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "FQDN msnhome.org",
+      "description": "Test description.",
       "pattern": "[domain-name:value = 'msnhome.org']",
       "indicator_types": [
         "malicious-activity"
@@ -300,10 +314,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--8d12f44f-8ac0-4b12-8b4a-3699ca8c9691",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix E MD5 hash '001dd76872d80801692ff942308c64e6'",
+      "description": "Test description.",
       "pattern": "[file:hashes.md5 = '001dd76872d80801692ff942308c64e6']",
       "indicator_types": [
         "malicious-activity"
@@ -313,10 +329,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--745e1537-b4f3-49da-9f64-df6b1b5df190",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix E MD5 hash '002325a0a67fded0381b5648d7fe9b8e'",
+      "description": "Test description.",
       "pattern": "[file:hashes.md5 = '002325a0a67fded0381b5648d7fe9b8e']",
       "indicator_types": [
         "malicious-activity"
@@ -326,10 +344,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--1dbe6ed0-c305-458f-9cce-f83c678f5afd",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix E MD5 hash '00dbb9e1c09dbdafb360f3163ba5a3de'",
+      "description": "Test description.",
       "pattern": "[file:hashes.md5 = '00dbb9e1c09dbdafb360f3163ba5a3de']",
       "indicator_types": [
         "malicious-activity"
@@ -339,10 +359,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--b3b6b540-d838-41e2-853b-005056c00008",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix F SSL Certificate for serial number '(Negative)4c:0b:1d:19:74:86:a7:66:b4:1a:bf:40:27:21:76:28'",
+      "description": "Test description.",
       "pattern": "[x509-certificate:issuer = 'CN=WEBMAIL' AND x509-certificate:serial_number = '4c:0b:1d:19:74:86:a7:66:b4:1a:bf:40:27:21:76:28']",
       "indicator_types": [
         "malicious-activity"
@@ -352,10 +374,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--b3b7035e-d838-41e2-8d38-005056c00008",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix F SSL Certificate for serial number '0e:97:88:1c:6c:a1:37:96:42:03:bc:45:42:24:75:6c'",
+      "description": "Test description.",
       "pattern": "[x509-certificate:issuer = 'CN=LM-68AB71FBD8F5' AND x509-certificate:serial_number = '0e:97:88:1c:6c:a1:37:96:42:03:bc:45:42:24:75:6c']",
       "indicator_types": [
         "malicious-activity"
@@ -365,6 +389,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": false,
       "id": "malware--2485b844-4efe-4343-84c8-eb33312dd56f",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -379,6 +404,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": false,
       "id": "malware--c0217091-9d3d-42a1-8952-ccc12d4ad8d0",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -392,6 +418,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": false,
       "id": "malware--0f01c5a3-f516-4450-9381-4dd9f2279411",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -411,6 +438,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": false,
       "id": "malware--33159b98-3264-4e10-a968-d67975b6272f",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -430,6 +458,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": true,
       "id": "malware--fb490cdb-6760-41eb-a79b-0b930a50c017",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
@@ -443,6 +472,7 @@
     {
       "type": "malware",
       "spec_version": "2.1",
+      "is_family": false,
       "id": "malware--ea50ecb7-2cd4-4895-bd08-31cd591ed0ca",
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",

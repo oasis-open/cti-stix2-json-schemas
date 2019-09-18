@@ -5,10 +5,12 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
+      "pattern_type": "stix",
       "id": "indicator--33fe3b22-0201-47cf-85d0-97c02164528d",
       "created": "2014-05-08T09:00:00.000Z",
       "modified": "2014-05-08T09:00:00.000Z",
       "name": "IP Address for known C2 channel",
+      "description": "Test description C2 channel.",
       "indicator_types": [
         "malicious-activity"
       ],

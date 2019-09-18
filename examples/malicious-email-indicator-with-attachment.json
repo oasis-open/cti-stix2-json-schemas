@@ -30,6 +30,7 @@
         {
             "type": "indicator",
             "spec_version": "2.1",
+            "pattern_type": "stix",
             "id": "indicator--8cf9236f-1b96-493d-98be-0c1c1e8b62d7",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2014-10-31T15:52:13.127Z",
@@ -45,11 +46,13 @@
         {
             "type": "indicator",
             "spec_version": "2.1",
+            "pattern_type": "stix",
             "id": "indicator--2e17f6fe-3a4d-438a-911a-e509ba1b9933",
             "created_by_ref": "identity--f690c992-8e7d-4b9a-9303-3312616c0220",
             "created": "2014-10-31T15:52:13.127Z",
             "modified": "2014-10-31T15:52:13.127Z",
             "name": "Malicious Email Attachment",
+            "description": "",
             "indicator_types": [
               "malicious-activity"
             ],
