@@ -52,6 +52,7 @@
             "created": "2014-10-31T15:52:13.127Z",
             "modified": "2014-10-31T15:52:13.127Z",
             "name": "Malicious Email Attachment",
+            "description": "",
             "indicator_types": [
               "malicious-activity"
             ],

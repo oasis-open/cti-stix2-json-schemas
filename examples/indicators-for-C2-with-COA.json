@@ -38,6 +38,7 @@
                 "malicious-activity"
             ],
             "name": "IP Address for known C2 channel",
+            "description": "Test description.",
             "pattern": "[ipv4-addr:value = '10.0.0.0']",
             "valid_from": "2014-05-08T09:00:00.000000Z"
         },
@@ -53,6 +54,7 @@
             ],
             "modified": "2017-01-27T13:49:53.997Z",
             "name": "File hash for Poison Ivy variant",
+            "description": "Test description.",
             "pattern": "[file:hashes.'SHA-256' = 'ef537f25c895bfa782526529a9b63d97aa631564d5d789c2b765448c8635fb6c']",
             "valid_from": "2014-05-08T09:00:00.000000Z"
         },

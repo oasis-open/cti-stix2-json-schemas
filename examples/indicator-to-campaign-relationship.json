@@ -14,6 +14,8 @@
       "type": "indicator",
       "spec_version": "2.1",
       "pattern_type": "stix",
+      "name": "test_name",
+      "description": "Test description.",
       "id": "indicator--c43a0a05-e8d2-4f64-ae37-3f3fb153f8d9",
       "created": "2014-09-09T19:58:39.609Z",
       "modified": "2014-09-09T19:58:39.609Z",

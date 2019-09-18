@@ -190,6 +190,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HTRAN Hop Point Accessor",
+      "description": "Test description.",
       "pattern": "[ipv4-addr:value = '223.166.0.0/15']",
       "indicator_types": [
         "malicious-activity"
@@ -210,6 +211,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HTRAN Hop Point Accessor",
+      "description": "Test description.",
       "pattern": "[ipv4-addr:value = '58.246.0.0/15']",
       "indicator_types": [
         "malicious-activity"
@@ -230,6 +232,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HTRAN Hop Point Accessor",
+      "description": "Test description.",
       "pattern": "[ipv4-addr:value = '112.64.0.0/15']",
       "indicator_types": [
         "malicious-activity"
@@ -250,6 +253,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "HTRAN Hop Point Accessor",
+      "description": "Test description.",
       "pattern": "[ipv4-addr:value = '139.226.0.0/15']",
       "indicator_types": [
         "malicious-activity"
@@ -270,6 +274,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "FQDN hugesoft.org",
+      "description": "Test description.",
       "pattern": "[domain-name:value = 'hugesoft.org']",
       "indicator_types": [
         "malicious-activity"
@@ -284,6 +289,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "FQDN arrowservice.net",
+      "description": "Test description.",
       "pattern": "[domain-name:value = 'arrowservice.net']",
       "indicator_types": [
         "malicious-activity"
@@ -298,6 +304,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "FQDN msnhome.org",
+      "description": "Test description.",
       "pattern": "[domain-name:value = 'msnhome.org']",
       "indicator_types": [
         "malicious-activity"
@@ -312,6 +319,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix E MD5 hash '001dd76872d80801692ff942308c64e6'",
+      "description": "Test description.",
       "pattern": "[file:hashes.md5 = '001dd76872d80801692ff942308c64e6']",
       "indicator_types": [
         "malicious-activity"
@@ -326,6 +334,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix E MD5 hash '002325a0a67fded0381b5648d7fe9b8e'",
+      "description": "Test description.",
       "pattern": "[file:hashes.md5 = '002325a0a67fded0381b5648d7fe9b8e']",
       "indicator_types": [
         "malicious-activity"
@@ -340,6 +349,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix E MD5 hash '00dbb9e1c09dbdafb360f3163ba5a3de'",
+      "description": "Test description.",
       "pattern": "[file:hashes.md5 = '00dbb9e1c09dbdafb360f3163ba5a3de']",
       "indicator_types": [
         "malicious-activity"
@@ -354,6 +364,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix F SSL Certificate for serial number '(Negative)4c:0b:1d:19:74:86:a7:66:b4:1a:bf:40:27:21:76:28'",
+      "description": "Test description.",
       "pattern": "[x509-certificate:issuer = 'CN=WEBMAIL' AND x509-certificate:serial_number = '4c:0b:1d:19:74:86:a7:66:b4:1a:bf:40:27:21:76:28']",
       "indicator_types": [
         "malicious-activity"
@@ -368,6 +379,7 @@
       "created": "2015-05-15T09:12:16.432Z",
       "modified": "2015-05-15T09:12:16.432Z",
       "name": "Appendix F SSL Certificate for serial number '0e:97:88:1c:6c:a1:37:96:42:03:bc:45:42:24:75:6c'",
+      "description": "Test description.",
       "pattern": "[x509-certificate:issuer = 'CN=LM-68AB71FBD8F5' AND x509-certificate:serial_number = '0e:97:88:1c:6c:a1:37:96:42:03:bc:45:42:24:75:6c']",
       "indicator_types": [
         "malicious-activity"
