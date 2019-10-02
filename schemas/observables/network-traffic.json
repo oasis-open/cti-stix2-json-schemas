@@ -181,10 +181,7 @@
           "description": "The HTTP request extension specifies a default extension for capturing network traffic properties specific to HTTP requests.",
           "properties": {
             "request_method": {
-              "type" : "array",
-              "items" : {
-                "type": "string"
-              },
+              "type" : "string",
               "description": "Specifies the HTTP method portion of the HTTP request line, as a lowercase string."
             },
             "request_value": {
