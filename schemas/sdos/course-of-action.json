@@ -35,11 +35,11 @@
         },
         "action_bin" : {
           "type": "string",
-          "contentEncoding": "base64", 
+          "contentEncoding": "base64",
           "description" : "Base64-encoded action content."
         },
         "action_reference" :{
-          "type" : "string",
+          "$ref": "../common/external-reference.json",
           "description" : "The value of this property MUST be a valid external reference that resolves to the action content as defined by the action_type property."
         },
         "name": {
@@ -58,13 +58,9 @@
   ],
   "oneOf": [
     {
-      "properties": {
-        "action_bin" : {
-          "type": "string",
-          "contentEncoding": "base64", 
-          "description" : "Base64-encoded action content."
-        }
-      },
+      "required": [
+        "action_bin"
+      ],
       "not": {
         "required": [
           "action_reference"
@@ -72,17 +68,20 @@
       }
     },
     {
-      "properties": {
-        "action_reference" :{
-          "type" : "string",
-          "description" : "The value of this property MUST be a valid external reference that resolves to the action content as defined by the action_type property."
-        }
-      },
+      "required": [
+        "action_reference"
+      ],
       "not": {
         "required": [
           "action_bin"
         ]
       }
+    },
+    {
+      "allOf": [
+        {"not" : { "required" : ["action_bin"] } },
+        {"not" : { "required" : ["action_reference"] } }
+      ]
     }
   ],
   "definitions": {
