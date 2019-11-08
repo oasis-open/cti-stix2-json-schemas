@@ -1,12 +1,12 @@
 {
-  "id": "../observables/directory.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/directory.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "directory",
   "description": "The Directory Object represents the properties common to a file system directory.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "../common/cyber-observable-core.json"
+      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/cyber-observable-core.json"
     },
     {
       "properties": {
@@ -27,15 +27,15 @@
           "description": "Specifies the observed encoding for the path."
         },
         "created": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies the date/time the directory was created."
         },
         "modified": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies the date/time the directory was last written to/modified."
         },
         "accessed": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies the date/time the directory was last accessed."
         },
         "contains_refs": {

@@ -1,6 +1,6 @@
 {
-  "id": "../common/bundle.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/bundle.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "bundle",
   "description": "A Bundle is a collection of arbitrary STIX Objects and Marking Definitions grouped together in a single container.",
   "type": "object",
@@ -15,7 +15,7 @@
     "id": {
       "allOf": [
         {
-          "$ref": "identifier.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/identifier.json",
           "description": "An identifier for this bundle. The id field for the Bundle is designed to help tools that may need it for processing, but tools are not required to store or track it. "
         },
         {
@@ -39,56 +39,56 @@
           {
             "oneOf": [
               {
-                "$ref": "../sdos/attack-pattern.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/attack-pattern.json"
               },
               {
-                "$ref": "../sdos/campaign.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/campaign.json"
               },
               {
-                "$ref": "../sdos/course-of-action.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/course-of-action.json"
               },
               {
-                "$ref": "../sdos/identity.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/identity.json"
               },
               {
-                "$ref": "../sdos/indicator.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/indicator.json"
               },
               {
-                "$ref": "../sdos/intrusion-set.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/intrusion-set.json"
               },
               {
-                "$ref": "../sdos/malware.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/malware.json"
               },
               {
-                "$ref": "marking-definition.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/marking-definition.json"
               },
               {
-                "$ref": "../sdos/observed-data.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/observed-data.json"
               },
               {
-                "$ref": "../sros/relationship.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sros/relationship.json"
               },
               {
-                "$ref": "../sdos/report.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/report.json"
               },
               {
-                "$ref": "../sros/sighting.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sros/sighting.json"
               },
               {
-                "$ref": "../sdos/threat-actor.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/threat-actor.json"
               },
               {
-                "$ref": "../sdos/tool.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/tool.json"
               },
               {
-                "$ref": "../sdos/vulnerability.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/vulnerability.json"
               }
             ]
           },
           {
             "allOf": [
               {
-                "$ref": "../common/core.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/core.json"
               },
               {
                 "properties": {

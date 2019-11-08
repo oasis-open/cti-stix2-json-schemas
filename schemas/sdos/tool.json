@@ -1,12 +1,12 @@
 {
-  "id": "../sdos/tool.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/tool.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "tool",
   "description": "Tools are legitimate software that can be used by threat actors to perform attacks.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "../common/core.json"
+      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/core.json"
     },
     {
       "properties": {
@@ -45,7 +45,7 @@
           "type": "array",
           "description": "The list of kill chain phases for which this Tool instance can be used.",
           "items": {
-            "$ref": "../common/kill-chain-phase.json"
+            "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/kill-chain-phase.json"
           },
           "minItems": 1
         }
