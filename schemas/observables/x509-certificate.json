@@ -1,12 +1,12 @@
 {
-  "id": "../observables/x509-certificate.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/x509-certificate.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "x509-certificate",
   "description": "The X509 Certificate Object represents the properties of an X.509 certificate.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "../common/cyber-observable-core.json"
+      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/cyber-observable-core.json"
     },
     {
       "properties": {
@@ -26,7 +26,7 @@
           "description": "Specifies whether the certificate is self-signed, i.e., whether it is signed by the same entity whose identity it certifies."
         },
         "hashes": {
-          "$ref": "../common/hashes-type.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hashes-type.json",
           "description": "Specifies any hashes that were calculated for the entire contents of the certificate."
         },
         "version": {
@@ -46,11 +46,11 @@
           "description": "Specifies the name of the Certificate Authority that issued the certificate."
         },
         "validity_not_before": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies the date on which the certificate validity period begins."
         },
         "validity_not_after": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies the date on which the certificate validity period ends."
         },
         "subject": {
@@ -148,11 +148,11 @@
               "description": "Specifies the number of additional certificates that may appear in the path before anyPolicy is no longer permitted."
             },
             "private_key_usage_period_not_before": {
-              "$ref": "../common/timestamp.json",
+              "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
               "description": "Specifies the date on which the validity period begins for the private key, if it is different from the validity period of the certificate."
             },
             "private_key_usage_period_not_after": {
-              "$ref": "../common/timestamp.json",
+              "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
               "description": "Specifies the date on which the validity period ends for the private key, if it is different from the validity period of the certificate."
             },
             "certificate_policies": {

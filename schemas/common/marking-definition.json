@@ -1,6 +1,6 @@
 {
-  "id": "../common/marking-definition.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/marking-definition.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "marking-definition",
   "description": "The marking-definition object represents a specific marking.",
   "type": "object",
@@ -25,18 +25,18 @@
       "description": "A name used to identify the Marking Definition."
     },
     "created_by_ref": {
-      "$ref": "identifier.json",
+      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/identifier.json",
       "description": "The created_by_ref property specifies the ID of the identity object that describes the entity that created this Marking Definition."
     },
     "created": {
-      "$ref": "timestamp.json",
+      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
       "description": "The created property represents the time at which the first version of this Marking Definition object was created."
     },
     "external_references": {
       "type": "array",
       "description": "A list of external references which refers to non-STIX information.",
       "items": {
-        "$ref": "external-reference.json"
+        "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/external-reference.json"
       },
       "minItems": 1
     },
@@ -46,7 +46,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "identifier.json"
+            "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/identifier.json"
           },
           {
             "pattern": "^marking-definition--"
@@ -70,7 +70,7 @@
         "id": {
           "allOf": [
             {
-              "$ref": "identifier.json"
+              "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/identifier.json"
             },
             {
               "title": "id",

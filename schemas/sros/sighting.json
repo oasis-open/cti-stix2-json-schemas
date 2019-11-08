@@ -1,12 +1,12 @@
 {
-  "id": "../sros/sighting.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sros/sighting.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "sighting",
   "description": "A Sighting denotes the belief that something in CTI (e.g., an indicator, malware, tool, threat actor, etc.) was seen.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "../common/core.json"
+      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/core.json"
     },
     {
       "properties": {
@@ -26,11 +26,11 @@
           "description" : "A description that provides more details and context about the Sighting."
         },
         "first_seen": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "The beginning of the time window during which the SDO referenced by the sighting_of_ref property was sighted."
         },
         "last_seen": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "The end of the time window during which the SDO referenced by the sighting_of_ref property was sighted."
         },
         "count": {
@@ -42,7 +42,7 @@
         "sighting_of_ref": {
           "allOf": [
             {
-              "$ref": "../common/identifier.json"
+              "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/identifier.json"
             },
             {
               "not": {
@@ -78,7 +78,7 @@
           "items": {
             "allOf": [
               {
-                "$ref": "../common/identifier.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/identifier.json"
               },
               {
                 "pattern": "^observed-data--"
@@ -93,7 +93,7 @@
           "items": {
             "allOf": [
               {
-                "$ref": "../common/identifier.json"
+                "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/identifier.json"
               },
               {
                 "pattern": "^(identity|location)--"

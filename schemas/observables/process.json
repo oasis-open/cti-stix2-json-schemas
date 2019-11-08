@@ -1,12 +1,12 @@
 {
-  "id": "../observables/process.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/observables/process.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "process",
   "description": "The Process Object represents common properties of an instance of a computer program as executed on an operating system.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "../common/cyber-observable-core.json"
+      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/cyber-observable-core.json"
     },
     {
       "properties": {
@@ -34,7 +34,7 @@
           "description": "Specifies the Process ID, or PID, of the process."
         },
         "created": {
-          "$ref": "../common/timestamp.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
           "description": "Specifies the date/time at which the process was created."
         },
         "cwd": {
@@ -46,7 +46,7 @@
           "description": "Specifies the full command line used in executing the process, including the process name (which may be specified individually via the binary_ref.name property) and any arguments."
         },
         "environment_variables": {
-          "$ref": "../common/dictionary.json",
+          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/dictionary.json",
           "description": "Specifies the list of environment variables associated with the process as a dictionary."
         },
         "opened_connection_refs": {
@@ -228,7 +228,7 @@
         }
       },
       "additionalProperties": {
-        "$ref": "../common/dictionary.json",
+        "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/dictionary.json",
         "description": "Custom file extension"
       }
     },

@@ -1,6 +1,6 @@
 {
-  "id": "../common/bundle.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/bundle.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "bundle",
   "description": "A Bundle is a collection of arbitrary STIX Objects and Marking Definitions grouped together in a single container.",
   "type": "object",
@@ -53,7 +53,7 @@
                 "$ref": "../sdos/malware.json"
               },
               {
-                "$ref": "marking-definition.json"
+                "$ref": "../common/marking-definition.json"
               },
               {
                 "$ref": "../sdos/observed-data.json"
