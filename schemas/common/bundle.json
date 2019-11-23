@@ -52,9 +52,6 @@
                 "$ref": "../sdos/malware.json"
               },
               {
-                "$ref": "../common/marking-definition.json"
-              },
-              {
                 "$ref": "../sdos/observed-data.json"
               },
               {
@@ -74,6 +71,66 @@
               },
               {
                 "$ref": "../sdos/vulnerability.json"
+              },
+              {
+                "$ref": "../observables/artifact.json"
+              },
+              {
+                "$ref": "../observables/autonomous-system.json"
+              },
+              {
+                "$ref": "../observables/directory.json"
+              },
+              {
+                "$ref": "../observables/domain-name.json"
+              },
+              {
+                "$ref": "../observables/email-addr.json"
+              },
+              {
+                "$ref": "../observables/email-message.json"
+              },
+              {
+                "$ref": "../observables/file.json"
+              },
+              {
+                "$ref": "../observables/ipv4-addr.json"
+              },
+              {
+                "$ref": "../observables/ipv6-addr.json"
+              },
+              {
+                "$ref": "../observables/mac-addr.json"
+              },
+              {
+                "$ref": "../observables/mutex.json"
+              },
+              {
+                "$ref": "../observables/network-traffic.json"
+              },
+              {
+                "$ref": "../observables/process.json"
+              },
+              {
+                "$ref": "../observables/software.json"
+              },
+              {
+                "$ref": "../observables/url.json"
+              },
+              {
+                "$ref": "../observables/user-account.json"
+              },
+              {
+                "$ref": "../observables/windows-registry-key.json"
+              },
+              {
+                "$ref": "../observables/x509-certificate.json"
+              },
+              {
+                "$ref": "../common/language-content.json"
+              },
+              {
+                "$ref": "../common/marking-definition.json"
               }
             ]
           },
@@ -96,14 +153,33 @@
                         "indicator",
                         "intrusion-set",
                         "malware",
-                        "marking-definition",
                         "observed-data",
                         "relationship",
                         "report",
                         "sighting",
                         "threat-actor",
                         "tool",
-                        "vulnerability"
+                        "vulnerability",
+                        "artifact",
+                        "autonomous-system",
+                        "directory",
+                        "domain-name",
+                        "email-addr",
+                        "email-message",
+                        "file",
+                        "ipv4-addr",
+                        "ipv6-addr",
+                        "mac-addr",
+                        "mutex",
+                        "network-traffic",
+                        "process",
+                        "software",
+                        "url",
+                        "user-account",
+                        "windows-registry-key",
+                        "x509-certificate",
+                        "language-content",
+                        "marking-definition"
                       ]
                     }
                   }
