@@ -1,12 +1,12 @@
 {
-  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/threat-actor.json",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sdos/threat-actor.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "threat-actor",
   "description": "Threat Actors are actual individuals, groups, or organizations believed to be operating with malicious intent.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/core.json"
+      "$ref": "../common/core.json"
     },
     {
       "properties": {

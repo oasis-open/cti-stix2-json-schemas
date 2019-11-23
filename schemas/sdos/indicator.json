@@ -1,12 +1,12 @@
 {
-  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/indicator.json",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sdos/indicator.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "indicator",
   "description": "Indicators contain a pattern that can be used to detect suspicious or malicious cyber activity.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/core.json"
+      "$ref": "../common/core.json"
     },
     {
       "properties": {
@@ -55,18 +55,18 @@
           "description": "The version of the pattern that is used."
         },
         "valid_from": {
-          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
+          "$ref": "../common/timestamp.json",
           "description": "The time from which this indicator should be considered valuable intelligence."
         },
         "valid_until": {
-          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
+          "$ref": "../common/timestamp.json",
           "description": "The time at which this indicator should no longer be considered valuable intelligence."
         },
         "kill_chain_phases": {
           "type": "array",
           "description": "The phases of the kill chain that this indicator detects.",
           "items": {
-            "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/kill-chain-phase.json"
+            "$ref": "../common/kill-chain-phase.json"
           },
           "minItems": 1
         }

@@ -1,12 +1,12 @@
 {
-  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/note.json",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sdos/note.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "note",
   "description": "A Note is a comment or note containing informative text to help explain the context of one or more STIX Objects (SDOs or SROs) or to provide additional analysis that is not contained in the original object.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/core.json"
+      "$ref": "../common/core.json"
     },
     {
       "properties": {
@@ -41,7 +41,7 @@
           "type": "array",
           "description": "The STIX Objects (SDOs and SROs) that the note is being applied to.",
           "items": {
-            "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/identifier.json"
+            "$ref": "../common/identifier.json"
           },
           "minItems": 1
         }

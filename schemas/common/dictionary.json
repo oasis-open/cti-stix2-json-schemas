@@ -1,5 +1,5 @@
 {
-  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/dictionary.json",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/common/dictionary.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "dictionary",
   "description": "A dictionary captures a set of key/value pairs",

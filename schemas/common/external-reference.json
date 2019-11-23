@@ -1,5 +1,5 @@
 {
-  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/external-reference.json",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/common/external-reference.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "external-reference",
   "description": "External references are used to describe pointers to information represented outside of STIX.",
@@ -10,11 +10,11 @@
       "description": "A human readable description"
     },
     "url": {
-      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/url-regex.json",
+      "$ref": "../common/url-regex.json",
       "description": "A URL reference to an external resource."
     },
     "hashes": {
-      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/hashes-type.json",
+      "$ref": "../common/hashes-type.json",
       "description": "Specifies a dictionary of hashes for the file."
     }
   },

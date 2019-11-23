@@ -1,5 +1,5 @@
 {
-  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/bundle.json",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/common/bundle.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "bundle",
   "description": "A Bundle is a collection of arbitrary STIX Objects and Marking Definitions grouped together in a single container.",
@@ -19,7 +19,6 @@
           "description": "An identifier for this bundle. The id field for the Bundle is designed to help tools that may need it for processing, but tools are not required to store or track it. "
         },
         {
-          "title": "id",
           "pattern": "^bundle--"
         }
       ]

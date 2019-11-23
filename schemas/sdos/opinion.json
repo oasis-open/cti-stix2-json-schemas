@@ -1,6 +1,6 @@
 {
-  "id": "../sdos/opinion.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sdos/opinion.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "opinion",
   "description": "An Opinion is an assessment of the correctness of the information in a STIX Object produced by a different entity and captures the level of agreement or disagreement using a fixed scale.",
   "type": "object",

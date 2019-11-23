@@ -1,5 +1,5 @@
 {
-  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/cyber-observable-core.json",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/common/cyber-observable-core.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "cyber-observable-core",
   "description": "Common properties and behavior across all Cyber Observable Objects.",
@@ -28,7 +28,7 @@
       "type": "array",
       "description": "The list of marking-definition objects to be applied to this object.",
       "items": {
-        "$ref": "identifier.json"
+        "$ref": "../common/identifier.json"
       },
       "minItems": 1
     },
@@ -36,7 +36,7 @@
       "type": "array",
       "description": "The set of granular markings that apply to this object.",
       "items": {
-        "$ref": "granular-marking.json"
+        "$ref": "../common/granular-marking.json"
       },
       "minItems": 1
     },
@@ -45,19 +45,19 @@
       "description": "Defines whether or not the data contained within the object has been defanged."
     },
     "id": {
-      "$ref": "identifier.json",
+      "$ref": "../common/identifier.json",
       "description": "Specifies the identifier of the observable object, as a string."
     },
     "extensions": {
-      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/dictionary.json",
+      "$ref": "../common/dictionary.json",
       "description": "Specifies any extensions of the object, as a dictionary."
     }
   },
   "patternProperties": {
     "^[a-z0-9_]{0,246}_bin$": {
-      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/binary.json"
+      "$ref": "../common/binary.json"
     },
-    "^[a-z0-9_]{3,250}$": {
+    "^[a-z0-9_]{2,250}$": {
       "anyOf": [
         {
           "type": "array",

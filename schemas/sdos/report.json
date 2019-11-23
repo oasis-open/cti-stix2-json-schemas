@@ -1,12 +1,12 @@
 {
-  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/sdos/report.json",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sdos/report.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "report",
   "description": "Reports are collections of threat intelligence focused on one or more topics, such as a description of a threat actor, malware, or attack technique, including context and related details.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/core.json"
+      "$ref": "../common/core.json"
     },
     {
       "properties": {
@@ -38,14 +38,14 @@
           "description": "A description that provides more details and context about Report."
         },
         "published": {
-          "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/timestamp.json",
+          "$ref": "../common/timestamp.json",
           "description": "The date that this report object was officially published by the creator of this report."
         },
         "object_refs": {
           "type": "array",
           "description": "Specifies the STIX Objects that are referred to by this Report.",
           "items": {
-            "$ref": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/master/schemas/common/identifier.json"
+            "$ref": "../common/identifier.json"
           },
           "minItems": 1
         }
