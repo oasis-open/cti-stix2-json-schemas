@@ -1,6 +1,6 @@
 {
-  "id": "../common/granular-marking.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.0/schemas/common/granular-marking.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "granular-marking",
   "description": "The granular-marking type defines how the list of marking-definition objects referenced by the marking_refs property to apply to a set of content identified by the list of selectors in the selectors property.",
   "type": "object",
@@ -17,7 +17,7 @@
     "marking_ref": {
       "allOf": [
         {
-          "$ref": "identifier.json"
+          "$ref": "../common/identifier.json"
         },
         {
           "pattern": "^marking-definition--",

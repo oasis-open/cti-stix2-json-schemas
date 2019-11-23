@@ -1,6 +1,6 @@
 {
-  "id": "../common/url-regex.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.0/schemas/common/url-regex.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "url-regex",
   "description": "Matches the elements of a URL using a regular expression.",
   "type": "string",

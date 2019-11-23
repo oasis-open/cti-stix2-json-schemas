@@ -1,6 +1,6 @@
 {
-  "id": "../common/core.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.0/schemas/common/core.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "core",
   "description": "Common properties and behavior across all STIX Domain Objects and STIX Relationship Objects.",
   "type": "object",
@@ -20,11 +20,11 @@
       }
     },
     "id": {
-      "$ref": "identifier.json",
+      "$ref": "../common/identifier.json",
       "description": "The id property universally and uniquely identifies this object."
     },
     "created_by_ref": {
-      "$ref": "identifier.json",
+      "$ref": "../common/identifier.json",
       "description": "The ID of the Source object that describes who created this object."
     },
     "labels": {
@@ -39,7 +39,7 @@
       "description": "The created property represents the time at which the first version of this object was created. The timstamp value MUST be precise to the nearest millisecond.",
       "allOf": [
 		{
-	      "$ref": "timestamp.json"
+	      "$ref": "../common/timestamp.json"
 		},
 		{
 		  "title": "timestamp_millis",
@@ -51,7 +51,7 @@
       "description": "The modified property represents the time that this particular version of the object was created. The timstamp value MUST be precise to the nearest millisecond.",
       "allOf": [
 		{
-	      "$ref": "timestamp.json"
+	      "$ref": "../common/timestamp.json"
 		},
 		{
 		  "title": "timestamp_millis",
@@ -67,7 +67,7 @@
       "type": "array",
       "description": "A list of external references which refers to non-STIX information.",
       "items": {
-        "$ref": "external-reference.json"
+        "$ref": "../common/external-reference.json"
       },
       "minItems": 1
     },
@@ -75,7 +75,7 @@
       "type": "array",
       "description": "The list of marking-definition objects to be applied to this object.",
       "items": {
-        "$ref": "identifier.json"
+        "$ref": "../common/identifier.json"
       },
       "minItems": 1
     },
@@ -83,7 +83,7 @@
       "type": "array",
       "description": "The set of granular markings that apply to this object.",
       "items": {
-        "$ref": "granular-marking.json"
+        "$ref": "../common/granular-marking.json"
       },
       "minItems": 1
     }

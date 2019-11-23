@@ -1,6 +1,6 @@
 {
-  "id": "../sdos/campaign.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.0/schemas/sdos/campaign.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "campaign",
   "description": "A Campaign is a grouping of adversary behavior that describes a set of malicious activities or attacks that occur over a period of time against a specific set of targets.",
   "type": "object",

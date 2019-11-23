@@ -1,6 +1,6 @@
 {
-  "id": "../common/marking-definition.json",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.0/schemas/common/marking-definition.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "marking-definition",
   "description": "The marking-definition object represents a specific marking.",
   "type": "object",
@@ -13,11 +13,11 @@
       ]
     },
     "created_by_ref": {
-      "$ref": "identifier.json",
+      "$ref": "../common/identifier.json",
       "description": "The created_by_ref property specifies the ID of the identity object that describes the entity that created this Marking Definition."
     },
     "created": {
-      "$ref": "timestamp.json",
+      "$ref": "../common/timestamp.json",
       "description": "The created property represents the time at which the first version of this Marking Definition object was created."
     },
     "external_references": {
@@ -34,7 +34,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "identifier.json"
+            "$ref": "../common/identifier.json"
           },
           {
             "pattern": "^marking-definition--"
@@ -47,7 +47,7 @@
       "type": "array",
       "description": "The granular_markings property specifies a list of granular markings applied to this object.",
       "items": {
-        "$ref": "granular-marking.json"
+        "$ref": "../common/granular-marking.json"
       },
       "minItems": 1
     }
@@ -58,7 +58,7 @@
         "id": {
           "allOf": [
             {
-              "$ref": "identifier.json"
+              "$ref": "../common/identifier.json"
             },
             {
               "title": "id",
