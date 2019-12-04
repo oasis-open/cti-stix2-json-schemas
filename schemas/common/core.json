@@ -74,7 +74,7 @@
     "confidence": {
       "type": "integer",
       "minimum": 0,
-      "maxmimum": 100,
+      "maximum": 100,
       "description": "Identifies the confidence that the creator has in the correctness of their data."
     },
     "lang": {

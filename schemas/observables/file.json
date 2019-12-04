@@ -205,7 +205,7 @@
                   "description": "Specifies whether the PDF file has been optimized."
                 },
                 "document_info_dict": {
-                  "type:": "object",
+                  "type": "object",
                   "patternProperties": {
                     "^[a-zA-Z0-9_-]{3,256}$": {
                       "type": "string"
