@@ -78,7 +78,7 @@
           "description": "Specifies the number of packets sent destination to the source."
         },
         "ipfix": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "patternProperties": {
             "^[a-zA-Z0-9_-]{3,256}$": {
               "anyOf": [
@@ -174,10 +174,10 @@
   ],
   "definitions": {
     "network-traffic-extensions-dictionary": {
-      "type": "object",
+      "allOf": [{ "$ref": "../common/dictionary.json" }],
       "patternProperties": {
         "^http-request-ext$": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "description": "The HTTP request extension specifies a default extension for capturing network traffic properties specific to HTTP requests.",
           "properties": {
             "request_method": {
@@ -193,7 +193,7 @@
               "description": "Specifies the HTTP version portion of the HTTP request line, as a lowercase string."
             },
             "request_header": {
-              "type": "object",
+              "allOf": [{ "$ref": "../common/dictionary.json" }],
               "description": "Specifies all of the HTTP header fields that may be found in the HTTP client request, as a dictionary.",
               "patternProperties": {
                 "^.+$": {
@@ -217,7 +217,7 @@
           ]
         },
         "^icmp-ext$": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "description": "The ICMP extension specifies a default extension for capturing network traffic properties specific to ICMP.",
           "properties": {
             "icmp_type_hex": {
@@ -235,7 +235,7 @@
           ]
         },
         "^socket-ext$": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "description": "The Network Socket extension specifies a default extension for capturing network traffic properties associated with network sockets.",
           "properties": {
             "address_family": {
@@ -261,9 +261,15 @@
               "description": "Specifies whether the socket is in listening mode."
             },
             "options": {
-              "$ref": "../common/dictionary.json",
-              "description": "Specifies any options (SO_*) that may be used by the socket, as a dictionary."
-            },
+	      "allOf": [{ "$ref": "../common/dictionary.json" }],
+	      "description": "Specifies any options (SO_*) that may be used by the socket, as a dictionary.",
+	      "patternProperties": {
+	  	"^(SO|ICMP|ICMP6|IP|IPV6|MCAST|TCP|IRLMP)_[A-Z]*$": {
+                  "type": "integer"
+	    	}
+	      },
+	      "additionalProperties": false
+	    },
             "socket_type": {
               "type": "string",
               "description": "Specifies the type of the socket.",
@@ -290,7 +296,7 @@
           ]
         },
         "^tcp-ext$": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "description": "The TCP extension specifies a default extension for capturing network traffic properties specific to TCP.",
           "allOf": [
             {

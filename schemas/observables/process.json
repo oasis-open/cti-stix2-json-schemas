@@ -98,10 +98,10 @@
   ],
   "definitions": {
     "process-extensions-dictionary": {
-      "type": "object",
+      "allOf": [{ "$ref": "../common/dictionary.json" }],
       "patternProperties": {
         "^windows-process-ext$": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "description": "The Windows Process extension specifies a default extension for capturing properties specific to Windows processes.",
           "allOf": [
             {
@@ -149,7 +149,7 @@
           ]
         },
         "^windows-service-ext$": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "description": "The Windows Service extension specifies a default extension for capturing properties specific to Windows services.",
           "properties": {
             "service_name": {
@@ -233,7 +233,7 @@
       }
     },
     "startup-info-dictionary": {
-      "type": "object",
+      "allOf": [{ "$ref": "../common/dictionary.json" }],
       "patternProperties": {
         "^lpDesktop|lpTitle|dwFillAttribute|dwFlags|wShowWindow|hStdInput|hStdOutput|hStdError$": {
           "type": "string"

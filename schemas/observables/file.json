@@ -96,10 +96,10 @@
   ],
   "definitions": {
     "file-extensions-dictionary": {
-      "type": "object",
+      "allOf": [{ "$ref": "../common/dictionary.json" }],
       "patternProperties": {
         "^ntfs-ext$": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "description": "The NTFS file extension specifies a default extension for capturing properties specific to the storage of the file on the NTFS file system.",
           "allOf": [
             {
@@ -143,8 +143,8 @@
           ]
         },
         "^raster-image-ext$": {
-          "type": "object",
-          "description": "The Raster Image file extension specifies a default extension for capturing properties specific to image files.",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
+	  "description": "The Raster Image file extension specifies a default extension for capturing properties specific to image files.",
           "allOf": [
             {
               "properties": {
@@ -161,7 +161,7 @@
                   "description": "Specifies the sum of bits used for each color channel in the image in the image file, and thus the total number of pixels used for expressing the color depth of the image."
                 },
                 "exif_tags": {
-                  "type": "object",
+                  "allOf": [{ "$ref": "../common/dictionary.json" }],
                   "description": "Specifies the set of EXIF tags found in the image file, as a dictionary. Each key/value pair in the dictionary represents the name/value of a single EXIF tag.",
                   "patternProperties": {
                     "^[A-Z][a-zA-Z0-9_-]+$": {
@@ -191,7 +191,7 @@
           ]
         },
         "^pdf-ext$": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "description": "The PDF file extension specifies a default extension for capturing properties specific to PDF files.",
           "allOf": [
             {
@@ -205,7 +205,7 @@
                   "description": "Specifies whether the PDF file has been optimized."
                 },
                 "document_info_dict": {
-                  "type": "object",
+                  "allOf": [{ "$ref": "../common/dictionary.json" }],
                   "patternProperties": {
                     "^[a-zA-Z0-9_-]{3,256}$": {
                       "type": "string"
@@ -235,7 +235,7 @@
           ]
         },
         "^archive-ext$": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "description": "The Archive File extension specifies a default extension for capturing properties specific to archive files.",
           "properties": {
             "contains_refs": {
@@ -256,7 +256,7 @@
           ]
         },
         "^windows-pebinary-ext$": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "description": "The Windows PE Binary File extension specifies a default extension for capturing properties specific to Windows portable executable (PE) files.",
           "properties": {
             "pe_type": {
@@ -391,7 +391,7 @@
       }
     },
     "windows-pe-optional-header-type": {
-      "type": "object",
+      "allOf": [{ "$ref": "../common/dictionary.json" }],
       "minProperties": 1,
       "additionalProperties": false,
       "description": "The Windows PE Optional Header type represents the properties of the PE optional header.",
@@ -532,7 +532,7 @@
       }
     },
     "windows-pe-section": {
-      "type": "object",
+      "allOf": [{ "$ref": "../common/dictionary.json" }],
       "description": "The PE Section type specifies metadata about a PE file section.",
       "properties": {
         "name": {

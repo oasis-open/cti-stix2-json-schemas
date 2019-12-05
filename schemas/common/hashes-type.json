@@ -3,9 +3,9 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "hashes",
   "description": "A dictionary captures a set of key/value pairs",
-  "type": "object",
+  "allOf": [{ "$ref": "dictionary.json" }],
   "patternProperties": {
-    "^[a-zA-Z0-9_-]{3,256}$": {
+    "^[a-zA-Z0-9_-]{3,250}$": {
       "type": "string",
       "description": "Custom hash key"
     },

@@ -4,30 +4,31 @@
   "title": "dictionary",
   "description": "A dictionary captures a set of key/value pairs",
   "type": "object",
+  "minProperties": 1,
   "patternProperties": {
-      "^[a-zA-Z0-9_-]{0,256}$": {
+      "^[a-zA-Z0-9_-]{3,250}$": {
         "anyOf": [
-          {
-            "type": "array",
+	  {  
+	    "type": "array",
             "minItems": 1
-          },
-          {
+	  },
+	  {
             "type": "string"
-          },
-          {
+	  },
+	  {
             "type": "integer"
-          },
-          {
+	  },
+	  {
             "type": "boolean"
-          },
-          {
+	  },
+	  {
             "type": "number"
-          },
-          {
+	  },
+	  {
             "type": "object"
-          }
-        ]
+	  }
+	]
       }
     },
-  "additionalProperties": false
+    "addtionalProperties": false
 }

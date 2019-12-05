@@ -103,10 +103,10 @@
   ],
   "definitions": {
     "user-account-extensions-dictionary": {
-      "type": "object",
+      "allOf": [{ "$ref": "../common/dictionary.json" }],
       "patternProperties": {
         "^unix-account-ext$": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "description": "The User Account Object defines the following extensions. In addition to these, producers MAY create their own.",
           "allOf": [
             {
