@@ -8,26 +8,26 @@
   "patternProperties": {
       "^[a-zA-Z0-9_-]{3,250}$": {
         "anyOf": [
-	  {  
-	    "type": "array",
+          {  
+            "type": "array",
             "minItems": 1
-	  },
-	  {
+          },
+          {
             "type": "string"
-	  },
-	  {
+          },
+          {
             "type": "integer"
-	  },
-	  {
+          },
+          {
             "type": "boolean"
-	  },
-	  {
+          },
+          {
             "type": "number"
-	  },
-	  {
+          },
+          {
             "type": "object"
-	  }
-	]
+          }
+        ]
       }
     },
     "addtionalProperties": false
