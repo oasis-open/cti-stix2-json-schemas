@@ -37,7 +37,7 @@
         },
         "objects": {
           "allOf": [{ "$ref": "../common/dictionary.json" }],
-	  "description": "A dictionary of Cyber Observable Objects that describes the single 'fact' that was observed.",
+          "description": "A dictionary of Cyber Observable Objects that describes the single 'fact' that was observed.",
           "patternProperties": {
             "^.*$": {
               "type": "object",
