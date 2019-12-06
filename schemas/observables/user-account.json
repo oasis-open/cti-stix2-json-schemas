@@ -106,7 +106,7 @@
       "allOf": [{ "$ref": "../common/dictionary.json" }],
       "patternProperties": {
         "^unix-account-ext$": {
-          "allOf": [{ "$ref": "../common/dictionary.json" }],
+          "type": "object",
           "description": "The User Account Object defines the following extensions. In addition to these, producers MAY create their own.",
           "allOf": [
             {

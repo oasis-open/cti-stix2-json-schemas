@@ -99,7 +99,7 @@
       "allOf": [{ "$ref": "../common/dictionary.json" }],
       "patternProperties": {
         "^ntfs-ext$": {
-          "allOf": [{ "$ref": "../common/dictionary.json" }],
+          "type": "object",
           "description": "The NTFS file extension specifies a default extension for capturing properties specific to the storage of the file on the NTFS file system.",
           "allOf": [
             {
@@ -143,7 +143,7 @@
           ]
         },
         "^raster-image-ext$": {
-          "allOf": [{ "$ref": "../common/dictionary.json" }],
+          "type": "object",
 	  "description": "The Raster Image file extension specifies a default extension for capturing properties specific to image files.",
           "allOf": [
             {
@@ -191,7 +191,7 @@
           ]
         },
         "^pdf-ext$": {
-          "allOf": [{ "$ref": "../common/dictionary.json" }],
+          "type": "object",
           "description": "The PDF file extension specifies a default extension for capturing properties specific to PDF files.",
           "allOf": [
             {
@@ -235,7 +235,7 @@
           ]
         },
         "^archive-ext$": {
-          "allOf": [{ "$ref": "../common/dictionary.json" }],
+          "type": "object",
           "description": "The Archive File extension specifies a default extension for capturing properties specific to archive files.",
           "properties": {
             "contains_refs": {
@@ -256,7 +256,7 @@
           ]
         },
         "^windows-pebinary-ext$": {
-          "allOf": [{ "$ref": "../common/dictionary.json" }],
+          "type": "object",
           "description": "The Windows PE Binary File extension specifies a default extension for capturing properties specific to Windows portable executable (PE) files.",
           "properties": {
             "pe_type": {
@@ -391,7 +391,7 @@
       }
     },
     "windows-pe-optional-header-type": {
-      "allOf": [{ "$ref": "../common/dictionary.json" }],
+      "type": "object",
       "minProperties": 1,
       "additionalProperties": false,
       "description": "The Windows PE Optional Header type represents the properties of the PE optional header.",
@@ -532,7 +532,7 @@
       }
     },
     "windows-pe-section": {
-      "allOf": [{ "$ref": "../common/dictionary.json" }],
+      "type": "object",
       "description": "The PE Section type specifies metadata about a PE file section.",
       "properties": {
         "name": {

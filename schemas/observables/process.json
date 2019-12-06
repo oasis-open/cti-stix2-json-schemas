@@ -101,7 +101,7 @@
       "allOf": [{ "$ref": "../common/dictionary.json" }],
       "patternProperties": {
         "^windows-process-ext$": {
-          "allOf": [{ "$ref": "../common/dictionary.json" }],
+          "type": "object",
           "description": "The Windows Process extension specifies a default extension for capturing properties specific to Windows processes.",
           "allOf": [
             {
@@ -149,7 +149,7 @@
           ]
         },
         "^windows-service-ext$": {
-          "allOf": [{ "$ref": "../common/dictionary.json" }],
+          "type": "object",
           "description": "The Windows Service extension specifies a default extension for capturing properties specific to Windows services.",
           "properties": {
             "service_name": {

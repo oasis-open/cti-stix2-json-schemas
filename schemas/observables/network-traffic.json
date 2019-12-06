@@ -177,7 +177,7 @@
       "allOf": [{ "$ref": "../common/dictionary.json" }],
       "patternProperties": {
         "^http-request-ext$": {
-          "allOf": [{ "$ref": "../common/dictionary.json" }],
+          "type": "object",
           "description": "The HTTP request extension specifies a default extension for capturing network traffic properties specific to HTTP requests.",
           "properties": {
             "request_method": {
@@ -217,7 +217,7 @@
           ]
         },
         "^icmp-ext$": {
-          "allOf": [{ "$ref": "../common/dictionary.json" }],
+          "type": "object",
           "description": "The ICMP extension specifies a default extension for capturing network traffic properties specific to ICMP.",
           "properties": {
             "icmp_type_hex": {
@@ -235,7 +235,7 @@
           ]
         },
         "^socket-ext$": {
-          "allOf": [{ "$ref": "../common/dictionary.json" }],
+          "type": "object",
           "description": "The Network Socket extension specifies a default extension for capturing network traffic properties associated with network sockets.",
           "properties": {
             "address_family": {
@@ -296,7 +296,7 @@
           ]
         },
         "^tcp-ext$": {
-          "allOf": [{ "$ref": "../common/dictionary.json" }],
+          "type": "object",
           "description": "The TCP extension specifies a default extension for capturing network traffic properties specific to TCP.",
           "allOf": [
             {
