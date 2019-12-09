@@ -96,7 +96,7 @@
   ],
   "definitions": {
     "file-extensions-dictionary": {
-      "type": "object",
+      "allOf": [{ "$ref": "../common/dictionary.json" }],
       "patternProperties": {
         "^ntfs-ext$": {
           "type": "object",
@@ -161,7 +161,7 @@
                   "description": "Specifies the sum of bits used for each color channel in the image in the image file, and thus the total number of pixels used for expressing the color depth of the image."
                 },
                 "exif_tags": {
-                  "type": "object",
+                  "allOf": [{ "$ref": "../common/dictionary.json" }],
                   "description": "Specifies the set of EXIF tags found in the image file, as a dictionary. Each key/value pair in the dictionary represents the name/value of a single EXIF tag.",
                   "patternProperties": {
                     "^[A-Z][a-zA-Z0-9_-]+$": {
@@ -205,9 +205,9 @@
                   "description": "Specifies whether the PDF file has been optimized."
                 },
                 "document_info_dict": {
-                  "type": "object",
+                  "allOf": [{ "$ref": "../common/dictionary.json" }],
                   "patternProperties": {
-                    "^[a-zA-Z0-9_-]{3,256}$": {
+                    "^[a-zA-Z0-9_-]{0,250}$": {
                       "type": "string"
                     }
                   },

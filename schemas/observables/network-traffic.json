@@ -78,9 +78,9 @@
           "description": "Specifies the number of packets sent destination to the source."
         },
         "ipfix": {
-          "type": "object",
+          "allOf": [{ "$ref": "../common/dictionary.json" }],
           "patternProperties": {
-            "^[a-zA-Z0-9_-]{3,256}$": {
+            "^[a-zA-Z0-9_-]{0,250}$": {
               "anyOf": [
                 {
                   "type": "string"
@@ -174,7 +174,7 @@
   ],
   "definitions": {
     "network-traffic-extensions-dictionary": {
-      "type": "object",
+      "allOf": [{ "$ref": "../common/dictionary.json" }],
       "patternProperties": {
         "^http-request-ext$": {
           "type": "object",
@@ -193,7 +193,7 @@
               "description": "Specifies the HTTP version portion of the HTTP request line, as a lowercase string."
             },
             "request_header": {
-              "type": "object",
+              "allOf": [{ "$ref": "../common/dictionary.json" }],
               "description": "Specifies all of the HTTP header fields that may be found in the HTTP client request, as a dictionary.",
               "patternProperties": {
                 "^.+$": {
@@ -261,8 +261,14 @@
               "description": "Specifies whether the socket is in listening mode."
             },
             "options": {
-              "$ref": "../common/dictionary.json",
-              "description": "Specifies any options (SO_*) that may be used by the socket, as a dictionary."
+              "allOf": [{ "$ref": "../common/dictionary.json" }],
+              "description": "Specifies any options (SO_*) that may be used by the socket, as a dictionary.",
+              "patternProperties": {
+                "^(SO|ICMP|ICMP6|IP|IPV6|MCAST|TCP|IRLMP)_[A-Z]*$": {
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false
             },
             "socket_type": {
               "type": "string",

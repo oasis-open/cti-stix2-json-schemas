@@ -103,7 +103,7 @@
   ],
   "definitions": {
     "user-account-extensions-dictionary": {
-      "type": "object",
+      "allOf": [{ "$ref": "../common/dictionary.json" }],
       "patternProperties": {
         "^unix-account-ext$": {
           "type": "object",

@@ -174,7 +174,7 @@
       ]
     },
     "email-additional-header-fields": {
-      "type": "object",
+      "allOf": [{ "$ref": "../common/dictionary.json" }],
       "description": "Specifies any other header fields (except for date, received_lines, content_type, from_ref, sender_ref, to_refs, cc_refs, bcc_refs, and subject) found in the email message, as a dictionary.",
       "not": {
         "patternProperties": {
@@ -185,7 +185,7 @@
         "additionalProperties": false
       },
       "patternProperties": {
-        "^[a-zA-Z0-9_-]{3,256}$": {
+        "^[a-zA-Z0-9_-]{0,250}$": {
           "oneOf": [
             {
               "type": "array",
