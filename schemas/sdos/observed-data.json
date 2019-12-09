@@ -38,6 +38,7 @@
         "objects": {
           "type": "object",
           "description": "A dictionary of Cyber Observable Objects that describes the single 'fact' that was observed.",
+          "minProperties": 1,
           "patternProperties": {
             "^.*$": {
               "type": "object",

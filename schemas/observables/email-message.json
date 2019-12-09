@@ -185,7 +185,7 @@
         "additionalProperties": false
       },
       "patternProperties": {
-        "^[a-zA-Z0-9_-]{3,250}$": {
+        "^[a-zA-Z0-9_-]{0,250}$": {
           "oneOf": [
             {
               "type": "array",

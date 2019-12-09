@@ -144,7 +144,7 @@
         },
         "^raster-image-ext$": {
           "type": "object",
-	  "description": "The Raster Image file extension specifies a default extension for capturing properties specific to image files.",
+          "description": "The Raster Image file extension specifies a default extension for capturing properties specific to image files.",
           "allOf": [
             {
               "properties": {
@@ -207,7 +207,7 @@
                 "document_info_dict": {
                   "allOf": [{ "$ref": "../common/dictionary.json" }],
                   "patternProperties": {
-                    "^[a-zA-Z0-9_-]{3,250}$": {
+                    "^[a-zA-Z0-9_-]{0,250}$": {
                       "type": "string"
                     }
                   },
