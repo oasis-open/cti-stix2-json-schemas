@@ -39,16 +39,11 @@
         },
         "pattern": {
           "type": "string",
-          "description": "The detection pattern for this indicator. The default language is STIX Patterning."
+          "description": "The detection pattern for this indicator."
         },
         "pattern_type" : {
           "type" : "string",
-          "description": "The type of pattern used in this indicator. Open-vocab values of stix, snort and yara",
-          "enum": [
-            "stix",
-            "snort",
-            "yara"
-          ]
+          "description": "The type of pattern used in this indicator."
         },
         "pattern_version" : {
           "type" : "string",
@@ -90,6 +85,17 @@
         "malicious-activity",
         "attribution",
         "unknown"
+      ]
+    },
+    "pattern-type-ov": {
+      "type": "string",
+      "enum": [
+        "stix",
+        "pcre",
+        "sigma",
+        "snort",
+        "suricata",
+        "yara"
       ]
     }
   }
