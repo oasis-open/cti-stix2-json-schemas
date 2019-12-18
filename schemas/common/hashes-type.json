@@ -43,7 +43,7 @@
       "type": "string",
       "description": "Specifies the ssdeep fuzzy hashing algorithm.",
       "pattern": "^[a-zA-Z0-9/+:.]{1,128}$"
-    }
+    },
     "^TLSH$": {
       "type": "string",
       "description": "Specifies the TLSH locality-sensitive hashing algorithm.",
