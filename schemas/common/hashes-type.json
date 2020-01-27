@@ -3,7 +3,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "hashes",
   "description": "The Hashes type represents one or more cryptographic hashes, as a special set of key/value pairs",
-  "allOf": [{ "$ref": "dictionary.json" }],
+  "allOf": [{ "$ref": "../common/dictionary.json" }],
   "patternProperties": {
     "^[a-zA-Z0-9_-]{3,250}$": {
       "type": "string",
