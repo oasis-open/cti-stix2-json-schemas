@@ -1,5 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sros/relationship.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "relationship",
   "description": "The Relationship object is used to link together two SDOs in order to describe how they are related to each other.",
   "type": "object",
@@ -21,6 +22,7 @@
           "pattern": "^relationship--"
         },
         "relationship_type": {
+          "title": "relationship_type",
           "type": "string",
           "description": "The name used to identify the type of relationship.",
           "pattern": "^[a-z0-9\\-]+$"
@@ -37,7 +39,7 @@
             },
             {
               "not": {
-                "pattern": "^(relationship|sighting|bundle|marking-definition)--.+$"
+                "pattern": "^(relationship|sighting|bundle|marking-definition|language-content)--.+$"
               }
             }
           ]
@@ -50,10 +52,18 @@
             },
             {
               "not": {
-                "pattern": "^(relationship|sighting|bundle|marking-definition)--.+$"
+                "pattern": "^(relationship|sighting|bundle|marking-definition|language-content)--.+$"
               }
             }
           ]
+        },
+        "start_time": {
+          "$ref": "../common/timestamp.json",
+          "description": "This optional timestamp represents the earliest time at which the Relationship between the objects exists. If this property is a future timestamp, at the time the updated property is defined, then this represents an estimate by the producer of the intelligence of the earliest time at which relationship will be asserted to be true."
+        },
+        "stop_time": {
+          "$ref": "../common/timestamp.json",
+          "description": "The latest time at which the Relationship between the objects exists. If this property is a future timestamp, at the time the updated property is defined, then this represents an estimate by the producer of the intelligence of the latest time at which relationship will be asserted to be true."
         }
       }
     }

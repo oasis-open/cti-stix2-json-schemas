@@ -1,5 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/observables/mutex.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "mutex",
   "description": "The Mutex Object represents the properties of a mutual exclusion (mutex) object.",
   "type": "object",
@@ -15,6 +16,10 @@
           "enum": [
             "mutex"
           ]
+        },
+        "id": {
+          "title": "id",
+          "pattern": "^mutex--"
         },
         "name": {
           "type": "string",

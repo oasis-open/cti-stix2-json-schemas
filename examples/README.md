@@ -1,127 +1,67 @@
-# Notes on 1.2 STIX Idioms translated to STIX 2.0 (json)
+# Notes on STIX 2.0 Examples
 
 ## General Comments
-* All of these idioms will be placed within a Package, even if they previously weren’t.  There is one idiom that contains reports, otherwise, they were avoided.
-* There is a lot of repetition since all TLOs require things like: created_time, spec_version, etc.  It might be useful to specify that any missing required properties can be obtained from a parent object.
-* Since created_date is required for all TLOs, if it was missing, the common one from the idiom was often used.  However, created_times on identities don't seem to fit that paradigm (i.e., identities seem more long-lived than arbitrary packages).
-* All CybOX object type names retain the –object suffix
-* Relationships require the specification of direction. Since all STIX 1.2 relationships were unidirectional, that has been set to “true” for all relationships.
-* In CybOX objects, do we need spec_version, and created_time?
-* Is Package a TLO - currently it inherits from cti-core?
-* created_by_ref information is missing from the idioms, for the most part 
-* TLO arrays are specified in alphabetical order in a Package
-* indicator:confidence isn't fully defined, even though it is a required property.  It was used only if in the original idiom.
+* Most of these were manually converted from the old [STIX 1.2 XML Idioms](http://stixproject.github.io/documentation/idioms/), and have been updated to STIX 2.0 JSON. This means many values are the same but some have been added based on required properties from the [STIX 2.0 Specification](https://docs.google.com/document/d/1yvqWaPPnPW-2NiVCLqzRszcx91ffMowfT5MmE9Nsy_w/edit#heading=h.8bbhgdisbmt).
+* Some of the STIX 1.x idioms were scrapped when transitioning to STIX 2.0 since certain concepts did not translate well.
+* All of these examples are placed within a STIX Bundle object.  
+* There is a lot of repetition since all SDOs and SROs require common properties like: id, created, modified etc.
+* The majority of these have indicators or specifically focus on indicators since this object was one of the main use cases for 2.0.
+* Some older examples were taken out until 2.1 is finished. Examples for objects like Incidents, Infrastructure and Assets will return with the release of 2.1.
+* In many cases, only required properties of objects were used unless the objective was to highlight specific objects as a whole. In those instances, most optional properties were also included.
+* SROs in each of these examples are located at the bottom of the Bundle, after the SDOs.
 
-[STIX 1.2 XML Idioms](http://stixproject.github.io/documentation/idioms/)
 
-## Comments for Individual Idioms
+## Comments for Individual Examples
+* Detailed write-ups and analyses of these examples on the STIX 2.0 CTI-documentation site under the [Examples page](https://oasis-open.github.io/cti-documentation/stix/examples.html).
 
-Idioms in italics were not translated
+### Campaigns and Threat Actors
+*Write-up on the documentation site to come soon*
+* Completely rewritten from 1.x "Defining Campaigns vs. Threat Actors Idiom".
+* Now includes Attack Pattern and multiple Identity objects.
 
-### *Assets Affected in an Incident*
-* This idiom and the currently defined asset in 2.0 are too disimilar at this time.
-
-### CVE in an Exploit Target
-none
-
-### Command and Control IP List
-none
-
-### Course of Action to Block Network Traffic
-* How do we handle "statement"
-* efficacy property is mssing from 2.0
-* objective property is missing from 2.0
-    
-### Defining Campaigns vs Threat Actors
-* victim-targeting.target is not really defined sufficently to complete this idiom
-    
-### File Hash Reputation
-* There was an indicated TTP, which I assumed is malware.
-* Malware requires a “kind”, but the idiom gave no indication what that should be
-
-### *Identifying a Threat Actor Profile*
-* how do we deal with CIQ is still undecided
-
-### Incident Essentials - Who, What, When
-* Reporter and victim become identities, which are associated with the incident via relationships, "reported-by" and "victim-of", respecitively
-* No relationship kinds defined for incidents
-* incidents not fleshed out, so nowhere to put:
- * time.initial_compromise, created time_of_initial_compromise property
- * time.incident_discovery, created time_of_incident_discovery property
- * time.restoration_achieved, created time_of_restoration_achieved property
- * time.incident_reported, created time_of_incident_reportedproperty
-    
-### Incident vs. Indicator (as Indicators)
-none
-
-### Incident vs. Indicator (as Incidents)
-* Incidents not fleshed out, so no where to put time.first_malicious_action (created "time_of_first_malicious_action" property)
-* Relationships (none defined for Incidents)
- * used leverages: incident -> malware
- * used evidenced-by: incident -> observation
-* The relationship name "uses-malware" was used in the idiom.  Maybe use it instead of "leverages", or generalize and just use "uses" a la "indicates"
-        
-### Incident vs. Indicator (as both)
-* same as Incident vs. Indicator (as Incidents)
-
-### Incident with Related Observables
-none
+### Identifying a Threat Actor Profile
+* Description of this example can be seen on the CTI-documentation site [here](https://oasis-open.github.io/cti-documentation/examples/identifying-a-threat-actor-profile).
+* Has been expanded from the 1.x idiom--added optional Threat Actor properties new to 2.0 such as aliases, roles, goals, motivation, and sophistication.
 
 ### Indicator for C2 IP Address
-* incomplete: what kind of TTP should be used?
-    
+*Write-up on the documentation site to come soon*
+* Needs to be expanded for 2.0--currently only contains one Indicator object representing the IP address.
+
 ### Indicator for Malicious URL
-* no timestamps specified
-    
-### Indicator to Campaign Relationship
-none
+* Description of this example can be seen on the CTI-documentation site [here](https://oasis-open.github.io/cti-documentation/examples/indicator-for-malicious-url).
+* This example was expanded upon for 2.0--a Malware SDO was added along with a relationship connecting it to the Indicator SDO.
 
-### Kill Chains in STIX
-* no name property defined for Identity
-* no name property defined for Kill Chain, used title property
-* no name property defined for Kill Chain Phase, used title property
-* no pattern in the idiom for the indicator
-* how do we add extra properties on relationships - ordinality, and can/should it be required?
+### Indicator, Campaign, and Intrusion Set
+*Write-up on the documentation site to come soon*
+* Formerly titled Indictor to Campaign Relationship--expanded for 2.0 to include Intrusion Set SDO.
 
-### Linking an Indicator to Kill Chain Phase
-* no pattern in the idiom for the indicator
-* no name property defined for Kill Chain, used title property 
-* no name property defined for Kill Chain Phase, used title property 
-* how do we add extra properties on relationships - ordinality, and can/should it be required?
-    
 ### Malicious E-mail Indicator With Attachment
-* TTP is an attack-pattern
-* why are there two indicators?
+*Write-up on the documentation site to come soon*
+* Includes Attack Pattern and Identity objects not present in 1.x.
 
-### *Malware Characterization using MAEC*
-* not much to this, basically a MAEC wrapper
-    
 ### Malware Indicator for File Hash
-* malware.name -> malware.title. In MAEC?
+* Description of this example can be seen on the CTI-documentation site [here](https://oasis-open.github.io/cti-documentation/examples/malware-indicator-for-file-hash).
+* Malware SDO is just a stub in 2.0, this example will be improved when 2.1 is released.
 
-### Malware Used During an Incident
-* malware.name -> malware.title. In MAEC?
-* The relationship name "uses-malware" was used in the idiom.  Maybe use it instead of "leverages", or generalize and just use "uses" a la "indicates"
-    
-### *OpenIOC Test Mechanism*
-* Is this idiom useful in 2.0?
-
-### Plain Wrapper Around Multiple Reports
-* added malware kind because it is required - assumed it was a RAT based on its name
-* is there a reason that the title of the second report mentioned indicators, but there are none in the idiom?
-    
-### *Snort Test Mechanism*
-* Not part of 2.0 yet
+### Sighting of an Indicator
+*Completely New Example Written for 2.0*
+* Description of this example can be seen on the CTI-documentation site [here](https://oasis-open.github.io/cti-documentation/examples/sighting-of-an-indicator).
 
 ### Threat Actor Leveraging Attack Patterns and Malware
-* no timestamps
+* Description of this example can be seen on the CTI-documentation site [here](https://oasis-open.github.io/cti-documentation/examples/threat-actor-leveraging-attack-patterns-and-malware).
+* Expanded to demonstrate the use of Kill chains in STIX 2.0 within the Attack Pattern and Malware SDOs.
 
-### *Victim Targeting by Sectors*
-* how do we deal with CIQ is still undecided
+### Using Granular Markings
+*Completely New Example Written for 2.0*
 
-### Victim Targeting for a Campaign
-* victim-targeting.target is not really defined sufficently to complete this idiom
-    
-### *Yara Test Mechanism*
-* Not part of 2.0 yet
+*Write-up on the documentation site to come soon*
 
+### Using Marking Definitions
+*Completely New Example Written for 2.0*
+* Description of this example can be seen on the CTI-documentation site [here](https://oasis-open.github.io/cti-documentation/examples/using-marking-definitions).
+* Demonstrates both specification-designed marking definition types: Statement and TLP.
+
+### Infrastructure Examples
+*Completely New Example Written for 2.1*
+* This example contains the bundled form of the infrastructure examples from STIX 2.1 WD04.
+* Demonstrates how to use the new Infrastructure object.

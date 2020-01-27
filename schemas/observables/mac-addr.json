@@ -1,5 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/observables/mac-addr.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "mac-addr",
   "description": "The MAC Address Object represents a single Media Access Control (MAC) address.",
   "type": "object",
@@ -15,6 +16,10 @@
           "enum": [
             "mac-addr"
           ]
+        },
+        "id": {
+          "title": "id",
+          "pattern": "^mac-addr--"
         },
         "value": {
           "type": "string",

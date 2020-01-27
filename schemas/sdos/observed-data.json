@@ -1,5 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sdos/observed-data.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "observed-data",
   "description": "Observed data conveys information that was observed on systems and networks, such as log data or network traffic, using the Cyber Observable specification.",
   "type": "object",
@@ -117,6 +118,14 @@
               ]
             }
           }
+        },
+        "object_refs": {
+          "type": "array",
+          "description": "A list of SCOs and SROs representing the observation.",
+          "items": {
+            "$ref": "../common/identifier.json"
+          },
+          "minItems": 1
         }
       }
     }
@@ -124,7 +133,18 @@
   "required": [
     "first_observed",
     "last_observed",
-    "number_observed",
-    "objects"
+    "number_observed"
+  ],
+  "oneOf": [
+    {
+      "required": [
+        "objects"
+      ]
+    },
+    {
+      "required": [
+        "object_refs"
+      ]
+    }
   ]
 }

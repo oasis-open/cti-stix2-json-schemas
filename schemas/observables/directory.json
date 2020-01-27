@@ -1,5 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/observables/directory.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "directory",
   "description": "The Directory Object represents the properties common to a file system directory.",
   "type": "object",
@@ -16,6 +17,11 @@
             "directory"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^directory--"
+        },
+
         "path": {
           "type": "string",
           "description": "Specifies the path, as originally observed, to the directory on the file system."
@@ -25,15 +31,15 @@
           "pattern": "^[a-zA-Z0-9/\\.+_:-]{2,250}$",
           "description": "Specifies the observed encoding for the path."
         },
-        "created": {
+        "ctime": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time the directory was created."
         },
-        "modified": {
+        "mtime": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time the directory was last written to/modified."
         },
-        "accessed": {
+        "atime": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time the directory was last accessed."
         },

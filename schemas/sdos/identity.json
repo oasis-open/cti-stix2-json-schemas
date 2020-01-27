@@ -1,5 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sdos/identity.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "identity",
   "description": "Identities can represent actual individuals, organizations, or groups (e.g., ACME, Inc.) as well as classes of individuals, organizations, or groups.",
   "type": "object",
@@ -20,7 +21,7 @@
           "title": "id",
           "pattern": "^identity--"
         },
-        "labels": {
+        "roles": {
           "type": "array",
           "description": "The list of roles that this Identity performs (e.g., CEO, Domain Administrators, Doctors, Hospital, or Retailer). No open vocabulary is yet defined for this property.",
           "items": {
@@ -65,9 +66,10 @@
       "enum": [
         "individual",
         "group",
+        "system",
         "organization",
         "class",
-        "unknown"
+        "unspecified"
       ]
     },
     "industry-sector-ov": {

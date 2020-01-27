@@ -1,5 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sdos/threat-actor.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "threat-actor",
   "description": "Threat Actors are actual individuals, groups, or organizations believed to be operating with malicious intent.",
   "type": "object",
@@ -20,9 +21,9 @@
           "title": "id",
           "pattern": "^threat-actor--"
         },
-        "labels": {
+        "threat_actor_types": {
           "type": "array",
-          "description": "This field specifies the type of threat actor. Open Vocab - threat-actor-label-ov",
+          "description": "This field specifies the type of threat actor. Open Vocab - threat-actor-type-ov",
           "items": {
             "type": "string"
           },
@@ -60,6 +61,14 @@
           },
           "minItems": 1
         },
+        "first_seen" : {
+          "$ref": "../common/timestamp.json",
+          "description": "The time that this Threat Actor was first seen."
+        },
+        "last_seen" : {
+          "$ref": "../common/timestamp.json",
+          "description": "The time that this Threat Actor was last seen."
+        },
         "sophistication": {
           "type": "string",
           "description": "The skill, specific knowledge, special training, or expertise a Threat Actor must have to perform the attack. Open Vocab - threat-actor-sophistication-ov"
@@ -93,10 +102,10 @@
   ],
   "required": [
     "name",
-    "labels"
+    "threat_actor_types"
   ],
   "definitions": {
-    "threat-actor-label-ov": {
+    "threat-actor-type-ov": {
       "type": "string",
       "enum": [
         "activist",
@@ -109,7 +118,8 @@
         "nation-state",
         "sensationalist",
         "spy",
-        "terrorist"
+        "terrorist",
+        "unknown"
       ]
     },
     "threat-actor-role-ov": {

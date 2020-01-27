@@ -1,5 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/observables/email-addr.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "email-addr",
   "description": "The Email Address Object represents a single email address.",
   "type": "object",
@@ -16,6 +17,10 @@
             "email-addr"
           ]
         },
+        "id": {
+          "title": "id",
+          "pattern": "^email-addr--"
+        },
         "value": {
           "type": "string",
           "pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$)",
@@ -26,8 +31,8 @@
           "description": "Specifies a single email display name, i.e., the name that is displayed to the human user of a mail application."
         },
         "belongs_to_ref": {
-          "type": "string",
-          "description": "Specifies the user account that the email address belongs to, as a reference to a User Account Object."
+          "description": "Specifies the user account that the email address belongs to, as a reference to a User Account Object.",
+          "type": "string"
         }
       },
       "required": [
