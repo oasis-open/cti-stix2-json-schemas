@@ -264,7 +264,7 @@
               "allOf": [{ "$ref": "../common/dictionary.json" }],
               "description": "Specifies any options (SO_*) that may be used by the socket, as a dictionary.",
               "patternProperties": {
-                "^(SO|ICMP|ICMP6|IP|IPV6|MCAST|TCP|IRLMP)_[A-Z]*$": {
+                "^(SO|ICMP|ICMP6|IP|IPV6|MCAST|TCP|IRLMP)(_[A-Z]+)+$": {
                   "type": "integer"
                 }
               },

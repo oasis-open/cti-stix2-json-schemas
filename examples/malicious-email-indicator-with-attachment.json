@@ -9,8 +9,7 @@
             "created": "2016-08-08T15:50:10.983Z",
             "modified": "2016-08-08T15:50:10.983Z",
             "name": "The MITRE Corporation - DHS Support Team",
-            "identity_class": "organization",
-            "object_marking_refs": ["marking-definition--34098fce-860f-48ae-8e50-ebd3cc5e41da"]
+            "identity_class": "organization"
         },
         {
             "type": "attack-pattern",
