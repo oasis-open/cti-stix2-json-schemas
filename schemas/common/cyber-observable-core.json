@@ -49,8 +49,42 @@
       "description": "Specifies the identifier of the observable object, as a string."
     },
     "extensions": {
-      "$ref": "../common/dictionary.json",
-      "description": "Specifies any extensions of the object, as a dictionary."
+      "type": "object",
+      "description": "Specifies any extensions of the object, as a dictionary.",
+      "minProperties": 1,
+      "patternProperties": {
+        "^[a-z0-9-]{0,246}-ext$": {
+          "type": "object",
+          "minProperties": 1,
+          "patternProperties": {
+            "^[a-z0-9_]{0,250}$": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "minItems": 1
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "object"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
     }
   },
   "patternProperties": {
