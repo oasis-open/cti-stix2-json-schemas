@@ -7,7 +7,7 @@
   "properties": {
     "type": {
       "type": "string",
-      "pattern": "^\\-?[a-z0-9]+(-[a-z0-9]+)*\\-?$",
+      "pattern": "^([a-z][a-z0-9]*)+(-[a-z0-9]+)*\\-?$",
       "minLength": 3,
       "maxLength": 250,
       "description": "Indicates that this object is an Observable Object. The value of this property MUST be a valid Observable Object type name, but to allow for custom objects this has been removed from the schema.",
@@ -54,10 +54,10 @@
     }
   },
   "patternProperties": {
-    "^[a-z0-9_]{0,246}_bin$": {
+    "^[a-z][a-z0-9_]{0,245}_bin$": {
       "$ref": "../common/binary.json"
     },
-    "^[a-z0-9_]{2,250}$": {
+    "^[a-z][a-z0-9_]{2,249}$": {
       "anyOf": [
         {
           "type": "array",
