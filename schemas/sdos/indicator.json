@@ -70,7 +70,6 @@
   ],
   "required": [
     "pattern",
-    "indicator_types",
     "pattern_type",
     "valid_from"
   ],
