@@ -14,8 +14,17 @@
       "description": "A URL reference to an external resource."
     },
     "hashes": {
-      "$ref": "../common/hashes-type.json",
-      "description": "Specifies a dictionary of hashes for the file."
+      "description": "Specifies a dictionary of hashes for the file.",
+      "allOf": [
+        {
+          "$ref": "../common/hashes-type.json"
+        },
+        {
+          "propertyNames": {
+            "pattern": "^MD5|SHA-1|SHA-256|SHA-512|SHA3-256|SHA3-512|SSDEEP|TLSH$"
+          }
+        }
+      ]
     }
   },
   "oneOf": [

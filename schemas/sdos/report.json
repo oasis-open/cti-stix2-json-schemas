@@ -54,7 +54,6 @@
   ],
   "required": [
     "name",
-    "report_types",
     "object_refs",
     "published"
   ],

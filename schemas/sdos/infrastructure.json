@@ -65,8 +65,7 @@
     }
   ],
   "required": [
-    "name",
-    "infrastructure_types"
+    "name"
   ],
   "definitions": {
     "infrastructure-type-ov": {
@@ -82,7 +81,7 @@
         "phishing",
         "reconnaissance",
         "staging",
-        "undefined"
+        "unknown"
       ]
     }
   }

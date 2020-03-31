@@ -3,6 +3,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "hashes",
   "description": "The Hashes type represents one or more cryptographic hashes, as a special set of key/value pairs",
+  "type": "object",
   "allOf": [{ "$ref": "../common/dictionary.json" }],
   "patternProperties": {
     "^[a-zA-Z0-9_-]{3,250}$": {
@@ -16,17 +17,17 @@
     },
     "^SHA-1$": {
       "type": "string",
-      "description": "Specifies the SHA\u00ad-1 (secure-\u00adhash algorithm 1) cryptographic hash function.",
+      "description": "Specifies the SHA-1 (secure-hash algorithm 1) cryptographic hash function.",
       "pattern": "^[a-fA-F0-9]{40}$"
     },
     "^SHA-256$": {
       "type": "string",
-      "description": "Specifies the SHA-\u00ad256 cryptographic hash function (part of the SHA\u00ad2 family).",
+      "description": "Specifies the SHA-256 cryptographic hash function (part of the SHA2 family).",
       "pattern": "^[a-fA-F0-9]{64}$"
     },
     "^SHA-512$": {
       "type": "string",
-      "description": "Specifies the SHA-\u00ad512 cryptographic hash function (part of the SHA\u00ad2 family).",
+      "description": "Specifies the SHA-512 cryptographic hash function (part of the SHA2 family).",
       "pattern": "^[a-fA-F0-9]{128}$"
     },
     "^SHA3-256$": {
