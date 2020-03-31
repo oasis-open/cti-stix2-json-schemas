@@ -106,32 +106,7 @@
       "minItems": 1
     }
   },
-  "patternProperties": {
-    "^[a-z][a-z0-9_]{3,249}$": {
-      "anyOf": [
-        {
-          "type": "array",
-          "minItems": 1
-        },
-        {
-          "type": "string"
-        },
-        {
-          "type": "integer"
-        },
-        {
-          "type": "boolean"
-        },
-        {
-          "type": "number"
-        },
-        {
-          "type": "object"
-        }
-      ]
-    }
-  },
-  "additionalProperties": false,
+  "allOf": [{ "$ref": "../common/properties.json" }],
   "not": {
     "anyOf": [
       {
