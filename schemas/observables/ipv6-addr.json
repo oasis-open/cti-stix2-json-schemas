@@ -23,7 +23,8 @@
         },
         "value": {
           "type": "string",
-          "description": "Specifies one or more IPv6 addresses expressed using CIDR notation."
+          "description": "Specifies one or more IPv6 addresses expressed using CIDR notation.",
+          "format": "ipv6"
         },
         "resolves_to_refs": {
           "type": "array",
