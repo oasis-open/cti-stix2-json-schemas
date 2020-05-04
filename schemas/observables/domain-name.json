@@ -19,7 +19,8 @@
         },
         "value": {
           "type": "string",
-          "description": "Specifies the value of the domain name."
+          "description": "Specifies the value of the domain name.",
+          "format": "idn-hostname"
         },
         "resolves_to_refs": {
           "type": "array",

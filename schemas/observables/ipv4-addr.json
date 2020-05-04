@@ -19,7 +19,8 @@
         },
         "value": {
           "type": "string",
-          "description": "Specifies one or more IPv4 addresses expressed using CIDR notation."
+          "description": "Specifies one or more IPv4 addresses expressed using CIDR notation.",
+          "format": "ipv4"
         },
         "resolves_to_refs": {
           "type": "array",
