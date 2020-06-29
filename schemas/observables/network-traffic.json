@@ -78,6 +78,7 @@
           "description": "Specifies the number of packets sent destination to the source."
         },
         "ipfix": {
+          "description": "Specifies any IP Flow Information Export (IPFIX) data for the traffic.",
           "allOf": [{ "$ref": "../common/dictionary.json" }],
           "patternProperties": {
             "^[a-zA-Z0-9_-]{0,250}$": {

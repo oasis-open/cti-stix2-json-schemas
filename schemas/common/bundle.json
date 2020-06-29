@@ -137,7 +137,14 @@
           {
             "allOf": [
               {
-                "$ref": "../common/core.json"
+                "oneOf": [
+                  {
+                    "$ref": "../common/core.json"
+                  },
+                  {
+                    "$ref": "../common/cyber-observable-core.json"
+                  }
+                ]
               },
               {
                 "properties": {
