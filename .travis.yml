@@ -2,7 +2,7 @@ language: python
 
 install:
   - pip install -U pip setuptools
-  - pip install stix2-validator==2.0.0.dev2
+  - pip install stix2-validator
   - npm install -g ajv-cli
 
 script:
