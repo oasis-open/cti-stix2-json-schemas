@@ -75,6 +75,7 @@
         },
         "ipfix": {
           "type": "object",
+          "description": "Specifies any IP Flow Information Export (IPFIX) data for the traffic.",
           "patternProperties": {
             "^[a-zA-Z0-9_-]{3,256}$": {
               "anyOf": [
