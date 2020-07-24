@@ -46,6 +46,9 @@
                 "$ref": "../sdos/indicator.json"
               },
               {
+                "$ref": "../sdos/infrastructure.json"
+              },
+              {
                 "$ref": "../sdos/intrusion-set.json"
               },
               {
@@ -158,6 +161,7 @@
                         "course-of-action",
                         "identity",
                         "indicator",
+                        "infrastructure",
                         "intrusion-set",
                         "malware",
                         "observed-data",
