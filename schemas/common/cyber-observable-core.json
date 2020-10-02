@@ -59,7 +59,7 @@
             "allOf": [{ "$ref": "../common/properties.json" }]
           }
         },
-        "addtionalProperties": false
+        "additionalProperties": false
     }
   },
   "allOf": [{ "$ref": "../common/properties.json" }],
