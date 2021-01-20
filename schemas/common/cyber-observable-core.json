@@ -40,7 +40,7 @@
       },
       "minItems": 1
     },
-    "is_defanged" : {
+    "defanged" : {
       "type" : "boolean",
       "description": "Defines whether or not the data contained within the object has been defanged."
     },
