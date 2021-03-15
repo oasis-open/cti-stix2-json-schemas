@@ -121,7 +121,7 @@
       },
       {
         "required": [
-          "usernames"
+          "username"
         ]
       },
       {
