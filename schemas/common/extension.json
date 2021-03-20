@@ -5,7 +5,6 @@
   "minProperties": 1,
   "properties": {
     "extension_type": {
-      "type": "string",
       "description": "The type of extension.",
       "$ref": "#/definitions/extension-type-enum"
     }
