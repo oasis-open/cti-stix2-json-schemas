@@ -7,10 +7,13 @@
     "extension_type": {
       "type": "string",
       "description": "The type of extension.",
-      "ref": "#/definitions/extension-type-enum"
+      "$ref": "#/definitions/extension-type-enum"
     }
   },
   "allOf": [{ "$ref": "../common/properties.json" }],
+  "required": [
+    "extension_type"
+  ],
   "definitions": {
     "extension-type-enum": {
       "type": "string",

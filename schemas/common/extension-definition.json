@@ -41,7 +41,7 @@
           "type": "array",
           "description": "Which extension types are contained within this extension.",
           "items": {
-            "ref": "#/definitions/extension-type-enum"
+            "$ref": "#/definitions/extension-type-enum"
           },
           "minItems": 1
         },
@@ -52,6 +52,25 @@
             "type": "string"
           },
           "minItems": 1
+        }
+      }
+    },
+    {
+      "if": {
+        "not": {
+          "properties": {
+            "extension_types": {
+              "type": "array",
+              "contains": {
+                "const": "toplevel-property-extension"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "required": ["extension_properties"]
         }
       }
     }
