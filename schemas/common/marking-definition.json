@@ -62,6 +62,17 @@
         "$ref": "granular-marking.json"
       },
       "minItems": 1
+    },
+    "extensions": {
+      "description": "Specifies any extensions of the object, as a dictionary.",
+      "type": "object",
+      "minProperties": 1,
+      "patternProperties": {
+          "^extension-definition--[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$": {
+            "allOf": [{ "$ref": "../common/extension.json" }]
+          }
+        },
+        "additionalProperties": false
     }
   },
   "oneOf": [
@@ -110,12 +121,21 @@
           }
         }
       ],
+      "anyOf": [
+        {
+          "required": ["extensions"]
+        },
+        {
+          "required": [
+            "definition",
+            "definition_type"
+          ]
+        }
+      ],
       "required": [
         "id",
         "type",
         "spec_version",
-        "definition",
-        "definition_type",
         "created"
       ]
     },
