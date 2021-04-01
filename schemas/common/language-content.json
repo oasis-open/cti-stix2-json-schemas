@@ -47,7 +47,6 @@
     {
       "required": [
         "object_ref",
-        "object_modified",
         "contents"
       ]
     }
