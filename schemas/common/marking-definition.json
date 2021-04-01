@@ -103,7 +103,8 @@
               "$ref": "#/definitions/statement",
               "description": "The definition property contains the marking object itself."
             }
-          }
+          },
+          "required": ["definition_type", "definition"]
         },
         {
           "properties": {
@@ -121,17 +122,17 @@
           }
         }
       ],
-      "anyOf": [
-        {
+      "if": {
+        "not": {
           "required": ["extensions"]
-        },
-        {
-          "required": [
-            "definition",
-            "definition_type"
-          ]
         }
-      ],
+      },
+      "then": {
+        "required": [
+          "definition",
+          "definition_type"
+        ]
+      },
       "required": [
         "id",
         "type",
@@ -168,6 +169,10 @@
         {
               "$ref": "#/definitions/tlp_red"
         }
+      ],
+      "required": [
+        "definition",
+        "definition_type"
       ]
     }
   ],
