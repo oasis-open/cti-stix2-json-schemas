@@ -33,7 +33,7 @@
           "type": "integer",
           "description": "Specifies the Process ID, or PID, of the process."
         },
-        "created": {
+        "created_time": {
           "$ref": "../common/timestamp.json",
           "description": "Specifies the date/time at which the process was created."
         },
