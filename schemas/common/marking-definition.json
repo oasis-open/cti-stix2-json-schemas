@@ -143,11 +143,37 @@
     {
       "description": "The TLP marking type defines how you would represent a Traffic Light Protocol (TLP) marking in a definition field.",
       "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this object, which MUST be the literal `marking-definition`.",
+          "enum": [
+            "marking-definition"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "description": "The unique identifier for this TLP Marking Definition."
+        },
+        "spec_version": {
+          "type": "string",
+          "enum": [
+            "2.1"
+          ],
+          "description": "The version of the STIX specification used to represent this object."
+        },
+        "name" : {
+          "type" : "string",
+          "description": "A name used to identify this TLP Marking Definition."
+        },
         "created": {
           "type": "string",
           "enum": [
             "2017-01-20T00:00:00.000Z"
           ]
+        },
+        "definition": {
+          "type" : "object",
+          "description": "The marking object itself."
         },
         "definition_type": {
           "type": "string",
@@ -171,9 +197,15 @@
         }
       ],
       "required": [
+        "id",
+        "type",
+        "spec_version",
+        "created",
+        "name",
         "definition",
         "definition_type"
-      ]
+      ],
+      "additionalProperties": false
     }
   ],
   "definitions": {
@@ -199,6 +231,12 @@
             "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
           ]
         },
+        "name": {
+          "type": "string",
+          "enum": [
+            "TLP:WHITE"
+          ]
+        },
         "definition": {
           "type": "object",
           "properties": {
@@ -219,6 +257,12 @@
           "type": "string",
           "enum": [
             "marking-definition--34098fce-860f-48ae-8e50-ebd3cc5e41da"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "enum": [
+            "TLP:GREEN"
           ]
         },
         "definition": {
@@ -243,6 +287,12 @@
             "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
           ]
         },
+        "name": {
+          "type": "string",
+          "enum": [
+            "TLP:AMBER"
+          ]
+        },
         "definition": {
           "type": "object",
           "properties": {
@@ -263,6 +313,12 @@
           "type": "string",
           "enum": [
             "marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "enum": [
+            "TLP:RED"
           ]
         },
         "definition": {
