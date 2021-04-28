@@ -109,11 +109,26 @@
     {
       "description": "The TLP marking type defines how you would represent a Traffic Light Protocol (TLP) marking in a definition field.",
       "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this object, which MUST be the literal `marking-definition`.",
+          "enum": [
+            "marking-definition"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "description": "The unique identifier for this TLP Marking Definition."
+        },
         "created": {
           "type": "string",
           "enum": [
             "2017-01-20T00:00:00.000Z"
           ]
+        },
+        "definition": {
+          "type" : "object",
+          "description": "The marking object itself."
         },
         "definition_type": {
           "type": "string",
@@ -135,7 +150,8 @@
         {
               "$ref": "#/definitions/tlp_red"
         }
-      ]
+      ],
+      "additionalProperties": false
     }
   ],
   "definitions": {
