@@ -1,0 +1,10 @@
+{
+    "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/interop/sighting-interop.json",
+    "$ref": "../sros/sighting.json",
+    "required": [
+        "first_seen",
+        "last_seen",
+        "count",
+        "created_by_ref"
+    ]
+}

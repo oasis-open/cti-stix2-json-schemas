@@ -1,0 +1,7 @@
+{
+    "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/interop/relationship-interop.json",
+    "$ref": "../sros/relationship.json",
+    "required": [
+        "created_by_ref"
+    ]
+}

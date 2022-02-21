@@ -1,0 +1,8 @@
+{
+    "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/interop/location-interop.json",
+    "$ref": "../sdos/location.json",
+    "required": [
+        "region",
+        "created_by_ref"
+    ]
+}

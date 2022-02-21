@@ -1,0 +1,9 @@
+{
+    "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/interop/intrusion-set-interop.json",
+    "$ref": "../sdos/intrusion-set.json",
+    "required": [
+        "resource_leve",
+        "primary_motivation",
+        "created_by_ref"
+    ]
+}
