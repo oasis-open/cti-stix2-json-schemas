@@ -2,7 +2,7 @@
     "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/interop/indicator-interop.json",
     "$ref": "../sdos/indicator.json",
     "required": [
-        "type",
+        "name",
         "indicator_types",
         "created_by_ref"
     ]
