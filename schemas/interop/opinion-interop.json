@@ -1,7 +1,0 @@
-{
-    "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/interop/opinion-interop.json",
-    "$ref": "../sdos/opinion.json",
-    "required": [
-        "created_by_ref"
-    ]
-}

@@ -1,0 +1,7 @@
+{
+    "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/interop/note.json",
+    "$ref": "../sdos/note.json",
+    "required": [
+        "created_by_ref"
+    ]
+}
