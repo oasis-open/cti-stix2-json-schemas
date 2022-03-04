@@ -1,6 +1,5 @@
 {
-    "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/interop/threat-actor.json",
-    "$ref": "../sdos/threat-actor.json",
+    "$ref": "../schemas/sdos/threat-actor.json",
     "required": [
         "threat_actor_types",
         "roles",

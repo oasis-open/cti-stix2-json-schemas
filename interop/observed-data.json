@@ -1,6 +1,6 @@
 {
     "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/interop/observed-data.json",
-    "$ref": "../sdos/observed-data.json",
+    "$ref": "../schemas/sdos/observed-data.json",
     "required": [
         "object_refs",
         "created_by_ref"

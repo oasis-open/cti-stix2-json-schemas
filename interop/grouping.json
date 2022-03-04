@@ -1,6 +1,5 @@
 {
-    "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/interop/grouping.json",
-    "$ref": "../sdos/grouping.json",
+    "$ref": "../schemas/sdos/grouping.json",
     "required": [
         "identities_class",
         "created_by_ref"
