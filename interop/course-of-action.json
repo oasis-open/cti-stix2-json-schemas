@@ -1,5 +1,6 @@
 {
-    "$ref": "../schemas/sdos/course-of-actioin.json",
+    "$id":"http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/interop/campaign.json",
+    "$ref": "../schemas/sdos/course-of-action.json",
     "required": [
         "created_by_ref"
     ]
