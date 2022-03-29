@@ -1,8 +1,12 @@
 {
     "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/interop/observed-data.json",
-    "$ref": "../schemas/sdos/observed-data.json",
-    "allOf":[
-        {"$ref": "core.json"}
+    "allOf": [
+        {
+          "$ref": "core.json"
+        },
+        {
+           "$ref": "../schemas/sdos/observed-data.json"
+        }
     ],
     "required": [
         "object_refs",

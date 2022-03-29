@@ -1,8 +1,12 @@
 {
     "$id":"http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/interop/infrastructure.json",
-    "$ref": "../schemas/sdos/infrastructure.json",
-    "allOf":[
-        {"$ref": "core.json"}
+    "allOf": [
+        {
+          "$ref": "core.json"
+        },
+        {
+           "$ref": "../schemas/sdos/infrastructure.json"
+        }
     ],
     "required": [
         "infrastructure_types",

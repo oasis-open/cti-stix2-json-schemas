@@ -1,6 +1,6 @@
 {
   "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/common/external-reference.json",
-  "$schema": "http://json-schema.org/draft-2020-12/schema#",
+  "$schema": "http://json-schema.org/draft2020-12/schema#",
   "title": "external-reference",
   "description": "External references are used to describe pointers to information represented outside of STIX.",
   "type": "object",

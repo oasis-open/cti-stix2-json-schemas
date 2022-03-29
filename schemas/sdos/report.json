@@ -1,6 +1,6 @@
 {
   "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sdos/report.json",
-  "$schema": "http://json-schema.org/draft-2020-12/schema#",
+  "$schema": "http://json-schema.org/draft2020-12/schema#",
   "title": "report",
   "description": "Reports are collections of threat intelligence focused on one or more topics, such as a description of a threat actor, malware, or attack technique, including context and related details.",
   "type": "object",
