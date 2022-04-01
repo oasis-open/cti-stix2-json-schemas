@@ -1,6 +1,6 @@
 {
   "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/observables/directory.json",
-  "$schema": "http://json-schema.org/draft2020-12/schema#",
+  "$schema": "http://json-schema.org/draft/2020-12/schema#",
   "title": "directory",
   "description": "The Directory Object represents the properties common to a file system directory.",
   "type": "object",

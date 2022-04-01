@@ -1,6 +1,6 @@
 {
   "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sdos/tool.json",
-  "$schema": "http://json-schema.org/draft2020-12/schema#",
+  "$schema": "http://json-schema.org/draft/2020-12/schema#",
   "title": "tool",
   "description": "Tools are legitimate software that can be used by threat actors to perform attacks.",
   "type": "object",
