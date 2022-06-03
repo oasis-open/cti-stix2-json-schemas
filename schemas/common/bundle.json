@@ -55,6 +55,9 @@
                 "$ref": "../sdos/malware.json"
               },
               {
+                "$ref": "../sdos/malware-analysis.json"
+              },
+              {
                 "$ref": "../sdos/observed-data.json"
               },
               {
