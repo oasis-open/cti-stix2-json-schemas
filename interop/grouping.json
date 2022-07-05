@@ -9,7 +9,6 @@
         }
     ],
     "required": [
-        "identities_class",
         "created_by_ref"
     ]
 }
