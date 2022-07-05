@@ -49,6 +49,7 @@
     }
   ],
   "required": [
+    "content",
     "object_refs"
   ]
 }
