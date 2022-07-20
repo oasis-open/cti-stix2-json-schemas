@@ -1,6 +1,6 @@
 {
   "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.0/schemas/observables/url.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "http://json-schema.org/draft/2020-12/schema#",
   "title": "url",
   "description": "The URL Object represents the properties of a uniform resource locator (URL).",
   "type": "object",
