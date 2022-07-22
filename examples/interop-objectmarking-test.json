@@ -12,13 +12,6 @@
             "external_id": "CAPEC-163"
         }
     ],
-    "kill_chain_phases":
-      [
-        {
-        "kill_chain_name": "example-kill-chain",
-        "phase_name": "lateral-movement"
-        }
-      ],
       "object_marking_refs": [
         "marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ed",
         "marking-definition--5e57c739-391a-4eb3-b6be-7d15ca92d5ec"
