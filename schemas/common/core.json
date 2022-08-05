@@ -1,6 +1,6 @@
 {
   "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/common/core.json",
-  "$schema": "http://json-schema.org/draft-2020-12/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "core",
   "description": "Common properties and behavior across all STIX Domain Objects and STIX Relationship Objects.",
   "type": "object",
