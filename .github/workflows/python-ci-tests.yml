@@ -25,7 +25,7 @@ jobs:
         pip install stix2-validator
     - name: Install npm dependencies
       run: |
-        npm install -g ajv-cli ajv-formats-draft2019
+        npm install -g ajv-cli ajv-formats-draft2019 ajv-formats
     - name: Test Examples
       run: |
         ./test_examples.sh
