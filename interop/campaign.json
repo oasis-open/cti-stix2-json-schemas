@@ -1,0 +1,15 @@
+{
+    "$id":"http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/interop/campaign.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "allOf": [
+        {
+          "$ref": "core.json"
+        },
+        {
+           "$ref": "../schemas/sdos/campaign.json"
+        }
+    ],
+    "required": [
+        "created_by_ref"
+    ]
+}
