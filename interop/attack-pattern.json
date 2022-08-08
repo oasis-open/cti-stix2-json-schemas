@@ -1,0 +1,17 @@
+{
+    "$id":"http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/interop/attack-pattern.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "allOf": [
+        {
+          "$ref": "core.json"
+        },
+        {
+           "$ref": "../schemas/sdos/attack-pattern.json"
+        }
+    ],
+    "required": [
+        "external_references", 
+        "kill_chain_phases", 
+        "created_by_ref"
+    ]
+}
