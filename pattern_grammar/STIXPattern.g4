@@ -50,7 +50,7 @@ propTest
   | objectPath NOT? ISSUBSET StringLiteral          # propTestIsSubset
   | objectPath NOT? ISSUPERSET StringLiteral        # propTestIsSuperset
   | LPAREN comparisonExpression RPAREN              # propTestParen
-  | EXISTS objectPath                               # propTestExists
+  | NOT? EXISTS objectPath                          # propTestExists
   ;
 
 startStopQualifier
