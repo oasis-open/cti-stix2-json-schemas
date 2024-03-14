@@ -198,7 +198,10 @@
               "description": "Specifies all of the HTTP header fields that may be found in the HTTP client request, as a dictionary.",
               "patternProperties": {
                 "^.+$": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               },
               "additionalProperties": false
