@@ -109,6 +109,11 @@
       "type": "object",
       "minProperties": 1,
       "patternProperties": {
+          "^([a-z][a-z0-9]*)+(-[a-z0-9]+)*\\-ext$": {
+            "type": "object",
+            "minProperties": 1,
+            "allOf": [{ "$ref": "../common/properties.json" }]
+          },
           "^extension-definition--[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$": {
             "allOf": [{ "$ref": "../common/extension.json" }]
           }
