@@ -1,6 +1,6 @@
 {
   "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/observables/email-addr.json",
-  "$schema": "http://json-schema.org/draft/2020-12/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "email-addr",
   "description": "The Email Address Object represents a single email address.",
   "type": "object",

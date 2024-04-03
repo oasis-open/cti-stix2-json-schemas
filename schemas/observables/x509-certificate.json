@@ -1,6 +1,6 @@
 {
   "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/observables/x509-certificate.json",
-  "$schema": "http://json-schema.org/draft/2020-12/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "x509-certificate",
   "description": "The X509 Certificate Object represents the properties of an X.509 certificate.",
   "type": "object",
