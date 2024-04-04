@@ -1,6 +1,6 @@
 {
   "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/common/marking-definition.json",
-  "$schema": "http://json-schema.org/draft/2020-12/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "marking-definition",
   "description": "The marking-definition object represents a specific marking.",
   "type": "object",
