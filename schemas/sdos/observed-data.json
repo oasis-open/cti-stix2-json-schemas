@@ -122,10 +122,93 @@
         "object_refs": {
           "type": "array",
           "description": "A list of SCOs and SROs representing the observation.",
-          "items": {
-            "$ref": "../common/identifier.json"
+          "patternProperties": {
+            "^.*$": {
+              "items":{
+                "oneOf": [
+                  {
+                    "allOf": [
+                      {
+                        "$ref": "../common/identifier.json"
+                      },
+                      {
+                        "not": {
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "pattern": "^(attack-pattern|campaign|course-of-action|grouping|identity|incident|indicator|infrastructure|intrusion-set|location|malware-analysis|malware|note|observed-data|opinion|report|threat-actor|tool|vulnerability)--.+$",
+                              "description": "Indicates that this object is an SDO - SDOs are not allowed in object_refs."
+                              }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "$ref": "../observables/artifact.json"
+                  },
+                  {
+                    "$ref": "../observables/autonomous-system.json"
+                  },
+                  {
+                    "$ref": "../observables/directory.json"
+                  },
+                  {
+                    "$ref": "../observables/domain-name.json"
+                  },
+                  {
+                    "$ref": "../observables/email-addr.json"
+                  },
+                  {
+                    "$ref": "../observables/email-message.json"
+                  },
+                  {
+                    "$ref": "../observables/file.json"
+                  },
+                  {
+                    "$ref": "../observables/ipv4-addr.json"
+                  },
+                  {
+                    "$ref": "../observables/ipv6-addr.json"
+                  },
+                  {
+                    "$ref": "../observables/mac-addr.json"
+                  },
+                  {
+                    "$ref": "../observables/mutex.json"
+                  },
+                  {
+                    "$ref": "../observables/network-traffic.json"
+                  },
+                  {
+                    "$ref": "../observables/process.json"
+                  },
+                  {
+                    "$ref": "../observables/software.json"
+                  },
+                  {
+                    "$ref": "../observables/url.json"
+                  },
+                  {
+                    "$ref": "../observables/user-account.json"
+                  },
+                  {
+                    "$ref": "../observables/windows-registry-key.json"
+                  },
+                  {
+                    "$ref": "../observables/x509-certificate.json"
+                  },
+                  {
+                    "$ref": "../sros/relationship.json"
+                  },
+                  {
+                    "$ref": "../sros/sighting.json"
+                  }
+                ]
+              }
+            }
           },
-          "minItems": 1
+        "minItems": 1
         }
       }
     }
