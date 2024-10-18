@@ -122,93 +122,80 @@
         "object_refs": {
           "type": "array",
           "description": "A list of SCOs and SROs representing the observation.",
-          "patternProperties": {
-            "^.*$": {
-              "items":{
-                "oneOf": [
+          "items": {
+            "anyOf": [
+              {
+                "allOf": [
                   {
-                    "allOf": [
-                      {
-                        "$ref": "../common/identifier.json"
-                      },
-                      {
-                        "not": {
-                          "properties": {
-                            "type": {
-                              "type": "string",
-                              "pattern": "^(attack-pattern|campaign|course-of-action|grouping|identity|incident|indicator|infrastructure|intrusion-set|location|malware-analysis|malware|note|observed-data|opinion|report|threat-actor|tool|vulnerability)--.+$",
-                              "description": "Indicates that this object is an SDO - SDOs are not allowed in object_refs."
-                              }
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "../common/identifier.json"
                   },
                   {
-                    "$ref": "../observables/artifact.json"
-                  },
-                  {
-                    "$ref": "../observables/autonomous-system.json"
-                  },
-                  {
-                    "$ref": "../observables/directory.json"
-                  },
-                  {
-                    "$ref": "../observables/domain-name.json"
-                  },
-                  {
-                    "$ref": "../observables/email-addr.json"
-                  },
-                  {
-                    "$ref": "../observables/email-message.json"
-                  },
-                  {
-                    "$ref": "../observables/file.json"
-                  },
-                  {
-                    "$ref": "../observables/ipv4-addr.json"
-                  },
-                  {
-                    "$ref": "../observables/ipv6-addr.json"
-                  },
-                  {
-                    "$ref": "../observables/mac-addr.json"
-                  },
-                  {
-                    "$ref": "../observables/mutex.json"
-                  },
-                  {
-                    "$ref": "../observables/network-traffic.json"
-                  },
-                  {
-                    "$ref": "../observables/process.json"
-                  },
-                  {
-                    "$ref": "../observables/software.json"
-                  },
-                  {
-                    "$ref": "../observables/url.json"
-                  },
-                  {
-                    "$ref": "../observables/user-account.json"
-                  },
-                  {
-                    "$ref": "../observables/windows-registry-key.json"
-                  },
-                  {
-                    "$ref": "../observables/x509-certificate.json"
-                  },
-                  {
-                    "$ref": "../sros/relationship.json"
-                  },
-                  {
-                    "$ref": "../sros/sighting.json"
+                    "not": {
+                      "pattern": "^(attack-pattern|campaign|course-of-action|grouping|identity|incident|indicator|infrastructure|intrusion-set|location|malware-analysis|malware|note|observed-data|opinion|report|threat-actor|tool|vulnerability).+$"
+                    }
                   }
                 ]
+              },
+              {
+                "pattern": "^autonomous-system--"
+              },
+              {
+                "pattern": "^directory--"
+              },
+              {
+                "pattern": "^domain-name--"
+              },
+              {
+                "pattern": "^email-addr--"
+              },
+              {
+                "pattern": "^email-message--"
+              },
+              {
+                "pattern": "^file--"
+              },
+              {
+                "pattern": "^ipv4-addr--"
+              },
+              {
+                "pattern": "^ipv6-addr--"
+              },
+              {
+                "pattern": "^mac-addr--"
+              },
+              {
+                "pattern": "^mutex--"
+              },
+              {
+                "pattern": "^network-traffic--"
+              },
+              {
+                "pattern": "^process--"
+              },
+              {
+                "pattern": "^software--"
+              },
+              {
+                "pattern": "^url--"
+              },
+              {
+                "pattern": "^user-account--"
+              },
+              {
+                "pattern": "^windows-registry-key--"
+              },
+              {
+                "pattern": "^x509-certificate--"
+              },
+              {
+                "pattern": "^relationship--"
+              },
+              {
+                "pattern": "^sighting--"
               }
-            }
+            ]
           },
-        "minItems": 1
+          "minItems": 1
         }
       }
     }
