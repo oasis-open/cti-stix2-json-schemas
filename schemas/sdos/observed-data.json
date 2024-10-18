@@ -123,6 +123,7 @@
           "type": "array",
           "description": "A list of SCOs and SROs representing the observation.",
           "items": {
+            "type" : "string",
             "anyOf": [
               {
                 "allOf": [
@@ -131,7 +132,7 @@
                   },
                   {
                     "not": {
-                      "pattern": "^(attack-pattern|campaign|course-of-action|grouping|identity|incident|indicator|infrastructure|intrusion-set|location|malware-analysis|malware|note|observed-data|opinion|report|threat-actor|tool|vulnerability).+$"
+                      "pattern": "^(attack-pattern|campaign|course-of-action|grouping|identity|incident|indicator|infrastructure|intrusion-set|location|malware-analysis|malware|note|observed-data|opinion|report|threat-actor|tool|vulnerability)"
                     }
                   }
                 ]
