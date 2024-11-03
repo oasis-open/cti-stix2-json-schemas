@@ -123,7 +123,24 @@
           "type": "array",
           "description": "A list of SCOs and SROs representing the observation.",
           "items": {
-            "$ref": "../common/identifier.json"
+            "type" : "string",
+            "anyOf": [
+              {
+                "allOf": [
+                  {
+                    "$ref": "../common/identifier.json"
+                  },
+                  {
+                    "not": {
+                      "pattern": "^(attack-pattern|campaign|course-of-action|grouping|identity|incident|indicator|infrastructure|intrusion-set|location|malware-analysis|malware|note|observed-data|opinion|report|threat-actor|tool|vulnerability)"
+                    }
+                  }
+                ]
+              },
+              {
+                "pattern": "^(autonomous-system--|directory--|domain-name--|email-addr--|email-message--|file--|ipv4-addr--|ipv6-addr--|mac-addr--|mutex--|network-traffic--|process--|software--|url--|user-account--|windows-registry-key--|x509-certificate--|relationship--|sighting--)"
+              }
+            ]
           },
           "minItems": 1
         }
