@@ -21,13 +21,13 @@
           "title": "id",
           "pattern": "^llm-prompt--"
         },
-        "content": {
+        "value": {
           "type": "string",
           "description": "Specifies the LLM Prompt content using Natural Language Instructions."
         }
       },
       "required": [
-        "content"
+        "value"
       ]
     }
   ]
